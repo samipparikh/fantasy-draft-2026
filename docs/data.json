@@ -1,0 +1,3095 @@
+{
+ "meta": {
+  "teams": 12,
+  "rounds": 16,
+  "sims": 4000,
+  "scoring": "half PPR (0.5/rec)",
+  "starters": {
+   "QB": 1,
+   "RB": 2,
+   "WR": 2,
+   "TE": 1,
+   "K": 1,
+   "DST": 1,
+   "FLEX": 1
+  },
+  "pool_size": 224,
+  "value_source": "auction value (176 priced players)",
+  "rb_weight": 1.15,
+  "adp_noise": 0.2,
+  "source": "The Ringer 2026 preseason rankings (Kelly / Heifetz / Horlbeck), half-PPR draft tracker, updated Aug 3 2026",
+  "priced_players": 176
+ },
+ "baselines": {
+  "QB": {
+   "rank": "QB12",
+   "pts": 281.5
+  },
+  "RB": {
+   "rank": "RB29",
+   "pts": 137.4
+  },
+  "WR": {
+   "rank": "WR30",
+   "pts": 151.1
+  },
+  "TE": {
+   "rank": "TE13",
+   "pts": 95.5
+  },
+  "K": {
+   "rank": "K12",
+   "pts": 102.4
+  },
+  "DST": {
+   "rank": "DST12",
+   "pts": 95.4
+  }
+ },
+ "tiers": {
+  "RB": [
+   {
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "tier": 1,
+    "team": "DET",
+    "adp": 1.0,
+    "vor": 195.1,
+    "av": 65
+   },
+   {
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "tier": 1,
+    "team": "ATL",
+    "adp": 2.0,
+    "vor": 188.1,
+    "av": 63
+   },
+   {
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "tier": 2,
+    "team": "SF",
+    "adp": 5.0,
+    "vor": 149.6,
+    "av": 52
+   },
+   {
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "tier": 2,
+    "team": "IND",
+    "adp": 8.0,
+    "vor": 139.1,
+    "av": 49
+   },
+   {
+    "name": "Saquon Barkley",
+    "pos": "RB",
+    "tier": 2,
+    "team": "PHI",
+    "adp": 9.0,
+    "vor": 132.1,
+    "av": 47
+   },
+   {
+    "name": "James Cook III",
+    "pos": "RB",
+    "tier": 2,
+    "team": "BUF",
+    "adp": 10.0,
+    "vor": 128.6,
+    "av": 46
+   },
+   {
+    "name": "Ashton Jeanty",
+    "pos": "RB",
+    "tier": 2,
+    "team": "LV",
+    "adp": 11.0,
+    "vor": 121.6,
+    "av": 44
+   },
+   {
+    "name": "Derrick Henry",
+    "pos": "RB",
+    "tier": 3,
+    "team": "BAL",
+    "adp": 14.0,
+    "vor": 111.1,
+    "av": 41
+   },
+   {
+    "name": "Omarion Hampton",
+    "pos": "RB",
+    "tier": 3,
+    "team": "LAC",
+    "adp": 15.0,
+    "vor": 104.1,
+    "av": 39
+   },
+   {
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "tier": 3,
+    "team": "KC",
+    "adp": 17.0,
+    "vor": 97.1,
+    "av": 37
+   },
+   {
+    "name": "Chase Brown",
+    "pos": "RB",
+    "tier": 3,
+    "team": "CIN",
+    "adp": 18.0,
+    "vor": 93.6,
+    "av": 36
+   },
+   {
+    "name": "De\u2019Von Achane",
+    "pos": "RB",
+    "tier": 4,
+    "team": "MIA",
+    "adp": 21.0,
+    "vor": 86.6,
+    "av": 34
+   },
+   {
+    "name": "Jeremiyah Love",
+    "pos": "RB",
+    "tier": 5,
+    "team": "ARI",
+    "adp": 31.0,
+    "vor": 69.1,
+    "av": 29
+   },
+   {
+    "name": "Josh Jacobs",
+    "pos": "RB",
+    "tier": 5,
+    "team": "GB",
+    "adp": 32.0,
+    "vor": 65.6,
+    "av": 28
+   }
+  ],
+  "WR": [
+   {
+    "name": "Ja\u2019Marr Chase",
+    "pos": "WR",
+    "tier": 1,
+    "team": "CIN",
+    "adp": 3.0,
+    "vor": 165.4,
+    "av": 59
+   },
+   {
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "tier": 2,
+    "team": "LAR",
+    "adp": 4.0,
+    "vor": 147.9,
+    "av": 54
+   },
+   {
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "tier": 2,
+    "team": "SEA",
+    "adp": 6.0,
+    "vor": 137.4,
+    "av": 51
+   },
+   {
+    "name": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "tier": 2,
+    "team": "DET",
+    "adp": 7.0,
+    "vor": 133.9,
+    "av": 50
+   },
+   {
+    "name": "Justin Jefferson",
+    "pos": "WR",
+    "tier": 3,
+    "team": "MIN",
+    "adp": 12.0,
+    "vor": 109.4,
+    "av": 43
+   },
+   {
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "tier": 3,
+    "team": "DAL",
+    "adp": 13.0,
+    "vor": 105.9,
+    "av": 42
+   },
+   {
+    "name": "A.J. Brown",
+    "pos": "WR",
+    "tier": 4,
+    "team": "NE",
+    "adp": 16.0,
+    "vor": 91.9,
+    "av": 38
+   },
+   {
+    "name": "Nico Collins",
+    "pos": "WR",
+    "tier": 4,
+    "team": "HOU",
+    "adp": 19.0,
+    "vor": 84.9,
+    "av": 36
+   },
+   {
+    "name": "Drake London",
+    "pos": "WR",
+    "tier": 4,
+    "team": "ATL",
+    "adp": 22.0,
+    "vor": 77.9,
+    "av": 34
+   },
+   {
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "tier": 4,
+    "team": "KC",
+    "adp": 23.0,
+    "vor": 74.4,
+    "av": 33
+   },
+   {
+    "name": "George Pickens",
+    "pos": "WR",
+    "tier": 4,
+    "team": "DAL",
+    "adp": 26.0,
+    "vor": 67.4,
+    "av": 31
+   },
+   {
+    "name": "Chris Olave",
+    "pos": "WR",
+    "tier": 4,
+    "team": "NO",
+    "adp": 27.0,
+    "vor": 67.4,
+    "av": 31
+   },
+   {
+    "name": "Emeka Egbuka",
+    "pos": "WR",
+    "tier": 4,
+    "team": "TB",
+    "adp": 28.0,
+    "vor": 63.9,
+    "av": 30
+   },
+   {
+    "name": "Tetairoa McMillan",
+    "pos": "WR",
+    "tier": 4,
+    "team": "CAR",
+    "adp": 29.0,
+    "vor": 63.9,
+    "av": 30
+   }
+  ],
+  "TE": [
+   {
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "tier": 1,
+    "team": "LV",
+    "adp": 20.0,
+    "vor": 112.0,
+    "av": 35
+   },
+   {
+    "name": "Trey McBride",
+    "pos": "TE",
+    "tier": 1,
+    "team": "ARI",
+    "adp": 24.0,
+    "vor": 101.5,
+    "av": 32
+   },
+   {
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "tier": 2,
+    "team": "CHI",
+    "adp": 43.0,
+    "vor": 63.0,
+    "av": 21
+   },
+   {
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "tier": 2,
+    "team": "IND",
+    "adp": 47.0,
+    "vor": 56.0,
+    "av": 19
+   },
+   {
+    "name": "Tucker Kraft",
+    "pos": "TE",
+    "tier": 3,
+    "team": "GB",
+    "adp": 67.0,
+    "vor": 35.0,
+    "av": 13
+   },
+   {
+    "name": "Kyle Pitts",
+    "pos": "TE",
+    "tier": 3,
+    "team": "ATL",
+    "adp": 72.0,
+    "vor": 31.5,
+    "av": 12
+   },
+   {
+    "name": "Sam LaPorta",
+    "pos": "TE",
+    "tier": 3,
+    "team": "DET",
+    "adp": 78.0,
+    "vor": 24.5,
+    "av": 10
+   },
+   {
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "tier": 3,
+    "team": "CLE",
+    "adp": 81.0,
+    "vor": 21.0,
+    "av": 9
+   },
+   {
+    "name": "Travis Kelce",
+    "pos": "TE",
+    "tier": 4,
+    "team": "KC",
+    "adp": 101.0,
+    "vor": 7.0,
+    "av": 5
+   },
+   {
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "tier": 4,
+    "team": "DAL",
+    "adp": 105.0,
+    "vor": 3.5,
+    "av": 4
+   },
+   {
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "tier": 4,
+    "team": "BUF",
+    "adp": 106.0,
+    "vor": 3.5,
+    "av": 4
+   },
+   {
+    "name": "Isaiah Likely",
+    "pos": "TE",
+    "tier": 4,
+    "team": "NYG",
+    "adp": 115.0,
+    "vor": 0.0,
+    "av": 3
+   },
+   {
+    "name": "Dallas Goedert",
+    "pos": "TE",
+    "tier": 4,
+    "team": "PHI",
+    "adp": 117.0,
+    "vor": 0.0,
+    "av": 3
+   },
+   {
+    "name": "Mark Andrews",
+    "pos": "TE",
+    "tier": 4,
+    "team": "BAL",
+    "adp": 118.0,
+    "vor": 0.0,
+    "av": 3
+   }
+  ],
+  "QB": [
+   {
+    "name": "Josh Allen",
+    "pos": "QB",
+    "tier": 1,
+    "team": "BUF",
+    "adp": 25.0,
+    "vor": 80.5,
+    "av": 32
+   },
+   {
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "tier": 2,
+    "team": "BAL",
+    "adp": 33.0,
+    "vor": 63.0,
+    "av": 27
+   },
+   {
+    "name": "Drake Maye",
+    "pos": "QB",
+    "tier": 2,
+    "team": "NE",
+    "adp": 35.0,
+    "vor": 59.5,
+    "av": 26
+   },
+   {
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "tier": 2,
+    "team": "WAS",
+    "adp": 40.0,
+    "vor": 49.0,
+    "av": 23
+   },
+   {
+    "name": "Joe Burrow",
+    "pos": "QB",
+    "tier": 3,
+    "team": "CIN",
+    "adp": 48.0,
+    "vor": 35.0,
+    "av": 19
+   },
+   {
+    "name": "Justin Herbert",
+    "pos": "QB",
+    "tier": 3,
+    "team": "LAC",
+    "adp": 52.0,
+    "vor": 28.0,
+    "av": 17
+   },
+   {
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "tier": 3,
+    "team": "PHI",
+    "adp": 53.0,
+    "vor": 28.0,
+    "av": 17
+   },
+   {
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "tier": 3,
+    "team": "CHI",
+    "adp": 61.0,
+    "vor": 21.0,
+    "av": 15
+   },
+   {
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "tier": 3,
+    "team": "JAX",
+    "adp": 68.0,
+    "vor": 14.0,
+    "av": 13
+   },
+   {
+    "name": "Dak Prescott",
+    "pos": "QB",
+    "tier": 3,
+    "team": "DAL",
+    "adp": 75.0,
+    "vor": 7.0,
+    "av": 11
+   },
+   {
+    "name": "Bo Nix",
+    "pos": "QB",
+    "tier": 3,
+    "team": "DEN",
+    "adp": 76.0,
+    "vor": 7.0,
+    "av": 11
+   },
+   {
+    "name": "Brock Purdy",
+    "pos": "QB",
+    "tier": 3,
+    "team": "SF",
+    "adp": 79.0,
+    "vor": 3.5,
+    "av": 10
+   },
+   {
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "tier": 4,
+    "team": "NYG",
+    "adp": 85.0,
+    "vor": -3.5,
+    "av": 8
+   },
+   {
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "tier": 4,
+    "team": "MIN",
+    "adp": 88.0,
+    "vor": -7.0,
+    "av": 7
+   }
+  ]
+ },
+ "slots": {
+  "5": {
+   "slot": 5,
+   "picks": [
+    {
+     "round": 1,
+     "overall": 5,
+     "label": "1.05"
+    },
+    {
+     "round": 2,
+     "overall": 20,
+     "label": "2.08"
+    },
+    {
+     "round": 3,
+     "overall": 29,
+     "label": "3.05"
+    },
+    {
+     "round": 4,
+     "overall": 44,
+     "label": "4.08"
+    },
+    {
+     "round": 5,
+     "overall": 53,
+     "label": "5.05"
+    },
+    {
+     "round": 6,
+     "overall": 68,
+     "label": "6.08"
+    },
+    {
+     "round": 7,
+     "overall": 77,
+     "label": "7.05"
+    },
+    {
+     "round": 8,
+     "overall": 92,
+     "label": "8.08"
+    },
+    {
+     "round": 9,
+     "overall": 101,
+     "label": "9.05"
+    },
+    {
+     "round": 10,
+     "overall": 116,
+     "label": "10.08"
+    },
+    {
+     "round": 11,
+     "overall": 125,
+     "label": "11.05"
+    },
+    {
+     "round": 12,
+     "overall": 140,
+     "label": "12.08"
+    },
+    {
+     "round": 13,
+     "overall": 149,
+     "label": "13.05"
+    },
+    {
+     "round": 14,
+     "overall": 164,
+     "label": "14.08"
+    },
+    {
+     "round": 15,
+     "overall": 173,
+     "label": "15.05"
+    },
+    {
+     "round": 16,
+     "overall": 188,
+     "label": "16.08"
+    }
+   ],
+   "turn_gaps": {
+    "r1_r2": 15,
+    "r2_r3": 9
+   },
+   "strategies": {
+    "rb_priority": {
+     "mean": 1755.3,
+     "p10": 1713.2,
+     "p50": 1757.8,
+     "p90": 1797.5,
+     "rb": 6.7,
+     "wr": 3.3
+    },
+    "bpa": {
+     "mean": 1763.6,
+     "p10": 1730.8,
+     "p50": 1764.0,
+     "p90": 1801.0,
+     "rb": 6.6,
+     "wr": 3.4
+    },
+    "hero_rb": {
+     "mean": 1750.3,
+     "p10": 1716.8,
+     "p50": 1749.2,
+     "p90": 1792.0,
+     "rb": 6.5,
+     "wr": 3.5
+    },
+    "zero_rb": {
+     "mean": 1749.3,
+     "p10": 1723.2,
+     "p50": 1750.0,
+     "p90": 1778.0,
+     "rb": 6.3,
+     "wr": 3.7
+    }
+   },
+   "ev": {
+    "r1": 160.7,
+    "r2": 108.1
+   },
+   "plan": [
+    {
+     "round": 1,
+     "pick": "1.05",
+     "overall": 5,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.755
+      },
+      {
+       "pos": "WR",
+       "share": 0.244
+      }
+     ],
+     "targets": [
+      {
+       "name": "Christian McCaffrey",
+       "pos": "RB",
+       "tier": 2,
+       "team": "SF",
+       "adp": 5.0,
+       "vor": 149.6,
+       "av": 52,
+       "p_avail": 0.575,
+       "p_take": 0.39
+      },
+      {
+       "name": "Ja\u2019Marr Chase",
+       "pos": "WR",
+       "tier": 1,
+       "team": "CIN",
+       "adp": 3.0,
+       "vor": 165.4,
+       "av": 59,
+       "p_avail": 0.269,
+       "p_take": 0.244
+      },
+      {
+       "name": "Bijan Robinson",
+       "pos": "RB",
+       "tier": 1,
+       "team": "ATL",
+       "adp": 2.0,
+       "vor": 188.1,
+       "av": 63,
+       "p_avail": 0.158,
+       "p_take": 0.15
+      },
+      {
+       "name": "Jonathan Taylor",
+       "pos": "RB",
+       "tier": 2,
+       "team": "IND",
+       "adp": 8.0,
+       "vor": 139.1,
+       "av": 49,
+       "p_avail": 0.924,
+       "p_take": 0.136
+      },
+      {
+       "name": "Jahmyr Gibbs",
+       "pos": "RB",
+       "tier": 1,
+       "team": "DET",
+       "adp": 1.0,
+       "vor": 195.1,
+       "av": 65,
+       "p_avail": 0.087,
+       "p_take": 0.079
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "pick": "2.08",
+     "overall": 20,
+     "mix": [
+      {
+       "pos": "TE",
+       "share": 0.487
+      },
+      {
+       "pos": "RB",
+       "share": 0.457
+      },
+      {
+       "pos": "WR",
+       "share": 0.056
+      }
+     ],
+     "targets": [
+      {
+       "name": "Brock Bowers",
+       "pos": "TE",
+       "tier": 1,
+       "team": "LV",
+       "adp": 20.0,
+       "vor": 112.0,
+       "av": 35,
+       "p_avail": 0.621,
+       "p_take": 0.456
+      },
+      {
+       "name": "Kenneth Walker III",
+       "pos": "RB",
+       "tier": 3,
+       "team": "KC",
+       "adp": 17.0,
+       "vor": 97.1,
+       "av": 37,
+       "p_avail": 0.311,
+       "p_take": 0.16
+      },
+      {
+       "name": "Chase Brown",
+       "pos": "RB",
+       "tier": 3,
+       "team": "CIN",
+       "adp": 18.0,
+       "vor": 93.6,
+       "av": 36,
+       "p_avail": 0.427,
+       "p_take": 0.125
+      },
+      {
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "tier": 3,
+       "team": "LAC",
+       "adp": 15.0,
+       "vor": 104.1,
+       "av": 39,
+       "p_avail": 0.119,
+       "p_take": 0.1
+      },
+      {
+       "name": "Derrick Henry",
+       "pos": "RB",
+       "tier": 3,
+       "team": "BAL",
+       "adp": 14.0,
+       "vor": 111.1,
+       "av": 41,
+       "p_avail": 0.05,
+       "p_take": 0.051
+      },
+      {
+       "name": "A.J. Brown",
+       "pos": "WR",
+       "tier": 4,
+       "team": "NE",
+       "adp": 16.0,
+       "vor": 91.9,
+       "av": 38,
+       "p_avail": 0.2,
+       "p_take": 0.036
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "pick": "3.05",
+     "overall": 29,
+     "mix": [
+      {
+       "pos": "WR",
+       "share": 0.45
+      },
+      {
+       "pos": "RB",
+       "share": 0.218
+      },
+      {
+       "pos": "QB",
+       "share": 0.201
+      },
+      {
+       "pos": "TE",
+       "share": 0.131
+      }
+     ],
+     "targets": [
+      {
+       "name": "Josh Allen",
+       "pos": "QB",
+       "tier": 1,
+       "team": "BUF",
+       "adp": 25.0,
+       "vor": 80.5,
+       "av": 32,
+       "p_avail": 0.334,
+       "p_take": 0.201
+      },
+      {
+       "name": "George Pickens",
+       "pos": "WR",
+       "tier": 4,
+       "team": "DAL",
+       "adp": 26.0,
+       "vor": 67.4,
+       "av": 31,
+       "p_avail": 0.394,
+       "p_take": 0.127
+      },
+      {
+       "name": "Jeremiyah Love",
+       "pos": "RB",
+       "tier": 5,
+       "team": "ARI",
+       "adp": 31.0,
+       "vor": 69.1,
+       "av": 29,
+       "p_avail": 0.741,
+       "p_take": 0.127
+      },
+      {
+       "name": "Trey McBride",
+       "pos": "TE",
+       "tier": 1,
+       "team": "ARI",
+       "adp": 24.0,
+       "vor": 101.5,
+       "av": 32,
+       "p_avail": 0.236,
+       "p_take": 0.118
+      },
+      {
+       "name": "Rashee Rice",
+       "pos": "WR",
+       "tier": 4,
+       "team": "KC",
+       "adp": 23.0,
+       "vor": 74.4,
+       "av": 33,
+       "p_avail": 0.176,
+       "p_take": 0.115
+      },
+      {
+       "name": "Drake London",
+       "pos": "WR",
+       "tier": 4,
+       "team": "ATL",
+       "adp": 22.0,
+       "vor": 77.9,
+       "av": 34,
+       "p_avail": 0.127,
+       "p_take": 0.088
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "pick": "4.08",
+     "overall": 44,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.393
+      },
+      {
+       "pos": "QB",
+       "share": 0.236
+      },
+      {
+       "pos": "TE",
+       "share": 0.204
+      },
+      {
+       "pos": "WR",
+       "share": 0.168
+      }
+     ],
+     "targets": [
+      {
+       "name": "Colston Loveland",
+       "pos": "TE",
+       "tier": 2,
+       "team": "CHI",
+       "adp": 43.0,
+       "vor": 63.0,
+       "av": 21,
+       "p_avail": 0.568,
+       "p_take": 0.151
+      },
+      {
+       "name": "Kyren Williams",
+       "pos": "RB",
+       "tier": 6,
+       "team": "LAR",
+       "adp": 37.0,
+       "vor": 51.6,
+       "av": 24,
+       "p_avail": 0.258,
+       "p_take": 0.112
+      },
+      {
+       "name": "Drake Maye",
+       "pos": "QB",
+       "tier": 2,
+       "team": "NE",
+       "adp": 35.0,
+       "vor": 59.5,
+       "av": 26,
+       "p_avail": 0.16,
+       "p_take": 0.11
+      },
+      {
+       "name": "Javonte Williams",
+       "pos": "RB",
+       "tier": 7,
+       "team": "DAL",
+       "adp": 38.0,
+       "vor": 48.1,
+       "av": 23,
+       "p_avail": 0.316,
+       "p_take": 0.085
+      },
+      {
+       "name": "Lamar Jackson",
+       "pos": "QB",
+       "tier": 2,
+       "team": "BAL",
+       "adp": 33.0,
+       "vor": 63.0,
+       "av": 27,
+       "p_avail": 0.097,
+       "p_take": 0.074
+      },
+      {
+       "name": "Breece Hall",
+       "pos": "RB",
+       "tier": 7,
+       "team": "NYJ",
+       "adp": 39.0,
+       "vor": 48.1,
+       "av": 23,
+       "p_avail": 0.38,
+       "p_take": 0.067
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "pick": "5.05",
+     "overall": 53,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.376
+      },
+      {
+       "pos": "WR",
+       "share": 0.365
+      },
+      {
+       "pos": "QB",
+       "share": 0.167
+      },
+      {
+       "pos": "TE",
+       "share": 0.093
+      }
+     ],
+     "targets": [
+      {
+       "name": "Travis Etienne Jr.",
+       "pos": "RB",
+       "tier": 8,
+       "team": "NO",
+       "adp": 46.0,
+       "vor": 37.6,
+       "av": 20,
+       "p_avail": 0.312,
+       "p_take": 0.186
+      },
+      {
+       "name": "Zay Flowers",
+       "pos": "WR",
+       "tier": 8,
+       "team": "BAL",
+       "adp": 42.0,
+       "vor": 35.9,
+       "av": 22,
+       "p_avail": 0.17,
+       "p_take": 0.096
+      },
+      {
+       "name": "Cam Skattebo",
+       "pos": "RB",
+       "tier": 9,
+       "team": "NYG",
+       "adp": 50.0,
+       "vor": 30.6,
+       "av": 18,
+       "p_avail": 0.496,
+       "p_take": 0.087
+      },
+      {
+       "name": "Joe Burrow",
+       "pos": "QB",
+       "tier": 3,
+       "team": "CIN",
+       "adp": 48.0,
+       "vor": 35.0,
+       "av": 19,
+       "p_avail": 0.442,
+       "p_take": 0.085
+      },
+      {
+       "name": "Malik Nabers",
+       "pos": "WR",
+       "tier": 8,
+       "team": "NYG",
+       "adp": 41.0,
+       "vor": 35.9,
+       "av": 22,
+       "p_avail": 0.131,
+       "p_take": 0.08
+      },
+      {
+       "name": "Jaylen Waddle",
+       "pos": "WR",
+       "tier": 9,
+       "team": "DEN",
+       "adp": 44.0,
+       "vor": 32.4,
+       "av": 21,
+       "p_avail": 0.24,
+       "p_take": 0.079
+      }
+     ]
+    },
+    {
+     "round": 6,
+     "pick": "6.08",
+     "overall": 68,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.368
+      },
+      {
+       "pos": "WR",
+       "share": 0.341
+      },
+      {
+       "pos": "QB",
+       "share": 0.214
+      },
+      {
+       "pos": "TE",
+       "share": 0.077
+      }
+     ],
+     "targets": [
+      {
+       "name": "TreVeyon Henderson",
+       "pos": "RB",
+       "tier": 10,
+       "team": "NE",
+       "adp": 59.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.293,
+       "p_take": 0.123
+      },
+      {
+       "name": "Quinshon Judkins",
+       "pos": "RB",
+       "tier": 10,
+       "team": "CLE",
+       "adp": 60.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.326,
+       "p_take": 0.095
+      },
+      {
+       "name": "Luther Burden III",
+       "pos": "WR",
+       "tier": 12,
+       "team": "CHI",
+       "adp": 54.0,
+       "vor": 18.4,
+       "av": 17,
+       "p_avail": 0.147,
+       "p_take": 0.078
+      },
+      {
+       "name": "Caleb Williams",
+       "pos": "QB",
+       "tier": 3,
+       "team": "CHI",
+       "adp": 61.0,
+       "vor": 21.0,
+       "av": 15,
+       "p_avail": 0.448,
+       "p_take": 0.078
+      },
+      {
+       "name": "Garrett Wilson",
+       "pos": "WR",
+       "tier": 12,
+       "team": "NYJ",
+       "adp": 55.0,
+       "vor": 18.4,
+       "av": 17,
+       "p_avail": 0.189,
+       "p_take": 0.076
+      },
+      {
+       "name": "Jameson Williams",
+       "pos": "WR",
+       "tier": 11,
+       "team": "DET",
+       "adp": 51.0,
+       "vor": 21.9,
+       "av": 18,
+       "p_avail": 0.085,
+       "p_take": 0.058
+      }
+     ]
+    },
+    {
+     "round": 7,
+     "pick": "7.05",
+     "overall": 77,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.666
+      },
+      {
+       "pos": "WR",
+       "share": 0.165
+      },
+      {
+       "pos": "QB",
+       "share": 0.085
+      },
+      {
+       "pos": "TE",
+       "share": 0.084
+      }
+     ],
+     "targets": [
+      {
+       "name": "Bucky Irving",
+       "pos": "RB",
+       "tier": 11,
+       "team": "TB",
+       "adp": 63.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.164,
+       "p_take": 0.114
+      },
+      {
+       "name": "D\u2019Andre Swift",
+       "pos": "RB",
+       "tier": 11,
+       "team": "CHI",
+       "adp": 62.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.13,
+       "p_take": 0.106
+      },
+      {
+       "name": "David Montgomery",
+       "pos": "RB",
+       "tier": 11,
+       "team": "HOU",
+       "adp": 64.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.207,
+       "p_take": 0.104
+      },
+      {
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "tier": 12,
+       "team": "NE",
+       "adp": 66.0,
+       "vor": 13.1,
+       "av": 13,
+       "p_avail": 0.252,
+       "p_take": 0.092
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "CAR",
+       "adp": 70.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.384,
+       "p_take": 0.074
+      },
+      {
+       "name": "Quinshon Judkins",
+       "pos": "RB",
+       "tier": 10,
+       "team": "CLE",
+       "adp": 60.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.07,
+       "p_take": 0.071
+      }
+     ]
+    },
+    {
+     "round": 8,
+     "pick": "8.08",
+     "overall": 92,
+     "mix": [
+      {
+       "pos": "TE",
+       "share": 0.423
+      },
+      {
+       "pos": "RB",
+       "share": 0.379
+      },
+      {
+       "pos": "QB",
+       "share": 0.124
+      },
+      {
+       "pos": "WR",
+       "share": 0.073
+      }
+     ],
+     "targets": [
+      {
+       "name": "Sam LaPorta",
+       "pos": "TE",
+       "tier": 3,
+       "team": "DET",
+       "adp": 78.0,
+       "vor": 24.5,
+       "av": 10,
+       "p_avail": 0.299,
+       "p_take": 0.129
+      },
+      {
+       "name": "Harold Fannin Jr.",
+       "pos": "TE",
+       "tier": 3,
+       "team": "CLE",
+       "adp": 81.0,
+       "vor": 21.0,
+       "av": 9,
+       "p_avail": 0.368,
+       "p_take": 0.11
+      },
+      {
+       "name": "Kyle Pitts",
+       "pos": "TE",
+       "tier": 3,
+       "team": "ATL",
+       "adp": 72.0,
+       "vor": 31.5,
+       "av": 12,
+       "p_avail": 0.131,
+       "p_take": 0.093
+      },
+      {
+       "name": "Tony Pollard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "TEN",
+       "adp": 71.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.124,
+       "p_take": 0.09
+      },
+      {
+       "name": "Jadarian Price",
+       "pos": "RB",
+       "tier": 14,
+       "team": "SEA",
+       "adp": 73.0,
+       "vor": 6.1,
+       "av": 11,
+       "p_avail": 0.155,
+       "p_take": 0.087
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "CAR",
+       "adp": 70.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.093,
+       "p_take": 0.078
+      }
+     ]
+    }
+   ]
+  },
+  "6": {
+   "slot": 6,
+   "picks": [
+    {
+     "round": 1,
+     "overall": 6,
+     "label": "1.06"
+    },
+    {
+     "round": 2,
+     "overall": 19,
+     "label": "2.07"
+    },
+    {
+     "round": 3,
+     "overall": 30,
+     "label": "3.06"
+    },
+    {
+     "round": 4,
+     "overall": 43,
+     "label": "4.07"
+    },
+    {
+     "round": 5,
+     "overall": 54,
+     "label": "5.06"
+    },
+    {
+     "round": 6,
+     "overall": 67,
+     "label": "6.07"
+    },
+    {
+     "round": 7,
+     "overall": 78,
+     "label": "7.06"
+    },
+    {
+     "round": 8,
+     "overall": 91,
+     "label": "8.07"
+    },
+    {
+     "round": 9,
+     "overall": 102,
+     "label": "9.06"
+    },
+    {
+     "round": 10,
+     "overall": 115,
+     "label": "10.07"
+    },
+    {
+     "round": 11,
+     "overall": 126,
+     "label": "11.06"
+    },
+    {
+     "round": 12,
+     "overall": 139,
+     "label": "12.07"
+    },
+    {
+     "round": 13,
+     "overall": 150,
+     "label": "13.06"
+    },
+    {
+     "round": 14,
+     "overall": 163,
+     "label": "14.07"
+    },
+    {
+     "round": 15,
+     "overall": 174,
+     "label": "15.06"
+    },
+    {
+     "round": 16,
+     "overall": 187,
+     "label": "16.07"
+    }
+   ],
+   "turn_gaps": {
+    "r1_r2": 13,
+    "r2_r3": 11
+   },
+   "strategies": {
+    "rb_priority": {
+     "mean": 1746.7,
+     "p10": 1706.5,
+     "p50": 1748.5,
+     "p90": 1788.0,
+     "rb": 6.7,
+     "wr": 3.3
+    },
+    "bpa": {
+     "mean": 1756.2,
+     "p10": 1726.5,
+     "p50": 1756.8,
+     "p90": 1790.5,
+     "rb": 6.6,
+     "wr": 3.4
+    },
+    "hero_rb": {
+     "mean": 1743.9,
+     "p10": 1713.5,
+     "p50": 1744.5,
+     "p90": 1778.0,
+     "rb": 6.5,
+     "wr": 3.5
+    },
+    "zero_rb": {
+     "mean": 1744.4,
+     "p10": 1718.5,
+     "p50": 1746.2,
+     "p90": 1774.2,
+     "rb": 6.3,
+     "wr": 3.7
+    }
+   },
+   "ev": {
+    "r1": 152.5,
+    "r2": 109.4
+   },
+   "plan": [
+    {
+     "round": 1,
+     "pick": "1.06",
+     "overall": 6,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.828
+      },
+      {
+       "pos": "WR",
+       "share": 0.172
+      }
+     ],
+     "targets": [
+      {
+       "name": "Jonathan Taylor",
+       "pos": "RB",
+       "tier": 2,
+       "team": "IND",
+       "adp": 8.0,
+       "vor": 139.1,
+       "av": 49,
+       "p_avail": 0.856,
+       "p_take": 0.367
+      },
+      {
+       "name": "Christian McCaffrey",
+       "pos": "RB",
+       "tier": 2,
+       "team": "SF",
+       "adp": 5.0,
+       "vor": 149.6,
+       "av": 52,
+       "p_avail": 0.408,
+       "p_take": 0.35
+      },
+      {
+       "name": "Ja\u2019Marr Chase",
+       "pos": "WR",
+       "tier": 1,
+       "team": "CIN",
+       "adp": 3.0,
+       "vor": 165.4,
+       "av": 59,
+       "p_avail": 0.149,
+       "p_take": 0.149
+      },
+      {
+       "name": "Bijan Robinson",
+       "pos": "RB",
+       "tier": 1,
+       "team": "ATL",
+       "adp": 2.0,
+       "vor": 188.1,
+       "av": 63,
+       "p_avail": 0.083,
+       "p_take": 0.076
+      },
+      {
+       "name": "Jahmyr Gibbs",
+       "pos": "RB",
+       "tier": 1,
+       "team": "DET",
+       "adp": 1.0,
+       "vor": 195.1,
+       "av": 65,
+       "p_avail": 0.033,
+       "p_take": 0.035
+      },
+      {
+       "name": "Puka Nacua",
+       "pos": "WR",
+       "tier": 2,
+       "team": "LAR",
+       "adp": 4.0,
+       "vor": 147.9,
+       "av": 54,
+       "p_avail": 0.261,
+       "p_take": 0.024
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "pick": "2.07",
+     "overall": 19,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.467
+      },
+      {
+       "pos": "TE",
+       "share": 0.463
+      },
+      {
+       "pos": "WR",
+       "share": 0.07
+      }
+     ],
+     "targets": [
+      {
+       "name": "Brock Bowers",
+       "pos": "TE",
+       "tier": 1,
+       "team": "LV",
+       "adp": 20.0,
+       "vor": 112.0,
+       "av": 35,
+       "p_avail": 0.715,
+       "p_take": 0.463
+      },
+      {
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "tier": 3,
+       "team": "LAC",
+       "adp": 15.0,
+       "vor": 104.1,
+       "av": 39,
+       "p_avail": 0.18,
+       "p_take": 0.16
+      },
+      {
+       "name": "Kenneth Walker III",
+       "pos": "RB",
+       "tier": 3,
+       "team": "KC",
+       "adp": 17.0,
+       "vor": 97.1,
+       "av": 37,
+       "p_avail": 0.405,
+       "p_take": 0.132
+      },
+      {
+       "name": "Derrick Henry",
+       "pos": "RB",
+       "tier": 3,
+       "team": "BAL",
+       "adp": 14.0,
+       "vor": 111.1,
+       "av": 41,
+       "p_avail": 0.087,
+       "p_take": 0.085
+      },
+      {
+       "name": "Chase Brown",
+       "pos": "RB",
+       "tier": 3,
+       "team": "CIN",
+       "adp": 18.0,
+       "vor": 93.6,
+       "av": 36,
+       "p_avail": 0.538,
+       "p_take": 0.077
+      },
+      {
+       "name": "A.J. Brown",
+       "pos": "WR",
+       "tier": 4,
+       "team": "NE",
+       "adp": 16.0,
+       "vor": 91.9,
+       "av": 38,
+       "p_avail": 0.288,
+       "p_take": 0.029
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "pick": "3.06",
+     "overall": 30,
+     "mix": [
+      {
+       "pos": "WR",
+       "share": 0.502
+      },
+      {
+       "pos": "RB",
+       "share": 0.221
+      },
+      {
+       "pos": "QB",
+       "share": 0.167
+      },
+      {
+       "pos": "TE",
+       "share": 0.11
+      }
+     ],
+     "targets": [
+      {
+       "name": "Josh Allen",
+       "pos": "QB",
+       "tier": 1,
+       "team": "BUF",
+       "adp": 25.0,
+       "vor": 80.5,
+       "av": 32,
+       "p_avail": 0.256,
+       "p_take": 0.167
+      },
+      {
+       "name": "George Pickens",
+       "pos": "WR",
+       "tier": 4,
+       "team": "DAL",
+       "adp": 26.0,
+       "vor": 67.4,
+       "av": 31,
+       "p_avail": 0.335,
+       "p_take": 0.147
+      },
+      {
+       "name": "Jeremiyah Love",
+       "pos": "RB",
+       "tier": 5,
+       "team": "ARI",
+       "adp": 31.0,
+       "vor": 69.1,
+       "av": 29,
+       "p_avail": 0.689,
+       "p_take": 0.147
+      },
+      {
+       "name": "Chris Olave",
+       "pos": "WR",
+       "tier": 4,
+       "team": "NO",
+       "adp": 27.0,
+       "vor": 67.4,
+       "av": 31,
+       "p_avail": 0.408,
+       "p_take": 0.123
+      },
+      {
+       "name": "Trey McBride",
+       "pos": "TE",
+       "tier": 1,
+       "team": "ARI",
+       "adp": 24.0,
+       "vor": 101.5,
+       "av": 32,
+       "p_avail": 0.199,
+       "p_take": 0.099
+      },
+      {
+       "name": "Rashee Rice",
+       "pos": "WR",
+       "tier": 4,
+       "team": "KC",
+       "adp": 23.0,
+       "vor": 74.4,
+       "av": 33,
+       "p_avail": 0.12,
+       "p_take": 0.098
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "pick": "4.07",
+     "overall": 43,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.363
+      },
+      {
+       "pos": "QB",
+       "share": 0.235
+      },
+      {
+       "pos": "TE",
+       "share": 0.21
+      },
+      {
+       "pos": "WR",
+       "share": 0.192
+      }
+     ],
+     "targets": [
+      {
+       "name": "Colston Loveland",
+       "pos": "TE",
+       "tier": 2,
+       "team": "CHI",
+       "adp": 43.0,
+       "vor": 63.0,
+       "av": 21,
+       "p_avail": 0.604,
+       "p_take": 0.161
+      },
+      {
+       "name": "Kyren Williams",
+       "pos": "RB",
+       "tier": 6,
+       "team": "LAR",
+       "adp": 37.0,
+       "vor": 51.6,
+       "av": 24,
+       "p_avail": 0.305,
+       "p_take": 0.108
+      },
+      {
+       "name": "Drake Maye",
+       "pos": "QB",
+       "tier": 2,
+       "team": "NE",
+       "adp": 35.0,
+       "vor": 59.5,
+       "av": 26,
+       "p_avail": 0.226,
+       "p_take": 0.107
+      },
+      {
+       "name": "Lamar Jackson",
+       "pos": "QB",
+       "tier": 2,
+       "team": "BAL",
+       "adp": 33.0,
+       "vor": 63.0,
+       "av": 27,
+       "p_avail": 0.133,
+       "p_take": 0.087
+      },
+      {
+       "name": "Josh Jacobs",
+       "pos": "RB",
+       "tier": 5,
+       "team": "GB",
+       "adp": 32.0,
+       "vor": 65.6,
+       "av": 28,
+       "p_avail": 0.081,
+       "p_take": 0.079
+      },
+      {
+       "name": "Javonte Williams",
+       "pos": "RB",
+       "tier": 7,
+       "team": "DAL",
+       "adp": 38.0,
+       "vor": 48.1,
+       "av": 23,
+       "p_avail": 0.358,
+       "p_take": 0.066
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "pick": "5.06",
+     "overall": 54,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.354
+      },
+      {
+       "pos": "WR",
+       "share": 0.345
+      },
+      {
+       "pos": "QB",
+       "share": 0.182
+      },
+      {
+       "pos": "TE",
+       "share": 0.118
+      }
+     ],
+     "targets": [
+      {
+       "name": "Travis Etienne Jr.",
+       "pos": "RB",
+       "tier": 8,
+       "team": "NO",
+       "adp": 46.0,
+       "vor": 37.6,
+       "av": 20,
+       "p_avail": 0.274,
+       "p_take": 0.173
+      },
+      {
+       "name": "Joe Burrow",
+       "pos": "QB",
+       "tier": 3,
+       "team": "CIN",
+       "adp": 48.0,
+       "vor": 35.0,
+       "av": 19,
+       "p_avail": 0.4,
+       "p_take": 0.098
+      },
+      {
+       "name": "Cam Skattebo",
+       "pos": "RB",
+       "tier": 9,
+       "team": "NYG",
+       "adp": 50.0,
+       "vor": 30.6,
+       "av": 18,
+       "p_avail": 0.449,
+       "p_take": 0.089
+      },
+      {
+       "name": "Zay Flowers",
+       "pos": "WR",
+       "tier": 8,
+       "team": "BAL",
+       "adp": 42.0,
+       "vor": 35.9,
+       "av": 22,
+       "p_avail": 0.141,
+       "p_take": 0.084
+      },
+      {
+       "name": "Malik Nabers",
+       "pos": "WR",
+       "tier": 8,
+       "team": "NYG",
+       "adp": 41.0,
+       "vor": 35.9,
+       "av": 22,
+       "p_avail": 0.104,
+       "p_take": 0.077
+      },
+      {
+       "name": "Jaylen Waddle",
+       "pos": "WR",
+       "tier": 9,
+       "team": "DEN",
+       "adp": 44.0,
+       "vor": 32.4,
+       "av": 21,
+       "p_avail": 0.208,
+       "p_take": 0.075
+      }
+     ]
+    },
+    {
+     "round": 6,
+     "pick": "6.07",
+     "overall": 67,
+     "mix": [
+      {
+       "pos": "WR",
+       "share": 0.361
+      },
+      {
+       "pos": "RB",
+       "share": 0.332
+      },
+      {
+       "pos": "QB",
+       "share": 0.22
+      },
+      {
+       "pos": "TE",
+       "share": 0.087
+      }
+     ],
+     "targets": [
+      {
+       "name": "TreVeyon Henderson",
+       "pos": "RB",
+       "tier": 10,
+       "team": "NE",
+       "adp": 59.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.336,
+       "p_take": 0.118
+      },
+      {
+       "name": "Luther Burden III",
+       "pos": "WR",
+       "tier": 12,
+       "team": "CHI",
+       "adp": 54.0,
+       "vor": 18.4,
+       "av": 17,
+       "p_avail": 0.18,
+       "p_take": 0.083
+      },
+      {
+       "name": "Quinshon Judkins",
+       "pos": "RB",
+       "tier": 10,
+       "team": "CLE",
+       "adp": 60.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.375,
+       "p_take": 0.082
+      },
+      {
+       "name": "Garrett Wilson",
+       "pos": "WR",
+       "tier": 12,
+       "team": "NYJ",
+       "adp": 55.0,
+       "vor": 18.4,
+       "av": 17,
+       "p_avail": 0.2,
+       "p_take": 0.073
+      },
+      {
+       "name": "Caleb Williams",
+       "pos": "QB",
+       "tier": 3,
+       "team": "CHI",
+       "adp": 61.0,
+       "vor": 21.0,
+       "av": 15,
+       "p_avail": 0.489,
+       "p_take": 0.069
+      },
+      {
+       "name": "Justin Herbert",
+       "pos": "QB",
+       "tier": 3,
+       "team": "LAC",
+       "adp": 52.0,
+       "vor": 28.0,
+       "av": 17,
+       "p_avail": 0.173,
+       "p_take": 0.066
+      }
+     ]
+    },
+    {
+     "round": 7,
+     "pick": "7.06",
+     "overall": 78,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.649
+      },
+      {
+       "pos": "WR",
+       "share": 0.137
+      },
+      {
+       "pos": "TE",
+       "share": 0.109
+      },
+      {
+       "pos": "QB",
+       "share": 0.105
+      }
+     ],
+     "targets": [
+      {
+       "name": "David Montgomery",
+       "pos": "RB",
+       "tier": 11,
+       "team": "HOU",
+       "adp": 64.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.182,
+       "p_take": 0.109
+      },
+      {
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "tier": 12,
+       "team": "NE",
+       "adp": 66.0,
+       "vor": 13.1,
+       "av": 13,
+       "p_avail": 0.232,
+       "p_take": 0.097
+      },
+      {
+       "name": "Bucky Irving",
+       "pos": "RB",
+       "tier": 11,
+       "team": "TB",
+       "adp": 63.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.158,
+       "p_take": 0.097
+      },
+      {
+       "name": "D\u2019Andre Swift",
+       "pos": "RB",
+       "tier": 11,
+       "team": "CHI",
+       "adp": 62.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.127,
+       "p_take": 0.094
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "CAR",
+       "adp": 70.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.356,
+       "p_take": 0.071
+      },
+      {
+       "name": "Quinshon Judkins",
+       "pos": "RB",
+       "tier": 10,
+       "team": "CLE",
+       "adp": 60.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.073,
+       "p_take": 0.065
+      }
+     ]
+    },
+    {
+     "round": 8,
+     "pick": "8.07",
+     "overall": 91,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.419
+      },
+      {
+       "pos": "TE",
+       "share": 0.373
+      },
+      {
+       "pos": "QB",
+       "share": 0.117
+      },
+      {
+       "pos": "WR",
+       "share": 0.092
+      }
+     ],
+     "targets": [
+      {
+       "name": "Sam LaPorta",
+       "pos": "TE",
+       "tier": 3,
+       "team": "DET",
+       "adp": 78.0,
+       "vor": 24.5,
+       "av": 10,
+       "p_avail": 0.318,
+       "p_take": 0.113
+      },
+      {
+       "name": "Kyle Pitts",
+       "pos": "TE",
+       "tier": 3,
+       "team": "ATL",
+       "adp": 72.0,
+       "vor": 31.5,
+       "av": 12,
+       "p_avail": 0.137,
+       "p_take": 0.096
+      },
+      {
+       "name": "Tony Pollard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "TEN",
+       "adp": 71.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.122,
+       "p_take": 0.093
+      },
+      {
+       "name": "Jadarian Price",
+       "pos": "RB",
+       "tier": 14,
+       "team": "SEA",
+       "adp": 73.0,
+       "vor": 6.1,
+       "av": 11,
+       "p_avail": 0.178,
+       "p_take": 0.093
+      },
+      {
+       "name": "Harold Fannin Jr.",
+       "pos": "TE",
+       "tier": 3,
+       "team": "CLE",
+       "adp": 81.0,
+       "vor": 21.0,
+       "av": 9,
+       "p_avail": 0.389,
+       "p_take": 0.093
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "CAR",
+       "adp": 70.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.11,
+       "p_take": 0.09
+      }
+     ]
+    }
+   ]
+  },
+  "7": {
+   "slot": 7,
+   "picks": [
+    {
+     "round": 1,
+     "overall": 7,
+     "label": "1.07"
+    },
+    {
+     "round": 2,
+     "overall": 18,
+     "label": "2.06"
+    },
+    {
+     "round": 3,
+     "overall": 31,
+     "label": "3.07"
+    },
+    {
+     "round": 4,
+     "overall": 42,
+     "label": "4.06"
+    },
+    {
+     "round": 5,
+     "overall": 55,
+     "label": "5.07"
+    },
+    {
+     "round": 6,
+     "overall": 66,
+     "label": "6.06"
+    },
+    {
+     "round": 7,
+     "overall": 79,
+     "label": "7.07"
+    },
+    {
+     "round": 8,
+     "overall": 90,
+     "label": "8.06"
+    },
+    {
+     "round": 9,
+     "overall": 103,
+     "label": "9.07"
+    },
+    {
+     "round": 10,
+     "overall": 114,
+     "label": "10.06"
+    },
+    {
+     "round": 11,
+     "overall": 127,
+     "label": "11.07"
+    },
+    {
+     "round": 12,
+     "overall": 138,
+     "label": "12.06"
+    },
+    {
+     "round": 13,
+     "overall": 151,
+     "label": "13.07"
+    },
+    {
+     "round": 14,
+     "overall": 162,
+     "label": "14.06"
+    },
+    {
+     "round": 15,
+     "overall": 175,
+     "label": "15.07"
+    },
+    {
+     "round": 16,
+     "overall": 186,
+     "label": "16.06"
+    }
+   ],
+   "turn_gaps": {
+    "r1_r2": 11,
+    "r2_r3": 13
+   },
+   "strategies": {
+    "rb_priority": {
+     "mean": 1743.2,
+     "p10": 1703.0,
+     "p50": 1745.0,
+     "p90": 1781.2,
+     "rb": 6.7,
+     "wr": 3.3
+    },
+    "bpa": {
+     "mean": 1751.2,
+     "p10": 1722.0,
+     "p50": 1751.8,
+     "p90": 1782.8,
+     "rb": 6.6,
+     "wr": 3.4
+    },
+    "hero_rb": {
+     "mean": 1740.4,
+     "p10": 1713.2,
+     "p50": 1741.0,
+     "p90": 1770.8,
+     "rb": 6.5,
+     "wr": 3.5
+    },
+    "zero_rb": {
+     "mean": 1739.7,
+     "p10": 1713.0,
+     "p50": 1741.2,
+     "p90": 1767.5,
+     "rb": 6.3,
+     "wr": 3.7
+    }
+   },
+   "ev": {
+    "r1": 146.5,
+    "r2": 110.6
+   },
+   "plan": [
+    {
+     "round": 1,
+     "pick": "1.07",
+     "overall": 7,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.876
+      },
+      {
+       "pos": "WR",
+       "share": 0.124
+      }
+     ],
+     "targets": [
+      {
+       "name": "Jonathan Taylor",
+       "pos": "RB",
+       "tier": 2,
+       "team": "IND",
+       "adp": 8.0,
+       "vor": 139.1,
+       "av": 49,
+       "p_avail": 0.725,
+       "p_take": 0.511
+      },
+      {
+       "name": "Christian McCaffrey",
+       "pos": "RB",
+       "tier": 2,
+       "team": "SF",
+       "adp": 5.0,
+       "vor": 149.6,
+       "av": 52,
+       "p_avail": 0.275,
+       "p_take": 0.247
+      },
+      {
+       "name": "Ja\u2019Marr Chase",
+       "pos": "WR",
+       "tier": 1,
+       "team": "CIN",
+       "adp": 3.0,
+       "vor": 165.4,
+       "av": 59,
+       "p_avail": 0.081,
+       "p_take": 0.079
+      },
+      {
+       "name": "Saquon Barkley",
+       "pos": "RB",
+       "tier": 2,
+       "team": "PHI",
+       "adp": 9.0,
+       "vor": 132.1,
+       "av": 47,
+       "p_avail": 0.849,
+       "p_take": 0.069
+      },
+      {
+       "name": "Puka Nacua",
+       "pos": "WR",
+       "tier": 2,
+       "team": "LAR",
+       "adp": 4.0,
+       "vor": 147.9,
+       "av": 54,
+       "p_avail": 0.156,
+       "p_take": 0.045
+      },
+      {
+       "name": "Bijan Robinson",
+       "pos": "RB",
+       "tier": 1,
+       "team": "ATL",
+       "adp": 2.0,
+       "vor": 188.1,
+       "av": 63,
+       "p_avail": 0.034,
+       "p_take": 0.036
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "pick": "2.06",
+     "overall": 18,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.52
+      },
+      {
+       "pos": "TE",
+       "share": 0.389
+      },
+      {
+       "pos": "WR",
+       "share": 0.091
+      }
+     ],
+     "targets": [
+      {
+       "name": "Brock Bowers",
+       "pos": "TE",
+       "tier": 1,
+       "team": "LV",
+       "adp": 20.0,
+       "vor": 112.0,
+       "av": 35,
+       "p_avail": 0.796,
+       "p_take": 0.389
+      },
+      {
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "tier": 3,
+       "team": "LAC",
+       "adp": 15.0,
+       "vor": 104.1,
+       "av": 39,
+       "p_avail": 0.27,
+       "p_take": 0.216
+      },
+      {
+       "name": "Derrick Henry",
+       "pos": "RB",
+       "tier": 3,
+       "team": "BAL",
+       "adp": 14.0,
+       "vor": 111.1,
+       "av": 41,
+       "p_avail": 0.153,
+       "p_take": 0.159
+      },
+      {
+       "name": "Kenneth Walker III",
+       "pos": "RB",
+       "tier": 3,
+       "team": "KC",
+       "adp": 17.0,
+       "vor": 97.1,
+       "av": 37,
+       "p_avail": 0.511,
+       "p_take": 0.1
+      },
+      {
+       "name": "CeeDee Lamb",
+       "pos": "WR",
+       "tier": 3,
+       "team": "DAL",
+       "adp": 13.0,
+       "vor": 105.9,
+       "av": 42,
+       "p_avail": 0.079,
+       "p_take": 0.053
+      },
+      {
+       "name": "Justin Jefferson",
+       "pos": "WR",
+       "tier": 3,
+       "team": "MIN",
+       "adp": 12.0,
+       "vor": 109.4,
+       "av": 43,
+       "p_avail": 0.028,
+       "p_take": 0.026
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "pick": "3.07",
+     "overall": 31,
+     "mix": [
+      {
+       "pos": "WR",
+       "share": 0.523
+      },
+      {
+       "pos": "RB",
+       "share": 0.219
+      },
+      {
+       "pos": "QB",
+       "share": 0.159
+      },
+      {
+       "pos": "TE",
+       "share": 0.098
+      }
+     ],
+     "targets": [
+      {
+       "name": "Josh Allen",
+       "pos": "QB",
+       "tier": 1,
+       "team": "BUF",
+       "adp": 25.0,
+       "vor": 80.5,
+       "av": 32,
+       "p_avail": 0.207,
+       "p_take": 0.159
+      },
+      {
+       "name": "Jeremiyah Love",
+       "pos": "RB",
+       "tier": 5,
+       "team": "ARI",
+       "adp": 31.0,
+       "vor": 69.1,
+       "av": 29,
+       "p_avail": 0.625,
+       "p_take": 0.158
+      },
+      {
+       "name": "George Pickens",
+       "pos": "WR",
+       "tier": 4,
+       "team": "DAL",
+       "adp": 26.0,
+       "vor": 67.4,
+       "av": 31,
+       "p_avail": 0.272,
+       "p_take": 0.149
+      },
+      {
+       "name": "Chris Olave",
+       "pos": "WR",
+       "tier": 4,
+       "team": "NO",
+       "adp": 27.0,
+       "vor": 67.4,
+       "av": 31,
+       "p_avail": 0.342,
+       "p_take": 0.133
+      },
+      {
+       "name": "Trey McBride",
+       "pos": "TE",
+       "tier": 1,
+       "team": "ARI",
+       "adp": 24.0,
+       "vor": 101.5,
+       "av": 32,
+       "p_avail": 0.142,
+       "p_take": 0.093
+      },
+      {
+       "name": "Rashee Rice",
+       "pos": "WR",
+       "tier": 4,
+       "team": "KC",
+       "adp": 23.0,
+       "vor": 74.4,
+       "av": 33,
+       "p_avail": 0.083,
+       "p_take": 0.075
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "pick": "4.06",
+     "overall": 42,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.318
+      },
+      {
+       "pos": "QB",
+       "share": 0.257
+      },
+      {
+       "pos": "TE",
+       "share": 0.216
+      },
+      {
+       "pos": "WR",
+       "share": 0.208
+      }
+     ],
+     "targets": [
+      {
+       "name": "Colston Loveland",
+       "pos": "TE",
+       "tier": 2,
+       "team": "CHI",
+       "adp": 43.0,
+       "vor": 63.0,
+       "av": 21,
+       "p_avail": 0.655,
+       "p_take": 0.173
+      },
+      {
+       "name": "Drake Maye",
+       "pos": "QB",
+       "tier": 2,
+       "team": "NE",
+       "adp": 35.0,
+       "vor": 59.5,
+       "av": 26,
+       "p_avail": 0.266,
+       "p_take": 0.119
+      },
+      {
+       "name": "Lamar Jackson",
+       "pos": "QB",
+       "tier": 2,
+       "team": "BAL",
+       "adp": 33.0,
+       "vor": 63.0,
+       "av": 27,
+       "p_avail": 0.151,
+       "p_take": 0.111
+      },
+      {
+       "name": "Kyren Williams",
+       "pos": "RB",
+       "tier": 6,
+       "team": "LAR",
+       "adp": 37.0,
+       "vor": 51.6,
+       "av": 24,
+       "p_avail": 0.344,
+       "p_take": 0.097
+      },
+      {
+       "name": "Josh Jacobs",
+       "pos": "RB",
+       "tier": 5,
+       "team": "GB",
+       "adp": 32.0,
+       "vor": 65.6,
+       "av": 28,
+       "p_avail": 0.104,
+       "p_take": 0.093
+      },
+      {
+       "name": "Tee Higgins",
+       "pos": "WR",
+       "tier": 6,
+       "team": "CIN",
+       "adp": 34.0,
+       "vor": 53.4,
+       "av": 27,
+       "p_avail": 0.187,
+       "p_take": 0.079
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "pick": "5.07",
+     "overall": 55,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.331
+      },
+      {
+       "pos": "WR",
+       "share": 0.318
+      },
+      {
+       "pos": "QB",
+       "share": 0.189
+      },
+      {
+       "pos": "TE",
+       "share": 0.162
+      }
+     ],
+     "targets": [
+      {
+       "name": "Travis Etienne Jr.",
+       "pos": "RB",
+       "tier": 8,
+       "team": "NO",
+       "adp": 46.0,
+       "vor": 37.6,
+       "av": 20,
+       "p_avail": 0.244,
+       "p_take": 0.15
+      },
+      {
+       "name": "Joe Burrow",
+       "pos": "QB",
+       "tier": 3,
+       "team": "CIN",
+       "adp": 48.0,
+       "vor": 35.0,
+       "av": 19,
+       "p_avail": 0.359,
+       "p_take": 0.097
+      },
+      {
+       "name": "Cam Skattebo",
+       "pos": "RB",
+       "tier": 9,
+       "team": "NYG",
+       "adp": 50.0,
+       "vor": 30.6,
+       "av": 18,
+       "p_avail": 0.418,
+       "p_take": 0.089
+      },
+      {
+       "name": "Jaylen Waddle",
+       "pos": "WR",
+       "tier": 9,
+       "team": "DEN",
+       "adp": 44.0,
+       "vor": 32.4,
+       "av": 21,
+       "p_avail": 0.175,
+       "p_take": 0.076
+      },
+      {
+       "name": "Tyler Warren",
+       "pos": "TE",
+       "tier": 2,
+       "team": "IND",
+       "adp": 47.0,
+       "vor": 56.0,
+       "av": 19,
+       "p_avail": 0.276,
+       "p_take": 0.074
+      },
+      {
+       "name": "Zay Flowers",
+       "pos": "WR",
+       "tier": 8,
+       "team": "BAL",
+       "adp": 42.0,
+       "vor": 35.9,
+       "av": 22,
+       "p_avail": 0.109,
+       "p_take": 0.073
+      }
+     ]
+    },
+    {
+     "round": 6,
+     "pick": "6.06",
+     "overall": 66,
+     "mix": [
+      {
+       "pos": "WR",
+       "share": 0.385
+      },
+      {
+       "pos": "RB",
+       "share": 0.294
+      },
+      {
+       "pos": "QB",
+       "share": 0.213
+      },
+      {
+       "pos": "TE",
+       "share": 0.108
+      }
+     ],
+     "targets": [
+      {
+       "name": "TreVeyon Henderson",
+       "pos": "RB",
+       "tier": 10,
+       "team": "NE",
+       "adp": 59.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.354,
+       "p_take": 0.098
+      },
+      {
+       "name": "Garrett Wilson",
+       "pos": "WR",
+       "tier": 12,
+       "team": "NYJ",
+       "adp": 55.0,
+       "vor": 18.4,
+       "av": 17,
+       "p_avail": 0.23,
+       "p_take": 0.085
+      },
+      {
+       "name": "Luther Burden III",
+       "pos": "WR",
+       "tier": 12,
+       "team": "CHI",
+       "adp": 54.0,
+       "vor": 18.4,
+       "av": 17,
+       "p_avail": 0.209,
+       "p_take": 0.082
+      },
+      {
+       "name": "Quinshon Judkins",
+       "pos": "RB",
+       "tier": 10,
+       "team": "CLE",
+       "adp": 60.0,
+       "vor": 20.1,
+       "av": 15,
+       "p_avail": 0.397,
+       "p_take": 0.073
+      },
+      {
+       "name": "Tucker Kraft",
+       "pos": "TE",
+       "tier": 3,
+       "team": "GB",
+       "adp": 67.0,
+       "vor": 35.0,
+       "av": 13,
+       "p_avail": 0.592,
+       "p_take": 0.072
+      },
+      {
+       "name": "Cam Skattebo",
+       "pos": "RB",
+       "tier": 9,
+       "team": "NYG",
+       "adp": 50.0,
+       "vor": 30.6,
+       "av": 18,
+       "p_avail": 0.073,
+       "p_take": 0.069
+      }
+     ]
+    },
+    {
+     "round": 7,
+     "pick": "7.07",
+     "overall": 79,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.614
+      },
+      {
+       "pos": "TE",
+       "share": 0.142
+      },
+      {
+       "pos": "WR",
+       "share": 0.135
+      },
+      {
+       "pos": "QB",
+       "share": 0.109
+      }
+     ],
+     "targets": [
+      {
+       "name": "David Montgomery",
+       "pos": "RB",
+       "tier": 11,
+       "team": "HOU",
+       "adp": 64.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.167,
+       "p_take": 0.098
+      },
+      {
+       "name": "D\u2019Andre Swift",
+       "pos": "RB",
+       "tier": 11,
+       "team": "CHI",
+       "adp": 62.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.124,
+       "p_take": 0.092
+      },
+      {
+       "name": "Bucky Irving",
+       "pos": "RB",
+       "tier": 11,
+       "team": "TB",
+       "adp": 63.0,
+       "vor": 16.6,
+       "av": 14,
+       "p_avail": 0.131,
+       "p_take": 0.09
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "CAR",
+       "adp": 70.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.312,
+       "p_take": 0.077
+      },
+      {
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "tier": 12,
+       "team": "NE",
+       "adp": 66.0,
+       "vor": 13.1,
+       "av": 13,
+       "p_avail": 0.221,
+       "p_take": 0.075
+      },
+      {
+       "name": "Tucker Kraft",
+       "pos": "TE",
+       "tier": 3,
+       "team": "GB",
+       "adp": 67.0,
+       "vor": 35.0,
+       "av": 13,
+       "p_avail": 0.238,
+       "p_take": 0.065
+      }
+     ]
+    },
+    {
+     "round": 8,
+     "pick": "8.06",
+     "overall": 90,
+     "mix": [
+      {
+       "pos": "RB",
+       "share": 0.439
+      },
+      {
+       "pos": "TE",
+       "share": 0.338
+      },
+      {
+       "pos": "QB",
+       "share": 0.117
+      },
+      {
+       "pos": "WR",
+       "share": 0.105
+      }
+     ],
+     "targets": [
+      {
+       "name": "Sam LaPorta",
+       "pos": "TE",
+       "tier": 3,
+       "team": "DET",
+       "adp": 78.0,
+       "vor": 24.5,
+       "av": 10,
+       "p_avail": 0.316,
+       "p_take": 0.107
+      },
+      {
+       "name": "Jadarian Price",
+       "pos": "RB",
+       "tier": 14,
+       "team": "SEA",
+       "adp": 73.0,
+       "vor": 6.1,
+       "av": 11,
+       "p_avail": 0.185,
+       "p_take": 0.098
+      },
+      {
+       "name": "Tony Pollard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "TEN",
+       "adp": 71.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.137,
+       "p_take": 0.096
+      },
+      {
+       "name": "Chuba Hubbard",
+       "pos": "RB",
+       "tier": 13,
+       "team": "CAR",
+       "adp": 70.0,
+       "vor": 9.6,
+       "av": 12,
+       "p_avail": 0.109,
+       "p_take": 0.096
+      },
+      {
+       "name": "Kyle Pitts",
+       "pos": "TE",
+       "tier": 3,
+       "team": "ATL",
+       "adp": 72.0,
+       "vor": 31.5,
+       "av": 12,
+       "p_avail": 0.144,
+       "p_take": 0.093
+      },
+      {
+       "name": "Harold Fannin Jr.",
+       "pos": "TE",
+       "tier": 3,
+       "team": "CLE",
+       "adp": 81.0,
+       "vor": 21.0,
+       "av": 9,
+       "p_avail": 0.422,
+       "p_take": 0.081
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "strategy_doc": {
+  "rb_priority": "RB-weighted VONA. Pushes RB early and often without ignoring value.",
+  "bpa": "Pure value over replacement + VONA. No positional thumb on the scale.",
+  "hero_rb": "One elite RB in round 1, then WR/TE until round 5+.",
+  "zero_rb": "No RB before round 4; load WR/TE early, attack RB volume late."
+ }
+}

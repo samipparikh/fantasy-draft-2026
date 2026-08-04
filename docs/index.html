@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 Half-PPR Draft Model — Slots 5, 6, 7</title>
+<meta name="description" content="Monte-Carlo draft model for a 12-team half-PPR league, comparing draft slots 5, 6 and 7 with an RB-priority strategy.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --series-3: #1baf7a;
+    --series-4: #eda100;
+    --deemph: #c3c2b7;
+    --good: #006300;
+    /* ordinal tier ramp (validated light: 650/500/350/250) */
+    --tier-1: #104281;
+    --tier-2: #256abf;
+    --tier-3: #5598e7;
+    --tier-4: #86b6ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --border: rgba(255,255,255,0.10);
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --series-3: #199e70;
+      --series-4: #c98500;
+      --deemph: #383835;
+      --good: #0ca30c;
+      /* ordinal tier ramp (validated dark: 150/250/400/600) */
+      --tier-1: #b7d3f6;
+      --tier-2: #86b6ef;
+      --tier-3: #3987e5;
+      --tier-4: #184f95;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --deemph: #383835;
+    --good: #0ca30c;
+    --tier-1: #b7d3f6;
+    --tier-2: #86b6ef;
+    --tier-3: #3987e5;
+    --tier-4: #184f95;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text-primary);
+    font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 40px 24px 72px; }
+
+  header.page { margin-bottom: 28px; }
+  h1 { font-size: 27px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--text-secondary); margin: 0; max-width: 68ch; }
+  .srcline { color: var(--text-muted); font-size: 13px; margin: 12px 0 0; }
+
+  h2 { font-size: 18px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sect { margin-top: 40px; }
+  .sect > .note { color: var(--text-secondary); font-size: 13.5px; margin: 0 0 16px; max-width: 74ch; }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  /* ---- filter row: one row, above everything it scopes ---- */
+  .filters {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 12px 16px; margin-bottom: 24px;
+    background: var(--surface-1);
+    border: 1px solid var(--border); border-radius: 10px;
+    position: sticky; top: 0; z-index: 20;
+  }
+  .filters .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+  .segmented { display: flex; gap: 2px; background: var(--page); border-radius: 8px; padding: 2px; }
+  .segmented button {
+    font: inherit; font-size: 14px; color: var(--text-secondary);
+    background: none; border: 0; border-radius: 6px;
+    padding: 6px 16px; cursor: pointer; min-height: 32px;
+  }
+  .segmented button:hover { background: color-mix(in srgb, var(--text-primary) 6%, transparent); }
+  .segmented button[aria-pressed="true"] {
+    background: var(--surface-1); color: var(--text-primary);
+    font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+  .spacer { flex: 1 1 auto; }
+  .ghost {
+    font: inherit; font-size: 13px; color: var(--text-secondary);
+    background: none; border: 1px solid var(--border);
+    border-radius: 6px; padding: 6px 12px; cursor: pointer; min-height: 32px;
+  }
+  .ghost:hover { background: color-mix(in srgb, var(--text-primary) 6%, transparent); }
+
+  /* ---- hero + stat tiles ---- */
+  .hero-row {
+    display: grid; grid-template-columns: minmax(210px, 1fr) 2fr;
+    gap: 20px; align-items: stretch;
+  }
+  @media (max-width: 720px) { .hero-row { grid-template-columns: 1fr; } }
+  .hero .label { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; }
+  .hero .value { font-size: 52px; line-height: 1.02; font-weight: 600; letter-spacing: -0.02em; }
+  .hero .delta { font-size: 13.5px; color: var(--text-secondary); margin-top: 8px; }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 560px) { .kpis { grid-template-columns: 1fr; } }
+  .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .tile .label { font-size: 12.5px; color: var(--text-secondary); margin-bottom: 4px; }
+  .tile .value { font-size: 25px; font-weight: 600; letter-spacing: -0.01em; }
+  .tile .foot { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+  /* ---- legend ---- */
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 14px; padding: 0; list-style: none; }
+  .legend li { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text-secondary); }
+  .legend .key-rect { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+  .legend .key-line { width: 16px; height: 2px; border-radius: 1px; flex: none; }
+  .legend .key-dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+
+  svg { display: block; max-width: 100%; overflow: visible; }
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .tick { fill: var(--text-muted); font-size: 11.5px; font-variant-numeric: tabular-nums; }
+  .cat { fill: var(--text-secondary); font-size: 12.5px; }
+  .vlabel { fill: var(--text-primary); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .gridline { stroke: var(--grid); stroke-width: 1; }
+  .baseline { stroke: var(--axis); stroke-width: 1; }
+  .hit { fill: transparent; cursor: default; }
+  .mark { transition: opacity 120ms ease; }
+  .lifted { opacity: 0.82; }
+
+  /* ---- tooltip ---- */
+  .tip {
+    position: fixed; z-index: 60; pointer-events: none; opacity: 0;
+    transition: opacity 90ms ease;
+    background: var(--surface-1); color: var(--text-primary);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 9px 11px; font-size: 12.5px; min-width: 148px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+  }
+  .tip .t-head { color: var(--text-secondary); font-size: 11.5px; margin-bottom: 6px; }
+  .tip .t-row { display: flex; align-items: baseline; gap: 8px; margin-top: 3px; }
+  .tip .t-key { width: 14px; height: 2px; border-radius: 1px; flex: none; position: relative; top: -3px; }
+  .tip .t-val { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tip .t-name { color: var(--text-secondary); }
+
+  /* ---- tables (the table-view twin) ---- */
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  caption { text-align: left; color: var(--text-secondary); font-size: 12.5px; padding-bottom: 8px; }
+  th, td { text-align: right; padding: 7px 9px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; font-variant-numeric: normal; }
+  thead th { color: var(--text-muted); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .tv[hidden] { display: none; }
+  .pos-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: baseline; }
+
+  /* ---- plan ---- */
+  .plan-pick { border-top: 1px solid var(--grid); padding: 16px 0 4px; }
+  .plan-pick:first-child { border-top: 0; padding-top: 0; }
+  .plan-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .plan-head .rd { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .plan-head .pk { font-size: 16px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .mixbar { display: flex; gap: 2px; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 4px; }
+  .mixbar span { display: block; }
+  .mixnote { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; }
+
+  footer.page { margin-top: 52px; padding-top: 20px; border-top: 1px solid var(--grid); color: var(--text-muted); font-size: 12.5px; }
+  footer.page a, .srcline a { color: var(--text-secondary); }
+  a { color: var(--series-1); }
+  .files { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+  .caveat { margin: 6px 0 0; padding-left: 18px; }
+  .caveat li { margin: 4px 0; }
+  .sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  @media print { .filters { position: static; } .ghost { display: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>2026 half-PPR draft model — slots 5, 6 and 7</h1>
+  <p class="sub">A Monte-Carlo model for a 12-team, half-PPR snake draft with an RB-priority
+  preference. Eleven opponents draft off consensus ADP with noise; every pick is
+  scored by value over replacement against the expected best alternative surviving
+  to the next turn.</p>
+  <p class="srcline">
+    Player pool: <strong>The Ringer</strong> 2026 preseason rankings (Kelly / Heifetz / Horlbeck),
+    half-PPR draft tracker, updated Aug 3 2026 · <span id="meta-line"></span>
+  </p>
+</header>
+
+<div class="filters" role="group" aria-label="Draft slot filter">
+  <span class="lbl" id="slot-lbl">Draft slot</span>
+  <div class="segmented" id="slot-seg" role="group" aria-labelledby="slot-lbl"></div>
+  <span class="spacer"></span>
+  <button class="ghost" id="tv-toggle" aria-pressed="false">Show data tables</button>
+  <button class="ghost" id="theme-toggle">Dark mode</button>
+</div>
+
+<section class="sect" id="verdict" style="margin-top:0">
+  <div class="hero-row">
+    <div class="card hero">
+      <div class="label" id="hero-label">Slot 5 · projected starting lineup</div>
+      <div class="value" id="hero-value">—</div>
+      <div class="delta" id="hero-delta"></div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Slot comparison — is a better slot worth anything?</h2>
+  <p class="note">Each strategy's mean projected starting-lineup points, by slot; the
+  rule behind each dot is the 10th–90th percentile across 4,000 drafts. <strong>The whole
+  spread across slots is about 12 points — under a point per week</strong>, and it is
+  dwarfed by the run-to-run spread, so slot choice matters far less than the round-2
+  tier cliff below.</p>
+  <div class="card">
+    <ul class="legend" id="cmp-legend"></ul>
+    <div id="cmp-chart"></div>
+    <div class="tv" id="cmp-table" hidden></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Why slot 5 wins — and why it barely does</h2>
+  <p class="note">Expected value of the best player available at your first two picks.
+  Moving from slot 5 back to slot 7 gains you only a little in round 2 but costs
+  much more in round 1: the snake's turn-back does not repay the round-1 loss,
+  because round 1 is where the steep tier cliffs sit.</p>
+  <div class="card">
+    <ul class="legend" id="ev-legend"></ul>
+    <div id="ev-chart"></div>
+    <div class="tv" id="ev-table" hidden></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>The tier cliffs</h2>
+  <p class="note">Value over replacement for the top of each position, shaded by tier.
+  The gaps are the point: <strong>RB has a two-man top tier, and TE falls 49 points
+  after Bowers and McBride</strong> — the largest single scarcity edge on the board,
+  and it lands on your round-2 turn.</p>
+  <div class="card">
+    <ul class="legend" id="tier-legend"></ul>
+    <div id="tier-chart"></div>
+    <div class="tv" id="tier-table" hidden></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Round-by-round plan</h2>
+  <p class="note">Following the <strong>rb_priority</strong> strategy — your stated
+  preference, not whichever strategy won. Availability is the probability the player is
+  still on the board when you pick; the bar shows which position the strategy took here
+  across all simulations.</p>
+  <div class="card" id="plan"></div>
+</section>
+
+<section class="sect">
+  <h2>What the RB preference costs</h2>
+  <div class="card" id="rbcost"></div>
+</section>
+
+<footer class="page">
+  <p><strong>Method &amp; caveats.</strong> The Ringer publishes no projected points, so
+  value is derived from its auction-value column — auction dollars are themselves a
+  value-over-replacement calculation, so AV&nbsp;→&nbsp;VOR is close to linear.
+  Consequence:</p>
+  <ul class="caveat">
+    <li><strong>Rankings, VOR gaps and tier breaks are meaningful; the absolute point
+    totals are on a plausible-but-synthetic scale.</strong></li>
+    <li>Availability odds assume your league drafts near consensus ADP. A keeper league
+    or an early positional run will shift them.</li>
+    <li>The model optimizes projected season points for the starting lineup. It does not
+    model bye conflicts, injury risk, playoff schedule, or in-season trades.</li>
+  </ul>
+  <div class="files">
+    <a href="report.txt">Full text report</a>
+    <a href="board_vor.csv">Board by VOR (CSV)</a>
+    <a href="ringer_2026.csv">Player pool (CSV)</a>
+    <a href="availability_slot5.csv">Availability: slot 5</a>
+    <a href="availability_slot6.csv">slot 6</a>
+    <a href="availability_slot7.csv">slot 7</a>
+  </div>
+  <p style="margin-top:14px" id="foot-meta"></p>
+</footer>
+
+</div>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+const POS_COLOR = { RB: 'var(--series-1)', WR: 'var(--series-2)', TE: 'var(--series-3)', QB: 'var(--series-4)',
+                    K: 'var(--deemph)', DST: 'var(--deemph)' };
+const STRATS = ['rb_priority', 'bpa', 'hero_rb', 'zero_rb'];
+const STRAT_LABEL = { rb_priority: 'RB priority', bpa: 'Best available', hero_rb: 'Hero RB', zero_rb: 'Zero RB' };
+const SVGNS = 'http://www.w3.org/2000/svg';
+
+let DATA = null, SLOT = '5', TABLES = false;
+
+const $ = id => document.getElementById(id);
+const fmt = (n, d = 0) => n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const pct = x => Math.round(x * 100) + '%';
+
+function el(tag, attrs = {}, text) {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (text != null) n.textContent = text;
+  return n;
+}
+function h(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+}
+
+/* ---------- tooltip ---------- */
+const tip = $('tip');
+function showTip(evt, head, rows) {
+  tip.replaceChildren();
+  if (head) tip.appendChild(h('div', 't-head', head));
+  for (const r of rows) {
+    const row = h('div', 't-row');
+    if (r.color) {
+      const k = h('span', 't-key');
+      k.style.background = r.color;
+      row.appendChild(k);
+    }
+    row.appendChild(h('span', 't-val', r.value));
+    row.appendChild(h('span', 't-name', r.name));
+    tip.appendChild(row);
+  }
+  tip.style.opacity = '1';
+  moveTip(evt);
+}
+function moveTip(evt) {
+  const pad = 14, r = tip.getBoundingClientRect();
+  let x = (evt.clientX ?? 0) + pad, y = (evt.clientY ?? 0) + pad;
+  if (x + r.width > innerWidth - 8) x = (evt.clientX ?? 0) - r.width - pad;
+  if (y + r.height > innerHeight - 8) y = (evt.clientY ?? 0) - r.height - pad;
+  tip.style.left = Math.max(8, x) + 'px';
+  tip.style.top = Math.max(8, y) + 'px';
+}
+function hideTip() { tip.style.opacity = '0'; }
+
+function bindMark(node, head, rows) {
+  const on = e => { node.classList.add('lifted'); showTip(e, head, rows); };
+  node.addEventListener('pointerenter', on);
+  node.addEventListener('pointermove', moveTip);
+  node.addEventListener('pointerleave', () => { node.classList.remove('lifted'); hideTip(); });
+  node.addEventListener('focus', e => {
+    const b = node.getBoundingClientRect();
+    on({ clientX: b.left + b.width / 2, clientY: b.top });
+  });
+  node.addEventListener('blur', () => { node.classList.remove('lifted'); hideTip(); });
+  node.setAttribute('tabindex', '0');
+}
+
+/* ---------- header ---------- */
+function renderMeta() {
+  const m = DATA.meta;
+  $('meta-line').textContent =
+    `${m.teams} teams · ${m.rounds} rounds · ${m.scoring} · ${fmt(m.sims)} simulated drafts per slot per strategy · ` +
+    `${m.pool_size} players (${m.priced_players} priced)`;
+  $('foot-meta').textContent =
+    `Model: value over replacement with roster-aware baselines, tier detection, ` +
+    `ADP noise σ = ${m.adp_noise} × ADP, RB weight ${m.rb_weight}. ` +
+    `Replacement level: ` +
+    Object.entries(DATA.baselines).map(([p, b]) => `${b.rank}`).join(', ') + '.';
+}
+
+function renderSlotFilter() {
+  const seg = $('slot-seg');
+  seg.replaceChildren();
+  for (const s of Object.keys(DATA.slots)) {
+    const b = h('button', null, 'Slot ' + s);
+    b.setAttribute('aria-pressed', String(s === SLOT));
+    b.onclick = () => { SLOT = s; renderAll(); };
+    seg.appendChild(b);
+  }
+}
+
+/* ---------- hero + KPIs ---------- */
+function renderVerdict() {
+  const d = DATA.slots[SLOT], rb = d.strategies.rb_priority, bpa = d.strategies.bpa;
+  const means = Object.entries(DATA.slots)
+    .map(([s, v]) => [s, v.strategies.rb_priority.mean]).sort((a, b) => b[1] - a[1]);
+  const best = means[0], rank = means.findIndex(m => m[0] === SLOT) + 1;
+
+  $('hero-label').textContent = `Slot ${SLOT} · projected starting lineup (RB priority)`;
+  $('hero-value').textContent = fmt(rb.mean, 1);
+  const gap = rb.mean - best[1];
+  $('hero-delta').textContent = rank === 1
+    ? `Best of the three slots · ${fmt(rb.mean - means[means.length - 1][1], 1)} pts ahead of the worst`
+    : `${fmt(gap, 1)} pts behind slot ${best[0]} · ${(Math.abs(gap) / 17).toFixed(2)} pts per week`;
+
+  const bowers = (d.plan.find(p => p.round === 2)?.targets || [])
+    .find(t => t.name.includes('Bowers'));
+  const tiles = [
+    { label: 'Rank among slots 5–7', value: `#${rank}`, foot: `of ${means.length}, by mean lineup points` },
+    { label: 'RB priority vs best available', value: `${rb.mean - bpa.mean >= 0 ? '+' : '−'}${fmt(Math.abs(rb.mean - bpa.mean), 1)}`,
+      foot: `${(Math.abs(rb.mean - bpa.mean) / 17).toFixed(2)} pts/week — the price of the preference` },
+    bowers
+      ? { label: 'Bowers available at your R2 turn', value: pct(bowers.p_avail), foot: `pick ${d.plan.find(p => p.round === 2).pick} · TE1, VOR ${fmt(bowers.vor)}` }
+      : { label: 'Round 1 → 2 turn gap', value: d.turn_gaps.r1_r2, foot: 'picks between your turns' },
+  ];
+  const box = $('kpis');
+  box.replaceChildren();
+  for (const t of tiles) {
+    const c = h('div', 'tile');
+    c.appendChild(h('div', 'label', t.label));
+    c.appendChild(h('div', 'value', String(t.value)));
+    c.appendChild(h('div', 'foot', t.foot));
+    box.appendChild(c);
+  }
+}
+
+/* ---------- chart 1: dot plot, strategy × slot ----------
+   A dot plot, not bars: the interesting range (1,740–1,765) is far from zero, and
+   bars drawn from a truncated baseline would exaggerate a 12-point spread into a
+   visual landslide — the opposite of what this chart says. Dots encode position
+   only, so a non-zero axis is honest. The p10–p90 rule behind each dot shows the
+   run-to-run spread, which dwarfs the between-slot difference.                  */
+function renderCompare() {
+  const slots = Object.keys(DATA.slots);
+  const W = 900, padL = 116, padR = 88, padT = 14, rowH = 27, groupPad = 20;
+  const padB = 52;
+  const H = padT + STRATS.length * (slots.length * rowH + groupPad) + padB;
+  const lows = STRATS.flatMap(s => slots.map(sl => DATA.slots[sl].strategies[s].p10));
+  const highs = STRATS.flatMap(s => slots.map(sl => DATA.slots[sl].strategies[s].p90));
+  const lo = Math.floor((Math.min(...lows) - 8) / 10) * 10, hi = Math.ceil((Math.max(...highs) + 8) / 10) * 10;
+  const x = v => padL + ((v - lo) / (hi - lo)) * (W - padL - padR);
+
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': 'Mean projected lineup points by strategy and draft slot, with 10th-to-90th percentile range' });
+
+  for (let t = lo; t <= hi; t += 20) {
+    svg.appendChild(el('line', { class: 'gridline', x1: x(t), x2: x(t), y1: padT, y2: H - padB }));
+    svg.appendChild(el('text', { class: 'tick', x: x(t), y: H - padB + 18, 'text-anchor': 'middle' }, fmt(t)));
+  }
+  svg.appendChild(el('text', { class: 'tick', x: W - padR, y: H - padB + 36, 'text-anchor': 'end' },
+    'projected starting-lineup points'));
+  svg.appendChild(el('line', { class: 'baseline', x1: padL, x2: padL, y1: padT, y2: H - padB }));
+
+  let y = padT + 4;
+  STRATS.forEach(strat => {
+    svg.appendChild(el('text', { class: 'cat', x: 8, y: y + (slots.length * rowH) / 2,
+      'dominant-baseline': 'middle' }, STRAT_LABEL[strat]));
+    slots.forEach(sl => {
+      const st = DATA.slots[sl].strategies[strat];
+      const isSel = sl === SLOT;
+      const col = isSel ? POS_COLOR.RB : 'var(--deemph)';
+      const cy = y + rowH / 2;
+      svg.appendChild(el('text', { class: 'tick', x: padL - 10, y: cy,
+        'text-anchor': 'end', 'dominant-baseline': 'middle',
+        'font-weight': isSel ? 600 : 400 }, sl));
+      // p10–p90 rule: run-to-run spread, recessive
+      svg.appendChild(el('line', { x1: x(st.p10), x2: x(st.p90), y1: cy, y2: cy,
+        stroke: col, 'stroke-width': 2, 'stroke-linecap': 'round',
+        opacity: isSel ? 0.34 : 0.22 }));
+      const g = el('g', { class: 'mark' });
+      // 2px surface ring keeps the dot legible where it crosses the rule
+      g.appendChild(el('circle', { cx: x(st.mean), cy, r: 5.5,
+        fill: col, stroke: 'var(--surface-1)', 'stroke-width': 2 }));
+      svg.appendChild(g);
+      if (isSel) {
+        svg.appendChild(el('text', { class: 'vlabel', x: x(st.p90) + 12, y: cy,
+          'dominant-baseline': 'middle' }, fmt(st.mean, 1)));
+      }
+      const hit = el('rect', { class: 'hit', x: padL, y, width: W - padL - padR, height: rowH });
+      bindMark(hit, `${STRAT_LABEL[strat]} · slot ${sl}`, [
+        { color: col, value: fmt(st.mean, 1), name: 'mean' },
+        { value: `${fmt(st.p10, 1)} – ${fmt(st.p90, 1)}`, name: '10th–90th pct' },
+        { value: `${st.rb} RB / ${st.wr} WR`, name: 'roster shape' },
+      ]);
+      svg.appendChild(hit);
+      y += rowH;
+    });
+    y += groupPad;
+  });
+
+  const box = $('cmp-chart');
+  box.replaceChildren(svg);
+
+  const lg = $('cmp-legend');
+  lg.replaceChildren();
+  lg.appendChild(legendItem('dot', POS_COLOR.RB, `Slot ${SLOT} (selected) — mean`));
+  lg.appendChild(legendItem('dot', 'var(--deemph)', 'Other slots'));
+  lg.appendChild(legendItem('line', 'var(--axis)', '10th–90th percentile across drafts'));
+
+  buildTable($('cmp-table'),
+    'Mean projected starting-lineup points by strategy and slot (10th–90th percentile in parentheses)',
+    ['Strategy', ...slots.map(s => 'Slot ' + s), 'Spread across slots'],
+    STRATS.map(s => {
+      const row = slots.map(sl => {
+        const st = DATA.slots[sl].strategies[s];
+        return `${fmt(st.mean, 1)}  (${fmt(st.p10, 1)}–${fmt(st.p90, 1)})`;
+      });
+      const ms = slots.map(sl => DATA.slots[sl].strategies[s].mean);
+      return [STRAT_LABEL[s], ...row, fmt(Math.max(...ms) - Math.min(...ms), 1)];
+    }));
+}
+
+function roundedRightBar(x, y, w, hgt, r) {
+  const rr = Math.min(r, w);
+  return `M${x},${y} H${x + w - rr} Q${x + w},${y} ${x + w},${y + rr} V${y + hgt - rr} Q${x + w},${y + hgt} ${x + w - rr},${y + hgt} H${x} Z`;
+}
+
+function legendItem(kind, color, label) {
+  const li = document.createElement('li');
+  const k = h('span', kind === 'line' ? 'key-line' : kind === 'dot' ? 'key-dot' : 'key-rect');
+  k.style.background = color;
+  li.appendChild(k);
+  li.appendChild(document.createTextNode(label));
+  return li;
+}
+
+/* ---------- chart 2: EV of picks 1 and 2, by slot ---------- */
+function renderEV() {
+  const slots = Object.keys(DATA.slots);
+  const W = 900, padL = 74, padR = 90, padT = 14, padB = 46;
+  const bandH = 74, H = padT + slots.length * bandH + padB;
+  const maxV = Math.ceil(Math.max(...slots.flatMap(s => [DATA.slots[s].ev.r1, DATA.slots[s].ev.r2])) / 20) * 20;
+  const x = v => padL + (v / maxV) * (W - padL - padR);
+
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': 'Expected best-available value over replacement at picks 1 and 2, by slot' });
+  for (let t = 0; t <= maxV; t += 40) {
+    svg.appendChild(el('line', { class: 'gridline', x1: x(t), x2: x(t), y1: padT, y2: H - padB }));
+    svg.appendChild(el('text', { class: 'tick', x: x(t), y: H - padB + 18, 'text-anchor': 'middle' }, fmt(t)));
+  }
+  svg.appendChild(el('text', { class: 'tick', x: W - padR, y: H - padB + 36, 'text-anchor': 'end' },
+    'expected best-available VOR'));
+  svg.appendChild(el('line', { class: 'baseline', x1: padL, x2: padL, y1: padT, y2: H - padB }));
+
+  slots.forEach((sl, i) => {
+    const d = DATA.slots[sl], barH = 18, gap = 2;
+    const top = padT + i * bandH + 8;
+    svg.appendChild(el('text', { class: 'cat', x: padL - 12, y: top + barH + gap,
+      'text-anchor': 'end', 'dominant-baseline': 'middle',
+      'font-weight': sl === SLOT ? 600 : 400 }, 'Slot ' + sl));
+    [['r1', 'Round 1', POS_COLOR.RB], ['r2', 'Round 2', POS_COLOR.WR]].forEach(([k, name, col], j) => {
+      const v = d.ev[k];
+      const yy = top + j * (barH + gap);
+      const bw = Math.max(2, x(v) - padL);
+      const dim = sl === SLOT ? 1 : 0.42;
+      const g = el('g', { class: 'mark', opacity: dim });
+      g.appendChild(el('path', { d: roundedRightBar(padL, yy, bw, barH, 4), fill: col }));
+      svg.appendChild(g);
+      svg.appendChild(el('text', { class: 'vlabel', x: padL + bw + 8, y: yy + barH / 2,
+        'dominant-baseline': 'middle', opacity: dim }, fmt(v, 1)));
+      const hit = el('rect', { class: 'hit', x: padL, y: yy - 1, width: W - padL - padR, height: barH + 2 });
+      bindMark(hit, `Slot ${sl} · ${name} (pick ${d.picks[j].label})`, [
+        { color: col, value: fmt(v, 1), name: 'expected best-available VOR' },
+      ]);
+      svg.appendChild(hit);
+    });
+    const tot = d.ev.r1 + d.ev.r2;
+    svg.appendChild(el('text', { class: 'tick', x: W - padR + 74, y: top + barH + gap,
+      'text-anchor': 'end', 'dominant-baseline': 'middle',
+      'font-weight': sl === SLOT ? 600 : 400, fill: 'var(--text-secondary)' }, 'Σ ' + fmt(tot, 1)));
+  });
+
+  $('ev-chart').replaceChildren(svg);
+  const lg = $('ev-legend');
+  lg.replaceChildren();
+  lg.appendChild(legendItem('rect', POS_COLOR.RB, 'Round 1 pick'));
+  lg.appendChild(legendItem('rect', POS_COLOR.WR, 'Round 2 pick'));
+
+  buildTable($('ev-table'), 'Expected best-available VOR at your first two picks',
+    ['Slot', 'R1 pick', 'R1 EV', 'R2 pick', 'R2 EV', 'Total'],
+    slots.map(s => {
+      const d = DATA.slots[s];
+      return ['Slot ' + s, d.picks[0].label, fmt(d.ev.r1, 1), d.picks[1].label,
+              fmt(d.ev.r2, 1), fmt(d.ev.r1 + d.ev.r2, 1)];
+    }));
+}
+
+/* ---------- chart 3: tier cliffs, small multiples ---------- */
+function renderTiers() {
+  const positions = ['RB', 'WR', 'TE', 'QB'];
+  const box = $('tier-chart');
+  box.replaceChildren();
+  const grid = h('div');
+  grid.style.display = 'grid';
+  grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(400px, 1fr))';
+  grid.style.gap = '20px';
+
+  const allV = positions.flatMap(p => DATA.tiers[p].map(x => x.vor));
+  const maxV = Math.ceil(Math.max(...allV) / 25) * 25;
+
+  for (const pos of positions) {
+    const rows = DATA.tiers[pos].slice(0, 10);
+    const W = 420, padL = 132, padR = 44, padT = 22, padB = 30, rowH = 21;
+    const H = padT + rows.length * rowH + padB;
+    const x = v => padL + (Math.max(0, v) / maxV) * (W - padL - padR);
+
+    const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img',
+      'aria-label': `${pos} value over replacement by tier` });
+    svg.appendChild(el('text', { class: 'cat', x: padL - 120, y: 10, 'font-weight': 600,
+      fill: 'var(--text-primary)' }, pos));
+    for (let t = 0; t <= maxV; t += 50) {
+      svg.appendChild(el('line', { class: 'gridline', x1: x(t), x2: x(t), y1: padT, y2: H - padB }));
+      svg.appendChild(el('text', { class: 'tick', x: x(t), y: H - padB + 16, 'text-anchor': 'middle' }, fmt(t)));
+    }
+    svg.appendChild(el('line', { class: 'baseline', x1: padL, x2: padL, y1: padT, y2: H - padB }));
+
+    rows.forEach((p, i) => {
+      const barH = 13, yy = padT + i * rowH + (rowH - barH) / 2;
+      const bw = Math.max(2, x(p.vor) - padL);
+      const col = `var(--tier-${Math.min(4, p.tier)})`;
+      svg.appendChild(el('text', { class: 'cat', x: padL - 10, y: yy + barH / 2,
+        'text-anchor': 'end', 'dominant-baseline': 'middle', 'font-size': 11.5 }, p.name));
+      const g = el('g', { class: 'mark' });
+      g.appendChild(el('path', { d: roundedRightBar(padL, yy, bw, barH, 4), fill: col }));
+      svg.appendChild(g);
+      // direct label required: light-mode relief rule for sub-3:1 fills
+      svg.appendChild(el('text', { class: 'vlabel', x: padL + bw + 7, y: yy + barH / 2,
+        'dominant-baseline': 'middle', 'font-size': 11 }, fmt(p.vor)));
+      const hit = el('rect', { class: 'hit', x: padL - 4, y: padT + i * rowH, width: W - padL - padR + 4, height: rowH });
+      bindMark(hit, `${p.name} · ${p.pos}${p.tier} · ${p.team}`, [
+        { color: col, value: fmt(p.vor, 1), name: 'value over replacement' },
+        { value: fmt(p.adp, 0), name: 'ADP' },
+        { value: '$' + p.av, name: 'auction value' },
+      ]);
+      svg.appendChild(hit);
+    });
+    const card = h('div');
+    card.appendChild(svg);
+    grid.appendChild(card);
+  }
+  box.appendChild(grid);
+
+  const lg = $('tier-legend');
+  lg.replaceChildren();
+  [1, 2, 3, 4].forEach(t => lg.appendChild(legendItem('rect', `var(--tier-${t})`, 'Tier ' + t + (t === 4 ? '+' : ''))));
+
+  const rows = [];
+  for (const pos of positions) {
+    for (const p of DATA.tiers[pos].slice(0, 10)) {
+      rows.push([p.name, `${p.pos}${p.tier}`, p.team, fmt(p.adp, 0), '$' + p.av, fmt(p.vor, 1)]);
+    }
+  }
+  buildTable($('tier-table'), 'Top of each position by value over replacement',
+    ['Player', 'Pos / tier', 'Team', 'ADP', 'AV', 'VOR'], rows);
+}
+
+/* ---------- plan ---------- */
+function renderPlan() {
+  const d = DATA.slots[SLOT];
+  const box = $('plan');
+  box.replaceChildren();
+
+  const sched = h('p', 'mixnote');
+  sched.style.marginBottom = '18px';
+  sched.textContent = 'Pick schedule: ' + d.picks.map(p => p.label).join('  ·  ') +
+    `   (turn gap R1→R2: ${d.turn_gaps.r1_r2} picks, R2→R3: ${d.turn_gaps.r2_r3})`;
+  box.appendChild(sched);
+
+  for (const pk of d.plan) {
+    const sec = h('div', 'plan-pick');
+    const head = h('div', 'plan-head');
+    head.appendChild(h('span', 'rd', 'Round ' + pk.round));
+    head.appendChild(h('span', 'pk', pk.pick));
+    head.appendChild(h('span', 'rd', 'overall #' + pk.overall));
+    sec.appendChild(head);
+
+    const bar = h('div', 'mixbar');
+    for (const m of pk.mix) {
+      const s = h('span');
+      s.style.width = (m.share * 100) + '%';
+      s.style.background = POS_COLOR[m.pos] || 'var(--deemph)';
+      bar.appendChild(s);
+    }
+    sec.appendChild(bar);
+    const note = h('div', 'mixnote');
+    note.textContent = 'Position taken here: ' + pk.mix.map(m => `${m.pos} ${pct(m.share)}`).join('  ·  ');
+    sec.appendChild(note);
+
+    const tbl = document.createElement('table');
+    const cap = document.createElement('caption');
+    cap.textContent = `Most-drafted targets at ${pk.pick}`;
+    tbl.appendChild(cap);
+    const thead = document.createElement('thead');
+    const trh = document.createElement('tr');
+    for (const c of ['Target', 'Pos', 'Team', 'ADP', 'VOR', 'Available', 'Taken']) {
+      const th = document.createElement('th');
+      th.textContent = c;
+      trh.appendChild(th);
+    }
+    thead.appendChild(trh);
+    tbl.appendChild(thead);
+    const tb = document.createElement('tbody');
+    for (const t of pk.targets) {
+      const tr = document.createElement('tr');
+      const td0 = document.createElement('td');
+      const dot = h('span', 'pos-dot');
+      dot.style.background = POS_COLOR[t.pos] || 'var(--deemph)';
+      td0.appendChild(dot);
+      td0.appendChild(document.createTextNode(t.name));
+      tr.appendChild(td0);
+      for (const v of [`${t.pos}${t.tier}`, t.team, fmt(t.adp, 0), fmt(t.vor, 0), pct(t.p_avail), pct(t.p_take)]) {
+        const td = document.createElement('td');
+        td.textContent = v;
+        tr.appendChild(td);
+      }
+      tb.appendChild(tr);
+    }
+    tbl.appendChild(tb);
+    sec.appendChild(tbl);
+    box.appendChild(sec);
+  }
+}
+
+/* ---------- RB cost ---------- */
+function renderRBCost() {
+  const box = $('rbcost');
+  box.replaceChildren();
+  const slots = Object.keys(DATA.slots);
+  const rows = slots.map(s => {
+    const st = DATA.slots[s].strategies;
+    const diff = st.rb_priority.mean - st.bpa.mean;
+    return [s, diff, st.rb_priority, st.bpa];
+  });
+  const worst = Math.max(...rows.map(r => Math.abs(r[1])));
+
+  const p = h('p', 'mixnote');
+  p.style.fontSize = '13.5px';
+  p.style.marginBottom = '16px';
+  p.textContent = worst < 15
+    ? `Across all three slots the RB preference costs between ` +
+      `${fmt(Math.min(...rows.map(r => Math.abs(r[1]))), 1)} and ${fmt(worst, 1)} projected points ` +
+      `— at most ${(worst / 17).toFixed(2)} points per week. That is a cheap preference: keep it.`
+    : `The RB preference costs up to ${fmt(worst, 1)} points. Consider lowering the RB weight.`;
+  box.appendChild(p);
+
+  const tbl = document.createElement('table');
+  const thead = document.createElement('thead');
+  const trh = document.createElement('tr');
+  for (const c of ['Slot', 'RB priority', 'Best available', 'Cost', 'Per week', 'Roster shape']) {
+    const th = document.createElement('th');
+    th.textContent = c;
+    trh.appendChild(th);
+  }
+  thead.appendChild(trh);
+  tbl.appendChild(thead);
+  const tb = document.createElement('tbody');
+  for (const [s, diff, rb, bpa] of rows) {
+    const tr = document.createElement('tr');
+    if (s === SLOT) tr.style.fontWeight = '600';
+    const cells = ['Slot ' + s, fmt(rb.mean, 1), fmt(bpa.mean, 1),
+      (diff >= 0 ? '+' : '−') + fmt(Math.abs(diff), 1),
+      (diff >= 0 ? '+' : '−') + (Math.abs(diff) / 17).toFixed(2),
+      `${rb.rb} RB / ${rb.wr} WR`];
+    cells.forEach((v, i) => {
+      const td = document.createElement('td');
+      td.textContent = v;
+      if (i === 3 && diff >= 0) td.style.color = 'var(--good)';
+      tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  }
+  tbl.appendChild(tb);
+  box.appendChild(tbl);
+}
+
+/* ---------- table-view twins ---------- */
+function buildTable(host, caption, headers, rows) {
+  host.replaceChildren();
+  const tbl = document.createElement('table');
+  tbl.style.marginTop = '18px';
+  const cap = document.createElement('caption');
+  cap.textContent = caption;
+  tbl.appendChild(cap);
+  const thead = document.createElement('thead');
+  const trh = document.createElement('tr');
+  for (const c of headers) {
+    const th = document.createElement('th');
+    th.textContent = c;
+    trh.appendChild(th);
+  }
+  thead.appendChild(trh);
+  tbl.appendChild(thead);
+  const tb = document.createElement('tbody');
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    for (const c of r) {
+      const td = document.createElement('td');
+      td.textContent = c;
+      tr.appendChild(td);
+    }
+    tb.appendChild(tr);
+  }
+  tbl.appendChild(tb);
+  host.appendChild(tbl);
+}
+
+function applyTableToggle() {
+  for (const id of ['cmp-table', 'ev-table', 'tier-table']) $(id).hidden = !TABLES;
+  const b = $('tv-toggle');
+  b.setAttribute('aria-pressed', String(TABLES));
+  b.textContent = TABLES ? 'Hide data tables' : 'Show data tables';
+}
+
+function renderAll() {
+  renderSlotFilter();
+  renderVerdict();
+  renderCompare();
+  renderEV();
+  renderTiers();
+  renderPlan();
+  renderRBCost();
+  applyTableToggle();
+}
+
+$('tv-toggle').onclick = () => { TABLES = !TABLES; applyTableToggle(); };
+$('theme-toggle').onclick = () => {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark'
+    || (!document.documentElement.hasAttribute('data-theme')
+        && matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+  $('theme-toggle').textContent = dark ? 'Dark mode' : 'Light mode';
+  renderAll();
+};
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(d => {
+    DATA = d;
+    SLOT = Object.keys(d.slots)[0];
+    renderMeta();
+    renderAll();
+  })
+  .catch(e => {
+    document.querySelector('.wrap').appendChild(
+      h('p', null, 'Could not load data.json: ' + e.message));
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+==============================================================================
+HALF-PPR SNAKE DRAFT MODEL
+==============================================================================
+League      : 12 teams, 16 rounds, snake
+Starters    : QB1, RB2, WR2, TE1, K1, DST1, FLEX1
+Scoring     : half PPR (0.5/rec)
+Value from  : auction value (176 priced players)
+Pool        : 224 players
+Sims        : 4000 per slot per strategy, ADP noise sigma = 0.20 x ADP (floor 2.5)
+
+Replacement baselines (VOR = projected points - baseline):
+POS  REPLACEMENT  BASELINE 
+---  -----------  ---------
+QB   QB12         281.5 pts
+RB   RB29         137.4 pts
+WR   WR30         151.1 pts
+TE   TE13         95.5 pts 
+K    K12          102.4 pts
+DST  DST12        95.4 pts 
+
+------------------------------------------------------------------------------
+TIER CLIFFS  (break on a VOR gap, threshold 15 pts near the
+top of a position and decaying with depth; max 8 per tier)
+------------------------------------------------------------------------------
+RB TIER  N  VOR RANGE  LAST ADP  MEMBERS                                                                 
+-------  -  ---------  --------  ------------------------------------------------------------------------
+RB1      2   195..188         2  Jahmyr Gibbs, Bijan Robinson                                            
+RB2      5   150..122        11  Christian McCaffrey, Jonathan Taylor, Saquon Barkley, James Cook III ...
+RB3      4    111..94        18  Derrick Henry, Omarion Hampton, Kenneth Walker III, Chase Brown         
+RB4      1     87..87        21  De’Von Achane                                                           
+
+WR TIER  N  VOR RANGE  LAST ADP  MEMBERS                                                
+-------  -  ---------  --------  -------------------------------------------------------
+WR1      1   165..165         3  Ja’Marr Chase                                          
+WR2      3   148..134         7  Puka Nacua, Jaxon Smith-Njigba, Amon-Ra St. Brown      
+WR3      2   109..106        13  Justin Jefferson, CeeDee Lamb                          
+WR4      8     92..64        29  A.J. Brown, Nico Collins, Drake London, Rashee Rice ...
+
+TE TIER  N  VOR RANGE  LAST ADP  MEMBERS                                                       
+-------  -  ---------  --------  --------------------------------------------------------------
+TE1      2   112..102        24  Brock Bowers, Trey McBride                                    
+TE2      2     63..56        47  Colston Loveland, Tyler Warren                                
+TE3      4     35..21        81  Tucker Kraft, Kyle Pitts, Sam LaPorta, Harold Fannin Jr.      
+TE4      8       7..0       127  Travis Kelce, Jake Ferguson, Dalton Kincaid, Isaiah Likely ...
+
+QB TIER  N  VOR RANGE  LAST ADP  MEMBERS                                                    
+-------  -  ---------  --------  -----------------------------------------------------------
+QB1      1     80..80        25  Josh Allen                                                 
+QB2      3     63..49        40  Lamar Jackson, Drake Maye, Jayden Daniels                  
+QB3      8      35..4        79  Joe Burrow, Justin Herbert, Jalen Hurts, Caleb Williams ...
+QB4      3    -4..-10        93  Jaxson Dart, Kyler Murray, Patrick Mahomes                 
+
+==============================================================================
+SLOT 5 -- pick schedule
+==============================================================================
+1.05(#5)  2.08(#20)  3.05(#29)  4.08(#44)  5.05(#53)  6.08(#68)  7.05(#77)  8.08(#92)  9.05(#101)  10.08(#116)  11.05(#125)  12.08(#140)  13.05(#149)  14.08(#164)  15.05(#173)  16.08(#188)
+Turn gap R1->R2: 15 picks.  R2->R3: 9 picks.
+
+------------------------------------------------------------------------------
+STRATEGY TOURNAMENT -- SLOT 5
+------------------------------------------------------------------------------
+Score = projected points of the best legal starting lineup the strategy
+ended up with, across simulated drafts.
+
+STRATEGY         MEAN   P10   P50   P90  NOTES                                                                
+-------------  ------  ----  ----  ----  ---------------------------------------------------------------------
+* bpa          1763.6  1731  1764  1801  Pure value over replacement + VONA. No positional thumb on the scale.
+  rb_priority  1755.3  1713  1758  1798  RB-weighted VONA. Pushes RB early and often without ignoring value.  
+  hero_rb      1750.3  1717  1749  1792  One elite RB in round 1, then WR/TE until round 5+.                  
+  zero_rb      1749.3  1723  1750  1778  No RB before round 4; load WR/TE early, attack RB volume late.       
+
+Spread between best and worst strategy: 14.3 projected points (0.8 pts/week).
+
+------------------------------------------------------------------------------
+RB-PRIORITY SANITY CHECK -- SLOT 5
+------------------------------------------------------------------------------
+RB priority costs 8.3 projected points vs pure value (0.49/week).
+That is the price of the preference. Cheap if small; if it is more than
+~15 points, consider lowering --rb-weight or taking value when it falls.
+Typical rb_priority roster shape: 6.7 RB, 3.3 WR.
+Best strategy on this pool at slot 5: bpa.
+
+------------------------------------------------------------------------------
+ROUND-BY-ROUND PLAN -- SLOT 5  (strategy: rb_priority)
+------------------------------------------------------------------------------
+POSITION MIX = how often this strategy took that position here.
+TARGETS = players most often drafted at this pick, with P(available).
+
+[Round  1  pick 1.05  overall   5]  RB 75%  WR 24%
+TARGET               POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-------------------  ---  ---  ---  ---  --------  -------
+Christian McCaffrey  RB2  SF     5  150       57%      38%
+Ja’Marr Chase        WR1  CIN    3  165       27%      24%
+Bijan Robinson       RB1  ATL    2  188       16%      15%
+Jonathan Taylor      RB2  IND    8  139       92%      13%
+Jahmyr Gibbs         RB1  DET    1  195        9%       7%
+   board: Ja’Marr Chase WR1 27% | Christian McCaffrey RB2 57% | Puka Nacua WR2 43% | Jonathan Taylor RB2 92% | Jaxon Smith-Njigba WR2 74%
+
+[Round  2  pick 2.08  overall  20]  TE 48%  RB 45%  WR 5%
+TARGET              POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ---  ---  ---  ---  --------  -------
+Brock Bowers        TE1  LV    20  112       62%      45%
+Kenneth Walker III  RB3  KC    17   97       31%      16%
+Chase Brown         RB3  CIN   18   94       43%      12%
+Omarion Hampton     RB3  LAC   15  104       12%       9%
+Derrick Henry       RB3  BAL   14  111        5%       5%
+A.J. Brown          WR4  NE    16   92       20%       3%
+   board: Brock Bowers TE1 62% | Trey McBride TE1 88% | Kenneth Walker III RB3 31% | Chase Brown RB3 43% | De’Von Achane RB4 71%
+
+[Round  3  pick 3.05  overall  29]  WR 44%  RB 21%  QB 20%  TE 13%
+TARGET          POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+--------------  ---  ---  ---  ---  --------  -------
+Josh Allen      QB1  BUF   25   80       33%      20%
+George Pickens  WR4  DAL   26   67       39%      12%
+Jeremiyah Love  RB5  ARI   31   69       74%      12%
+Trey McBride    TE1  ARI   24  102       24%      11%
+Rashee Rice     WR4  KC    23   74       18%      11%
+Drake London    WR4  ATL   22   78       13%       8%
+   board: Josh Allen QB1 33% | Jeremiyah Love RB5 74% | George Pickens WR4 39% | Chris Olave WR4 48% | Josh Jacobs RB5 78%
+
+[Round  4  pick 4.08  overall  44]  RB 39%  QB 23%  TE 20%  WR 16%
+TARGET            POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+----------------  ---  ---  ---  ---  --------  -------
+Colston Loveland  TE2  CHI   43   63       57%      15%
+Kyren Williams    RB6  LAR   37   52       26%      11%
+Drake Maye        QB2  NE    35   60       16%      10%
+Javonte Williams  RB7  DAL   38   48       32%       8%
+Lamar Jackson     QB2  BAL   33   63       10%       7%
+Breece Hall       RB7  NYJ   39   48       38%       6%
+   board: Colston Loveland TE2 57% | Tyler Warren TE2 72% | Kyren Williams RB6 26% | Jayden Daniels QB2 43% | Javonte Williams RB7 32%
+
+[Round  5  pick 5.05  overall  53]  RB 37%  WR 36%  QB 16%  TE 9%
+TARGET              POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ---  ---  ---  ---  --------  -------
+Travis Etienne Jr.  RB8  NO    46   38       31%      18%
+Zay Flowers         WR8  BAL   42   36       17%       9%
+Cam Skattebo        RB9  NYG   50   31       50%       8%
+Joe Burrow          QB3  CIN   48   35       44%       8%
+Malik Nabers        WR8  NYG   41   36       13%       8%
+Jaylen Waddle       WR9  DEN   44   32       24%       7%
+   board: Tyler Warren TE2 33% | Travis Etienne Jr. RB8 31% | Joe Burrow QB3 44% | Tucker Kraft TE3 91% | Kyle Pitts TE3 94%
+
+[Round  6  pick 6.08  overall  68]  RB 36%  WR 34%  QB 21%  TE 7%
+TARGET              POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ----  ---  ---  ---  --------  -------
+TreVeyon Henderson  RB10  NE    59   20       29%      12%
+Quinshon Judkins    RB10  CLE   60   20       33%       9%
+Luther Burden III   WR12  CHI   54   18       15%       7%
+Caleb Williams      QB3   CHI   61   21       45%       7%
+Garrett Wilson      WR12  NYJ   55   18       19%       7%
+Jameson Williams    WR11  DET   51   22        8%       5%
+   board: Tucker Kraft TE3 57% | Kyle Pitts TE3 70% | Sam LaPorta TE3 82% | Caleb Williams QB3 45% | Harold Fannin Jr. TE3 85%
+
+[Round  7  pick 7.05  overall  77]  RB 66%  WR 16%  QB 8%  TE 8%
+TARGET               POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-------------------  ----  ---  ---  ---  --------  -------
+Bucky Irving         RB11  TB    63   17       16%      11%
+D’Andre Swift        RB11  CHI   62   17       13%      10%
+David Montgomery     RB11  HOU   64   17       21%      10%
+Rhamondre Stevenson  RB12  NE    66   13       25%       9%
+Chuba Hubbard        RB13  CAR   70   10       38%       7%
+Quinshon Judkins     RB10  CLE   60   20        7%       7%
+   board: Tucker Kraft TE3 31% | Kyle Pitts TE3 47% | Sam LaPorta TE3 64% | Harold Fannin Jr. TE3 70% | Trevor Lawrence QB3 47%
+
+[Round  8  pick 8.08  overall  92]  TE 42%  RB 37%  QB 12%  WR 7%
+TARGET             POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-----------------  ----  ---  ---  ---  --------  -------
+Sam LaPorta        TE3   DET   78   24       30%      12%
+Harold Fannin Jr.  TE3   CLE   81   21       37%      10%
+Kyle Pitts         TE3   ATL   72   32       13%       9%
+Tony Pollard       RB13  TEN   71   10       12%       9%
+Jadarian Price     RB14  SEA   73    6       16%       8%
+Chuba Hubbard      RB13  CAR   70   10        9%       7%
+   board: Sam LaPorta TE3 30% | Harold Fannin Jr. TE3 37% | Travis Kelce TE4 77% | Brock Purdy QB3 30% | Jake Ferguson TE4 81%
+
+==============================================================================
+SLOT 6 -- pick schedule
+==============================================================================
+1.06(#6)  2.07(#19)  3.06(#30)  4.07(#43)  5.06(#54)  6.07(#67)  7.06(#78)  8.07(#91)  9.06(#102)  10.07(#115)  11.06(#126)  12.07(#139)  13.06(#150)  14.07(#163)  15.06(#174)  16.07(#187)
+Turn gap R1->R2: 13 picks.  R2->R3: 11 picks.
+
+------------------------------------------------------------------------------
+STRATEGY TOURNAMENT -- SLOT 6
+------------------------------------------------------------------------------
+Score = projected points of the best legal starting lineup the strategy
+ended up with, across simulated drafts.
+
+STRATEGY         MEAN   P10   P50   P90  NOTES                                                                
+-------------  ------  ----  ----  ----  ---------------------------------------------------------------------
+* bpa          1756.2  1726  1757  1790  Pure value over replacement + VONA. No positional thumb on the scale.
+  rb_priority  1746.7  1706  1748  1788  RB-weighted VONA. Pushes RB early and often without ignoring value.  
+  zero_rb      1744.4  1718  1746  1774  No RB before round 4; load WR/TE early, attack RB volume late.       
+  hero_rb      1743.9  1714  1744  1778  One elite RB in round 1, then WR/TE until round 5+.                  
+
+Spread between best and worst strategy: 12.3 projected points (0.7 pts/week).
+
+------------------------------------------------------------------------------
+RB-PRIORITY SANITY CHECK -- SLOT 6
+------------------------------------------------------------------------------
+RB priority costs 9.5 projected points vs pure value (0.56/week).
+That is the price of the preference. Cheap if small; if it is more than
+~15 points, consider lowering --rb-weight or taking value when it falls.
+Typical rb_priority roster shape: 6.7 RB, 3.3 WR.
+Best strategy on this pool at slot 6: bpa.
+
+------------------------------------------------------------------------------
+ROUND-BY-ROUND PLAN -- SLOT 6  (strategy: rb_priority)
+------------------------------------------------------------------------------
+POSITION MIX = how often this strategy took that position here.
+TARGETS = players most often drafted at this pick, with P(available).
+
+[Round  1  pick 1.06  overall   6]  RB 82%  WR 17%
+TARGET               POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-------------------  ---  ---  ---  ---  --------  -------
+Jonathan Taylor      RB2  IND    8  139       86%      36%
+Christian McCaffrey  RB2  SF     5  150       41%      35%
+Ja’Marr Chase        WR1  CIN    3  165       15%      14%
+Bijan Robinson       RB1  ATL    2  188        8%       7%
+Jahmyr Gibbs         RB1  DET    1  195        3%       3%
+Puka Nacua           WR2  LAR    4  148       26%       2%
+   board: Christian McCaffrey RB2 41% | Puka Nacua WR2 26% | Jonathan Taylor RB2 86% | Jaxon Smith-Njigba WR2 60% | Amon-Ra St. Brown WR2 75%
+
+[Round  2  pick 2.07  overall  19]  RB 46%  TE 46%  WR 7%
+TARGET              POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ---  ---  ---  ---  --------  -------
+Brock Bowers        TE1  LV    20  112       72%      46%
+Omarion Hampton     RB3  LAC   15  104       18%      16%
+Kenneth Walker III  RB3  KC    17   97       40%      13%
+Derrick Henry       RB3  BAL   14  111        9%       8%
+Chase Brown         RB3  CIN   18   94       54%       7%
+A.J. Brown          WR4  NE    16   92       29%       2%
+   board: Brock Bowers TE1 72% | Trey McBride TE1 91% | Kenneth Walker III RB3 40% | Chase Brown RB3 54% | A.J. Brown WR4 29%
+
+[Round  3  pick 3.06  overall  30]  WR 50%  RB 22%  QB 16%  TE 10%
+TARGET          POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+--------------  ---  ---  ---  ---  --------  -------
+Josh Allen      QB1  BUF   25   80       26%      16%
+George Pickens  WR4  DAL   26   67       33%      14%
+Jeremiyah Love  RB5  ARI   31   69       69%      14%
+Chris Olave     WR4  NO    27   67       41%      12%
+Trey McBride    TE1  ARI   24  102       20%       9%
+Rashee Rice     WR4  KC    23   74       12%       9%
+   board: Josh Allen QB1 26% | Jeremiyah Love RB5 69% | George Pickens WR4 33% | Chris Olave WR4 41% | Josh Jacobs RB5 73%
+
+[Round  4  pick 4.07  overall  43]  RB 36%  QB 23%  TE 20%  WR 19%
+TARGET            POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+----------------  ---  ---  ---  ---  --------  -------
+Colston Loveland  TE2  CHI   43   63       60%      16%
+Kyren Williams    RB6  LAR   37   52       30%      10%
+Drake Maye        QB2  NE    35   60       23%      10%
+Lamar Jackson     QB2  BAL   33   63       13%       8%
+Josh Jacobs       RB5  GB    32   66        8%       7%
+Javonte Williams  RB7  DAL   38   48       36%       6%
+   board: Colston Loveland TE2 60% | Tyler Warren TE2 76% | Kyren Williams RB6 30% | Jayden Daniels QB2 49% | Javonte Williams RB7 36%
+
+[Round  5  pick 5.06  overall  54]  RB 35%  WR 34%  QB 18%  TE 11%
+TARGET              POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ---  ---  ---  ---  --------  -------
+Travis Etienne Jr.  RB8  NO    46   38       27%      17%
+Joe Burrow          QB3  CIN   48   35       40%       9%
+Cam Skattebo        RB9  NYG   50   31       45%       8%
+Zay Flowers         WR8  BAL   42   36       14%       8%
+Malik Nabers        WR8  NYG   41   36       10%       7%
+Jaylen Waddle       WR9  DEN   44   32       21%       7%
+   board: Tyler Warren TE2 31% | Travis Etienne Jr. RB8 27% | Joe Burrow QB3 40% | Tucker Kraft TE3 88% | Kyle Pitts TE3 93%
+
+[Round  6  pick 6.07  overall  67]  WR 36%  RB 33%  QB 22%  TE 8%
+TARGET              POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ----  ---  ---  ---  --------  -------
+TreVeyon Henderson  RB10  NE    59   20       34%      11%
+Luther Burden III   WR12  CHI   54   18       18%       8%
+Quinshon Judkins    RB10  CLE   60   20       38%       8%
+Garrett Wilson      WR12  NYJ   55   18       20%       7%
+Caleb Williams      QB3   CHI   61   21       49%       6%
+Justin Herbert      QB3   LAC   52   28       17%       6%
+   board: Tucker Kraft TE3 57% | Kyle Pitts TE3 73% | Sam LaPorta TE3 83% | Caleb Williams QB3 49% | Harold Fannin Jr. TE3 86%
+
+[Round  7  pick 7.06  overall  78]  RB 64%  WR 13%  TE 10%  QB 10%
+TARGET               POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-------------------  ----  ---  ---  ---  --------  -------
+David Montgomery     RB11  HOU   64   17       18%      10%
+Rhamondre Stevenson  RB12  NE    66   13       23%       9%
+Bucky Irving         RB11  TB    63   17       16%       9%
+D’Andre Swift        RB11  CHI   62   17       13%       9%
+Chuba Hubbard        RB13  CAR   70   10       36%       7%
+Quinshon Judkins     RB10  CLE   60   20        7%       6%
+   board: Tucker Kraft TE3 27% | Kyle Pitts TE3 43% | Sam LaPorta TE3 62% | Harold Fannin Jr. TE3 67% | Trevor Lawrence QB3 45%
+
+[Round  8  pick 8.07  overall  91]  RB 41%  TE 37%  QB 11%  WR 9%
+TARGET             POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-----------------  ----  ---  ---  ---  --------  -------
+Sam LaPorta        TE3   DET   78   24       32%      11%
+Kyle Pitts         TE3   ATL   72   32       14%       9%
+Tony Pollard       RB13  TEN   71   10       12%       9%
+Jadarian Price     RB14  SEA   73    6       18%       9%
+Harold Fannin Jr.  TE3   CLE   81   21       39%       9%
+Chuba Hubbard      RB13  CAR   70   10       11%       9%
+   board: Sam LaPorta TE3 32% | Harold Fannin Jr. TE3 39% | Travis Kelce TE4 79% | Brock Purdy QB3 31% | Jake Ferguson TE4 84%
+
+==============================================================================
+SLOT 7 -- pick schedule
+==============================================================================
+1.07(#7)  2.06(#18)  3.07(#31)  4.06(#42)  5.07(#55)  6.06(#66)  7.07(#79)  8.06(#90)  9.07(#103)  10.06(#114)  11.07(#127)  12.06(#138)  13.07(#151)  14.06(#162)  15.07(#175)  16.06(#186)
+Turn gap R1->R2: 11 picks.  R2->R3: 13 picks.
+
+------------------------------------------------------------------------------
+STRATEGY TOURNAMENT -- SLOT 7
+------------------------------------------------------------------------------
+Score = projected points of the best legal starting lineup the strategy
+ended up with, across simulated drafts.
+
+STRATEGY         MEAN   P10   P50   P90  NOTES                                                                
+-------------  ------  ----  ----  ----  ---------------------------------------------------------------------
+* bpa          1751.2  1722  1752  1783  Pure value over replacement + VONA. No positional thumb on the scale.
+  rb_priority  1743.2  1703  1745  1781  RB-weighted VONA. Pushes RB early and often without ignoring value.  
+  hero_rb      1740.4  1713  1741  1771  One elite RB in round 1, then WR/TE until round 5+.                  
+  zero_rb      1739.7  1713  1741  1768  No RB before round 4; load WR/TE early, attack RB volume late.       
+
+Spread between best and worst strategy: 11.5 projected points (0.7 pts/week).
+
+------------------------------------------------------------------------------
+RB-PRIORITY SANITY CHECK -- SLOT 7
+------------------------------------------------------------------------------
+RB priority costs 8.0 projected points vs pure value (0.47/week).
+That is the price of the preference. Cheap if small; if it is more than
+~15 points, consider lowering --rb-weight or taking value when it falls.
+Typical rb_priority roster shape: 6.7 RB, 3.3 WR.
+Best strategy on this pool at slot 7: bpa.
+
+------------------------------------------------------------------------------
+ROUND-BY-ROUND PLAN -- SLOT 7  (strategy: rb_priority)
+------------------------------------------------------------------------------
+POSITION MIX = how often this strategy took that position here.
+TARGETS = players most often drafted at this pick, with P(available).
+
+[Round  1  pick 1.07  overall   7]  RB 87%  WR 12%
+TARGET               POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-------------------  ---  ---  ---  ---  --------  -------
+Jonathan Taylor      RB2  IND    8  139       72%      51%
+Christian McCaffrey  RB2  SF     5  150       27%      24%
+Ja’Marr Chase        WR1  CIN    3  165        8%       7%
+Saquon Barkley       RB2  PHI    9  132       85%       6%
+Puka Nacua           WR2  LAR    4  148       16%       4%
+Bijan Robinson       RB1  ATL    2  188        3%       3%
+   board: Christian McCaffrey RB2 27% | Jonathan Taylor RB2 72% | Jaxon Smith-Njigba WR2 42% | Amon-Ra St. Brown WR2 59% | Saquon Barkley RB2 85%
+
+[Round  2  pick 2.06  overall  18]  RB 51%  TE 38%  WR 9%
+TARGET              POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ---  ---  ---  ---  --------  -------
+Brock Bowers        TE1  LV    20  112       80%      38%
+Omarion Hampton     RB3  LAC   15  104       27%      21%
+Derrick Henry       RB3  BAL   14  111       15%      15%
+Kenneth Walker III  RB3  KC    17   97       51%       9%
+CeeDee Lamb         WR3  DAL   13  106        8%       5%
+Justin Jefferson    WR3  MIN   12  109        3%       2%
+   board: Brock Bowers TE1 80% | Omarion Hampton RB3 27% | Trey McBride TE1 94% | Kenneth Walker III RB3 51% | Chase Brown RB3 65%
+
+[Round  3  pick 3.07  overall  31]  WR 52%  RB 21%  QB 15%  TE 9%
+TARGET          POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+--------------  ---  ---  ---  ---  --------  -------
+Josh Allen      QB1  BUF   25   80       21%      15%
+Jeremiyah Love  RB5  ARI   31   69       62%      15%
+George Pickens  WR4  DAL   26   67       27%      14%
+Chris Olave     WR4  NO    27   67       34%      13%
+Trey McBride    TE1  ARI   24  102       14%       9%
+Rashee Rice     WR4  KC    23   74        8%       7%
+   board: Jeremiyah Love RB5 62% | George Pickens WR4 27% | Chris Olave WR4 34% | Josh Jacobs RB5 67% | Emeka Egbuka WR4 42%
+
+[Round  4  pick 4.06  overall  42]  RB 31%  QB 25%  TE 21%  WR 20%
+TARGET            POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+----------------  ---  ---  ---  ---  --------  -------
+Colston Loveland  TE2  CHI   43   63       66%      17%
+Drake Maye        QB2  NE    35   60       27%      11%
+Lamar Jackson     QB2  BAL   33   63       15%      11%
+Kyren Williams    RB6  LAR   37   52       34%       9%
+Josh Jacobs       RB5  GB    32   66       10%       9%
+Tee Higgins       WR6  CIN   34   53       19%       7%
+   board: Colston Loveland TE2 66% | Drake Maye QB2 27% | Tyler Warren TE2 78% | Kyren Williams RB6 34% | Jayden Daniels QB2 53%
+
+[Round  5  pick 5.07  overall  55]  RB 33%  WR 31%  QB 18%  TE 16%
+TARGET              POS  TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ---  ---  ---  ---  --------  -------
+Travis Etienne Jr.  RB8  NO    46   38       24%      15%
+Joe Burrow          QB3  CIN   48   35       36%       9%
+Cam Skattebo        RB9  NYG   50   31       42%       8%
+Jaylen Waddle       WR9  DEN   44   32       17%       7%
+Tyler Warren        TE2  IND   47   56       28%       7%
+Zay Flowers         WR8  BAL   42   36       11%       7%
+   board: Tyler Warren TE2 28% | Joe Burrow QB3 36% | Tucker Kraft TE3 87% | Kyle Pitts TE3 92% | Cam Skattebo RB9 42%
+
+[Round  6  pick 6.06  overall  66]  WR 38%  RB 29%  QB 21%  TE 10%
+TARGET              POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+------------------  ----  ---  ---  ---  --------  -------
+TreVeyon Henderson  RB10  NE    59   20       35%       9%
+Garrett Wilson      WR12  NYJ   55   18       23%       8%
+Luther Burden III   WR12  CHI   54   18       21%       8%
+Quinshon Judkins    RB10  CLE   60   20       40%       7%
+Tucker Kraft        TE3   GB    67   35       59%       7%
+Cam Skattebo        RB9   NYG   50   31        7%       6%
+   board: Tucker Kraft TE3 59% | Kyle Pitts TE3 75% | Sam LaPorta TE3 84% | Caleb Williams QB3 50% | Harold Fannin Jr. TE3 89%
+
+[Round  7  pick 7.07  overall  79]  RB 61%  TE 14%  WR 13%  QB 10%
+TARGET               POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-------------------  ----  ---  ---  ---  --------  -------
+David Montgomery     RB11  HOU   64   17       17%       9%
+D’Andre Swift        RB11  CHI   62   17       12%       9%
+Bucky Irving         RB11  TB    63   17       13%       8%
+Chuba Hubbard        RB13  CAR   70   10       31%       7%
+Rhamondre Stevenson  RB12  NE    66   13       22%       7%
+Tucker Kraft         TE3   GB    67   35       24%       6%
+   board: Kyle Pitts TE3 40% | Sam LaPorta TE3 57% | Harold Fannin Jr. TE3 66% | Trevor Lawrence QB3 42% | Chuba Hubbard RB13 31%
+
+[Round  8  pick 8.06  overall  90]  RB 43%  TE 33%  QB 11%  WR 10%
+TARGET             POS   TM   ADP  VOR  P(AVAIL)  P(TAKE)
+-----------------  ----  ---  ---  ---  --------  -------
+Sam LaPorta        TE3   DET   78   24       32%      10%
+Jadarian Price     RB14  SEA   73    6       18%       9%
+Tony Pollard       RB13  TEN   71   10       14%       9%
+Chuba Hubbard      RB13  CAR   70   10       11%       9%
+Kyle Pitts         TE3   ATL   72   32       14%       9%
+Harold Fannin Jr.  TE3   CLE   81   21       42%       8%
+   board: Sam LaPorta TE3 32% | Harold Fannin Jr. TE3 42% | Bo Nix QB3 26% | Travis Kelce TE4 80% | Brock Purdy QB3 36%
+
+------------------------------------------------------------------------------
+FILES
+------------------------------------------------------------------------------
+out/board_vor.csv            full pool ranked by VOR, with tiers
+out/availability_slot5.csv   P(available) at each of your picks
+out/availability_slot6.csv   P(available) at each of your picks
+out/availability_slot7.csv   P(available) at each of your picks
+
