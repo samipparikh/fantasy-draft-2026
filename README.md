@@ -23,6 +23,29 @@ Useful flags:
 | `--plan-rounds 8` | `10` | Rounds to detail |
 | `--demo` | — | Synthetic pool; engine smoke test only |
 
+
+## Post-draft report
+
+The draft happened; `postdraft.py` grades it.
+
+```bash
+python3 postdraft.py --results hh_draft_2026.csv --focus KGB
+```
+
+It reads the draft-tracker export (`hh_draft_2026.csv`), scores every team by the
+best starting lineup it can field in points over replacement, audits the focus
+team pick by pick against the board it passed on, and enumerates every trade of
+up to two players a side — keeping only the ones where *both* starting lineups
+improve. Output is `docs/postdraft.json`, rendered by
+[`docs/results.html`](https://samipparikh.github.io/fantasy-draft-2026/results.html).
+
+Two things worth knowing about the scoring:
+
+- **Defenses are excluded.** The export projects every DST between −69 and −190
+  points, which is a different scale rather than a ranking.
+- **An unfillable starting slot is charged the full replacement level**, so
+  trading away your only quarterback never scores as a gain.
+
 ## Data
 
 `ringer_2026.csv` — all 224 players from The Ringer's 2026 preseason rankings
@@ -64,6 +87,7 @@ replacement level.
 
 | File | Contents |
 |---|---|
+| `docs/postdraft.json` | Post-draft grades, pick audit and trade finder output |
 | `out/report.txt` | The full text report |
 | `out/board_vor.csv` | All 224 players ranked by VOR, with tiers |
 | `out/availability_slot6.csv` | P(available) at each of your 16 picks |

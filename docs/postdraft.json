@@ -1,0 +1,8089 @@
+{
+ "meta": {
+  "label": "HH 2026 half-PPR, 12-team snake",
+  "teams": 12,
+  "rounds": 16,
+  "focus": "KGB",
+  "lineup": {
+   "QB": 1,
+   "RB": 2,
+   "WR": 3,
+   "TE": 1,
+   "K": 1,
+   "FLEX": 1
+  },
+  "replacement": {
+   "QB": 379.4,
+   "RB": 165.6,
+   "WR": 143.1,
+   "TE": 154.8,
+   "K": 134.0
+  },
+  "median_pos_vorp": {
+   "QB": 14.6,
+   "RB": 129.4,
+   "WR": 177.3,
+   "TE": 19.4,
+   "K": 8.0,
+   "FLEX": 1.7
+  },
+  "dst_excluded": true
+ },
+ "teams": [
+  {
+   "team": "Hash",
+   "pts": 2081.5,
+   "vorp": 487.1,
+   "pos_vorp": {
+    "QB": 16.3,
+    "RB": 260.7,
+    "WR": 122.9,
+    "TE": 63.8,
+    "K": 23.0,
+    "FLEX": 0.4
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 53,
+      "rnd": 5,
+      "pick": 5,
+      "name": "Joe Burrow",
+      "pos": "QB",
+      "nfl": "CIN",
+      "pos_rank": 5,
+      "fpts": 395.6769,
+      "vorp": 16.3
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 5,
+      "rnd": 1,
+      "pick": 5,
+      "name": "Jonathan Taylor",
+      "pos": "RB",
+      "nfl": "IND",
+      "pos_rank": 3,
+      "fpts": 309.4705,
+      "vorp": 143.9
+     },
+     {
+      "ovr": 20,
+      "rnd": 2,
+      "pick": 8,
+      "name": "Derrick Henry",
+      "pos": "RB",
+      "nfl": "BAL",
+      "pos_rank": 4,
+      "fpts": 282.4201,
+      "vorp": 116.8
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 44,
+      "rnd": 4,
+      "pick": 8,
+      "name": "Zay Flowers",
+      "pos": "WR",
+      "nfl": "BAL",
+      "pos_rank": 13,
+      "fpts": 214.5265,
+      "vorp": 71.4
+     },
+     {
+      "ovr": 77,
+      "rnd": 7,
+      "pick": 5,
+      "name": "Marvin Harrison Jr.",
+      "pos": "WR",
+      "nfl": "ARI",
+      "pos_rank": 29,
+      "fpts": 170.4079,
+      "vorp": 27.3
+     },
+     {
+      "ovr": 125,
+      "rnd": 11,
+      "pick": 5,
+      "name": "Courtland Sutton",
+      "pos": "WR",
+      "nfl": "DEN",
+      "pos_rank": 32,
+      "fpts": 167.3115,
+      "vorp": 24.2
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 29,
+      "rnd": 3,
+      "pick": 5,
+      "name": "Trey McBride",
+      "pos": "TE",
+      "nfl": "ARI",
+      "pos_rank": 1,
+      "fpts": 218.6409,
+      "vorp": 63.8
+     }
+    ],
+    "K": [
+     {
+      "ovr": 164,
+      "rnd": 14,
+      "pick": 8,
+      "name": "Ka'imi Fairbairn",
+      "pos": "K",
+      "nfl": "HOU",
+      "pos_rank": 2,
+      "fpts": 157.0,
+      "vorp": 23.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 68,
+      "rnd": 6,
+      "pick": 8,
+      "name": "Tony Pollard",
+      "pos": "RB",
+      "nfl": "TEN",
+      "pos_rank": 30,
+      "fpts": 166.010077,
+      "vorp": 0.4
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 92,
+     "rnd": 8,
+     "pick": 8,
+     "name": "Jordan Addison",
+     "pos": "WR",
+     "nfl": "MIN",
+     "pos_rank": 39,
+     "fpts": 147.4935,
+     "vorp": 4.4
+    },
+    {
+     "ovr": 101,
+     "rnd": 9,
+     "pick": 5,
+     "name": "Seahawks",
+     "pos": "DST",
+     "nfl": "SEA",
+     "pos_rank": 1,
+     "fpts": -69.1,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 116,
+     "rnd": 10,
+     "pick": 8,
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "nfl": "CAR",
+     "pos_rank": 33,
+     "fpts": 163.9894,
+     "vorp": -1.6
+    },
+    {
+     "ovr": 173,
+     "rnd": 15,
+     "pick": 5,
+     "name": "Matthew Golden",
+     "pos": "WR",
+     "nfl": "GB",
+     "pos_rank": 56,
+     "fpts": 130.4245,
+     "vorp": -12.7
+    },
+    {
+     "ovr": 140,
+     "rnd": 12,
+     "pick": 8,
+     "name": "Jordan Love",
+     "pos": "QB",
+     "nfl": "GB",
+     "pos_rank": 21,
+     "fpts": 350.8679,
+     "vorp": -28.5
+    },
+    {
+     "ovr": 188,
+     "rnd": 16,
+     "pick": 8,
+     "name": "Kayshon Boutte",
+     "pos": "WR",
+     "nfl": "HOU",
+     "pos_rank": 67,
+     "fpts": 113.4674,
+     "vorp": -29.6
+    },
+    {
+     "ovr": 149,
+     "rnd": 13,
+     "pick": 5,
+     "name": "Zach Charbonnet",
+     "pos": "RB",
+     "nfl": "SEA",
+     "pos_rank": 53,
+     "fpts": 93.506771,
+     "vorp": -72.1
+    }
+   ],
+   "bench_vorp": -140.1,
+   "roster": [
+    {
+     "ovr": 5,
+     "rnd": 1,
+     "pick": 5,
+     "name": "Jonathan Taylor",
+     "pos": "RB",
+     "nfl": "IND",
+     "pos_rank": 3,
+     "fpts": 309.4705,
+     "vorp": 143.9
+    },
+    {
+     "ovr": 20,
+     "rnd": 2,
+     "pick": 8,
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "nfl": "BAL",
+     "pos_rank": 4,
+     "fpts": 282.4201,
+     "vorp": 116.8
+    },
+    {
+     "ovr": 29,
+     "rnd": 3,
+     "pick": 5,
+     "name": "Trey McBride",
+     "pos": "TE",
+     "nfl": "ARI",
+     "pos_rank": 1,
+     "fpts": 218.6409,
+     "vorp": 63.8
+    },
+    {
+     "ovr": 44,
+     "rnd": 4,
+     "pick": 8,
+     "name": "Zay Flowers",
+     "pos": "WR",
+     "nfl": "BAL",
+     "pos_rank": 13,
+     "fpts": 214.5265,
+     "vorp": 71.4
+    },
+    {
+     "ovr": 53,
+     "rnd": 5,
+     "pick": 5,
+     "name": "Joe Burrow",
+     "pos": "QB",
+     "nfl": "CIN",
+     "pos_rank": 5,
+     "fpts": 395.6769,
+     "vorp": 16.3
+    },
+    {
+     "ovr": 68,
+     "rnd": 6,
+     "pick": 8,
+     "name": "Tony Pollard",
+     "pos": "RB",
+     "nfl": "TEN",
+     "pos_rank": 30,
+     "fpts": 166.010077,
+     "vorp": 0.4
+    },
+    {
+     "ovr": 77,
+     "rnd": 7,
+     "pick": 5,
+     "name": "Marvin Harrison Jr.",
+     "pos": "WR",
+     "nfl": "ARI",
+     "pos_rank": 29,
+     "fpts": 170.4079,
+     "vorp": 27.3
+    },
+    {
+     "ovr": 92,
+     "rnd": 8,
+     "pick": 8,
+     "name": "Jordan Addison",
+     "pos": "WR",
+     "nfl": "MIN",
+     "pos_rank": 39,
+     "fpts": 147.4935,
+     "vorp": 4.4
+    },
+    {
+     "ovr": 101,
+     "rnd": 9,
+     "pick": 5,
+     "name": "Seahawks",
+     "pos": "DST",
+     "nfl": "SEA",
+     "pos_rank": 1,
+     "fpts": -69.1,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 116,
+     "rnd": 10,
+     "pick": 8,
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "nfl": "CAR",
+     "pos_rank": 33,
+     "fpts": 163.9894,
+     "vorp": -1.6
+    },
+    {
+     "ovr": 125,
+     "rnd": 11,
+     "pick": 5,
+     "name": "Courtland Sutton",
+     "pos": "WR",
+     "nfl": "DEN",
+     "pos_rank": 32,
+     "fpts": 167.3115,
+     "vorp": 24.2
+    },
+    {
+     "ovr": 140,
+     "rnd": 12,
+     "pick": 8,
+     "name": "Jordan Love",
+     "pos": "QB",
+     "nfl": "GB",
+     "pos_rank": 21,
+     "fpts": 350.8679,
+     "vorp": -28.5
+    },
+    {
+     "ovr": 149,
+     "rnd": 13,
+     "pick": 5,
+     "name": "Zach Charbonnet",
+     "pos": "RB",
+     "nfl": "SEA",
+     "pos_rank": 53,
+     "fpts": 93.506771,
+     "vorp": -72.1
+    },
+    {
+     "ovr": 164,
+     "rnd": 14,
+     "pick": 8,
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "nfl": "HOU",
+     "pos_rank": 2,
+     "fpts": 157.0,
+     "vorp": 23.0
+    },
+    {
+     "ovr": 173,
+     "rnd": 15,
+     "pick": 5,
+     "name": "Matthew Golden",
+     "pos": "WR",
+     "nfl": "GB",
+     "pos_rank": 56,
+     "fpts": 130.4245,
+     "vorp": -12.7
+    },
+    {
+     "ovr": 188,
+     "rnd": 16,
+     "pick": 8,
+     "name": "Kayshon Boutte",
+     "pos": "WR",
+     "nfl": "HOU",
+     "pos_rank": 67,
+     "fpts": 113.4674,
+     "vorp": -29.6
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 1,
+   "pos_rank": {
+    "QB": 5,
+    "RB": 1,
+    "WR": 10,
+    "TE": 1,
+    "K": 2,
+    "FLEX": 8
+   }
+  },
+  {
+   "team": "Cenk",
+   "pts": 1997.4,
+   "vorp": 425.6,
+   "pos_vorp": {
+    "QB": 29.6,
+    "RB": 120.7,
+    "WR": 251.2,
+    "TE": 15.2,
+    "K": 7.0,
+    "FLEX": 1.9
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 82,
+      "rnd": 7,
+      "pick": 10,
+      "name": "Dak Prescott",
+      "pos": "QB",
+      "nfl": "DAL",
+      "pos_rank": 2,
+      "fpts": 408.9816,
+      "vorp": 29.6
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 10,
+      "rnd": 1,
+      "pick": 10,
+      "name": "De'Von Achane",
+      "pos": "RB",
+      "nfl": "MIA",
+      "pos_rank": 6,
+      "fpts": 280.7806,
+      "vorp": 115.2
+     },
+     {
+      "ovr": 63,
+      "rnd": 6,
+      "pick": 3,
+      "name": "Rico Dowdle",
+      "pos": "RB",
+      "nfl": "PIT",
+      "pos_rank": 26,
+      "fpts": 171.1423,
+      "vorp": 5.5
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 34,
+      "rnd": 3,
+      "pick": 10,
+      "name": "Rashee Rice",
+      "pos": "WR",
+      "nfl": "KC",
+      "pos_rank": 5,
+      "fpts": 250.487,
+      "vorp": 107.4
+     },
+     {
+      "ovr": 15,
+      "rnd": 2,
+      "pick": 3,
+      "name": "Justin Jefferson",
+      "pos": "WR",
+      "nfl": "MIN",
+      "pos_rank": 12,
+      "fpts": 215.8944,
+      "vorp": 72.8
+     },
+     {
+      "ovr": 39,
+      "rnd": 4,
+      "pick": 3,
+      "name": "Malik Nabers",
+      "pos": "WR",
+      "nfl": "NYG",
+      "pos_rank": 14,
+      "fpts": 214.1348,
+      "vorp": 71.0
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 58,
+      "rnd": 5,
+      "pick": 10,
+      "name": "Tyler Warren",
+      "pos": "TE",
+      "nfl": "IND",
+      "pos_rank": 7,
+      "fpts": 169.9719,
+      "vorp": 15.2
+     }
+    ],
+    "K": [
+     {
+      "ovr": 183,
+      "rnd": 16,
+      "pick": 3,
+      "name": "Chase McLaughlin",
+      "pos": "K",
+      "nfl": "TB",
+      "pos_rank": 8,
+      "fpts": 141.0,
+      "vorp": 7.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 178,
+      "rnd": 15,
+      "pick": 10,
+      "name": "Wan'Dale Robinson",
+      "pos": "WR",
+      "nfl": "TEN",
+      "pos_rank": 41,
+      "fpts": 145.0323,
+      "vorp": 1.9
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 111,
+     "rnd": 10,
+     "pick": 3,
+     "name": "Jaguars",
+     "pos": "DST",
+     "nfl": "JAC",
+     "pos_rank": 14,
+     "fpts": -124.55,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 159,
+     "rnd": 14,
+     "pick": 3,
+     "name": "49ers",
+     "pos": "DST",
+     "nfl": "SF",
+     "pos_rank": 20,
+     "fpts": -140.85,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 135,
+     "rnd": 12,
+     "pick": 3,
+     "name": "Deebo Samuel",
+     "pos": "WR",
+     "nfl": "SF",
+     "pos_rank": 45,
+     "fpts": 141.6512,
+     "vorp": -1.4
+    },
+    {
+     "ovr": 154,
+     "rnd": 13,
+     "pick": 10,
+     "name": "Daniel Jones",
+     "pos": "QB",
+     "nfl": "IND",
+     "pos_rank": 16,
+     "fpts": 359.1314,
+     "vorp": -20.3
+    },
+    {
+     "ovr": 87,
+     "rnd": 8,
+     "pick": 3,
+     "name": "Jacory Croskey-Merritt",
+     "pos": "RB",
+     "nfl": "WAS",
+     "pos_rank": 39,
+     "fpts": 140.70273,
+     "vorp": -24.9
+    },
+    {
+     "ovr": 106,
+     "rnd": 9,
+     "pick": 10,
+     "name": "Jaxson Dart",
+     "pos": "QB",
+     "nfl": "NYG",
+     "pos_rank": 20,
+     "fpts": 351.1188,
+     "vorp": -28.3
+    },
+    {
+     "ovr": 130,
+     "rnd": 11,
+     "pick": 10,
+     "name": "Woody Marks",
+     "pos": "RB",
+     "nfl": "HOU",
+     "pos_rank": 44,
+     "fpts": 117.6822,
+     "vorp": -47.9
+    }
+   ],
+   "bench_vorp": -122.8,
+   "roster": [
+    {
+     "ovr": 10,
+     "rnd": 1,
+     "pick": 10,
+     "name": "De'Von Achane",
+     "pos": "RB",
+     "nfl": "MIA",
+     "pos_rank": 6,
+     "fpts": 280.7806,
+     "vorp": 115.2
+    },
+    {
+     "ovr": 15,
+     "rnd": 2,
+     "pick": 3,
+     "name": "Justin Jefferson",
+     "pos": "WR",
+     "nfl": "MIN",
+     "pos_rank": 12,
+     "fpts": 215.8944,
+     "vorp": 72.8
+    },
+    {
+     "ovr": 34,
+     "rnd": 3,
+     "pick": 10,
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "nfl": "KC",
+     "pos_rank": 5,
+     "fpts": 250.487,
+     "vorp": 107.4
+    },
+    {
+     "ovr": 39,
+     "rnd": 4,
+     "pick": 3,
+     "name": "Malik Nabers",
+     "pos": "WR",
+     "nfl": "NYG",
+     "pos_rank": 14,
+     "fpts": 214.1348,
+     "vorp": 71.0
+    },
+    {
+     "ovr": 58,
+     "rnd": 5,
+     "pick": 10,
+     "name": "Tyler Warren",
+     "pos": "TE",
+     "nfl": "IND",
+     "pos_rank": 7,
+     "fpts": 169.9719,
+     "vorp": 15.2
+    },
+    {
+     "ovr": 63,
+     "rnd": 6,
+     "pick": 3,
+     "name": "Rico Dowdle",
+     "pos": "RB",
+     "nfl": "PIT",
+     "pos_rank": 26,
+     "fpts": 171.1423,
+     "vorp": 5.5
+    },
+    {
+     "ovr": 82,
+     "rnd": 7,
+     "pick": 10,
+     "name": "Dak Prescott",
+     "pos": "QB",
+     "nfl": "DAL",
+     "pos_rank": 2,
+     "fpts": 408.9816,
+     "vorp": 29.6
+    },
+    {
+     "ovr": 87,
+     "rnd": 8,
+     "pick": 3,
+     "name": "Jacory Croskey-Merritt",
+     "pos": "RB",
+     "nfl": "WAS",
+     "pos_rank": 39,
+     "fpts": 140.70273,
+     "vorp": -24.9
+    },
+    {
+     "ovr": 106,
+     "rnd": 9,
+     "pick": 10,
+     "name": "Jaxson Dart",
+     "pos": "QB",
+     "nfl": "NYG",
+     "pos_rank": 20,
+     "fpts": 351.1188,
+     "vorp": -28.3
+    },
+    {
+     "ovr": 111,
+     "rnd": 10,
+     "pick": 3,
+     "name": "Jaguars",
+     "pos": "DST",
+     "nfl": "JAC",
+     "pos_rank": 14,
+     "fpts": -124.55,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 130,
+     "rnd": 11,
+     "pick": 10,
+     "name": "Woody Marks",
+     "pos": "RB",
+     "nfl": "HOU",
+     "pos_rank": 44,
+     "fpts": 117.6822,
+     "vorp": -47.9
+    },
+    {
+     "ovr": 135,
+     "rnd": 12,
+     "pick": 3,
+     "name": "Deebo Samuel",
+     "pos": "WR",
+     "nfl": "SF",
+     "pos_rank": 45,
+     "fpts": 141.6512,
+     "vorp": -1.4
+    },
+    {
+     "ovr": 154,
+     "rnd": 13,
+     "pick": 10,
+     "name": "Daniel Jones",
+     "pos": "QB",
+     "nfl": "IND",
+     "pos_rank": 16,
+     "fpts": 359.1314,
+     "vorp": -20.3
+    },
+    {
+     "ovr": 159,
+     "rnd": 14,
+     "pick": 3,
+     "name": "49ers",
+     "pos": "DST",
+     "nfl": "SF",
+     "pos_rank": 20,
+     "fpts": -140.85,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 178,
+     "rnd": 15,
+     "pick": 10,
+     "name": "Wan'Dale Robinson",
+     "pos": "WR",
+     "nfl": "TEN",
+     "pos_rank": 41,
+     "fpts": 145.0323,
+     "vorp": 1.9
+    },
+    {
+     "ovr": 183,
+     "rnd": 16,
+     "pick": 3,
+     "name": "Chase McLaughlin",
+     "pos": "K",
+     "nfl": "TB",
+     "pos_rank": 8,
+     "fpts": 141.0,
+     "vorp": 7.0
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 2,
+   "pos_rank": {
+    "QB": 2,
+    "RB": 8,
+    "WR": 3,
+    "TE": 7,
+    "K": 7,
+    "FLEX": 6
+   }
+  },
+  {
+   "team": "Keung",
+   "pts": 2016.0,
+   "vorp": 421.7,
+   "pos_vorp": {
+    "QB": 13.9,
+    "RB": 252.4,
+    "WR": 105.3,
+    "TE": 41.1,
+    "K": 9.0,
+    "FLEX": 0.0
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 72,
+      "rnd": 6,
+      "pick": 12,
+      "name": "Jayden Daniels",
+      "pos": "QB",
+      "nfl": "WAS",
+      "pos_rank": 7,
+      "fpts": 393.2782,
+      "vorp": 13.9
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 1,
+      "rnd": 1,
+      "pick": 1,
+      "name": "Jahmyr Gibbs",
+      "pos": "RB",
+      "nfl": "DET",
+      "pos_rank": 1,
+      "fpts": 367.353,
+      "vorp": 201.8
+     },
+     {
+      "ovr": 24,
+      "rnd": 2,
+      "pick": 12,
+      "name": "Ashton Jeanty",
+      "pos": "RB",
+      "nfl": "LV",
+      "pos_rank": 13,
+      "fpts": 216.2389,
+      "vorp": 50.6
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 48,
+      "rnd": 4,
+      "pick": 12,
+      "name": "Emeka Egbuka",
+      "pos": "WR",
+      "nfl": "TB",
+      "pos_rank": 18,
+      "fpts": 195.4286,
+      "vorp": 52.3
+     },
+     {
+      "ovr": 49,
+      "rnd": 5,
+      "pick": 1,
+      "name": "Jaylen Waddle",
+      "pos": "WR",
+      "nfl": "DEN",
+      "pos_rank": 26,
+      "fpts": 174.5923,
+      "vorp": 31.5
+     },
+     {
+      "ovr": 73,
+      "rnd": 7,
+      "pick": 1,
+      "name": "Mike Evans",
+      "pos": "WR",
+      "nfl": "SF",
+      "pos_rank": 34,
+      "fpts": 164.6154,
+      "vorp": 21.5
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 25,
+      "rnd": 3,
+      "pick": 1,
+      "name": "Brock Bowers",
+      "pos": "TE",
+      "nfl": "LV",
+      "pos_rank": 2,
+      "fpts": 195.8643,
+      "vorp": 41.1
+     }
+    ],
+    "K": [
+     {
+      "ovr": 168,
+      "rnd": 14,
+      "pick": 12,
+      "name": "Cameron Dicker",
+      "pos": "K",
+      "nfl": "LAC",
+      "pos_rank": 7,
+      "fpts": 143.0,
+      "vorp": 9.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 97,
+      "rnd": 9,
+      "pick": 1,
+      "name": "RJ Harvey",
+      "pos": "RB",
+      "nfl": "DEN",
+      "pos_rank": 31,
+      "fpts": 165.6335,
+      "vorp": 0.0
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 121,
+     "rnd": 11,
+     "pick": 1,
+     "name": "Michael Wilson",
+     "pos": "WR",
+     "nfl": "ARI",
+     "pos_rank": 38,
+     "fpts": 153.177,
+     "vorp": 10.1
+    },
+    {
+     "ovr": 96,
+     "rnd": 8,
+     "pick": 12,
+     "name": "Rams",
+     "pos": "DST",
+     "nfl": "LAR",
+     "pos_rank": 5,
+     "fpts": -88.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 120,
+     "rnd": 10,
+     "pick": 12,
+     "name": "De'Zhaun Stribling",
+     "pos": "WR",
+     "nfl": "SF",
+     "pos_rank": 46,
+     "fpts": 141.3392,
+     "vorp": -1.8
+    },
+    {
+     "ovr": 192,
+     "rnd": 16,
+     "pick": 12,
+     "name": "Hunter Henry",
+     "pos": "TE",
+     "nfl": "NE",
+     "pos_rank": 18,
+     "fpts": 134.3698,
+     "vorp": -20.4
+    },
+    {
+     "ovr": 145,
+     "rnd": 13,
+     "pick": 1,
+     "name": "Sam Darnold",
+     "pos": "QB",
+     "nfl": "SEA",
+     "pos_rank": 17,
+     "fpts": 358.348,
+     "vorp": -21.1
+    },
+    {
+     "ovr": 144,
+     "rnd": 12,
+     "pick": 12,
+     "name": "Josh Jacobs",
+     "pos": "RB",
+     "nfl": "GB",
+     "pos_rank": 46,
+     "fpts": 114.5171,
+     "vorp": -51.1
+    },
+    {
+     "ovr": 169,
+     "rnd": 15,
+     "pick": 1,
+     "name": "Isiah Pacheco",
+     "pos": "RB",
+     "nfl": "DET",
+     "pos_rank": 61,
+     "fpts": 80.1291,
+     "vorp": -85.5
+    }
+   ],
+   "bench_vorp": -169.8,
+   "roster": [
+    {
+     "ovr": 1,
+     "rnd": 1,
+     "pick": 1,
+     "name": "Jahmyr Gibbs",
+     "pos": "RB",
+     "nfl": "DET",
+     "pos_rank": 1,
+     "fpts": 367.353,
+     "vorp": 201.8
+    },
+    {
+     "ovr": 24,
+     "rnd": 2,
+     "pick": 12,
+     "name": "Ashton Jeanty",
+     "pos": "RB",
+     "nfl": "LV",
+     "pos_rank": 13,
+     "fpts": 216.2389,
+     "vorp": 50.6
+    },
+    {
+     "ovr": 25,
+     "rnd": 3,
+     "pick": 1,
+     "name": "Brock Bowers",
+     "pos": "TE",
+     "nfl": "LV",
+     "pos_rank": 2,
+     "fpts": 195.8643,
+     "vorp": 41.1
+    },
+    {
+     "ovr": 48,
+     "rnd": 4,
+     "pick": 12,
+     "name": "Emeka Egbuka",
+     "pos": "WR",
+     "nfl": "TB",
+     "pos_rank": 18,
+     "fpts": 195.4286,
+     "vorp": 52.3
+    },
+    {
+     "ovr": 49,
+     "rnd": 5,
+     "pick": 1,
+     "name": "Jaylen Waddle",
+     "pos": "WR",
+     "nfl": "DEN",
+     "pos_rank": 26,
+     "fpts": 174.5923,
+     "vorp": 31.5
+    },
+    {
+     "ovr": 72,
+     "rnd": 6,
+     "pick": 12,
+     "name": "Jayden Daniels",
+     "pos": "QB",
+     "nfl": "WAS",
+     "pos_rank": 7,
+     "fpts": 393.2782,
+     "vorp": 13.9
+    },
+    {
+     "ovr": 73,
+     "rnd": 7,
+     "pick": 1,
+     "name": "Mike Evans",
+     "pos": "WR",
+     "nfl": "SF",
+     "pos_rank": 34,
+     "fpts": 164.6154,
+     "vorp": 21.5
+    },
+    {
+     "ovr": 96,
+     "rnd": 8,
+     "pick": 12,
+     "name": "Rams",
+     "pos": "DST",
+     "nfl": "LAR",
+     "pos_rank": 5,
+     "fpts": -88.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 97,
+     "rnd": 9,
+     "pick": 1,
+     "name": "RJ Harvey",
+     "pos": "RB",
+     "nfl": "DEN",
+     "pos_rank": 31,
+     "fpts": 165.6335,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 120,
+     "rnd": 10,
+     "pick": 12,
+     "name": "De'Zhaun Stribling",
+     "pos": "WR",
+     "nfl": "SF",
+     "pos_rank": 46,
+     "fpts": 141.3392,
+     "vorp": -1.8
+    },
+    {
+     "ovr": 121,
+     "rnd": 11,
+     "pick": 1,
+     "name": "Michael Wilson",
+     "pos": "WR",
+     "nfl": "ARI",
+     "pos_rank": 38,
+     "fpts": 153.177,
+     "vorp": 10.1
+    },
+    {
+     "ovr": 144,
+     "rnd": 12,
+     "pick": 12,
+     "name": "Josh Jacobs",
+     "pos": "RB",
+     "nfl": "GB",
+     "pos_rank": 46,
+     "fpts": 114.5171,
+     "vorp": -51.1
+    },
+    {
+     "ovr": 145,
+     "rnd": 13,
+     "pick": 1,
+     "name": "Sam Darnold",
+     "pos": "QB",
+     "nfl": "SEA",
+     "pos_rank": 17,
+     "fpts": 358.348,
+     "vorp": -21.1
+    },
+    {
+     "ovr": 168,
+     "rnd": 14,
+     "pick": 12,
+     "name": "Cameron Dicker",
+     "pos": "K",
+     "nfl": "LAC",
+     "pos_rank": 7,
+     "fpts": 143.0,
+     "vorp": 9.0
+    },
+    {
+     "ovr": 169,
+     "rnd": 15,
+     "pick": 1,
+     "name": "Isiah Pacheco",
+     "pos": "RB",
+     "nfl": "DET",
+     "pos_rank": 61,
+     "fpts": 80.1291,
+     "vorp": -85.5
+    },
+    {
+     "ovr": 192,
+     "rnd": 16,
+     "pick": 12,
+     "name": "Hunter Henry",
+     "pos": "TE",
+     "nfl": "NE",
+     "pos_rank": 18,
+     "fpts": 134.3698,
+     "vorp": -20.4
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 3,
+   "pos_rank": {
+    "QB": 7,
+    "RB": 2,
+    "WR": 11,
+    "TE": 2,
+    "K": 6,
+    "FLEX": 9
+   }
+  },
+  {
+   "team": "Nigel",
+   "pts": 1989.6,
+   "vorp": 395.4,
+   "pos_vorp": {
+    "QB": 58.5,
+    "RB": 54.8,
+    "WR": 244.2,
+    "TE": 34.4,
+    "K": 2.0,
+    "FLEX": 1.5
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 21,
+      "rnd": 2,
+      "pick": 9,
+      "name": "Josh Allen",
+      "pos": "QB",
+      "nfl": "BUF",
+      "pos_rank": 1,
+      "fpts": 437.8545,
+      "vorp": 58.5
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 28,
+      "rnd": 3,
+      "pick": 4,
+      "name": "Kyren Williams",
+      "pos": "RB",
+      "nfl": "LAR",
+      "pos_rank": 17,
+      "fpts": 212.0954,
+      "vorp": 46.5
+     },
+     {
+      "ovr": 69,
+      "rnd": 6,
+      "pick": 9,
+      "name": "Jaylen Warren",
+      "pos": "RB",
+      "nfl": "PIT",
+      "pos_rank": 25,
+      "fpts": 173.9453,
+      "vorp": 8.3
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 4,
+      "rnd": 1,
+      "pick": 4,
+      "name": "Puka Nacua",
+      "pos": "WR",
+      "nfl": "LAR",
+      "pos_rank": 1,
+      "fpts": 307.9745,
+      "vorp": 164.9
+     },
+     {
+      "ovr": 45,
+      "rnd": 4,
+      "pick": 9,
+      "name": "Tee Higgins",
+      "pos": "WR",
+      "nfl": "CIN",
+      "pos_rank": 16,
+      "fpts": 205.3393,
+      "vorp": 62.2
+     },
+     {
+      "ovr": 117,
+      "rnd": 10,
+      "pick": 9,
+      "name": "Quentin Johnston",
+      "pos": "WR",
+      "nfl": "LAC",
+      "pos_rank": 36,
+      "fpts": 160.1562,
+      "vorp": 17.1
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 100,
+      "rnd": 9,
+      "pick": 4,
+      "name": "Harold Fannin Jr.",
+      "pos": "TE",
+      "nfl": "CLE",
+      "pos_rank": 4,
+      "fpts": 189.1685,
+      "vorp": 34.4
+     }
+    ],
+    "K": [
+     {
+      "ovr": 189,
+      "rnd": 16,
+      "pick": 9,
+      "name": "Tyler Loop",
+      "pos": "K",
+      "nfl": "BAL",
+      "pos_rank": 11,
+      "fpts": 136.0,
+      "vorp": 2.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 52,
+      "rnd": 5,
+      "pick": 4,
+      "name": "Rhamondre Stevenson",
+      "pos": "RB",
+      "nfl": "NE",
+      "pos_rank": 29,
+      "fpts": 167.0654,
+      "vorp": 1.5
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 141,
+     "rnd": 12,
+     "pick": 9,
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "nfl": "SF",
+     "pos_rank": 10,
+     "fpts": 386.5805,
+     "vorp": 7.2
+    },
+    {
+     "ovr": 124,
+     "rnd": 11,
+     "pick": 4,
+     "name": "Chargers",
+     "pos": "DST",
+     "nfl": "LAC",
+     "pos_rank": 10,
+     "fpts": -115.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 172,
+     "rnd": 15,
+     "pick": 4,
+     "name": "Jalen Coker",
+     "pos": "WR",
+     "nfl": "CAR",
+     "pos_rank": 48,
+     "fpts": 140.1818,
+     "vorp": -2.9
+    },
+    {
+     "ovr": 76,
+     "rnd": 7,
+     "pick": 4,
+     "name": "Jonathon Brooks",
+     "pos": "RB",
+     "nfl": "CAR",
+     "pos_rank": 35,
+     "fpts": 151.5327,
+     "vorp": -14.1
+    },
+    {
+     "ovr": 148,
+     "rnd": 13,
+     "pick": 4,
+     "name": "Aaron Jones",
+     "pos": "RB",
+     "nfl": "MIN",
+     "pos_rank": 38,
+     "fpts": 142.2468,
+     "vorp": -23.4
+    },
+    {
+     "ovr": 93,
+     "rnd": 8,
+     "pick": 9,
+     "name": "Bo Nix",
+     "pos": "QB",
+     "nfl": "DEN",
+     "pos_rank": 18,
+     "fpts": 353.6693,
+     "vorp": -25.7
+    },
+    {
+     "ovr": 165,
+     "rnd": 14,
+     "pick": 9,
+     "name": "Dalton Schultz",
+     "pos": "TE",
+     "nfl": "HOU",
+     "pos_rank": 19,
+     "fpts": 127.62,
+     "vorp": -27.2
+    }
+   ],
+   "bench_vorp": -86.1,
+   "roster": [
+    {
+     "ovr": 4,
+     "rnd": 1,
+     "pick": 4,
+     "name": "Puka Nacua",
+     "pos": "WR",
+     "nfl": "LAR",
+     "pos_rank": 1,
+     "fpts": 307.9745,
+     "vorp": 164.9
+    },
+    {
+     "ovr": 21,
+     "rnd": 2,
+     "pick": 9,
+     "name": "Josh Allen",
+     "pos": "QB",
+     "nfl": "BUF",
+     "pos_rank": 1,
+     "fpts": 437.8545,
+     "vorp": 58.5
+    },
+    {
+     "ovr": 28,
+     "rnd": 3,
+     "pick": 4,
+     "name": "Kyren Williams",
+     "pos": "RB",
+     "nfl": "LAR",
+     "pos_rank": 17,
+     "fpts": 212.0954,
+     "vorp": 46.5
+    },
+    {
+     "ovr": 45,
+     "rnd": 4,
+     "pick": 9,
+     "name": "Tee Higgins",
+     "pos": "WR",
+     "nfl": "CIN",
+     "pos_rank": 16,
+     "fpts": 205.3393,
+     "vorp": 62.2
+    },
+    {
+     "ovr": 52,
+     "rnd": 5,
+     "pick": 4,
+     "name": "Rhamondre Stevenson",
+     "pos": "RB",
+     "nfl": "NE",
+     "pos_rank": 29,
+     "fpts": 167.0654,
+     "vorp": 1.5
+    },
+    {
+     "ovr": 69,
+     "rnd": 6,
+     "pick": 9,
+     "name": "Jaylen Warren",
+     "pos": "RB",
+     "nfl": "PIT",
+     "pos_rank": 25,
+     "fpts": 173.9453,
+     "vorp": 8.3
+    },
+    {
+     "ovr": 76,
+     "rnd": 7,
+     "pick": 4,
+     "name": "Jonathon Brooks",
+     "pos": "RB",
+     "nfl": "CAR",
+     "pos_rank": 35,
+     "fpts": 151.5327,
+     "vorp": -14.1
+    },
+    {
+     "ovr": 93,
+     "rnd": 8,
+     "pick": 9,
+     "name": "Bo Nix",
+     "pos": "QB",
+     "nfl": "DEN",
+     "pos_rank": 18,
+     "fpts": 353.6693,
+     "vorp": -25.7
+    },
+    {
+     "ovr": 100,
+     "rnd": 9,
+     "pick": 4,
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "nfl": "CLE",
+     "pos_rank": 4,
+     "fpts": 189.1685,
+     "vorp": 34.4
+    },
+    {
+     "ovr": 117,
+     "rnd": 10,
+     "pick": 9,
+     "name": "Quentin Johnston",
+     "pos": "WR",
+     "nfl": "LAC",
+     "pos_rank": 36,
+     "fpts": 160.1562,
+     "vorp": 17.1
+    },
+    {
+     "ovr": 124,
+     "rnd": 11,
+     "pick": 4,
+     "name": "Chargers",
+     "pos": "DST",
+     "nfl": "LAC",
+     "pos_rank": 10,
+     "fpts": -115.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 141,
+     "rnd": 12,
+     "pick": 9,
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "nfl": "SF",
+     "pos_rank": 10,
+     "fpts": 386.5805,
+     "vorp": 7.2
+    },
+    {
+     "ovr": 148,
+     "rnd": 13,
+     "pick": 4,
+     "name": "Aaron Jones",
+     "pos": "RB",
+     "nfl": "MIN",
+     "pos_rank": 38,
+     "fpts": 142.2468,
+     "vorp": -23.4
+    },
+    {
+     "ovr": 165,
+     "rnd": 14,
+     "pick": 9,
+     "name": "Dalton Schultz",
+     "pos": "TE",
+     "nfl": "HOU",
+     "pos_rank": 19,
+     "fpts": 127.62,
+     "vorp": -27.2
+    },
+    {
+     "ovr": 172,
+     "rnd": 15,
+     "pick": 4,
+     "name": "Jalen Coker",
+     "pos": "WR",
+     "nfl": "CAR",
+     "pos_rank": 48,
+     "fpts": 140.1818,
+     "vorp": -2.9
+    },
+    {
+     "ovr": 189,
+     "rnd": 16,
+     "pick": 9,
+     "name": "Tyler Loop",
+     "pos": "K",
+     "nfl": "BAL",
+     "pos_rank": 11,
+     "fpts": 136.0,
+     "vorp": 2.0
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 4,
+   "pos_rank": {
+    "QB": 1,
+    "RB": 12,
+    "WR": 4,
+    "TE": 4,
+    "K": 10,
+    "FLEX": 7
+   }
+  },
+  {
+   "team": "Tolga",
+   "pts": 1976.4,
+   "vorp": 392.9,
+   "pos_vorp": {
+    "QB": 13.2,
+    "RB": 68.2,
+    "WR": 284.8,
+    "TE": 7.5,
+    "K": 16.0,
+    "FLEX": 3.2
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 78,
+      "rnd": 7,
+      "pick": 6,
+      "name": "Caleb Williams",
+      "pos": "QB",
+      "nfl": "CHI",
+      "pos_rank": 8,
+      "fpts": 392.6407,
+      "vorp": 13.2
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 30,
+      "rnd": 3,
+      "pick": 6,
+      "name": "Jeremiyah Love",
+      "pos": "RB",
+      "nfl": "ARI",
+      "pos_rank": 20,
+      "fpts": 202.1618,
+      "vorp": 36.6
+     },
+     {
+      "ovr": 43,
+      "rnd": 4,
+      "pick": 7,
+      "name": "Quinshon Judkins",
+      "pos": "RB",
+      "nfl": "CLE",
+      "pos_rank": 21,
+      "fpts": 197.211166,
+      "vorp": 31.6
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 6,
+      "rnd": 1,
+      "pick": 6,
+      "name": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "nfl": "SEA",
+      "pos_rank": 2,
+      "fpts": 289.5582,
+      "vorp": 146.5
+     },
+     {
+      "ovr": 19,
+      "rnd": 2,
+      "pick": 7,
+      "name": "Drake London",
+      "pos": "WR",
+      "nfl": "ATL",
+      "pos_rank": 7,
+      "fpts": 241.4489,
+      "vorp": 98.3
+     },
+     {
+      "ovr": 54,
+      "rnd": 5,
+      "pick": 6,
+      "name": "Luther Burden III",
+      "pos": "WR",
+      "nfl": "CHI",
+      "pos_rank": 24,
+      "fpts": 183.0905,
+      "vorp": 40.0
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 67,
+      "rnd": 6,
+      "pick": 7,
+      "name": "Sam LaPorta",
+      "pos": "TE",
+      "nfl": "DET",
+      "pos_rank": 9,
+      "fpts": 162.2887,
+      "vorp": 7.5
+     }
+    ],
+    "K": [
+     {
+      "ovr": 150,
+      "rnd": 13,
+      "pick": 6,
+      "name": "Brandon Aubrey",
+      "pos": "K",
+      "nfl": "DAL",
+      "pos_rank": 4,
+      "fpts": 150.0,
+      "vorp": 16.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 163,
+      "rnd": 14,
+      "pick": 7,
+      "name": "Mark Andrews",
+      "pos": "TE",
+      "nfl": "BAL",
+      "pos_rank": 11,
+      "fpts": 157.9865,
+      "vorp": 3.2
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 126,
+     "rnd": 11,
+     "pick": 6,
+     "name": "Jared Goff",
+     "pos": "QB",
+     "nfl": "DET",
+     "pos_rank": 12,
+     "fpts": 382.5703,
+     "vorp": 3.2
+    },
+    {
+     "ovr": 174,
+     "rnd": 15,
+     "pick": 6,
+     "name": "Jakobi Meyers",
+     "pos": "WR",
+     "nfl": "JAC",
+     "pos_rank": 43,
+     "fpts": 144.2521,
+     "vorp": 1.2
+    },
+    {
+     "ovr": 115,
+     "rnd": 10,
+     "pick": 7,
+     "name": "Ravens",
+     "pos": "DST",
+     "nfl": "BAL",
+     "pos_rank": 7,
+     "fpts": -104.2,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 139,
+     "rnd": 12,
+     "pick": 7,
+     "name": "Packers",
+     "pos": "DST",
+     "nfl": "GB",
+     "pos_rank": 11,
+     "fpts": -117.75,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 102,
+     "rnd": 9,
+     "pick": 6,
+     "name": "Kyle Monangai",
+     "pos": "RB",
+     "nfl": "CHI",
+     "pos_rank": 37,
+     "fpts": 144.906966,
+     "vorp": -20.7
+    },
+    {
+     "ovr": 187,
+     "rnd": 16,
+     "pick": 7,
+     "name": "Tre Tucker",
+     "pos": "WR",
+     "nfl": "LV",
+     "pos_rank": 62,
+     "fpts": 121.1428,
+     "vorp": -22.0
+    },
+    {
+     "ovr": 91,
+     "rnd": 8,
+     "pick": 7,
+     "name": "Blake Corum",
+     "pos": "RB",
+     "nfl": "LAR",
+     "pos_rank": 41,
+     "fpts": 129.301791,
+     "vorp": -36.3
+    }
+   ],
+   "bench_vorp": -74.6,
+   "roster": [
+    {
+     "ovr": 6,
+     "rnd": 1,
+     "pick": 6,
+     "name": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "nfl": "SEA",
+     "pos_rank": 2,
+     "fpts": 289.5582,
+     "vorp": 146.5
+    },
+    {
+     "ovr": 19,
+     "rnd": 2,
+     "pick": 7,
+     "name": "Drake London",
+     "pos": "WR",
+     "nfl": "ATL",
+     "pos_rank": 7,
+     "fpts": 241.4489,
+     "vorp": 98.3
+    },
+    {
+     "ovr": 30,
+     "rnd": 3,
+     "pick": 6,
+     "name": "Jeremiyah Love",
+     "pos": "RB",
+     "nfl": "ARI",
+     "pos_rank": 20,
+     "fpts": 202.1618,
+     "vorp": 36.6
+    },
+    {
+     "ovr": 43,
+     "rnd": 4,
+     "pick": 7,
+     "name": "Quinshon Judkins",
+     "pos": "RB",
+     "nfl": "CLE",
+     "pos_rank": 21,
+     "fpts": 197.211166,
+     "vorp": 31.6
+    },
+    {
+     "ovr": 54,
+     "rnd": 5,
+     "pick": 6,
+     "name": "Luther Burden III",
+     "pos": "WR",
+     "nfl": "CHI",
+     "pos_rank": 24,
+     "fpts": 183.0905,
+     "vorp": 40.0
+    },
+    {
+     "ovr": 67,
+     "rnd": 6,
+     "pick": 7,
+     "name": "Sam LaPorta",
+     "pos": "TE",
+     "nfl": "DET",
+     "pos_rank": 9,
+     "fpts": 162.2887,
+     "vorp": 7.5
+    },
+    {
+     "ovr": 78,
+     "rnd": 7,
+     "pick": 6,
+     "name": "Caleb Williams",
+     "pos": "QB",
+     "nfl": "CHI",
+     "pos_rank": 8,
+     "fpts": 392.6407,
+     "vorp": 13.2
+    },
+    {
+     "ovr": 91,
+     "rnd": 8,
+     "pick": 7,
+     "name": "Blake Corum",
+     "pos": "RB",
+     "nfl": "LAR",
+     "pos_rank": 41,
+     "fpts": 129.301791,
+     "vorp": -36.3
+    },
+    {
+     "ovr": 102,
+     "rnd": 9,
+     "pick": 6,
+     "name": "Kyle Monangai",
+     "pos": "RB",
+     "nfl": "CHI",
+     "pos_rank": 37,
+     "fpts": 144.906966,
+     "vorp": -20.7
+    },
+    {
+     "ovr": 115,
+     "rnd": 10,
+     "pick": 7,
+     "name": "Ravens",
+     "pos": "DST",
+     "nfl": "BAL",
+     "pos_rank": 7,
+     "fpts": -104.2,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 126,
+     "rnd": 11,
+     "pick": 6,
+     "name": "Jared Goff",
+     "pos": "QB",
+     "nfl": "DET",
+     "pos_rank": 12,
+     "fpts": 382.5703,
+     "vorp": 3.2
+    },
+    {
+     "ovr": 139,
+     "rnd": 12,
+     "pick": 7,
+     "name": "Packers",
+     "pos": "DST",
+     "nfl": "GB",
+     "pos_rank": 11,
+     "fpts": -117.75,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 150,
+     "rnd": 13,
+     "pick": 6,
+     "name": "Brandon Aubrey",
+     "pos": "K",
+     "nfl": "DAL",
+     "pos_rank": 4,
+     "fpts": 150.0,
+     "vorp": 16.0
+    },
+    {
+     "ovr": 163,
+     "rnd": 14,
+     "pick": 7,
+     "name": "Mark Andrews",
+     "pos": "TE",
+     "nfl": "BAL",
+     "pos_rank": 11,
+     "fpts": 157.9865,
+     "vorp": 3.2
+    },
+    {
+     "ovr": 174,
+     "rnd": 15,
+     "pick": 6,
+     "name": "Jakobi Meyers",
+     "pos": "WR",
+     "nfl": "JAC",
+     "pos_rank": 43,
+     "fpts": 144.2521,
+     "vorp": 1.2
+    },
+    {
+     "ovr": 187,
+     "rnd": 16,
+     "pick": 7,
+     "name": "Tre Tucker",
+     "pos": "WR",
+     "nfl": "LV",
+     "pos_rank": 62,
+     "fpts": 121.1428,
+     "vorp": -22.0
+    }
+   ],
+   "dead_spots": 3,
+   "rank": 5,
+   "pos_rank": {
+    "QB": 8,
+    "RB": 10,
+    "WR": 1,
+    "TE": 9,
+    "K": 4,
+    "FLEX": 5
+   }
+  },
+  {
+   "team": "Sly",
+   "pts": 1982.5,
+   "vorp": 388.2,
+   "pos_vorp": {
+    "QB": -2.7,
+    "RB": 148.8,
+    "WR": 199.6,
+    "TE": 11.9,
+    "K": 12.0,
+    "FLEX": 18.6
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 84,
+      "rnd": 7,
+      "pick": 12,
+      "name": "Justin Herbert",
+      "pos": "QB",
+      "nfl": "LAC",
+      "pos_rank": 14,
+      "fpts": 376.6804,
+      "vorp": -2.7
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 12,
+      "rnd": 1,
+      "pick": 12,
+      "name": "Chase Brown",
+      "pos": "RB",
+      "nfl": "CIN",
+      "pos_rank": 7,
+      "fpts": 264.8458,
+      "vorp": 99.2
+     },
+     {
+      "ovr": 37,
+      "rnd": 4,
+      "pick": 1,
+      "name": "Bucky Irving",
+      "pos": "RB",
+      "nfl": "TB",
+      "pos_rank": 16,
+      "fpts": 215.1882,
+      "vorp": 49.6
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 13,
+      "rnd": 2,
+      "pick": 1,
+      "name": "A.J. Brown",
+      "pos": "WR",
+      "nfl": "NE",
+      "pos_rank": 9,
+      "fpts": 232.3742,
+      "vorp": 89.3
+     },
+     {
+      "ovr": 36,
+      "rnd": 3,
+      "pick": 12,
+      "name": "Tetairoa McMillan",
+      "pos": "WR",
+      "nfl": "CAR",
+      "pos_rank": 15,
+      "fpts": 207.9409,
+      "vorp": 64.8
+     },
+     {
+      "ovr": 133,
+      "rnd": 12,
+      "pick": 1,
+      "name": "Alec Pierce",
+      "pos": "WR",
+      "nfl": "IND",
+      "pos_rank": 21,
+      "fpts": 188.5634,
+      "vorp": 45.5
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 61,
+      "rnd": 6,
+      "pick": 1,
+      "name": "Tucker Kraft",
+      "pos": "TE",
+      "nfl": "GB",
+      "pos_rank": 8,
+      "fpts": 166.697,
+      "vorp": 11.9
+     }
+    ],
+    "K": [
+     {
+      "ovr": 180,
+      "rnd": 15,
+      "pick": 12,
+      "name": "Jake Bates",
+      "pos": "K",
+      "nfl": "DET",
+      "pos_rank": 5,
+      "fpts": 146.0,
+      "vorp": 12.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 60,
+      "rnd": 5,
+      "pick": 12,
+      "name": "David Montgomery",
+      "pos": "RB",
+      "nfl": "HOU",
+      "pos_rank": 23,
+      "fpts": 184.208067,
+      "vorp": 18.6
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 85,
+     "rnd": 8,
+     "pick": 1,
+     "name": "DK Metcalf",
+     "pos": "WR",
+     "nfl": "PIT",
+     "pos_rank": 35,
+     "fpts": 161.7755,
+     "vorp": 18.7
+    },
+    {
+     "ovr": 108,
+     "rnd": 9,
+     "pick": 12,
+     "name": "Eagles",
+     "pos": "DST",
+     "nfl": "PHI",
+     "pos_rank": 4,
+     "fpts": -83.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 157,
+     "rnd": 14,
+     "pick": 1,
+     "name": "Lions",
+     "pos": "DST",
+     "nfl": "DET",
+     "pos_rank": 13,
+     "fpts": -121.25,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 109,
+     "rnd": 10,
+     "pick": 1,
+     "name": "Rachaad White",
+     "pos": "RB",
+     "nfl": "WAS",
+     "pos_rank": 40,
+     "fpts": 137.5285,
+     "vorp": -28.1
+    },
+    {
+     "ovr": 156,
+     "rnd": 13,
+     "pick": 12,
+     "name": "Dylan Sampson",
+     "pos": "RB",
+     "nfl": "CLE",
+     "pos_rank": 47,
+     "fpts": 110.9954,
+     "vorp": -54.6
+    },
+    {
+     "ovr": 132,
+     "rnd": 11,
+     "pick": 12,
+     "name": "Jordan James",
+     "pos": "RB",
+     "nfl": "SF",
+     "pos_rank": 48,
+     "fpts": 109.4384,
+     "vorp": -56.2
+    },
+    {
+     "ovr": 181,
+     "rnd": 16,
+     "pick": 1,
+     "name": "Kaelon Black",
+     "pos": "RB",
+     "nfl": "SF",
+     "pos_rank": 49,
+     "fpts": 108.3219,
+     "vorp": -57.3
+    }
+   ],
+   "bench_vorp": -177.5,
+   "roster": [
+    {
+     "ovr": 12,
+     "rnd": 1,
+     "pick": 12,
+     "name": "Chase Brown",
+     "pos": "RB",
+     "nfl": "CIN",
+     "pos_rank": 7,
+     "fpts": 264.8458,
+     "vorp": 99.2
+    },
+    {
+     "ovr": 13,
+     "rnd": 2,
+     "pick": 1,
+     "name": "A.J. Brown",
+     "pos": "WR",
+     "nfl": "NE",
+     "pos_rank": 9,
+     "fpts": 232.3742,
+     "vorp": 89.3
+    },
+    {
+     "ovr": 36,
+     "rnd": 3,
+     "pick": 12,
+     "name": "Tetairoa McMillan",
+     "pos": "WR",
+     "nfl": "CAR",
+     "pos_rank": 15,
+     "fpts": 207.9409,
+     "vorp": 64.8
+    },
+    {
+     "ovr": 37,
+     "rnd": 4,
+     "pick": 1,
+     "name": "Bucky Irving",
+     "pos": "RB",
+     "nfl": "TB",
+     "pos_rank": 16,
+     "fpts": 215.1882,
+     "vorp": 49.6
+    },
+    {
+     "ovr": 60,
+     "rnd": 5,
+     "pick": 12,
+     "name": "David Montgomery",
+     "pos": "RB",
+     "nfl": "HOU",
+     "pos_rank": 23,
+     "fpts": 184.208067,
+     "vorp": 18.6
+    },
+    {
+     "ovr": 61,
+     "rnd": 6,
+     "pick": 1,
+     "name": "Tucker Kraft",
+     "pos": "TE",
+     "nfl": "GB",
+     "pos_rank": 8,
+     "fpts": 166.697,
+     "vorp": 11.9
+    },
+    {
+     "ovr": 84,
+     "rnd": 7,
+     "pick": 12,
+     "name": "Justin Herbert",
+     "pos": "QB",
+     "nfl": "LAC",
+     "pos_rank": 14,
+     "fpts": 376.6804,
+     "vorp": -2.7
+    },
+    {
+     "ovr": 85,
+     "rnd": 8,
+     "pick": 1,
+     "name": "DK Metcalf",
+     "pos": "WR",
+     "nfl": "PIT",
+     "pos_rank": 35,
+     "fpts": 161.7755,
+     "vorp": 18.7
+    },
+    {
+     "ovr": 108,
+     "rnd": 9,
+     "pick": 12,
+     "name": "Eagles",
+     "pos": "DST",
+     "nfl": "PHI",
+     "pos_rank": 4,
+     "fpts": -83.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 109,
+     "rnd": 10,
+     "pick": 1,
+     "name": "Rachaad White",
+     "pos": "RB",
+     "nfl": "WAS",
+     "pos_rank": 40,
+     "fpts": 137.5285,
+     "vorp": -28.1
+    },
+    {
+     "ovr": 132,
+     "rnd": 11,
+     "pick": 12,
+     "name": "Jordan James",
+     "pos": "RB",
+     "nfl": "SF",
+     "pos_rank": 48,
+     "fpts": 109.4384,
+     "vorp": -56.2
+    },
+    {
+     "ovr": 133,
+     "rnd": 12,
+     "pick": 1,
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "nfl": "IND",
+     "pos_rank": 21,
+     "fpts": 188.5634,
+     "vorp": 45.5
+    },
+    {
+     "ovr": 156,
+     "rnd": 13,
+     "pick": 12,
+     "name": "Dylan Sampson",
+     "pos": "RB",
+     "nfl": "CLE",
+     "pos_rank": 47,
+     "fpts": 110.9954,
+     "vorp": -54.6
+    },
+    {
+     "ovr": 157,
+     "rnd": 14,
+     "pick": 1,
+     "name": "Lions",
+     "pos": "DST",
+     "nfl": "DET",
+     "pos_rank": 13,
+     "fpts": -121.25,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 180,
+     "rnd": 15,
+     "pick": 12,
+     "name": "Jake Bates",
+     "pos": "K",
+     "nfl": "DET",
+     "pos_rank": 5,
+     "fpts": 146.0,
+     "vorp": 12.0
+    },
+    {
+     "ovr": 181,
+     "rnd": 16,
+     "pick": 1,
+     "name": "Kaelon Black",
+     "pos": "RB",
+     "nfl": "SF",
+     "pos_rank": 49,
+     "fpts": 108.3219,
+     "vorp": -57.3
+    }
+   ],
+   "dead_spots": 4,
+   "rank": 6,
+   "pos_rank": {
+    "QB": 11,
+    "RB": 5,
+    "WR": 5,
+    "TE": 8,
+    "K": 5,
+    "FLEX": 2
+   }
+  },
+  {
+   "team": "TheOhZone",
+   "pts": 1955.3,
+   "vorp": 361.0,
+   "pos_vorp": {
+    "QB": -28.6,
+    "RB": 204.0,
+    "WR": 153.1,
+    "TE": 3.6,
+    "K": 2.0,
+    "FLEX": 26.9
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 143,
+      "rnd": 12,
+      "pick": 11,
+      "name": "Tyler Shough",
+      "pos": "QB",
+      "nfl": "NO",
+      "pos_rank": 22,
+      "fpts": 350.7718,
+      "vorp": -28.6
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 2,
+      "rnd": 1,
+      "pick": 2,
+      "name": "Bijan Robinson",
+      "pos": "RB",
+      "nfl": "ATL",
+      "pos_rank": 2,
+      "fpts": 318.7164,
+      "vorp": 153.1
+     },
+     {
+      "ovr": 23,
+      "rnd": 2,
+      "pick": 11,
+      "name": "Travis Etienne",
+      "pos": "RB",
+      "nfl": "NO",
+      "pos_rank": 12,
+      "fpts": 216.447,
+      "vorp": 50.8
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 26,
+      "rnd": 3,
+      "pick": 2,
+      "name": "Nico Collins",
+      "pos": "WR",
+      "nfl": "HOU",
+      "pos_rank": 10,
+      "fpts": 224.0541,
+      "vorp": 81.0
+     },
+     {
+      "ovr": 47,
+      "rnd": 4,
+      "pick": 11,
+      "name": "Garrett Wilson",
+      "pos": "WR",
+      "nfl": "NYJ",
+      "pos_rank": 19,
+      "fpts": 192.6787,
+      "vorp": 49.6
+     },
+     {
+      "ovr": 71,
+      "rnd": 6,
+      "pick": 11,
+      "name": "Parker Washington",
+      "pos": "WR",
+      "nfl": "JAC",
+      "pos_rank": 33,
+      "fpts": 165.7085,
+      "vorp": 22.6
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 95,
+      "rnd": 8,
+      "pick": 11,
+      "name": "Isaiah Likely",
+      "pos": "TE",
+      "nfl": "NYG",
+      "pos_rank": 10,
+      "fpts": 158.3959,
+      "vorp": 3.6
+     }
+    ],
+    "K": [
+     {
+      "ovr": 170,
+      "rnd": 15,
+      "pick": 2,
+      "name": "Cam Little",
+      "pos": "K",
+      "nfl": "JAC",
+      "pos_rank": 12,
+      "fpts": 136.0,
+      "vorp": 2.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 50,
+      "rnd": 5,
+      "pick": 2,
+      "name": "Bhayshul Tuten",
+      "pos": "RB",
+      "nfl": "JAC",
+      "pos_rank": 22,
+      "fpts": 192.5014,
+      "vorp": 26.9
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 98,
+     "rnd": 9,
+     "pick": 2,
+     "name": "Texans",
+     "pos": "DST",
+     "nfl": "HOU",
+     "pos_rank": 3,
+     "fpts": -73.55,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 167,
+     "rnd": 14,
+     "pick": 11,
+     "name": "Bills",
+     "pos": "DST",
+     "nfl": "BUF",
+     "pos_rank": 16,
+     "fpts": -127.25,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 122,
+     "rnd": 11,
+     "pick": 2,
+     "name": "KC Concepcion",
+     "pos": "WR",
+     "nfl": "CLE",
+     "pos_rank": 51,
+     "fpts": 136.6314,
+     "vorp": -6.5
+    },
+    {
+     "ovr": 119,
+     "rnd": 10,
+     "pick": 11,
+     "name": "Juwan Johnson",
+     "pos": "TE",
+     "nfl": "NO",
+     "pos_rank": 16,
+     "fpts": 142.8179,
+     "vorp": -12.0
+    },
+    {
+     "ovr": 74,
+     "rnd": 7,
+     "pick": 2,
+     "name": "Jordan Mason",
+     "pos": "RB",
+     "nfl": "MIN",
+     "pos_rank": 36,
+     "fpts": 146.30537,
+     "vorp": -19.3
+    },
+    {
+     "ovr": 146,
+     "rnd": 13,
+     "pick": 2,
+     "name": "Tank Bigsby",
+     "pos": "RB",
+     "nfl": "PHI",
+     "pos_rank": 50,
+     "fpts": 98.501092,
+     "vorp": -67.1
+    },
+    {
+     "ovr": 191,
+     "rnd": 16,
+     "pick": 11,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC",
+     "pos_rank": 66,
+     "fpts": 70.303171,
+     "vorp": -95.3
+    }
+   ],
+   "bench_vorp": -200.2,
+   "roster": [
+    {
+     "ovr": 2,
+     "rnd": 1,
+     "pick": 2,
+     "name": "Bijan Robinson",
+     "pos": "RB",
+     "nfl": "ATL",
+     "pos_rank": 2,
+     "fpts": 318.7164,
+     "vorp": 153.1
+    },
+    {
+     "ovr": 23,
+     "rnd": 2,
+     "pick": 11,
+     "name": "Travis Etienne",
+     "pos": "RB",
+     "nfl": "NO",
+     "pos_rank": 12,
+     "fpts": 216.447,
+     "vorp": 50.8
+    },
+    {
+     "ovr": 26,
+     "rnd": 3,
+     "pick": 2,
+     "name": "Nico Collins",
+     "pos": "WR",
+     "nfl": "HOU",
+     "pos_rank": 10,
+     "fpts": 224.0541,
+     "vorp": 81.0
+    },
+    {
+     "ovr": 47,
+     "rnd": 4,
+     "pick": 11,
+     "name": "Garrett Wilson",
+     "pos": "WR",
+     "nfl": "NYJ",
+     "pos_rank": 19,
+     "fpts": 192.6787,
+     "vorp": 49.6
+    },
+    {
+     "ovr": 50,
+     "rnd": 5,
+     "pick": 2,
+     "name": "Bhayshul Tuten",
+     "pos": "RB",
+     "nfl": "JAC",
+     "pos_rank": 22,
+     "fpts": 192.5014,
+     "vorp": 26.9
+    },
+    {
+     "ovr": 71,
+     "rnd": 6,
+     "pick": 11,
+     "name": "Parker Washington",
+     "pos": "WR",
+     "nfl": "JAC",
+     "pos_rank": 33,
+     "fpts": 165.7085,
+     "vorp": 22.6
+    },
+    {
+     "ovr": 74,
+     "rnd": 7,
+     "pick": 2,
+     "name": "Jordan Mason",
+     "pos": "RB",
+     "nfl": "MIN",
+     "pos_rank": 36,
+     "fpts": 146.30537,
+     "vorp": -19.3
+    },
+    {
+     "ovr": 95,
+     "rnd": 8,
+     "pick": 11,
+     "name": "Isaiah Likely",
+     "pos": "TE",
+     "nfl": "NYG",
+     "pos_rank": 10,
+     "fpts": 158.3959,
+     "vorp": 3.6
+    },
+    {
+     "ovr": 98,
+     "rnd": 9,
+     "pick": 2,
+     "name": "Texans",
+     "pos": "DST",
+     "nfl": "HOU",
+     "pos_rank": 3,
+     "fpts": -73.55,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 119,
+     "rnd": 10,
+     "pick": 11,
+     "name": "Juwan Johnson",
+     "pos": "TE",
+     "nfl": "NO",
+     "pos_rank": 16,
+     "fpts": 142.8179,
+     "vorp": -12.0
+    },
+    {
+     "ovr": 122,
+     "rnd": 11,
+     "pick": 2,
+     "name": "KC Concepcion",
+     "pos": "WR",
+     "nfl": "CLE",
+     "pos_rank": 51,
+     "fpts": 136.6314,
+     "vorp": -6.5
+    },
+    {
+     "ovr": 143,
+     "rnd": 12,
+     "pick": 11,
+     "name": "Tyler Shough",
+     "pos": "QB",
+     "nfl": "NO",
+     "pos_rank": 22,
+     "fpts": 350.7718,
+     "vorp": -28.6
+    },
+    {
+     "ovr": 146,
+     "rnd": 13,
+     "pick": 2,
+     "name": "Tank Bigsby",
+     "pos": "RB",
+     "nfl": "PHI",
+     "pos_rank": 50,
+     "fpts": 98.501092,
+     "vorp": -67.1
+    },
+    {
+     "ovr": 167,
+     "rnd": 14,
+     "pick": 11,
+     "name": "Bills",
+     "pos": "DST",
+     "nfl": "BUF",
+     "pos_rank": 16,
+     "fpts": -127.25,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 170,
+     "rnd": 15,
+     "pick": 2,
+     "name": "Cam Little",
+     "pos": "K",
+     "nfl": "JAC",
+     "pos_rank": 12,
+     "fpts": 136.0,
+     "vorp": 2.0
+    },
+    {
+     "ovr": 191,
+     "rnd": 16,
+     "pick": 11,
+     "name": "Keaton Mitchell",
+     "pos": "RB",
+     "nfl": "LAC",
+     "pos_rank": 66,
+     "fpts": 70.303171,
+     "vorp": -95.3
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 7,
+   "pos_rank": {
+    "QB": 12,
+    "RB": 3,
+    "WR": 9,
+    "TE": 10,
+    "K": 11,
+    "FLEX": 1
+   }
+  },
+  {
+   "team": "David",
+   "pts": 1933.1,
+   "vorp": 349.7,
+   "pos_vorp": {
+    "QB": 15.3,
+    "RB": 125.1,
+    "WR": 184.5,
+    "TE": 1.5,
+    "K": 33.0,
+    "FLEX": -9.7
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 65,
+      "rnd": 6,
+      "pick": 5,
+      "name": "Jalen Hurts",
+      "pos": "QB",
+      "nfl": "PHI",
+      "pos_rank": 6,
+      "fpts": 394.6881,
+      "vorp": 15.3
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 17,
+      "rnd": 2,
+      "pick": 5,
+      "name": "Saquon Barkley",
+      "pos": "RB",
+      "nfl": "PHI",
+      "pos_rank": 9,
+      "fpts": 240.8615,
+      "vorp": 75.3
+     },
+     {
+      "ovr": 32,
+      "rnd": 3,
+      "pick": 8,
+      "name": "Cam Skattebo",
+      "pos": "RB",
+      "nfl": "NYG",
+      "pos_rank": 15,
+      "fpts": 215.4074,
+      "vorp": 49.8
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 8,
+      "rnd": 1,
+      "pick": 8,
+      "name": "Amon-Ra St. Brown",
+      "pos": "WR",
+      "nfl": "DET",
+      "pos_rank": 4,
+      "fpts": 260.5402,
+      "vorp": 117.4
+     },
+     {
+      "ovr": 41,
+      "rnd": 4,
+      "pick": 5,
+      "name": "Terry McLaurin",
+      "pos": "WR",
+      "nfl": "WAS",
+      "pos_rank": 23,
+      "fpts": 184.7889,
+      "vorp": 41.7
+     },
+     {
+      "ovr": 56,
+      "rnd": 5,
+      "pick": 8,
+      "name": "Brian Thomas Jr.",
+      "pos": "WR",
+      "nfl": "JAC",
+      "pos_rank": 31,
+      "fpts": 168.4866,
+      "vorp": 25.4
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 89,
+      "rnd": 8,
+      "pick": 5,
+      "name": "Travis Kelce",
+      "pos": "TE",
+      "nfl": "KC",
+      "pos_rank": 12,
+      "fpts": 156.2656,
+      "vorp": 1.5
+     }
+    ],
+    "K": [
+     {
+      "ovr": 128,
+      "rnd": 11,
+      "pick": 8,
+      "name": "Jason Myers",
+      "pos": "K",
+      "nfl": "SEA",
+      "pos_rank": 1,
+      "fpts": 167.0,
+      "vorp": 33.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 176,
+      "rnd": 15,
+      "pick": 8,
+      "name": "Brenton Strange",
+      "pos": "TE",
+      "nfl": "JAC",
+      "pos_rank": 15,
+      "fpts": 145.056,
+      "vorp": -9.7
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 104,
+     "rnd": 9,
+     "pick": 8,
+     "name": "Cowboys",
+     "pos": "DST",
+     "nfl": "DAL",
+     "pos_rank": 29,
+     "fpts": -180.65,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 113,
+     "rnd": 10,
+     "pick": 5,
+     "name": "Chiefs",
+     "pos": "DST",
+     "nfl": "KC",
+     "pos_rank": 12,
+     "fpts": -118.6,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 152,
+     "rnd": 13,
+     "pick": 8,
+     "name": "Bears",
+     "pos": "DST",
+     "nfl": "CHI",
+     "pos_rank": 15,
+     "fpts": -126.95,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 185,
+     "rnd": 16,
+     "pick": 5,
+     "name": "Denzel Boston",
+     "pos": "WR",
+     "nfl": "CLE",
+     "pos_rank": 55,
+     "fpts": 131.0212,
+     "vorp": -12.1
+    },
+    {
+     "ovr": 161,
+     "rnd": 14,
+     "pick": 5,
+     "name": "Makai Lemon",
+     "pos": "WR",
+     "nfl": "PHI",
+     "pos_rank": 64,
+     "fpts": 120.9269,
+     "vorp": -22.2
+    },
+    {
+     "ovr": 80,
+     "rnd": 7,
+     "pick": 8,
+     "name": "Jonah Coleman",
+     "pos": "RB",
+     "nfl": "DEN",
+     "pos_rank": 83,
+     "fpts": 21.8051,
+     "vorp": -143.8
+    },
+    {
+     "ovr": 137,
+     "rnd": 12,
+     "pick": 5,
+     "name": "Fernando Mendoza",
+     "pos": "QB",
+     "nfl": "LV",
+     "pos_rank": 32,
+     "fpts": 218.0909,
+     "vorp": -161.3
+    }
+   ],
+   "bench_vorp": -339.4,
+   "roster": [
+    {
+     "ovr": 8,
+     "rnd": 1,
+     "pick": 8,
+     "name": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "nfl": "DET",
+     "pos_rank": 4,
+     "fpts": 260.5402,
+     "vorp": 117.4
+    },
+    {
+     "ovr": 17,
+     "rnd": 2,
+     "pick": 5,
+     "name": "Saquon Barkley",
+     "pos": "RB",
+     "nfl": "PHI",
+     "pos_rank": 9,
+     "fpts": 240.8615,
+     "vorp": 75.3
+    },
+    {
+     "ovr": 32,
+     "rnd": 3,
+     "pick": 8,
+     "name": "Cam Skattebo",
+     "pos": "RB",
+     "nfl": "NYG",
+     "pos_rank": 15,
+     "fpts": 215.4074,
+     "vorp": 49.8
+    },
+    {
+     "ovr": 41,
+     "rnd": 4,
+     "pick": 5,
+     "name": "Terry McLaurin",
+     "pos": "WR",
+     "nfl": "WAS",
+     "pos_rank": 23,
+     "fpts": 184.7889,
+     "vorp": 41.7
+    },
+    {
+     "ovr": 56,
+     "rnd": 5,
+     "pick": 8,
+     "name": "Brian Thomas Jr.",
+     "pos": "WR",
+     "nfl": "JAC",
+     "pos_rank": 31,
+     "fpts": 168.4866,
+     "vorp": 25.4
+    },
+    {
+     "ovr": 65,
+     "rnd": 6,
+     "pick": 5,
+     "name": "Jalen Hurts",
+     "pos": "QB",
+     "nfl": "PHI",
+     "pos_rank": 6,
+     "fpts": 394.6881,
+     "vorp": 15.3
+    },
+    {
+     "ovr": 80,
+     "rnd": 7,
+     "pick": 8,
+     "name": "Jonah Coleman",
+     "pos": "RB",
+     "nfl": "DEN",
+     "pos_rank": 83,
+     "fpts": 21.8051,
+     "vorp": -143.8
+    },
+    {
+     "ovr": 89,
+     "rnd": 8,
+     "pick": 5,
+     "name": "Travis Kelce",
+     "pos": "TE",
+     "nfl": "KC",
+     "pos_rank": 12,
+     "fpts": 156.2656,
+     "vorp": 1.5
+    },
+    {
+     "ovr": 104,
+     "rnd": 9,
+     "pick": 8,
+     "name": "Cowboys",
+     "pos": "DST",
+     "nfl": "DAL",
+     "pos_rank": 29,
+     "fpts": -180.65,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 113,
+     "rnd": 10,
+     "pick": 5,
+     "name": "Chiefs",
+     "pos": "DST",
+     "nfl": "KC",
+     "pos_rank": 12,
+     "fpts": -118.6,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 128,
+     "rnd": 11,
+     "pick": 8,
+     "name": "Jason Myers",
+     "pos": "K",
+     "nfl": "SEA",
+     "pos_rank": 1,
+     "fpts": 167.0,
+     "vorp": 33.0
+    },
+    {
+     "ovr": 137,
+     "rnd": 12,
+     "pick": 5,
+     "name": "Fernando Mendoza",
+     "pos": "QB",
+     "nfl": "LV",
+     "pos_rank": 32,
+     "fpts": 218.0909,
+     "vorp": -161.3
+    },
+    {
+     "ovr": 152,
+     "rnd": 13,
+     "pick": 8,
+     "name": "Bears",
+     "pos": "DST",
+     "nfl": "CHI",
+     "pos_rank": 15,
+     "fpts": -126.95,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 161,
+     "rnd": 14,
+     "pick": 5,
+     "name": "Makai Lemon",
+     "pos": "WR",
+     "nfl": "PHI",
+     "pos_rank": 64,
+     "fpts": 120.9269,
+     "vorp": -22.2
+    },
+    {
+     "ovr": 176,
+     "rnd": 15,
+     "pick": 8,
+     "name": "Brenton Strange",
+     "pos": "TE",
+     "nfl": "JAC",
+     "pos_rank": 15,
+     "fpts": 145.056,
+     "vorp": -9.7
+    },
+    {
+     "ovr": 185,
+     "rnd": 16,
+     "pick": 5,
+     "name": "Denzel Boston",
+     "pos": "WR",
+     "nfl": "CLE",
+     "pos_rank": 55,
+     "fpts": 131.0212,
+     "vorp": -12.1
+    }
+   ],
+   "dead_spots": 4,
+   "rank": 8,
+   "pos_rank": {
+    "QB": 6,
+    "RB": 7,
+    "WR": 6,
+    "TE": 11,
+    "K": 1,
+    "FLEX": 12
+   }
+  },
+  {
+   "team": "Win95",
+   "pts": 1939.4,
+   "vorp": 345.1,
+   "pos_vorp": {
+    "QB": 16.9,
+    "RB": 133.7,
+    "WR": 170.2,
+    "TE": 23.6,
+    "K": 7.0,
+    "FLEX": -6.3
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 81,
+      "rnd": 7,
+      "pick": 9,
+      "name": "Trevor Lawrence",
+      "pos": "QB",
+      "nfl": "JAC",
+      "pos_rank": 4,
+      "fpts": 396.3312,
+      "vorp": 16.9
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 9,
+      "rnd": 1,
+      "pick": 9,
+      "name": "James Cook",
+      "pos": "RB",
+      "nfl": "BUF",
+      "pos_rank": 8,
+      "fpts": 246.0543,
+      "vorp": 80.5
+     },
+     {
+      "ovr": 33,
+      "rnd": 3,
+      "pick": 9,
+      "name": "D'Andre Swift",
+      "pos": "RB",
+      "nfl": "CHI",
+      "pos_rank": 11,
+      "fpts": 218.8264,
+      "vorp": 53.2
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 16,
+      "rnd": 2,
+      "pick": 4,
+      "name": "Chris Olave",
+      "pos": "WR",
+      "nfl": "NO",
+      "pos_rank": 8,
+      "fpts": 240.4207,
+      "vorp": 97.3
+     },
+     {
+      "ovr": 40,
+      "rnd": 4,
+      "pick": 4,
+      "name": "Ladd McConkey",
+      "pos": "WR",
+      "nfl": "LAC",
+      "pos_rank": 22,
+      "fpts": 185.2232,
+      "vorp": 42.1
+     },
+     {
+      "ovr": 57,
+      "rnd": 5,
+      "pick": 9,
+      "name": "DJ Moore",
+      "pos": "WR",
+      "nfl": "BUF",
+      "pos_rank": 27,
+      "fpts": 173.8511,
+      "vorp": 30.8
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 112,
+      "rnd": 10,
+      "pick": 4,
+      "name": "Dallas Goedert",
+      "pos": "TE",
+      "nfl": "PHI",
+      "pos_rank": 6,
+      "fpts": 178.4342,
+      "vorp": 23.6
+     }
+    ],
+    "K": [
+     {
+      "ovr": 177,
+      "rnd": 15,
+      "pick": 9,
+      "name": "Will Reichard",
+      "pos": "K",
+      "nfl": "MIN",
+      "pos_rank": 10,
+      "fpts": 141.0,
+      "vorp": 7.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 64,
+      "rnd": 6,
+      "pick": 4,
+      "name": "Kenneth Gainwell",
+      "pos": "RB",
+      "nfl": "TB",
+      "pos_rank": 34,
+      "fpts": 159.2723,
+      "vorp": -6.3
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 88,
+     "rnd": 8,
+     "pick": 4,
+     "name": "Titans",
+     "pos": "DST",
+     "nfl": "TEN",
+     "pos_rank": 31,
+     "fpts": -189.35,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 105,
+     "rnd": 9,
+     "pick": 9,
+     "name": "Broncos",
+     "pos": "DST",
+     "nfl": "DEN",
+     "pos_rank": 2,
+     "fpts": -73.5,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 136,
+     "rnd": 12,
+     "pick": 4,
+     "name": "Patriots",
+     "pos": "DST",
+     "nfl": "NE",
+     "pos_rank": 9,
+     "fpts": -108.7,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 184,
+     "rnd": 16,
+     "pick": 4,
+     "name": "Jerry Jeudy",
+     "pos": "WR",
+     "nfl": "CLE",
+     "pos_rank": 50,
+     "fpts": 137.4068,
+     "vorp": -5.7
+    },
+    {
+     "ovr": 129,
+     "rnd": 11,
+     "pick": 9,
+     "name": "Jake Ferguson",
+     "pos": "TE",
+     "nfl": "DAL",
+     "pos_rank": 17,
+     "fpts": 140.3172,
+     "vorp": -14.5
+    },
+    {
+     "ovr": 153,
+     "rnd": 13,
+     "pick": 9,
+     "name": "Christopher Brooks",
+     "pos": "RB",
+     "nfl": "GB",
+     "pos_rank": 63,
+     "fpts": 78.00402,
+     "vorp": -87.6
+    },
+    {
+     "ovr": 160,
+     "rnd": 14,
+     "pick": 4,
+     "name": "Ray Davis",
+     "pos": "RB",
+     "nfl": "BUF",
+     "pos_rank": 98,
+     "fpts": 18.6093,
+     "vorp": -147.0
+    }
+   ],
+   "bench_vorp": -254.8,
+   "roster": [
+    {
+     "ovr": 9,
+     "rnd": 1,
+     "pick": 9,
+     "name": "James Cook",
+     "pos": "RB",
+     "nfl": "BUF",
+     "pos_rank": 8,
+     "fpts": 246.0543,
+     "vorp": 80.5
+    },
+    {
+     "ovr": 16,
+     "rnd": 2,
+     "pick": 4,
+     "name": "Chris Olave",
+     "pos": "WR",
+     "nfl": "NO",
+     "pos_rank": 8,
+     "fpts": 240.4207,
+     "vorp": 97.3
+    },
+    {
+     "ovr": 33,
+     "rnd": 3,
+     "pick": 9,
+     "name": "D'Andre Swift",
+     "pos": "RB",
+     "nfl": "CHI",
+     "pos_rank": 11,
+     "fpts": 218.8264,
+     "vorp": 53.2
+    },
+    {
+     "ovr": 40,
+     "rnd": 4,
+     "pick": 4,
+     "name": "Ladd McConkey",
+     "pos": "WR",
+     "nfl": "LAC",
+     "pos_rank": 22,
+     "fpts": 185.2232,
+     "vorp": 42.1
+    },
+    {
+     "ovr": 57,
+     "rnd": 5,
+     "pick": 9,
+     "name": "DJ Moore",
+     "pos": "WR",
+     "nfl": "BUF",
+     "pos_rank": 27,
+     "fpts": 173.8511,
+     "vorp": 30.8
+    },
+    {
+     "ovr": 64,
+     "rnd": 6,
+     "pick": 4,
+     "name": "Kenneth Gainwell",
+     "pos": "RB",
+     "nfl": "TB",
+     "pos_rank": 34,
+     "fpts": 159.2723,
+     "vorp": -6.3
+    },
+    {
+     "ovr": 81,
+     "rnd": 7,
+     "pick": 9,
+     "name": "Trevor Lawrence",
+     "pos": "QB",
+     "nfl": "JAC",
+     "pos_rank": 4,
+     "fpts": 396.3312,
+     "vorp": 16.9
+    },
+    {
+     "ovr": 88,
+     "rnd": 8,
+     "pick": 4,
+     "name": "Titans",
+     "pos": "DST",
+     "nfl": "TEN",
+     "pos_rank": 31,
+     "fpts": -189.35,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 105,
+     "rnd": 9,
+     "pick": 9,
+     "name": "Broncos",
+     "pos": "DST",
+     "nfl": "DEN",
+     "pos_rank": 2,
+     "fpts": -73.5,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 112,
+     "rnd": 10,
+     "pick": 4,
+     "name": "Dallas Goedert",
+     "pos": "TE",
+     "nfl": "PHI",
+     "pos_rank": 6,
+     "fpts": 178.4342,
+     "vorp": 23.6
+    },
+    {
+     "ovr": 129,
+     "rnd": 11,
+     "pick": 9,
+     "name": "Jake Ferguson",
+     "pos": "TE",
+     "nfl": "DAL",
+     "pos_rank": 17,
+     "fpts": 140.3172,
+     "vorp": -14.5
+    },
+    {
+     "ovr": 136,
+     "rnd": 12,
+     "pick": 4,
+     "name": "Patriots",
+     "pos": "DST",
+     "nfl": "NE",
+     "pos_rank": 9,
+     "fpts": -108.7,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 153,
+     "rnd": 13,
+     "pick": 9,
+     "name": "Christopher Brooks",
+     "pos": "RB",
+     "nfl": "GB",
+     "pos_rank": 63,
+     "fpts": 78.00402,
+     "vorp": -87.6
+    },
+    {
+     "ovr": 160,
+     "rnd": 14,
+     "pick": 4,
+     "name": "Ray Davis",
+     "pos": "RB",
+     "nfl": "BUF",
+     "pos_rank": 98,
+     "fpts": 18.6093,
+     "vorp": -147.0
+    },
+    {
+     "ovr": 177,
+     "rnd": 15,
+     "pick": 9,
+     "name": "Will Reichard",
+     "pos": "K",
+     "nfl": "MIN",
+     "pos_rank": 10,
+     "fpts": 141.0,
+     "vorp": 7.0
+    },
+    {
+     "ovr": 184,
+     "rnd": 16,
+     "pick": 4,
+     "name": "Jerry Jeudy",
+     "pos": "WR",
+     "nfl": "CLE",
+     "pos_rank": 50,
+     "fpts": 137.4068,
+     "vorp": -5.7
+    }
+   ],
+   "dead_spots": 4,
+   "rank": 9,
+   "pos_rank": {
+    "QB": 4,
+    "RB": 6,
+    "WR": 7,
+    "TE": 6,
+    "K": 8,
+    "FLEX": 11
+   }
+  },
+  {
+   "team": "Kenan",
+   "pts": 1914.3,
+   "vorp": 342.5,
+   "pos_vorp": {
+    "QB": 11.5,
+    "RB": 54.9,
+    "WR": 272.6,
+    "TE": -0.0,
+    "K": 0.0,
+    "FLEX": 3.5
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 46,
+      "rnd": 4,
+      "pick": 10,
+      "name": "Drake Maye",
+      "pos": "QB",
+      "nfl": "NE",
+      "pos_rank": 9,
+      "fpts": 390.9325,
+      "vorp": 11.5
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 22,
+      "rnd": 2,
+      "pick": 10,
+      "name": "Javonte Williams",
+      "pos": "RB",
+      "nfl": "DAL",
+      "pos_rank": 14,
+      "fpts": 216.2378,
+      "vorp": 50.6
+     },
+     {
+      "ovr": 75,
+      "rnd": 7,
+      "pick": 3,
+      "name": "J.K. Dobbins",
+      "pos": "RB",
+      "nfl": "DEN",
+      "pos_rank": 27,
+      "fpts": 169.906174,
+      "vorp": 4.3
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 3,
+      "rnd": 1,
+      "pick": 3,
+      "name": "Ja'Marr Chase",
+      "pos": "WR",
+      "nfl": "CIN",
+      "pos_rank": 3,
+      "fpts": 279.2907,
+      "vorp": 136.2
+     },
+     {
+      "ovr": 27,
+      "rnd": 3,
+      "pick": 3,
+      "name": "George Pickens",
+      "pos": "WR",
+      "nfl": "DAL",
+      "pos_rank": 6,
+      "fpts": 244.4973,
+      "vorp": 101.4
+     },
+     {
+      "ovr": 51,
+      "rnd": 5,
+      "pick": 3,
+      "name": "Davante Adams",
+      "pos": "WR",
+      "nfl": "LAR",
+      "pos_rank": 25,
+      "fpts": 178.0952,
+      "vorp": 35.0
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 70,
+      "rnd": 6,
+      "pick": 10,
+      "name": "Kyle Pitts",
+      "pos": "TE",
+      "nfl": "ATL",
+      "pos_rank": 13,
+      "fpts": 154.7698,
+      "vorp": -0.0
+     }
+    ],
+    "K": [
+     {
+      "ovr": 171,
+      "rnd": 15,
+      "pick": 3,
+      "name": "Evan McPherson",
+      "pos": "K",
+      "nfl": "CIN",
+      "pos_rank": 14,
+      "fpts": 134.0,
+      "vorp": 0.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 166,
+      "rnd": 14,
+      "pick": 10,
+      "name": "Romeo Doubs",
+      "pos": "WR",
+      "nfl": "NE",
+      "pos_rank": 40,
+      "fpts": 146.5839,
+      "vorp": 3.5
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 99,
+     "rnd": 9,
+     "pick": 3,
+     "name": "Steelers",
+     "pos": "DST",
+     "nfl": "PIT",
+     "pos_rank": 8,
+     "fpts": -106.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 123,
+     "rnd": 11,
+     "pick": 3,
+     "name": "Jayden Reed",
+     "pos": "WR",
+     "nfl": "GB",
+     "pos_rank": 44,
+     "fpts": 143.0587,
+     "vorp": -0.0
+    },
+    {
+     "ovr": 142,
+     "rnd": 12,
+     "pick": 10,
+     "name": "Baker Mayfield",
+     "pos": "QB",
+     "nfl": "TB",
+     "pos_rank": 15,
+     "fpts": 371.3158,
+     "vorp": -8.1
+    },
+    {
+     "ovr": 147,
+     "rnd": 13,
+     "pick": 3,
+     "name": "Xavier Worthy",
+     "pos": "WR",
+     "nfl": "KC",
+     "pos_rank": 52,
+     "fpts": 134.8113,
+     "vorp": -8.3
+    },
+    {
+     "ovr": 94,
+     "rnd": 8,
+     "pick": 10,
+     "name": "Mike Washington Jr.",
+     "pos": "RB",
+     "nfl": "LV",
+     "pos_rank": 42,
+     "fpts": 121.1381,
+     "vorp": -44.5
+    },
+    {
+     "ovr": 190,
+     "rnd": 16,
+     "pick": 10,
+     "name": "Brian Robinson Jr.",
+     "pos": "RB",
+     "nfl": "ATL",
+     "pos_rank": 62,
+     "fpts": 79.001275,
+     "vorp": -86.6
+    },
+    {
+     "ovr": 118,
+     "rnd": 10,
+     "pick": 10,
+     "name": "Emmett Johnson",
+     "pos": "RB",
+     "nfl": "KC",
+     "pos_rank": 86,
+     "fpts": 21.3051,
+     "vorp": -144.3
+    }
+   ],
+   "bench_vorp": -291.8,
+   "roster": [
+    {
+     "ovr": 3,
+     "rnd": 1,
+     "pick": 3,
+     "name": "Ja'Marr Chase",
+     "pos": "WR",
+     "nfl": "CIN",
+     "pos_rank": 3,
+     "fpts": 279.2907,
+     "vorp": 136.2
+    },
+    {
+     "ovr": 22,
+     "rnd": 2,
+     "pick": 10,
+     "name": "Javonte Williams",
+     "pos": "RB",
+     "nfl": "DAL",
+     "pos_rank": 14,
+     "fpts": 216.2378,
+     "vorp": 50.6
+    },
+    {
+     "ovr": 27,
+     "rnd": 3,
+     "pick": 3,
+     "name": "George Pickens",
+     "pos": "WR",
+     "nfl": "DAL",
+     "pos_rank": 6,
+     "fpts": 244.4973,
+     "vorp": 101.4
+    },
+    {
+     "ovr": 46,
+     "rnd": 4,
+     "pick": 10,
+     "name": "Drake Maye",
+     "pos": "QB",
+     "nfl": "NE",
+     "pos_rank": 9,
+     "fpts": 390.9325,
+     "vorp": 11.5
+    },
+    {
+     "ovr": 51,
+     "rnd": 5,
+     "pick": 3,
+     "name": "Davante Adams",
+     "pos": "WR",
+     "nfl": "LAR",
+     "pos_rank": 25,
+     "fpts": 178.0952,
+     "vorp": 35.0
+    },
+    {
+     "ovr": 70,
+     "rnd": 6,
+     "pick": 10,
+     "name": "Kyle Pitts",
+     "pos": "TE",
+     "nfl": "ATL",
+     "pos_rank": 13,
+     "fpts": 154.7698,
+     "vorp": -0.0
+    },
+    {
+     "ovr": 75,
+     "rnd": 7,
+     "pick": 3,
+     "name": "J.K. Dobbins",
+     "pos": "RB",
+     "nfl": "DEN",
+     "pos_rank": 27,
+     "fpts": 169.906174,
+     "vorp": 4.3
+    },
+    {
+     "ovr": 94,
+     "rnd": 8,
+     "pick": 10,
+     "name": "Mike Washington Jr.",
+     "pos": "RB",
+     "nfl": "LV",
+     "pos_rank": 42,
+     "fpts": 121.1381,
+     "vorp": -44.5
+    },
+    {
+     "ovr": 99,
+     "rnd": 9,
+     "pick": 3,
+     "name": "Steelers",
+     "pos": "DST",
+     "nfl": "PIT",
+     "pos_rank": 8,
+     "fpts": -106.4,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 118,
+     "rnd": 10,
+     "pick": 10,
+     "name": "Emmett Johnson",
+     "pos": "RB",
+     "nfl": "KC",
+     "pos_rank": 86,
+     "fpts": 21.3051,
+     "vorp": -144.3
+    },
+    {
+     "ovr": 123,
+     "rnd": 11,
+     "pick": 3,
+     "name": "Jayden Reed",
+     "pos": "WR",
+     "nfl": "GB",
+     "pos_rank": 44,
+     "fpts": 143.0587,
+     "vorp": -0.0
+    },
+    {
+     "ovr": 142,
+     "rnd": 12,
+     "pick": 10,
+     "name": "Baker Mayfield",
+     "pos": "QB",
+     "nfl": "TB",
+     "pos_rank": 15,
+     "fpts": 371.3158,
+     "vorp": -8.1
+    },
+    {
+     "ovr": 147,
+     "rnd": 13,
+     "pick": 3,
+     "name": "Xavier Worthy",
+     "pos": "WR",
+     "nfl": "KC",
+     "pos_rank": 52,
+     "fpts": 134.8113,
+     "vorp": -8.3
+    },
+    {
+     "ovr": 166,
+     "rnd": 14,
+     "pick": 10,
+     "name": "Romeo Doubs",
+     "pos": "WR",
+     "nfl": "NE",
+     "pos_rank": 40,
+     "fpts": 146.5839,
+     "vorp": 3.5
+    },
+    {
+     "ovr": 171,
+     "rnd": 15,
+     "pick": 3,
+     "name": "Evan McPherson",
+     "pos": "K",
+     "nfl": "CIN",
+     "pos_rank": 14,
+     "fpts": 134.0,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 190,
+     "rnd": 16,
+     "pick": 10,
+     "name": "Brian Robinson Jr.",
+     "pos": "RB",
+     "nfl": "ATL",
+     "pos_rank": 62,
+     "fpts": 79.001275,
+     "vorp": -86.6
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 10,
+   "pos_rank": {
+    "QB": 9,
+    "RB": 11,
+    "WR": 2,
+    "TE": 12,
+    "K": 12,
+    "FLEX": 4
+   }
+  },
+  {
+   "team": "Sujay",
+   "pts": 1921.0,
+   "vorp": 326.7,
+   "pos_vorp": {
+    "QB": 23.5,
+    "RB": 103.8,
+    "WR": 154.6,
+    "TE": 27.4,
+    "K": 19.0,
+    "FLEX": -1.6
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 38,
+      "rnd": 4,
+      "pick": 2,
+      "name": "Lamar Jackson",
+      "pos": "QB",
+      "nfl": "BAL",
+      "pos_rank": 3,
+      "fpts": 402.9403,
+      "vorp": 23.5
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 14,
+      "rnd": 2,
+      "pick": 2,
+      "name": "Kenneth Walker III",
+      "pos": "RB",
+      "nfl": "KC",
+      "pos_rank": 10,
+      "fpts": 225.914076,
+      "vorp": 60.3
+     },
+     {
+      "ovr": 35,
+      "rnd": 3,
+      "pick": 11,
+      "name": "Breece Hall",
+      "pos": "RB",
+      "nfl": "NYJ",
+      "pos_rank": 19,
+      "fpts": 209.0639,
+      "vorp": 43.5
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 11,
+      "rnd": 1,
+      "pick": 11,
+      "name": "CeeDee Lamb",
+      "pos": "WR",
+      "nfl": "DAL",
+      "pos_rank": 11,
+      "fpts": 221.5911,
+      "vorp": 78.5
+     },
+     {
+      "ovr": 62,
+      "rnd": 6,
+      "pick": 2,
+      "name": "Jameson Williams",
+      "pos": "WR",
+      "nfl": "DET",
+      "pos_rank": 20,
+      "fpts": 190.7199,
+      "vorp": 47.6
+     },
+     {
+      "ovr": 59,
+      "rnd": 5,
+      "pick": 11,
+      "name": "Christian Watson",
+      "pos": "WR",
+      "nfl": "GB",
+      "pos_rank": 28,
+      "fpts": 171.5553,
+      "vorp": 28.5
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 86,
+      "rnd": 8,
+      "pick": 2,
+      "name": "George Kittle",
+      "pos": "TE",
+      "nfl": "SF",
+      "pos_rank": 5,
+      "fpts": 182.24,
+      "vorp": 27.4
+     }
+    ],
+    "K": [
+     {
+      "ovr": 182,
+      "rnd": 16,
+      "pick": 2,
+      "name": "Spencer Shrader",
+      "pos": "K",
+      "nfl": "IND",
+      "pos_rank": 3,
+      "fpts": 153.0,
+      "vorp": 19.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 83,
+      "rnd": 7,
+      "pick": 11,
+      "name": "TreVeyon Henderson",
+      "pos": "RB",
+      "nfl": "NE",
+      "pos_rank": 32,
+      "fpts": 164.023457,
+      "vorp": -1.6
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 107,
+     "rnd": 9,
+     "pick": 11,
+     "name": "Vikings",
+     "pos": "DST",
+     "nfl": "MIN",
+     "pos_rank": 6,
+     "fpts": -91.85,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 110,
+     "rnd": 10,
+     "pick": 2,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "nfl": "LAR",
+     "pos_rank": 13,
+     "fpts": 379.3529,
+     "vorp": -0.0
+    },
+    {
+     "ovr": 158,
+     "rnd": 14,
+     "pick": 2,
+     "name": "Michael Pittman",
+     "pos": "WR",
+     "nfl": "PIT",
+     "pos_rank": 47,
+     "fpts": 140.9842,
+     "vorp": -2.1
+    },
+    {
+     "ovr": 131,
+     "rnd": 11,
+     "pick": 11,
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "nfl": "BUF",
+     "pos_rank": 14,
+     "fpts": 148.2073,
+     "vorp": -6.6
+    },
+    {
+     "ovr": 134,
+     "rnd": 12,
+     "pick": 2,
+     "name": "Stefon Diggs",
+     "pos": "WR",
+     "nfl": "WAS",
+     "pos_rank": 54,
+     "fpts": 133.6311,
+     "vorp": -9.5
+    },
+    {
+     "ovr": 179,
+     "rnd": 15,
+     "pick": 11,
+     "name": "Tyjae Spears",
+     "pos": "RB",
+     "nfl": "TEN",
+     "pos_rank": 43,
+     "fpts": 119.315015,
+     "vorp": -46.3
+    },
+    {
+     "ovr": 155,
+     "rnd": 13,
+     "pick": 11,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI",
+     "pos_rank": 58,
+     "fpts": 87.304665,
+     "vorp": -78.3
+    }
+   ],
+   "bench_vorp": -142.8,
+   "roster": [
+    {
+     "ovr": 11,
+     "rnd": 1,
+     "pick": 11,
+     "name": "CeeDee Lamb",
+     "pos": "WR",
+     "nfl": "DAL",
+     "pos_rank": 11,
+     "fpts": 221.5911,
+     "vorp": 78.5
+    },
+    {
+     "ovr": 14,
+     "rnd": 2,
+     "pick": 2,
+     "name": "Kenneth Walker III",
+     "pos": "RB",
+     "nfl": "KC",
+     "pos_rank": 10,
+     "fpts": 225.914076,
+     "vorp": 60.3
+    },
+    {
+     "ovr": 35,
+     "rnd": 3,
+     "pick": 11,
+     "name": "Breece Hall",
+     "pos": "RB",
+     "nfl": "NYJ",
+     "pos_rank": 19,
+     "fpts": 209.0639,
+     "vorp": 43.5
+    },
+    {
+     "ovr": 38,
+     "rnd": 4,
+     "pick": 2,
+     "name": "Lamar Jackson",
+     "pos": "QB",
+     "nfl": "BAL",
+     "pos_rank": 3,
+     "fpts": 402.9403,
+     "vorp": 23.5
+    },
+    {
+     "ovr": 59,
+     "rnd": 5,
+     "pick": 11,
+     "name": "Christian Watson",
+     "pos": "WR",
+     "nfl": "GB",
+     "pos_rank": 28,
+     "fpts": 171.5553,
+     "vorp": 28.5
+    },
+    {
+     "ovr": 62,
+     "rnd": 6,
+     "pick": 2,
+     "name": "Jameson Williams",
+     "pos": "WR",
+     "nfl": "DET",
+     "pos_rank": 20,
+     "fpts": 190.7199,
+     "vorp": 47.6
+    },
+    {
+     "ovr": 83,
+     "rnd": 7,
+     "pick": 11,
+     "name": "TreVeyon Henderson",
+     "pos": "RB",
+     "nfl": "NE",
+     "pos_rank": 32,
+     "fpts": 164.023457,
+     "vorp": -1.6
+    },
+    {
+     "ovr": 86,
+     "rnd": 8,
+     "pick": 2,
+     "name": "George Kittle",
+     "pos": "TE",
+     "nfl": "SF",
+     "pos_rank": 5,
+     "fpts": 182.24,
+     "vorp": 27.4
+    },
+    {
+     "ovr": 107,
+     "rnd": 9,
+     "pick": 11,
+     "name": "Vikings",
+     "pos": "DST",
+     "nfl": "MIN",
+     "pos_rank": 6,
+     "fpts": -91.85,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 110,
+     "rnd": 10,
+     "pick": 2,
+     "name": "Matthew Stafford",
+     "pos": "QB",
+     "nfl": "LAR",
+     "pos_rank": 13,
+     "fpts": 379.3529,
+     "vorp": -0.0
+    },
+    {
+     "ovr": 131,
+     "rnd": 11,
+     "pick": 11,
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "nfl": "BUF",
+     "pos_rank": 14,
+     "fpts": 148.2073,
+     "vorp": -6.6
+    },
+    {
+     "ovr": 134,
+     "rnd": 12,
+     "pick": 2,
+     "name": "Stefon Diggs",
+     "pos": "WR",
+     "nfl": "WAS",
+     "pos_rank": 54,
+     "fpts": 133.6311,
+     "vorp": -9.5
+    },
+    {
+     "ovr": 155,
+     "rnd": 13,
+     "pick": 11,
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "nfl": "ARI",
+     "pos_rank": 58,
+     "fpts": 87.304665,
+     "vorp": -78.3
+    },
+    {
+     "ovr": 158,
+     "rnd": 14,
+     "pick": 2,
+     "name": "Michael Pittman",
+     "pos": "WR",
+     "nfl": "PIT",
+     "pos_rank": 47,
+     "fpts": 140.9842,
+     "vorp": -2.1
+    },
+    {
+     "ovr": 179,
+     "rnd": 15,
+     "pick": 11,
+     "name": "Tyjae Spears",
+     "pos": "RB",
+     "nfl": "TEN",
+     "pos_rank": 43,
+     "fpts": 119.315015,
+     "vorp": -46.3
+    },
+    {
+     "ovr": 182,
+     "rnd": 16,
+     "pick": 2,
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "nfl": "IND",
+     "pos_rank": 3,
+     "fpts": 153.0,
+     "vorp": 19.0
+    }
+   ],
+   "dead_spots": 5,
+   "rank": 11,
+   "pos_rank": {
+    "QB": 3,
+    "RB": 9,
+    "WR": 8,
+    "TE": 5,
+    "K": 3,
+    "FLEX": 10
+   }
+  },
+  {
+   "team": "KGB",
+   "pts": 1910.9,
+   "vorp": 316.5,
+   "pos_vorp": {
+    "QB": 5.4,
+    "RB": 160.6,
+    "WR": 95.2,
+    "TE": 36.9,
+    "K": 7.0,
+    "FLEX": 11.4
+   },
+   "starters": {
+    "QB": [
+     {
+      "ovr": 127,
+      "rnd": 11,
+      "pick": 7,
+      "name": "Patrick Mahomes",
+      "pos": "QB",
+      "nfl": "KC",
+      "pos_rank": 11,
+      "fpts": 384.8143,
+      "vorp": 5.4
+     }
+    ],
+    "RB": [
+     {
+      "ovr": 7,
+      "rnd": 1,
+      "pick": 7,
+      "name": "Christian McCaffrey",
+      "pos": "RB",
+      "nfl": "SF",
+      "pos_rank": 5,
+      "fpts": 281.4548,
+      "vorp": 115.9
+     },
+     {
+      "ovr": 18,
+      "rnd": 2,
+      "pick": 6,
+      "name": "Omarion Hampton",
+      "pos": "RB",
+      "nfl": "LAC",
+      "pos_rank": 18,
+      "fpts": 210.3552,
+      "vorp": 44.8
+     }
+    ],
+    "WR": [
+     {
+      "ovr": 31,
+      "rnd": 3,
+      "pick": 7,
+      "name": "DeVonta Smith",
+      "pos": "WR",
+      "nfl": "PHI",
+      "pos_rank": 17,
+      "fpts": 196.7788,
+      "vorp": 53.7
+     },
+     {
+      "ovr": 79,
+      "rnd": 7,
+      "pick": 7,
+      "name": "Rome Odunze",
+      "pos": "WR",
+      "nfl": "CHI",
+      "pos_rank": 30,
+      "fpts": 170.0439,
+      "vorp": 26.9
+     },
+     {
+      "ovr": 90,
+      "rnd": 8,
+      "pick": 6,
+      "name": "Chris Godwin",
+      "pos": "WR",
+      "nfl": "TB",
+      "pos_rank": 37,
+      "fpts": 157.6767,
+      "vorp": 14.6
+     }
+    ],
+    "TE": [
+     {
+      "ovr": 42,
+      "rnd": 4,
+      "pick": 6,
+      "name": "Colston Loveland",
+      "pos": "TE",
+      "nfl": "CHI",
+      "pos_rank": 3,
+      "fpts": 191.7394,
+      "vorp": 36.9
+     }
+    ],
+    "K": [
+     {
+      "ovr": 186,
+      "rnd": 16,
+      "pick": 6,
+      "name": "Harrison Mevis",
+      "pos": "K",
+      "nfl": "LAR",
+      "pos_rank": 9,
+      "fpts": 141.0,
+      "vorp": 7.0
+     }
+    ],
+    "FLEX": [
+     {
+      "ovr": 55,
+      "rnd": 5,
+      "pick": 7,
+      "name": "Jadarian Price",
+      "pos": "RB",
+      "nfl": "SEA",
+      "pos_rank": 24,
+      "fpts": 177.0426,
+      "vorp": 11.4
+     }
+    ]
+   },
+   "bench": [
+    {
+     "ovr": 66,
+     "rnd": 6,
+     "pick": 6,
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "nfl": "GB",
+     "pos_rank": 28,
+     "fpts": 168.5252,
+     "vorp": 2.9
+    },
+    {
+     "ovr": 151,
+     "rnd": 13,
+     "pick": 7,
+     "name": "Buccaneers",
+     "pos": "DST",
+     "nfl": "TB",
+     "pos_rank": 21,
+     "fpts": -142.55,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 162,
+     "rnd": 14,
+     "pick": 6,
+     "name": "Giants",
+     "pos": "DST",
+     "nfl": "NYG",
+     "pos_rank": 28,
+     "fpts": -171.7,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 103,
+     "rnd": 9,
+     "pick": 7,
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "nfl": "TEN",
+     "pos_rank": 61,
+     "fpts": 125.329,
+     "vorp": -17.8
+    },
+    {
+     "ovr": 138,
+     "rnd": 12,
+     "pick": 6,
+     "name": "Kyler Murray",
+     "pos": "QB",
+     "nfl": "MIN",
+     "pos_rank": 24,
+     "fpts": 348.3798,
+     "vorp": -31.0
+    },
+    {
+     "ovr": 114,
+     "rnd": 10,
+     "pick": 6,
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAC",
+     "pos_rank": 45,
+     "fpts": 117.300618,
+     "vorp": -48.3
+    },
+    {
+     "ovr": 175,
+     "rnd": 15,
+     "pick": 7,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "nfl": "NO",
+     "pos_rank": 55,
+     "fpts": 90.812984,
+     "vorp": -74.8
+    }
+   ],
+   "bench_vorp": -169.0,
+   "roster": [
+    {
+     "ovr": 7,
+     "rnd": 1,
+     "pick": 7,
+     "name": "Christian McCaffrey",
+     "pos": "RB",
+     "nfl": "SF",
+     "pos_rank": 5,
+     "fpts": 281.4548,
+     "vorp": 115.9
+    },
+    {
+     "ovr": 18,
+     "rnd": 2,
+     "pick": 6,
+     "name": "Omarion Hampton",
+     "pos": "RB",
+     "nfl": "LAC",
+     "pos_rank": 18,
+     "fpts": 210.3552,
+     "vorp": 44.8
+    },
+    {
+     "ovr": 31,
+     "rnd": 3,
+     "pick": 7,
+     "name": "DeVonta Smith",
+     "pos": "WR",
+     "nfl": "PHI",
+     "pos_rank": 17,
+     "fpts": 196.7788,
+     "vorp": 53.7
+    },
+    {
+     "ovr": 42,
+     "rnd": 4,
+     "pick": 6,
+     "name": "Colston Loveland",
+     "pos": "TE",
+     "nfl": "CHI",
+     "pos_rank": 3,
+     "fpts": 191.7394,
+     "vorp": 36.9
+    },
+    {
+     "ovr": 55,
+     "rnd": 5,
+     "pick": 7,
+     "name": "Jadarian Price",
+     "pos": "RB",
+     "nfl": "SEA",
+     "pos_rank": 24,
+     "fpts": 177.0426,
+     "vorp": 11.4
+    },
+    {
+     "ovr": 66,
+     "rnd": 6,
+     "pick": 6,
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "nfl": "GB",
+     "pos_rank": 28,
+     "fpts": 168.5252,
+     "vorp": 2.9
+    },
+    {
+     "ovr": 79,
+     "rnd": 7,
+     "pick": 7,
+     "name": "Rome Odunze",
+     "pos": "WR",
+     "nfl": "CHI",
+     "pos_rank": 30,
+     "fpts": 170.0439,
+     "vorp": 26.9
+    },
+    {
+     "ovr": 90,
+     "rnd": 8,
+     "pick": 6,
+     "name": "Chris Godwin",
+     "pos": "WR",
+     "nfl": "TB",
+     "pos_rank": 37,
+     "fpts": 157.6767,
+     "vorp": 14.6
+    },
+    {
+     "ovr": 103,
+     "rnd": 9,
+     "pick": 7,
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "nfl": "TEN",
+     "pos_rank": 61,
+     "fpts": 125.329,
+     "vorp": -17.8
+    },
+    {
+     "ovr": 114,
+     "rnd": 10,
+     "pick": 6,
+     "name": "Chris Rodriguez Jr.",
+     "pos": "RB",
+     "nfl": "JAC",
+     "pos_rank": 45,
+     "fpts": 117.300618,
+     "vorp": -48.3
+    },
+    {
+     "ovr": 127,
+     "rnd": 11,
+     "pick": 7,
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "nfl": "KC",
+     "pos_rank": 11,
+     "fpts": 384.8143,
+     "vorp": 5.4
+    },
+    {
+     "ovr": 138,
+     "rnd": 12,
+     "pick": 6,
+     "name": "Kyler Murray",
+     "pos": "QB",
+     "nfl": "MIN",
+     "pos_rank": 24,
+     "fpts": 348.3798,
+     "vorp": -31.0
+    },
+    {
+     "ovr": 151,
+     "rnd": 13,
+     "pick": 7,
+     "name": "Buccaneers",
+     "pos": "DST",
+     "nfl": "TB",
+     "pos_rank": 21,
+     "fpts": -142.55,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 162,
+     "rnd": 14,
+     "pick": 6,
+     "name": "Giants",
+     "pos": "DST",
+     "nfl": "NYG",
+     "pos_rank": 28,
+     "fpts": -171.7,
+     "vorp": 0.0
+    },
+    {
+     "ovr": 175,
+     "rnd": 15,
+     "pick": 7,
+     "name": "Alvin Kamara",
+     "pos": "RB",
+     "nfl": "NO",
+     "pos_rank": 55,
+     "fpts": 90.812984,
+     "vorp": -74.8
+    },
+    {
+     "ovr": 186,
+     "rnd": 16,
+     "pick": 6,
+     "name": "Harrison Mevis",
+     "pos": "K",
+     "nfl": "LAR",
+     "pos_rank": 9,
+     "fpts": 141.0,
+     "vorp": 7.0
+    }
+   ],
+   "dead_spots": 4,
+   "rank": 12,
+   "pos_rank": {
+    "QB": 10,
+    "RB": 4,
+    "WR": 12,
+    "TE": 3,
+    "K": 9,
+    "FLEX": 3
+   }
+  }
+ ],
+ "picks": [
+  {
+   "ovr": 1,
+   "rnd": 1,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Jahmyr Gibbs",
+   "pos": "RB",
+   "nfl": "DET",
+   "elapsed": "",
+   "pos_rank": 1,
+   "fpts": 367.353,
+   "vorp": 201.8
+  },
+  {
+   "ovr": 2,
+   "rnd": 1,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Bijan Robinson",
+   "pos": "RB",
+   "nfl": "ATL",
+   "elapsed": "31 sec",
+   "pos_rank": 2,
+   "fpts": 318.7164,
+   "vorp": 153.1
+  },
+  {
+   "ovr": 3,
+   "rnd": 1,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "Ja'Marr Chase",
+   "pos": "WR",
+   "nfl": "CIN",
+   "elapsed": "14 sec",
+   "pos_rank": 3,
+   "fpts": 279.2907,
+   "vorp": 136.2
+  },
+  {
+   "ovr": 4,
+   "rnd": 1,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Puka Nacua",
+   "pos": "WR",
+   "nfl": "LAR",
+   "elapsed": "8 sec",
+   "pos_rank": 1,
+   "fpts": 307.9745,
+   "vorp": 164.9
+  },
+  {
+   "ovr": 5,
+   "rnd": 1,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Jonathan Taylor",
+   "pos": "RB",
+   "nfl": "IND",
+   "elapsed": "6 sec",
+   "pos_rank": 3,
+   "fpts": 309.4705,
+   "vorp": 143.9
+  },
+  {
+   "ovr": 6,
+   "rnd": 1,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Jaxon Smith-Njigba",
+   "pos": "WR",
+   "nfl": "SEA",
+   "elapsed": "10 sec",
+   "pos_rank": 2,
+   "fpts": 289.5582,
+   "vorp": 146.5
+  },
+  {
+   "ovr": 7,
+   "rnd": 1,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Christian McCaffrey",
+   "pos": "RB",
+   "nfl": "SF",
+   "elapsed": "3 min 42 sec",
+   "pos_rank": 5,
+   "fpts": 281.4548,
+   "vorp": 115.9
+  },
+  {
+   "ovr": 8,
+   "rnd": 1,
+   "pick": 8,
+   "team": "David",
+   "name": "Amon-Ra St. Brown",
+   "pos": "WR",
+   "nfl": "DET",
+   "elapsed": "7 sec",
+   "pos_rank": 4,
+   "fpts": 260.5402,
+   "vorp": 117.4
+  },
+  {
+   "ovr": 9,
+   "rnd": 1,
+   "pick": 9,
+   "team": "Win95",
+   "name": "James Cook",
+   "pos": "RB",
+   "nfl": "BUF",
+   "elapsed": "27 sec",
+   "pos_rank": 8,
+   "fpts": 246.0543,
+   "vorp": 80.5
+  },
+  {
+   "ovr": 10,
+   "rnd": 1,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "De'Von Achane",
+   "pos": "RB",
+   "nfl": "MIA",
+   "elapsed": "15 sec",
+   "pos_rank": 6,
+   "fpts": 280.7806,
+   "vorp": 115.2
+  },
+  {
+   "ovr": 11,
+   "rnd": 1,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "CeeDee Lamb",
+   "pos": "WR",
+   "nfl": "DAL",
+   "elapsed": "3 min 30 sec",
+   "pos_rank": 11,
+   "fpts": 221.5911,
+   "vorp": 78.5
+  },
+  {
+   "ovr": 12,
+   "rnd": 1,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Chase Brown",
+   "pos": "RB",
+   "nfl": "CIN",
+   "elapsed": "32 sec",
+   "pos_rank": 7,
+   "fpts": 264.8458,
+   "vorp": 99.2
+  },
+  {
+   "ovr": 13,
+   "rnd": 2,
+   "pick": 1,
+   "team": "Sly",
+   "name": "A.J. Brown",
+   "pos": "WR",
+   "nfl": "NE",
+   "elapsed": "16 sec",
+   "pos_rank": 9,
+   "fpts": 232.3742,
+   "vorp": 89.3
+  },
+  {
+   "ovr": 14,
+   "rnd": 2,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Kenneth Walker III",
+   "pos": "RB",
+   "nfl": "KC",
+   "elapsed": "1 min 30 sec",
+   "pos_rank": 10,
+   "fpts": 225.914076,
+   "vorp": 60.3
+  },
+  {
+   "ovr": 15,
+   "rnd": 2,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Justin Jefferson",
+   "pos": "WR",
+   "nfl": "MIN",
+   "elapsed": "35 sec",
+   "pos_rank": 12,
+   "fpts": 215.8944,
+   "vorp": 72.8
+  },
+  {
+   "ovr": 16,
+   "rnd": 2,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Chris Olave",
+   "pos": "WR",
+   "nfl": "NO",
+   "elapsed": "26 sec",
+   "pos_rank": 8,
+   "fpts": 240.4207,
+   "vorp": 97.3
+  },
+  {
+   "ovr": 17,
+   "rnd": 2,
+   "pick": 5,
+   "team": "David",
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "nfl": "PHI",
+   "elapsed": "10 sec",
+   "pos_rank": 9,
+   "fpts": 240.8615,
+   "vorp": 75.3
+  },
+  {
+   "ovr": 18,
+   "rnd": 2,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Omarion Hampton",
+   "pos": "RB",
+   "nfl": "LAC",
+   "elapsed": "48 sec",
+   "pos_rank": 18,
+   "fpts": 210.3552,
+   "vorp": 44.8
+  },
+  {
+   "ovr": 19,
+   "rnd": 2,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Drake London",
+   "pos": "WR",
+   "nfl": "ATL",
+   "elapsed": "1 min 4 sec",
+   "pos_rank": 7,
+   "fpts": 241.4489,
+   "vorp": 98.3
+  },
+  {
+   "ovr": 20,
+   "rnd": 2,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Derrick Henry",
+   "pos": "RB",
+   "nfl": "BAL",
+   "elapsed": "4 sec",
+   "pos_rank": 4,
+   "fpts": 282.4201,
+   "vorp": 116.8
+  },
+  {
+   "ovr": 21,
+   "rnd": 2,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Josh Allen",
+   "pos": "QB",
+   "nfl": "BUF",
+   "elapsed": "28 sec",
+   "pos_rank": 1,
+   "fpts": 437.8545,
+   "vorp": 58.5
+  },
+  {
+   "ovr": 22,
+   "rnd": 2,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Javonte Williams",
+   "pos": "RB",
+   "nfl": "DAL",
+   "elapsed": "53 sec",
+   "pos_rank": 14,
+   "fpts": 216.2378,
+   "vorp": 50.6
+  },
+  {
+   "ovr": 23,
+   "rnd": 2,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Travis Etienne",
+   "pos": "RB",
+   "nfl": "NO",
+   "elapsed": "1 min 13 sec",
+   "pos_rank": 12,
+   "fpts": 216.447,
+   "vorp": 50.8
+  },
+  {
+   "ovr": 24,
+   "rnd": 2,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Ashton Jeanty",
+   "pos": "RB",
+   "nfl": "LV",
+   "elapsed": "15 sec",
+   "pos_rank": 13,
+   "fpts": 216.2389,
+   "vorp": 50.6
+  },
+  {
+   "ovr": 25,
+   "rnd": 3,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Brock Bowers",
+   "pos": "TE",
+   "nfl": "LV",
+   "elapsed": "5 sec",
+   "pos_rank": 2,
+   "fpts": 195.8643,
+   "vorp": 41.1
+  },
+  {
+   "ovr": 26,
+   "rnd": 3,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Nico Collins",
+   "pos": "WR",
+   "nfl": "HOU",
+   "elapsed": "1 min 7 sec",
+   "pos_rank": 10,
+   "fpts": 224.0541,
+   "vorp": 81.0
+  },
+  {
+   "ovr": 27,
+   "rnd": 3,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "George Pickens",
+   "pos": "WR",
+   "nfl": "DAL",
+   "elapsed": "9 sec",
+   "pos_rank": 6,
+   "fpts": 244.4973,
+   "vorp": 101.4
+  },
+  {
+   "ovr": 28,
+   "rnd": 3,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Kyren Williams",
+   "pos": "RB",
+   "nfl": "LAR",
+   "elapsed": "1 min 9 sec",
+   "pos_rank": 17,
+   "fpts": 212.0954,
+   "vorp": 46.5
+  },
+  {
+   "ovr": 29,
+   "rnd": 3,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Trey McBride",
+   "pos": "TE",
+   "nfl": "ARI",
+   "elapsed": "9 sec",
+   "pos_rank": 1,
+   "fpts": 218.6409,
+   "vorp": 63.8
+  },
+  {
+   "ovr": 30,
+   "rnd": 3,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Jeremiyah Love",
+   "pos": "RB",
+   "nfl": "ARI",
+   "elapsed": "58 sec",
+   "pos_rank": 20,
+   "fpts": 202.1618,
+   "vorp": 36.6
+  },
+  {
+   "ovr": 31,
+   "rnd": 3,
+   "pick": 7,
+   "team": "KGB",
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "nfl": "PHI",
+   "elapsed": "53 sec",
+   "pos_rank": 17,
+   "fpts": 196.7788,
+   "vorp": 53.7
+  },
+  {
+   "ovr": 32,
+   "rnd": 3,
+   "pick": 8,
+   "team": "David",
+   "name": "Cam Skattebo",
+   "pos": "RB",
+   "nfl": "NYG",
+   "elapsed": "9 sec",
+   "pos_rank": 15,
+   "fpts": 215.4074,
+   "vorp": 49.8
+  },
+  {
+   "ovr": 33,
+   "rnd": 3,
+   "pick": 9,
+   "team": "Win95",
+   "name": "D'Andre Swift",
+   "pos": "RB",
+   "nfl": "CHI",
+   "elapsed": "9 sec",
+   "pos_rank": 11,
+   "fpts": 218.8264,
+   "vorp": 53.2
+  },
+  {
+   "ovr": 34,
+   "rnd": 3,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Rashee Rice",
+   "pos": "WR",
+   "nfl": "KC",
+   "elapsed": "55 sec",
+   "pos_rank": 5,
+   "fpts": 250.487,
+   "vorp": 107.4
+  },
+  {
+   "ovr": 35,
+   "rnd": 3,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "Breece Hall",
+   "pos": "RB",
+   "nfl": "NYJ",
+   "elapsed": "1 min 7 sec",
+   "pos_rank": 19,
+   "fpts": 209.0639,
+   "vorp": 43.5
+  },
+  {
+   "ovr": 36,
+   "rnd": 3,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Tetairoa McMillan",
+   "pos": "WR",
+   "nfl": "CAR",
+   "elapsed": "1 min 49 sec",
+   "pos_rank": 15,
+   "fpts": 207.9409,
+   "vorp": 64.8
+  },
+  {
+   "ovr": 37,
+   "rnd": 4,
+   "pick": 1,
+   "team": "Sly",
+   "name": "Bucky Irving",
+   "pos": "RB",
+   "nfl": "TB",
+   "elapsed": "53 sec",
+   "pos_rank": 16,
+   "fpts": 215.1882,
+   "vorp": 49.6
+  },
+  {
+   "ovr": 38,
+   "rnd": 4,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "nfl": "BAL",
+   "elapsed": "13 sec",
+   "pos_rank": 3,
+   "fpts": 402.9403,
+   "vorp": 23.5
+  },
+  {
+   "ovr": 39,
+   "rnd": 4,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Malik Nabers",
+   "pos": "WR",
+   "nfl": "NYG",
+   "elapsed": "55 sec",
+   "pos_rank": 14,
+   "fpts": 214.1348,
+   "vorp": 71.0
+  },
+  {
+   "ovr": 40,
+   "rnd": 4,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Ladd McConkey",
+   "pos": "WR",
+   "nfl": "LAC",
+   "elapsed": "1 min 11 sec",
+   "pos_rank": 22,
+   "fpts": 185.2232,
+   "vorp": 42.1
+  },
+  {
+   "ovr": 41,
+   "rnd": 4,
+   "pick": 5,
+   "team": "David",
+   "name": "Terry McLaurin",
+   "pos": "WR",
+   "nfl": "WAS",
+   "elapsed": "43 sec",
+   "pos_rank": 23,
+   "fpts": 184.7889,
+   "vorp": 41.7
+  },
+  {
+   "ovr": 42,
+   "rnd": 4,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Colston Loveland",
+   "pos": "TE",
+   "nfl": "CHI",
+   "elapsed": "27 sec",
+   "pos_rank": 3,
+   "fpts": 191.7394,
+   "vorp": 36.9
+  },
+  {
+   "ovr": 43,
+   "rnd": 4,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Quinshon Judkins",
+   "pos": "RB",
+   "nfl": "CLE",
+   "elapsed": "24 sec",
+   "pos_rank": 21,
+   "fpts": 197.211166,
+   "vorp": 31.6
+  },
+  {
+   "ovr": 44,
+   "rnd": 4,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Zay Flowers",
+   "pos": "WR",
+   "nfl": "BAL",
+   "elapsed": "34 sec",
+   "pos_rank": 13,
+   "fpts": 214.5265,
+   "vorp": 71.4
+  },
+  {
+   "ovr": 45,
+   "rnd": 4,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Tee Higgins",
+   "pos": "WR",
+   "nfl": "CIN",
+   "elapsed": "1 min 16 sec",
+   "pos_rank": 16,
+   "fpts": 205.3393,
+   "vorp": 62.2
+  },
+  {
+   "ovr": 46,
+   "rnd": 4,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Drake Maye",
+   "pos": "QB",
+   "nfl": "NE",
+   "elapsed": "17 sec",
+   "pos_rank": 9,
+   "fpts": 390.9325,
+   "vorp": 11.5
+  },
+  {
+   "ovr": 47,
+   "rnd": 4,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Garrett Wilson",
+   "pos": "WR",
+   "nfl": "NYJ",
+   "elapsed": "36 sec",
+   "pos_rank": 19,
+   "fpts": 192.6787,
+   "vorp": 49.6
+  },
+  {
+   "ovr": 48,
+   "rnd": 4,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Emeka Egbuka",
+   "pos": "WR",
+   "nfl": "TB",
+   "elapsed": "1 min 9 sec",
+   "pos_rank": 18,
+   "fpts": 195.4286,
+   "vorp": 52.3
+  },
+  {
+   "ovr": 49,
+   "rnd": 5,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Jaylen Waddle",
+   "pos": "WR",
+   "nfl": "DEN",
+   "elapsed": "1 min 2 sec",
+   "pos_rank": 26,
+   "fpts": 174.5923,
+   "vorp": 31.5
+  },
+  {
+   "ovr": 50,
+   "rnd": 5,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Bhayshul Tuten",
+   "pos": "RB",
+   "nfl": "JAC",
+   "elapsed": "7 sec",
+   "pos_rank": 22,
+   "fpts": 192.5014,
+   "vorp": 26.9
+  },
+  {
+   "ovr": 51,
+   "rnd": 5,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "Davante Adams",
+   "pos": "WR",
+   "nfl": "LAR",
+   "elapsed": "30 sec",
+   "pos_rank": 25,
+   "fpts": 178.0952,
+   "vorp": 35.0
+  },
+  {
+   "ovr": 52,
+   "rnd": 5,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Rhamondre Stevenson",
+   "pos": "RB",
+   "nfl": "NE",
+   "elapsed": "33 sec",
+   "pos_rank": 29,
+   "fpts": 167.0654,
+   "vorp": 1.5
+  },
+  {
+   "ovr": 53,
+   "rnd": 5,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Joe Burrow",
+   "pos": "QB",
+   "nfl": "CIN",
+   "elapsed": "49 sec",
+   "pos_rank": 5,
+   "fpts": 395.6769,
+   "vorp": 16.3
+  },
+  {
+   "ovr": 54,
+   "rnd": 5,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Luther Burden III",
+   "pos": "WR",
+   "nfl": "CHI",
+   "elapsed": "18 sec",
+   "pos_rank": 24,
+   "fpts": 183.0905,
+   "vorp": 40.0
+  },
+  {
+   "ovr": 55,
+   "rnd": 5,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Jadarian Price",
+   "pos": "RB",
+   "nfl": "SEA",
+   "elapsed": "49 sec",
+   "pos_rank": 24,
+   "fpts": 177.0426,
+   "vorp": 11.4
+  },
+  {
+   "ovr": 56,
+   "rnd": 5,
+   "pick": 8,
+   "team": "David",
+   "name": "Brian Thomas Jr.",
+   "pos": "WR",
+   "nfl": "JAC",
+   "elapsed": "15 sec",
+   "pos_rank": 31,
+   "fpts": 168.4866,
+   "vorp": 25.4
+  },
+  {
+   "ovr": 57,
+   "rnd": 5,
+   "pick": 9,
+   "team": "Win95",
+   "name": "DJ Moore",
+   "pos": "WR",
+   "nfl": "BUF",
+   "elapsed": "33 sec",
+   "pos_rank": 27,
+   "fpts": 173.8511,
+   "vorp": 30.8
+  },
+  {
+   "ovr": 58,
+   "rnd": 5,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Tyler Warren",
+   "pos": "TE",
+   "nfl": "IND",
+   "elapsed": "1 min 22 sec",
+   "pos_rank": 7,
+   "fpts": 169.9719,
+   "vorp": 15.2
+  },
+  {
+   "ovr": 59,
+   "rnd": 5,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "Christian Watson",
+   "pos": "WR",
+   "nfl": "GB",
+   "elapsed": "42 sec",
+   "pos_rank": 28,
+   "fpts": 171.5553,
+   "vorp": 28.5
+  },
+  {
+   "ovr": 60,
+   "rnd": 5,
+   "pick": 12,
+   "team": "Sly",
+   "name": "David Montgomery",
+   "pos": "RB",
+   "nfl": "HOU",
+   "elapsed": "6 sec",
+   "pos_rank": 23,
+   "fpts": 184.208067,
+   "vorp": 18.6
+  },
+  {
+   "ovr": 61,
+   "rnd": 6,
+   "pick": 1,
+   "team": "Sly",
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "nfl": "GB",
+   "elapsed": "38 sec",
+   "pos_rank": 8,
+   "fpts": 166.697,
+   "vorp": 11.9
+  },
+  {
+   "ovr": 62,
+   "rnd": 6,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Jameson Williams",
+   "pos": "WR",
+   "nfl": "DET",
+   "elapsed": "1 min 13 sec",
+   "pos_rank": 20,
+   "fpts": 190.7199,
+   "vorp": 47.6
+  },
+  {
+   "ovr": 63,
+   "rnd": 6,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Rico Dowdle",
+   "pos": "RB",
+   "nfl": "PIT",
+   "elapsed": "1 min 10 sec",
+   "pos_rank": 26,
+   "fpts": 171.1423,
+   "vorp": 5.5
+  },
+  {
+   "ovr": 64,
+   "rnd": 6,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Kenneth Gainwell",
+   "pos": "RB",
+   "nfl": "TB",
+   "elapsed": "11 sec",
+   "pos_rank": 34,
+   "fpts": 159.2723,
+   "vorp": -6.3
+  },
+  {
+   "ovr": 65,
+   "rnd": 6,
+   "pick": 5,
+   "team": "David",
+   "name": "Jalen Hurts",
+   "pos": "QB",
+   "nfl": "PHI",
+   "elapsed": "16 sec",
+   "pos_rank": 6,
+   "fpts": 394.6881,
+   "vorp": 15.3
+  },
+  {
+   "ovr": 66,
+   "rnd": 6,
+   "pick": 6,
+   "team": "KGB",
+   "name": "MarShawn Lloyd",
+   "pos": "RB",
+   "nfl": "GB",
+   "elapsed": "1 min 19 sec",
+   "pos_rank": 28,
+   "fpts": 168.5252,
+   "vorp": 2.9
+  },
+  {
+   "ovr": 67,
+   "rnd": 6,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Sam LaPorta",
+   "pos": "TE",
+   "nfl": "DET",
+   "elapsed": "7 sec",
+   "pos_rank": 9,
+   "fpts": 162.2887,
+   "vorp": 7.5
+  },
+  {
+   "ovr": 68,
+   "rnd": 6,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Tony Pollard",
+   "pos": "RB",
+   "nfl": "TEN",
+   "elapsed": "7 sec",
+   "pos_rank": 30,
+   "fpts": 166.010077,
+   "vorp": 0.4
+  },
+  {
+   "ovr": 69,
+   "rnd": 6,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Jaylen Warren",
+   "pos": "RB",
+   "nfl": "PIT",
+   "elapsed": "1 min 17 sec",
+   "pos_rank": 25,
+   "fpts": 173.9453,
+   "vorp": 8.3
+  },
+  {
+   "ovr": 70,
+   "rnd": 6,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Kyle Pitts",
+   "pos": "TE",
+   "nfl": "ATL",
+   "elapsed": "39 sec",
+   "pos_rank": 13,
+   "fpts": 154.7698,
+   "vorp": -0.0
+  },
+  {
+   "ovr": 71,
+   "rnd": 6,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Parker Washington",
+   "pos": "WR",
+   "nfl": "JAC",
+   "elapsed": "7 sec",
+   "pos_rank": 33,
+   "fpts": 165.7085,
+   "vorp": 22.6
+  },
+  {
+   "ovr": 72,
+   "rnd": 6,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Jayden Daniels",
+   "pos": "QB",
+   "nfl": "WAS",
+   "elapsed": "1 min 24 sec",
+   "pos_rank": 7,
+   "fpts": 393.2782,
+   "vorp": 13.9
+  },
+  {
+   "ovr": 73,
+   "rnd": 7,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Mike Evans",
+   "pos": "WR",
+   "nfl": "SF",
+   "elapsed": "47 sec",
+   "pos_rank": 34,
+   "fpts": 164.6154,
+   "vorp": 21.5
+  },
+  {
+   "ovr": 74,
+   "rnd": 7,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Jordan Mason",
+   "pos": "RB",
+   "nfl": "MIN",
+   "elapsed": "15 sec",
+   "pos_rank": 36,
+   "fpts": 146.30537,
+   "vorp": -19.3
+  },
+  {
+   "ovr": 75,
+   "rnd": 7,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "J.K. Dobbins",
+   "pos": "RB",
+   "nfl": "DEN",
+   "elapsed": "14 sec",
+   "pos_rank": 27,
+   "fpts": 169.906174,
+   "vorp": 4.3
+  },
+  {
+   "ovr": 76,
+   "rnd": 7,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Jonathon Brooks",
+   "pos": "RB",
+   "nfl": "CAR",
+   "elapsed": "1 min 8 sec",
+   "pos_rank": 35,
+   "fpts": 151.5327,
+   "vorp": -14.1
+  },
+  {
+   "ovr": 77,
+   "rnd": 7,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Marvin Harrison Jr.",
+   "pos": "WR",
+   "nfl": "ARI",
+   "elapsed": "60 sec",
+   "pos_rank": 29,
+   "fpts": 170.4079,
+   "vorp": 27.3
+  },
+  {
+   "ovr": 78,
+   "rnd": 7,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Caleb Williams",
+   "pos": "QB",
+   "nfl": "CHI",
+   "elapsed": "49 sec",
+   "pos_rank": 8,
+   "fpts": 392.6407,
+   "vorp": 13.2
+  },
+  {
+   "ovr": 79,
+   "rnd": 7,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Rome Odunze",
+   "pos": "WR",
+   "nfl": "CHI",
+   "elapsed": "41 sec",
+   "pos_rank": 30,
+   "fpts": 170.0439,
+   "vorp": 26.9
+  },
+  {
+   "ovr": 80,
+   "rnd": 7,
+   "pick": 8,
+   "team": "David",
+   "name": "Jonah Coleman",
+   "pos": "RB",
+   "nfl": "DEN",
+   "elapsed": "5 sec",
+   "pos_rank": 83,
+   "fpts": 21.8051,
+   "vorp": -143.8
+  },
+  {
+   "ovr": 81,
+   "rnd": 7,
+   "pick": 9,
+   "team": "Win95",
+   "name": "Trevor Lawrence",
+   "pos": "QB",
+   "nfl": "JAC",
+   "elapsed": "24 sec",
+   "pos_rank": 4,
+   "fpts": 396.3312,
+   "vorp": 16.9
+  },
+  {
+   "ovr": 82,
+   "rnd": 7,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "elapsed": "44 sec",
+   "pos_rank": 2,
+   "fpts": 408.9816,
+   "vorp": 29.6
+  },
+  {
+   "ovr": 83,
+   "rnd": 7,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "TreVeyon Henderson",
+   "pos": "RB",
+   "nfl": "NE",
+   "elapsed": "41 sec",
+   "pos_rank": 32,
+   "fpts": 164.023457,
+   "vorp": -1.6
+  },
+  {
+   "ovr": 84,
+   "rnd": 7,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Justin Herbert",
+   "pos": "QB",
+   "nfl": "LAC",
+   "elapsed": "30 sec",
+   "pos_rank": 14,
+   "fpts": 376.6804,
+   "vorp": -2.7
+  },
+  {
+   "ovr": 85,
+   "rnd": 8,
+   "pick": 1,
+   "team": "Sly",
+   "name": "DK Metcalf",
+   "pos": "WR",
+   "nfl": "PIT",
+   "elapsed": "1 min 42 sec",
+   "pos_rank": 35,
+   "fpts": 161.7755,
+   "vorp": 18.7
+  },
+  {
+   "ovr": 86,
+   "rnd": 8,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "George Kittle",
+   "pos": "TE",
+   "nfl": "SF",
+   "elapsed": "11 sec",
+   "pos_rank": 5,
+   "fpts": 182.24,
+   "vorp": 27.4
+  },
+  {
+   "ovr": 87,
+   "rnd": 8,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Jacory Croskey-Merritt",
+   "pos": "RB",
+   "nfl": "WAS",
+   "elapsed": "1 min 24 sec",
+   "pos_rank": 39,
+   "fpts": 140.70273,
+   "vorp": -24.9
+  },
+  {
+   "ovr": 88,
+   "rnd": 8,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Titans",
+   "pos": "DST",
+   "nfl": "TEN",
+   "elapsed": "36 sec",
+   "pos_rank": 31,
+   "fpts": -189.35,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 89,
+   "rnd": 8,
+   "pick": 5,
+   "team": "David",
+   "name": "Travis Kelce",
+   "pos": "TE",
+   "nfl": "KC",
+   "elapsed": "17 sec",
+   "pos_rank": 12,
+   "fpts": 156.2656,
+   "vorp": 1.5
+  },
+  {
+   "ovr": 90,
+   "rnd": 8,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Chris Godwin",
+   "pos": "WR",
+   "nfl": "TB",
+   "elapsed": "1 min 18 sec",
+   "pos_rank": 37,
+   "fpts": 157.6767,
+   "vorp": 14.6
+  },
+  {
+   "ovr": 91,
+   "rnd": 8,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Blake Corum",
+   "pos": "RB",
+   "nfl": "LAR",
+   "elapsed": "12 sec",
+   "pos_rank": 41,
+   "fpts": 129.301791,
+   "vorp": -36.3
+  },
+  {
+   "ovr": 92,
+   "rnd": 8,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "nfl": "MIN",
+   "elapsed": "7 sec",
+   "pos_rank": 39,
+   "fpts": 147.4935,
+   "vorp": 4.4
+  },
+  {
+   "ovr": 93,
+   "rnd": 8,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Bo Nix",
+   "pos": "QB",
+   "nfl": "DEN",
+   "elapsed": "1 min 7 sec",
+   "pos_rank": 18,
+   "fpts": 353.6693,
+   "vorp": -25.7
+  },
+  {
+   "ovr": 94,
+   "rnd": 8,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Mike Washington Jr.",
+   "pos": "RB",
+   "nfl": "LV",
+   "elapsed": "13 sec",
+   "pos_rank": 42,
+   "fpts": 121.1381,
+   "vorp": -44.5
+  },
+  {
+   "ovr": 95,
+   "rnd": 8,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Isaiah Likely",
+   "pos": "TE",
+   "nfl": "NYG",
+   "elapsed": "28 sec",
+   "pos_rank": 10,
+   "fpts": 158.3959,
+   "vorp": 3.6
+  },
+  {
+   "ovr": 96,
+   "rnd": 8,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Rams",
+   "pos": "DST",
+   "nfl": "LAR",
+   "elapsed": "1 min 51 sec",
+   "pos_rank": 5,
+   "fpts": -88.4,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 97,
+   "rnd": 9,
+   "pick": 1,
+   "team": "Keung",
+   "name": "RJ Harvey",
+   "pos": "RB",
+   "nfl": "DEN",
+   "elapsed": "8 sec",
+   "pos_rank": 31,
+   "fpts": 165.6335,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 98,
+   "rnd": 9,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Texans",
+   "pos": "DST",
+   "nfl": "HOU",
+   "elapsed": "19 sec",
+   "pos_rank": 3,
+   "fpts": -73.55,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 99,
+   "rnd": 9,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "Steelers",
+   "pos": "DST",
+   "nfl": "PIT",
+   "elapsed": "1 min 43 sec",
+   "pos_rank": 8,
+   "fpts": -106.4,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 100,
+   "rnd": 9,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Harold Fannin Jr.",
+   "pos": "TE",
+   "nfl": "CLE",
+   "elapsed": "15 sec",
+   "pos_rank": 4,
+   "fpts": 189.1685,
+   "vorp": 34.4
+  },
+  {
+   "ovr": 101,
+   "rnd": 9,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Seahawks",
+   "pos": "DST",
+   "nfl": "SEA",
+   "elapsed": "52 sec",
+   "pos_rank": 1,
+   "fpts": -69.1,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 102,
+   "rnd": 9,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Kyle Monangai",
+   "pos": "RB",
+   "nfl": "CHI",
+   "elapsed": "15 sec",
+   "pos_rank": 37,
+   "fpts": 144.906966,
+   "vorp": -20.7
+  },
+  {
+   "ovr": 103,
+   "rnd": 9,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Carnell Tate",
+   "pos": "WR",
+   "nfl": "TEN",
+   "elapsed": "44 sec",
+   "pos_rank": 61,
+   "fpts": 125.329,
+   "vorp": -17.8
+  },
+  {
+   "ovr": 104,
+   "rnd": 9,
+   "pick": 8,
+   "team": "David",
+   "name": "Cowboys",
+   "pos": "DST",
+   "nfl": "DAL",
+   "elapsed": "12 sec",
+   "pos_rank": 29,
+   "fpts": -180.65,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 105,
+   "rnd": 9,
+   "pick": 9,
+   "team": "Win95",
+   "name": "Broncos",
+   "pos": "DST",
+   "nfl": "DEN",
+   "elapsed": "30 sec",
+   "pos_rank": 2,
+   "fpts": -73.5,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 106,
+   "rnd": 9,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Jaxson Dart",
+   "pos": "QB",
+   "nfl": "NYG",
+   "elapsed": "1 min 20 sec",
+   "pos_rank": 20,
+   "fpts": 351.1188,
+   "vorp": -28.3
+  },
+  {
+   "ovr": 107,
+   "rnd": 9,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "Vikings",
+   "pos": "DST",
+   "nfl": "MIN",
+   "elapsed": "11 sec",
+   "pos_rank": 6,
+   "fpts": -91.85,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 108,
+   "rnd": 9,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Eagles",
+   "pos": "DST",
+   "nfl": "PHI",
+   "elapsed": "57 sec",
+   "pos_rank": 4,
+   "fpts": -83.4,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 109,
+   "rnd": 10,
+   "pick": 1,
+   "team": "Sly",
+   "name": "Rachaad White",
+   "pos": "RB",
+   "nfl": "WAS",
+   "elapsed": "1 min 8 sec",
+   "pos_rank": 40,
+   "fpts": 137.5285,
+   "vorp": -28.1
+  },
+  {
+   "ovr": 110,
+   "rnd": 10,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Matthew Stafford",
+   "pos": "QB",
+   "nfl": "LAR",
+   "elapsed": "15 sec",
+   "pos_rank": 13,
+   "fpts": 379.3529,
+   "vorp": -0.0
+  },
+  {
+   "ovr": 111,
+   "rnd": 10,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Jaguars",
+   "pos": "DST",
+   "nfl": "JAC",
+   "elapsed": "2 min 6 sec",
+   "pos_rank": 14,
+   "fpts": -124.55,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 112,
+   "rnd": 10,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Dallas Goedert",
+   "pos": "TE",
+   "nfl": "PHI",
+   "elapsed": "17 sec",
+   "pos_rank": 6,
+   "fpts": 178.4342,
+   "vorp": 23.6
+  },
+  {
+   "ovr": 113,
+   "rnd": 10,
+   "pick": 5,
+   "team": "David",
+   "name": "Chiefs",
+   "pos": "DST",
+   "nfl": "KC",
+   "elapsed": "15 sec",
+   "pos_rank": 12,
+   "fpts": -118.6,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 114,
+   "rnd": 10,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Chris Rodriguez Jr.",
+   "pos": "RB",
+   "nfl": "JAC",
+   "elapsed": "57 sec",
+   "pos_rank": 45,
+   "fpts": 117.300618,
+   "vorp": -48.3
+  },
+  {
+   "ovr": 115,
+   "rnd": 10,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Ravens",
+   "pos": "DST",
+   "nfl": "BAL",
+   "elapsed": "6 sec",
+   "pos_rank": 7,
+   "fpts": -104.2,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 116,
+   "rnd": 10,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Chuba Hubbard",
+   "pos": "RB",
+   "nfl": "CAR",
+   "elapsed": "7 sec",
+   "pos_rank": 33,
+   "fpts": 163.9894,
+   "vorp": -1.6
+  },
+  {
+   "ovr": 117,
+   "rnd": 10,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Quentin Johnston",
+   "pos": "WR",
+   "nfl": "LAC",
+   "elapsed": "1 min 4 sec",
+   "pos_rank": 36,
+   "fpts": 160.1562,
+   "vorp": 17.1
+  },
+  {
+   "ovr": 118,
+   "rnd": 10,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Emmett Johnson",
+   "pos": "RB",
+   "nfl": "KC",
+   "elapsed": "14 sec",
+   "pos_rank": 86,
+   "fpts": 21.3051,
+   "vorp": -144.3
+  },
+  {
+   "ovr": 119,
+   "rnd": 10,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Juwan Johnson",
+   "pos": "TE",
+   "nfl": "NO",
+   "elapsed": "47 sec",
+   "pos_rank": 16,
+   "fpts": 142.8179,
+   "vorp": -12.0
+  },
+  {
+   "ovr": 120,
+   "rnd": 10,
+   "pick": 12,
+   "team": "Keung",
+   "name": "De'Zhaun Stribling",
+   "pos": "WR",
+   "nfl": "SF",
+   "elapsed": "49 sec",
+   "pos_rank": 46,
+   "fpts": 141.3392,
+   "vorp": -1.8
+  },
+  {
+   "ovr": 121,
+   "rnd": 11,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Michael Wilson",
+   "pos": "WR",
+   "nfl": "ARI",
+   "elapsed": "2 sec",
+   "pos_rank": 38,
+   "fpts": 153.177,
+   "vorp": 10.1
+  },
+  {
+   "ovr": 122,
+   "rnd": 11,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "KC Concepcion",
+   "pos": "WR",
+   "nfl": "CLE",
+   "elapsed": "30 sec",
+   "pos_rank": 51,
+   "fpts": 136.6314,
+   "vorp": -6.5
+  },
+  {
+   "ovr": 123,
+   "rnd": 11,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "Jayden Reed",
+   "pos": "WR",
+   "nfl": "GB",
+   "elapsed": "1 min 17 sec",
+   "pos_rank": 44,
+   "fpts": 143.0587,
+   "vorp": -0.0
+  },
+  {
+   "ovr": 124,
+   "rnd": 11,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Chargers",
+   "pos": "DST",
+   "nfl": "LAC",
+   "elapsed": "13 sec",
+   "pos_rank": 10,
+   "fpts": -115.4,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 125,
+   "rnd": 11,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Courtland Sutton",
+   "pos": "WR",
+   "nfl": "DEN",
+   "elapsed": "28 sec",
+   "pos_rank": 32,
+   "fpts": 167.3115,
+   "vorp": 24.2
+  },
+  {
+   "ovr": 126,
+   "rnd": 11,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Jared Goff",
+   "pos": "QB",
+   "nfl": "DET",
+   "elapsed": "38 sec",
+   "pos_rank": 12,
+   "fpts": 382.5703,
+   "vorp": 3.2
+  },
+  {
+   "ovr": 127,
+   "rnd": 11,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Patrick Mahomes",
+   "pos": "QB",
+   "nfl": "KC",
+   "elapsed": "23 sec",
+   "pos_rank": 11,
+   "fpts": 384.8143,
+   "vorp": 5.4
+  },
+  {
+   "ovr": 128,
+   "rnd": 11,
+   "pick": 8,
+   "team": "David",
+   "name": "Jason Myers",
+   "pos": "K",
+   "nfl": "SEA",
+   "elapsed": "13 sec",
+   "pos_rank": 1,
+   "fpts": 167.0,
+   "vorp": 33.0
+  },
+  {
+   "ovr": 129,
+   "rnd": 11,
+   "pick": 9,
+   "team": "Win95",
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "nfl": "DAL",
+   "elapsed": "35 sec",
+   "pos_rank": 17,
+   "fpts": 140.3172,
+   "vorp": -14.5
+  },
+  {
+   "ovr": 130,
+   "rnd": 11,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Woody Marks",
+   "pos": "RB",
+   "nfl": "HOU",
+   "elapsed": "40 sec",
+   "pos_rank": 44,
+   "fpts": 117.6822,
+   "vorp": -47.9
+  },
+  {
+   "ovr": 131,
+   "rnd": 11,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "Dalton Kincaid",
+   "pos": "TE",
+   "nfl": "BUF",
+   "elapsed": "1 min 4 sec",
+   "pos_rank": 14,
+   "fpts": 148.2073,
+   "vorp": -6.6
+  },
+  {
+   "ovr": 132,
+   "rnd": 11,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Jordan James",
+   "pos": "RB",
+   "nfl": "SF",
+   "elapsed": "1 min 16 sec",
+   "pos_rank": 48,
+   "fpts": 109.4384,
+   "vorp": -56.2
+  },
+  {
+   "ovr": 133,
+   "rnd": 12,
+   "pick": 1,
+   "team": "Sly",
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "nfl": "IND",
+   "elapsed": "55 sec",
+   "pos_rank": 21,
+   "fpts": 188.5634,
+   "vorp": 45.5
+  },
+  {
+   "ovr": 134,
+   "rnd": 12,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Stefon Diggs",
+   "pos": "WR",
+   "nfl": "WAS",
+   "elapsed": "1 min 10 sec",
+   "pos_rank": 54,
+   "fpts": 133.6311,
+   "vorp": -9.5
+  },
+  {
+   "ovr": 135,
+   "rnd": 12,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Deebo Samuel",
+   "pos": "WR",
+   "nfl": "SF",
+   "elapsed": "59 sec",
+   "pos_rank": 45,
+   "fpts": 141.6512,
+   "vorp": -1.4
+  },
+  {
+   "ovr": 136,
+   "rnd": 12,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Patriots",
+   "pos": "DST",
+   "nfl": "NE",
+   "elapsed": "33 sec",
+   "pos_rank": 9,
+   "fpts": -108.7,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 137,
+   "rnd": 12,
+   "pick": 5,
+   "team": "David",
+   "name": "Fernando Mendoza",
+   "pos": "QB",
+   "nfl": "LV",
+   "elapsed": "10 sec",
+   "pos_rank": 32,
+   "fpts": 218.0909,
+   "vorp": -161.3
+  },
+  {
+   "ovr": 138,
+   "rnd": 12,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Kyler Murray",
+   "pos": "QB",
+   "nfl": "MIN",
+   "elapsed": "1 min 2 sec",
+   "pos_rank": 24,
+   "fpts": 348.3798,
+   "vorp": -31.0
+  },
+  {
+   "ovr": 139,
+   "rnd": 12,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Packers",
+   "pos": "DST",
+   "nfl": "GB",
+   "elapsed": "5 sec",
+   "pos_rank": 11,
+   "fpts": -117.75,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 140,
+   "rnd": 12,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Jordan Love",
+   "pos": "QB",
+   "nfl": "GB",
+   "elapsed": "14 sec",
+   "pos_rank": 21,
+   "fpts": 350.8679,
+   "vorp": -28.5
+  },
+  {
+   "ovr": 141,
+   "rnd": 12,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Brock Purdy",
+   "pos": "QB",
+   "nfl": "SF",
+   "elapsed": "7 sec",
+   "pos_rank": 10,
+   "fpts": 386.5805,
+   "vorp": 7.2
+  },
+  {
+   "ovr": 142,
+   "rnd": 12,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Baker Mayfield",
+   "pos": "QB",
+   "nfl": "TB",
+   "elapsed": "1 min 31 sec",
+   "pos_rank": 15,
+   "fpts": 371.3158,
+   "vorp": -8.1
+  },
+  {
+   "ovr": 143,
+   "rnd": 12,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Tyler Shough",
+   "pos": "QB",
+   "nfl": "NO",
+   "elapsed": "2 min 44 sec",
+   "pos_rank": 22,
+   "fpts": 350.7718,
+   "vorp": -28.6
+  },
+  {
+   "ovr": 144,
+   "rnd": 12,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "nfl": "GB",
+   "elapsed": "8 sec",
+   "pos_rank": 46,
+   "fpts": 114.5171,
+   "vorp": -51.1
+  },
+  {
+   "ovr": 145,
+   "rnd": 13,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Sam Darnold",
+   "pos": "QB",
+   "nfl": "SEA",
+   "elapsed": "59 sec",
+   "pos_rank": 17,
+   "fpts": 358.348,
+   "vorp": -21.1
+  },
+  {
+   "ovr": 146,
+   "rnd": 13,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "nfl": "PHI",
+   "elapsed": "16 sec",
+   "pos_rank": 50,
+   "fpts": 98.501092,
+   "vorp": -67.1
+  },
+  {
+   "ovr": 147,
+   "rnd": 13,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "Xavier Worthy",
+   "pos": "WR",
+   "nfl": "KC",
+   "elapsed": "50 sec",
+   "pos_rank": 52,
+   "fpts": 134.8113,
+   "vorp": -8.3
+  },
+  {
+   "ovr": 148,
+   "rnd": 13,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Aaron Jones",
+   "pos": "RB",
+   "nfl": "MIN",
+   "elapsed": "47 sec",
+   "pos_rank": 38,
+   "fpts": 142.2468,
+   "vorp": -23.4
+  },
+  {
+   "ovr": 149,
+   "rnd": 13,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Zach Charbonnet",
+   "pos": "RB",
+   "nfl": "SEA",
+   "elapsed": "11 sec",
+   "pos_rank": 53,
+   "fpts": 93.506771,
+   "vorp": -72.1
+  },
+  {
+   "ovr": 150,
+   "rnd": 13,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Brandon Aubrey",
+   "pos": "K",
+   "nfl": "DAL",
+   "elapsed": "9 sec",
+   "pos_rank": 4,
+   "fpts": 150.0,
+   "vorp": 16.0
+  },
+  {
+   "ovr": 151,
+   "rnd": 13,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Buccaneers",
+   "pos": "DST",
+   "nfl": "TB",
+   "elapsed": "1 min 34 sec",
+   "pos_rank": 21,
+   "fpts": -142.55,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 152,
+   "rnd": 13,
+   "pick": 8,
+   "team": "David",
+   "name": "Bears",
+   "pos": "DST",
+   "nfl": "CHI",
+   "elapsed": "17 sec",
+   "pos_rank": 15,
+   "fpts": -126.95,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 153,
+   "rnd": 13,
+   "pick": 9,
+   "team": "Win95",
+   "name": "Christopher Brooks",
+   "pos": "RB",
+   "nfl": "GB",
+   "elapsed": "16 sec",
+   "pos_rank": 63,
+   "fpts": 78.00402,
+   "vorp": -87.6
+  },
+  {
+   "ovr": 154,
+   "rnd": 13,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Daniel Jones",
+   "pos": "QB",
+   "nfl": "IND",
+   "elapsed": "44 sec",
+   "pos_rank": 16,
+   "fpts": 359.1314,
+   "vorp": -20.3
+  },
+  {
+   "ovr": 155,
+   "rnd": 13,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "Tyler Allgeier",
+   "pos": "RB",
+   "nfl": "ARI",
+   "elapsed": "6 sec",
+   "pos_rank": 58,
+   "fpts": 87.304665,
+   "vorp": -78.3
+  },
+  {
+   "ovr": 156,
+   "rnd": 13,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Dylan Sampson",
+   "pos": "RB",
+   "nfl": "CLE",
+   "elapsed": "30 sec",
+   "pos_rank": 47,
+   "fpts": 110.9954,
+   "vorp": -54.6
+  },
+  {
+   "ovr": 157,
+   "rnd": 14,
+   "pick": 1,
+   "team": "Sly",
+   "name": "Lions",
+   "pos": "DST",
+   "nfl": "DET",
+   "elapsed": "36 sec",
+   "pos_rank": 13,
+   "fpts": -121.25,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 158,
+   "rnd": 14,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Michael Pittman",
+   "pos": "WR",
+   "nfl": "PIT",
+   "elapsed": "1 min 27 sec",
+   "pos_rank": 47,
+   "fpts": 140.9842,
+   "vorp": -2.1
+  },
+  {
+   "ovr": 159,
+   "rnd": 14,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "49ers",
+   "pos": "DST",
+   "nfl": "SF",
+   "elapsed": "13 sec",
+   "pos_rank": 20,
+   "fpts": -140.85,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 160,
+   "rnd": 14,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Ray Davis",
+   "pos": "RB",
+   "nfl": "BUF",
+   "elapsed": "10 sec",
+   "pos_rank": 98,
+   "fpts": 18.6093,
+   "vorp": -147.0
+  },
+  {
+   "ovr": 161,
+   "rnd": 14,
+   "pick": 5,
+   "team": "David",
+   "name": "Makai Lemon",
+   "pos": "WR",
+   "nfl": "PHI",
+   "elapsed": "0 sec",
+   "pos_rank": 64,
+   "fpts": 120.9269,
+   "vorp": -22.2
+  },
+  {
+   "ovr": 162,
+   "rnd": 14,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Giants",
+   "pos": "DST",
+   "nfl": "NYG",
+   "elapsed": "43 sec",
+   "pos_rank": 28,
+   "fpts": -171.7,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 163,
+   "rnd": 14,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Mark Andrews",
+   "pos": "TE",
+   "nfl": "BAL",
+   "elapsed": "44 sec",
+   "pos_rank": 11,
+   "fpts": 157.9865,
+   "vorp": 3.2
+  },
+  {
+   "ovr": 164,
+   "rnd": 14,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Ka'imi Fairbairn",
+   "pos": "K",
+   "nfl": "HOU",
+   "elapsed": "11 sec",
+   "pos_rank": 2,
+   "fpts": 157.0,
+   "vorp": 23.0
+  },
+  {
+   "ovr": 165,
+   "rnd": 14,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Dalton Schultz",
+   "pos": "TE",
+   "nfl": "HOU",
+   "elapsed": "4 sec",
+   "pos_rank": 19,
+   "fpts": 127.62,
+   "vorp": -27.2
+  },
+  {
+   "ovr": 166,
+   "rnd": 14,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Romeo Doubs",
+   "pos": "WR",
+   "nfl": "NE",
+   "elapsed": "29 sec",
+   "pos_rank": 40,
+   "fpts": 146.5839,
+   "vorp": 3.5
+  },
+  {
+   "ovr": 167,
+   "rnd": 14,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Bills",
+   "pos": "DST",
+   "nfl": "BUF",
+   "elapsed": "9 sec",
+   "pos_rank": 16,
+   "fpts": -127.25,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 168,
+   "rnd": 14,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Cameron Dicker",
+   "pos": "K",
+   "nfl": "LAC",
+   "elapsed": "13 sec",
+   "pos_rank": 7,
+   "fpts": 143.0,
+   "vorp": 9.0
+  },
+  {
+   "ovr": 169,
+   "rnd": 15,
+   "pick": 1,
+   "team": "Keung",
+   "name": "Isiah Pacheco",
+   "pos": "RB",
+   "nfl": "DET",
+   "elapsed": "31 sec",
+   "pos_rank": 61,
+   "fpts": 80.1291,
+   "vorp": -85.5
+  },
+  {
+   "ovr": 170,
+   "rnd": 15,
+   "pick": 2,
+   "team": "TheOhZone",
+   "name": "Cam Little",
+   "pos": "K",
+   "nfl": "JAC",
+   "elapsed": "37 sec",
+   "pos_rank": 12,
+   "fpts": 136.0,
+   "vorp": 2.0
+  },
+  {
+   "ovr": 171,
+   "rnd": 15,
+   "pick": 3,
+   "team": "Kenan",
+   "name": "Evan McPherson",
+   "pos": "K",
+   "nfl": "CIN",
+   "elapsed": "13 sec",
+   "pos_rank": 14,
+   "fpts": 134.0,
+   "vorp": 0.0
+  },
+  {
+   "ovr": 172,
+   "rnd": 15,
+   "pick": 4,
+   "team": "Nigel",
+   "name": "Jalen Coker",
+   "pos": "WR",
+   "nfl": "CAR",
+   "elapsed": "1 min 11 sec",
+   "pos_rank": 48,
+   "fpts": 140.1818,
+   "vorp": -2.9
+  },
+  {
+   "ovr": 173,
+   "rnd": 15,
+   "pick": 5,
+   "team": "Hash",
+   "name": "Matthew Golden",
+   "pos": "WR",
+   "nfl": "GB",
+   "elapsed": "4 sec",
+   "pos_rank": 56,
+   "fpts": 130.4245,
+   "vorp": -12.7
+  },
+  {
+   "ovr": 174,
+   "rnd": 15,
+   "pick": 6,
+   "team": "Tolga",
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "nfl": "JAC",
+   "elapsed": "52 sec",
+   "pos_rank": 43,
+   "fpts": 144.2521,
+   "vorp": 1.2
+  },
+  {
+   "ovr": 175,
+   "rnd": 15,
+   "pick": 7,
+   "team": "KGB",
+   "name": "Alvin Kamara",
+   "pos": "RB",
+   "nfl": "NO",
+   "elapsed": "27 sec",
+   "pos_rank": 55,
+   "fpts": 90.812984,
+   "vorp": -74.8
+  },
+  {
+   "ovr": 176,
+   "rnd": 15,
+   "pick": 8,
+   "team": "David",
+   "name": "Brenton Strange",
+   "pos": "TE",
+   "nfl": "JAC",
+   "elapsed": "0 sec",
+   "pos_rank": 15,
+   "fpts": 145.056,
+   "vorp": -9.7
+  },
+  {
+   "ovr": 177,
+   "rnd": 15,
+   "pick": 9,
+   "team": "Win95",
+   "name": "Will Reichard",
+   "pos": "K",
+   "nfl": "MIN",
+   "elapsed": "13 sec",
+   "pos_rank": 10,
+   "fpts": 141.0,
+   "vorp": 7.0
+  },
+  {
+   "ovr": 178,
+   "rnd": 15,
+   "pick": 10,
+   "team": "Cenk",
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "nfl": "TEN",
+   "elapsed": "47 sec",
+   "pos_rank": 41,
+   "fpts": 145.0323,
+   "vorp": 1.9
+  },
+  {
+   "ovr": 179,
+   "rnd": 15,
+   "pick": 11,
+   "team": "Sujay",
+   "name": "Tyjae Spears",
+   "pos": "RB",
+   "nfl": "TEN",
+   "elapsed": "1 min 7 sec",
+   "pos_rank": 43,
+   "fpts": 119.315015,
+   "vorp": -46.3
+  },
+  {
+   "ovr": 180,
+   "rnd": 15,
+   "pick": 12,
+   "team": "Sly",
+   "name": "Jake Bates",
+   "pos": "K",
+   "nfl": "DET",
+   "elapsed": "42 sec",
+   "pos_rank": 5,
+   "fpts": 146.0,
+   "vorp": 12.0
+  },
+  {
+   "ovr": 181,
+   "rnd": 16,
+   "pick": 1,
+   "team": "Sly",
+   "name": "Kaelon Black",
+   "pos": "RB",
+   "nfl": "SF",
+   "elapsed": "59 sec (13 min 29 sec)",
+   "pos_rank": 49,
+   "fpts": 108.3219,
+   "vorp": -57.3
+  },
+  {
+   "ovr": 182,
+   "rnd": 16,
+   "pick": 2,
+   "team": "Sujay",
+   "name": "Spencer Shrader",
+   "pos": "K",
+   "nfl": "IND",
+   "elapsed": "45 sec (15 min 12 sec)",
+   "pos_rank": 3,
+   "fpts": 153.0,
+   "vorp": 19.0
+  },
+  {
+   "ovr": 183,
+   "rnd": 16,
+   "pick": 3,
+   "team": "Cenk",
+   "name": "Chase McLaughlin",
+   "pos": "K",
+   "nfl": "TB",
+   "elapsed": "60 sec (15 min 9 sec)",
+   "pos_rank": 8,
+   "fpts": 141.0,
+   "vorp": 7.0
+  },
+  {
+   "ovr": 184,
+   "rnd": 16,
+   "pick": 4,
+   "team": "Win95",
+   "name": "Jerry Jeudy",
+   "pos": "WR",
+   "nfl": "CLE",
+   "elapsed": "6 sec (6 min 37 sec)",
+   "pos_rank": 50,
+   "fpts": 137.4068,
+   "vorp": -5.7
+  },
+  {
+   "ovr": 185,
+   "rnd": 16,
+   "pick": 5,
+   "team": "David",
+   "name": "Denzel Boston",
+   "pos": "WR",
+   "nfl": "CLE",
+   "elapsed": "0 sec (3 min 9 sec)",
+   "pos_rank": 55,
+   "fpts": 131.0212,
+   "vorp": -12.1
+  },
+  {
+   "ovr": 186,
+   "rnd": 16,
+   "pick": 6,
+   "team": "KGB",
+   "name": "Harrison Mevis",
+   "pos": "K",
+   "nfl": "LAR",
+   "elapsed": "59 sec (16 min 46 sec)",
+   "pos_rank": 9,
+   "fpts": 141.0,
+   "vorp": 7.0
+  },
+  {
+   "ovr": 187,
+   "rnd": 16,
+   "pick": 7,
+   "team": "Tolga",
+   "name": "Tre Tucker",
+   "pos": "WR",
+   "nfl": "LV",
+   "elapsed": "12 sec (7 min 3 sec)",
+   "pos_rank": 62,
+   "fpts": 121.1428,
+   "vorp": -22.0
+  },
+  {
+   "ovr": 188,
+   "rnd": 16,
+   "pick": 8,
+   "team": "Hash",
+   "name": "Kayshon Boutte",
+   "pos": "WR",
+   "nfl": "HOU",
+   "elapsed": "26 sec (5 min 29 sec)",
+   "pos_rank": 67,
+   "fpts": 113.4674,
+   "vorp": -29.6
+  },
+  {
+   "ovr": 189,
+   "rnd": 16,
+   "pick": 9,
+   "team": "Nigel",
+   "name": "Tyler Loop",
+   "pos": "K",
+   "nfl": "BAL",
+   "elapsed": "1 min 5 sec (11 min 52 sec)",
+   "pos_rank": 11,
+   "fpts": 136.0,
+   "vorp": 2.0
+  },
+  {
+   "ovr": 190,
+   "rnd": 16,
+   "pick": 10,
+   "team": "Kenan",
+   "name": "Brian Robinson Jr.",
+   "pos": "RB",
+   "nfl": "ATL",
+   "elapsed": "14 sec (9 min 40 sec)",
+   "pos_rank": 62,
+   "fpts": 79.001275,
+   "vorp": -86.6
+  },
+  {
+   "ovr": 191,
+   "rnd": 16,
+   "pick": 11,
+   "team": "TheOhZone",
+   "name": "Keaton Mitchell",
+   "pos": "RB",
+   "nfl": "LAC",
+   "elapsed": "13 sec (9 min 59 sec)",
+   "pos_rank": 66,
+   "fpts": 70.303171,
+   "vorp": -95.3
+  },
+  {
+   "ovr": 192,
+   "rnd": 16,
+   "pick": 12,
+   "team": "Keung",
+   "name": "Hunter Henry",
+   "pos": "TE",
+   "nfl": "NE",
+   "elapsed": "0 sec (9 min 23 sec)",
+   "pos_rank": 18,
+   "fpts": 134.3698,
+   "vorp": -20.4
+  }
+ ],
+ "focus_log": [
+  {
+   "ovr": 7,
+   "rnd": 1,
+   "pick": 7,
+   "name": "Christian McCaffrey",
+   "pos": "RB",
+   "nfl": "SF",
+   "pos_rank": 5,
+   "fpts": 281.4548,
+   "vorp": 115.9,
+   "best_avail": [
+    {
+     "name": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "vorp": 117.4,
+     "ovr": 8,
+     "team": "David"
+    },
+    {
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "vorp": 116.8,
+     "ovr": 20,
+     "team": "Hash"
+    },
+    {
+     "name": "Christian McCaffrey",
+     "pos": "RB",
+     "vorp": 115.9,
+     "ovr": 7,
+     "team": "KGB"
+    }
+   ]
+  },
+  {
+   "ovr": 18,
+   "rnd": 2,
+   "pick": 6,
+   "name": "Omarion Hampton",
+   "pos": "RB",
+   "nfl": "LAC",
+   "pos_rank": 18,
+   "fpts": 210.3552,
+   "vorp": 44.8,
+   "best_avail": [
+    {
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "vorp": 116.8,
+     "ovr": 20,
+     "team": "Hash"
+    },
+    {
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "vorp": 107.4,
+     "ovr": 34,
+     "team": "Cenk"
+    },
+    {
+     "name": "George Pickens",
+     "pos": "WR",
+     "vorp": 101.4,
+     "ovr": 27,
+     "team": "Kenan"
+    }
+   ]
+  },
+  {
+   "ovr": 31,
+   "rnd": 3,
+   "pick": 7,
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "nfl": "PHI",
+   "pos_rank": 17,
+   "fpts": 196.7788,
+   "vorp": 53.7,
+   "best_avail": [
+    {
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "vorp": 107.4,
+     "ovr": 34,
+     "team": "Cenk"
+    },
+    {
+     "name": "Zay Flowers",
+     "pos": "WR",
+     "vorp": 71.4,
+     "ovr": 44,
+     "team": "Hash"
+    },
+    {
+     "name": "Malik Nabers",
+     "pos": "WR",
+     "vorp": 71.0,
+     "ovr": 39,
+     "team": "Cenk"
+    }
+   ]
+  },
+  {
+   "ovr": 42,
+   "rnd": 4,
+   "pick": 6,
+   "name": "Colston Loveland",
+   "pos": "TE",
+   "nfl": "CHI",
+   "pos_rank": 3,
+   "fpts": 191.7394,
+   "vorp": 36.9,
+   "best_avail": [
+    {
+     "name": "Zay Flowers",
+     "pos": "WR",
+     "vorp": 71.4,
+     "ovr": 44,
+     "team": "Hash"
+    },
+    {
+     "name": "Tee Higgins",
+     "pos": "WR",
+     "vorp": 62.2,
+     "ovr": 45,
+     "team": "Nigel"
+    },
+    {
+     "name": "Emeka Egbuka",
+     "pos": "WR",
+     "vorp": 52.3,
+     "ovr": 48,
+     "team": "Keung"
+    }
+   ]
+  },
+  {
+   "ovr": 55,
+   "rnd": 5,
+   "pick": 7,
+   "name": "Jadarian Price",
+   "pos": "RB",
+   "nfl": "SEA",
+   "pos_rank": 24,
+   "fpts": 177.0426,
+   "vorp": 11.4,
+   "best_avail": [
+    {
+     "name": "Jameson Williams",
+     "pos": "WR",
+     "vorp": 47.6,
+     "ovr": 62,
+     "team": "Sujay"
+    },
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "vorp": 34.4,
+     "ovr": 100,
+     "team": "Nigel"
+    }
+   ]
+  },
+  {
+   "ovr": 66,
+   "rnd": 6,
+   "pick": 6,
+   "name": "MarShawn Lloyd",
+   "pos": "RB",
+   "nfl": "GB",
+   "pos_rank": 28,
+   "fpts": 168.5252,
+   "vorp": 2.9,
+   "best_avail": [
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "vorp": 34.4,
+     "ovr": 100,
+     "team": "Nigel"
+    },
+    {
+     "name": "Jason Myers",
+     "pos": "K",
+     "vorp": 33.0,
+     "ovr": 128,
+     "team": "David"
+    }
+   ]
+  },
+  {
+   "ovr": 79,
+   "rnd": 7,
+   "pick": 7,
+   "name": "Rome Odunze",
+   "pos": "WR",
+   "nfl": "CHI",
+   "pos_rank": 30,
+   "fpts": 170.0439,
+   "vorp": 26.9,
+   "best_avail": [
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "vorp": 34.4,
+     "ovr": 100,
+     "team": "Nigel"
+    },
+    {
+     "name": "Jason Myers",
+     "pos": "K",
+     "vorp": 33.0,
+     "ovr": 128,
+     "team": "David"
+    }
+   ]
+  },
+  {
+   "ovr": 90,
+   "rnd": 8,
+   "pick": 6,
+   "name": "Chris Godwin",
+   "pos": "WR",
+   "nfl": "TB",
+   "pos_rank": 37,
+   "fpts": 157.6767,
+   "vorp": 14.6,
+   "best_avail": [
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "vorp": 34.4,
+     "ovr": 100,
+     "team": "Nigel"
+    },
+    {
+     "name": "Jason Myers",
+     "pos": "K",
+     "vorp": 33.0,
+     "ovr": 128,
+     "team": "David"
+    }
+   ]
+  },
+  {
+   "ovr": 103,
+   "rnd": 9,
+   "pick": 7,
+   "name": "Carnell Tate",
+   "pos": "WR",
+   "nfl": "TEN",
+   "pos_rank": 61,
+   "fpts": 125.329,
+   "vorp": -17.8,
+   "best_avail": [
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Jason Myers",
+     "pos": "K",
+     "vorp": 33.0,
+     "ovr": 128,
+     "team": "David"
+    },
+    {
+     "name": "Courtland Sutton",
+     "pos": "WR",
+     "vorp": 24.2,
+     "ovr": 125,
+     "team": "Hash"
+    }
+   ]
+  },
+  {
+   "ovr": 114,
+   "rnd": 10,
+   "pick": 6,
+   "name": "Chris Rodriguez Jr.",
+   "pos": "RB",
+   "nfl": "JAC",
+   "pos_rank": 45,
+   "fpts": 117.300618,
+   "vorp": -48.3,
+   "best_avail": [
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Jason Myers",
+     "pos": "K",
+     "vorp": 33.0,
+     "ovr": 128,
+     "team": "David"
+    },
+    {
+     "name": "Courtland Sutton",
+     "pos": "WR",
+     "vorp": 24.2,
+     "ovr": 125,
+     "team": "Hash"
+    }
+   ]
+  },
+  {
+   "ovr": 127,
+   "rnd": 11,
+   "pick": 7,
+   "name": "Patrick Mahomes",
+   "pos": "QB",
+   "nfl": "KC",
+   "pos_rank": 11,
+   "fpts": 384.8143,
+   "vorp": 5.4,
+   "best_avail": [
+    {
+     "name": "Alec Pierce",
+     "pos": "WR",
+     "vorp": 45.5,
+     "ovr": 133,
+     "team": "Sly"
+    },
+    {
+     "name": "Jason Myers",
+     "pos": "K",
+     "vorp": 33.0,
+     "ovr": 128,
+     "team": "David"
+    },
+    {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "vorp": 23.0,
+     "ovr": 164,
+     "team": "Hash"
+    }
+   ]
+  },
+  {
+   "ovr": 138,
+   "rnd": 12,
+   "pick": 6,
+   "name": "Kyler Murray",
+   "pos": "QB",
+   "nfl": "MIN",
+   "pos_rank": 24,
+   "fpts": 348.3798,
+   "vorp": -31.0,
+   "best_avail": [
+    {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "vorp": 23.0,
+     "ovr": 164,
+     "team": "Hash"
+    },
+    {
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "vorp": 19.0,
+     "ovr": 182,
+     "team": "Sujay"
+    },
+    {
+     "name": "Brandon Aubrey",
+     "pos": "K",
+     "vorp": 16.0,
+     "ovr": 150,
+     "team": "Tolga"
+    }
+   ]
+  },
+  {
+   "ovr": 151,
+   "rnd": 13,
+   "pick": 7,
+   "name": "Buccaneers",
+   "pos": "DST",
+   "nfl": "TB",
+   "pos_rank": 21,
+   "fpts": -142.55,
+   "vorp": 0.0,
+   "best_avail": [
+    {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "vorp": 23.0,
+     "ovr": 164,
+     "team": "Hash"
+    },
+    {
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "vorp": 19.0,
+     "ovr": 182,
+     "team": "Sujay"
+    },
+    {
+     "name": "Jake Bates",
+     "pos": "K",
+     "vorp": 12.0,
+     "ovr": 180,
+     "team": "Sly"
+    }
+   ]
+  },
+  {
+   "ovr": 162,
+   "rnd": 14,
+   "pick": 6,
+   "name": "Giants",
+   "pos": "DST",
+   "nfl": "NYG",
+   "pos_rank": 28,
+   "fpts": -171.7,
+   "vorp": 0.0,
+   "best_avail": [
+    {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "vorp": 23.0,
+     "ovr": 164,
+     "team": "Hash"
+    },
+    {
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "vorp": 19.0,
+     "ovr": 182,
+     "team": "Sujay"
+    },
+    {
+     "name": "Jake Bates",
+     "pos": "K",
+     "vorp": 12.0,
+     "ovr": 180,
+     "team": "Sly"
+    }
+   ]
+  },
+  {
+   "ovr": 175,
+   "rnd": 15,
+   "pick": 7,
+   "name": "Alvin Kamara",
+   "pos": "RB",
+   "nfl": "NO",
+   "pos_rank": 55,
+   "fpts": 90.812984,
+   "vorp": -74.8,
+   "best_avail": [
+    {
+     "name": "Spencer Shrader",
+     "pos": "K",
+     "vorp": 19.0,
+     "ovr": 182,
+     "team": "Sujay"
+    },
+    {
+     "name": "Jake Bates",
+     "pos": "K",
+     "vorp": 12.0,
+     "ovr": 180,
+     "team": "Sly"
+    },
+    {
+     "name": "Will Reichard",
+     "pos": "K",
+     "vorp": 7.0,
+     "ovr": 177,
+     "team": "Win95"
+    }
+   ]
+  },
+  {
+   "ovr": 186,
+   "rnd": 16,
+   "pick": 6,
+   "name": "Harrison Mevis",
+   "pos": "K",
+   "nfl": "LAR",
+   "pos_rank": 9,
+   "fpts": 141.0,
+   "vorp": 7.0,
+   "best_avail": [
+    {
+     "name": "Harrison Mevis",
+     "pos": "K",
+     "vorp": 7.0,
+     "ovr": 186,
+     "team": "KGB"
+    },
+    {
+     "name": "Tyler Loop",
+     "pos": "K",
+     "vorp": 2.0,
+     "ovr": 189,
+     "team": "Nigel"
+    },
+    {
+     "name": "Hunter Henry",
+     "pos": "TE",
+     "vorp": -20.4,
+     "ovr": 192,
+     "team": "Keung"
+    }
+   ]
+  }
+ ],
+ "trades": [
+  {
+   "partner": "David",
+   "give": [
+    {
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "pos_rank": 28,
+     "fpts": 168.5252
+    },
+    {
+     "name": "Chris Godwin",
+     "pos": "WR",
+     "pos_rank": 37,
+     "fpts": 157.6767
+    }
+   ],
+   "get": [
+    {
+     "name": "Brian Thomas Jr.",
+     "pos": "WR",
+     "pos_rank": 31,
+     "fpts": 168.4866
+    }
+   ],
+   "gain_focus": 10.8,
+   "gain_partner": 1.8,
+   "gain_total": 12.6
+  },
+  {
+   "partner": "David",
+   "give": [
+    {
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "pos_rank": 28,
+     "fpts": 168.5252
+    },
+    {
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "pos_rank": 11,
+     "fpts": 384.8143
+    }
+   ],
+   "get": [
+    {
+     "name": "Jalen Hurts",
+     "pos": "QB",
+     "pos_rank": 6,
+     "fpts": 394.6881
+    }
+   ],
+   "gain_focus": 9.9,
+   "gain_partner": 2.7,
+   "gain_total": 12.6
+  },
+  {
+   "partner": "Keung",
+   "give": [
+    {
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "pos_rank": 11,
+     "fpts": 384.8143
+    }
+   ],
+   "get": [
+    {
+     "name": "Jayden Daniels",
+     "pos": "QB",
+     "pos_rank": 7,
+     "fpts": 393.2782
+    },
+    {
+     "name": "RJ Harvey",
+     "pos": "RB",
+     "pos_rank": 31,
+     "fpts": 165.6335
+    }
+   ],
+   "gain_focus": 8.5,
+   "gain_partner": 1.6,
+   "gain_total": 10.1
+  },
+  {
+   "partner": "Win95",
+   "give": [
+    {
+     "name": "Omarion Hampton",
+     "pos": "RB",
+     "pos_rank": 18,
+     "fpts": 210.3552
+    },
+    {
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "pos_rank": 28,
+     "fpts": 168.5252
+    }
+   ],
+   "get": [
+    {
+     "name": "D'Andre Swift",
+     "pos": "RB",
+     "pos_rank": 11,
+     "fpts": 218.8264
+    }
+   ],
+   "gain_focus": 8.5,
+   "gain_partner": 0.7,
+   "gain_total": 9.2
+  },
+  {
+   "partner": "Keung",
+   "give": [
+    {
+     "name": "Omarion Hampton",
+     "pos": "RB",
+     "pos_rank": 18,
+     "fpts": 210.3552
+    },
+    {
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "pos_rank": 28,
+     "fpts": 168.5252
+    }
+   ],
+   "get": [
+    {
+     "name": "Emeka Egbuka",
+     "pos": "WR",
+     "pos_rank": 18,
+     "fpts": 195.4286
+    }
+   ],
+   "gain_focus": 7.7,
+   "gain_partner": 2.6,
+   "gain_total": 10.3
+  },
+  {
+   "partner": "Win95",
+   "give": [
+    {
+     "name": "Jadarian Price",
+     "pos": "RB",
+     "pos_rank": 24,
+     "fpts": 177.0426
+    },
+    {
+     "name": "Chris Godwin",
+     "pos": "WR",
+     "pos_rank": 37,
+     "fpts": 157.6767
+    }
+   ],
+   "get": [
+    {
+     "name": "DJ Moore",
+     "pos": "WR",
+     "pos_rank": 27,
+     "fpts": 173.8511
+    }
+   ],
+   "gain_focus": 7.7,
+   "gain_partner": 1.5,
+   "gain_total": 9.2
+  },
+  {
+   "partner": "Sly",
+   "give": [
+    {
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "pos_rank": 61,
+     "fpts": 125.329
+    }
+   ],
+   "get": [
+    {
+     "name": "David Montgomery",
+     "pos": "RB",
+     "pos_rank": 23,
+     "fpts": 184.208067
+    }
+   ],
+   "gain_focus": 7.2,
+   "gain_partner": 0.1,
+   "gain_total": 7.3
+  },
+  {
+   "partner": "Sly",
+   "give": [
+    {
+     "name": "DeVonta Smith",
+     "pos": "WR",
+     "pos_rank": 17,
+     "fpts": 196.7788
+    }
+   ],
+   "get": [
+    {
+     "name": "Bucky Irving",
+     "pos": "RB",
+     "pos_rank": 16,
+     "fpts": 215.1882
+    },
+    {
+     "name": "DK Metcalf",
+     "pos": "WR",
+     "pos_rank": 35,
+     "fpts": 161.7755
+    }
+   ],
+   "gain_focus": 3.2,
+   "gain_partner": 4.2,
+   "gain_total": 7.4
+  },
+  {
+   "partner": "Hash",
+   "give": [
+    {
+     "name": "Jadarian Price",
+     "pos": "RB",
+     "pos_rank": 24,
+     "fpts": 177.0426
+    },
+    {
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "pos_rank": 11,
+     "fpts": 384.8143
+    }
+   ],
+   "get": [
+    {
+     "name": "Joe Burrow",
+     "pos": "QB",
+     "pos_rank": 5,
+     "fpts": 395.6769
+    }
+   ],
+   "gain_focus": 2.4,
+   "gain_partner": 0.1,
+   "gain_total": 2.5
+  },
+  {
+   "partner": "Nigel",
+   "give": [
+    {
+     "name": "DeVonta Smith",
+     "pos": "WR",
+     "pos_rank": 17,
+     "fpts": 196.7788
+    },
+    {
+     "name": "Jadarian Price",
+     "pos": "RB",
+     "pos_rank": 24,
+     "fpts": 177.0426
+    }
+   ],
+   "get": [
+    {
+     "name": "Tee Higgins",
+     "pos": "WR",
+     "pos_rank": 16,
+     "fpts": 205.3393
+    },
+    {
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "pos_rank": 10,
+     "fpts": 386.5805
+    }
+   ],
+   "gain_focus": 1.9,
+   "gain_partner": 1.3,
+   "gain_total": 3.2
+  }
+ ],
+ "trades_found": 252
+}

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post-draft report — KGB, HH 2026 half-PPR</title>
+<meta name="description" content="Post-draft grades for a 12-team half-PPR league: every roster scored by projected starting lineup over replacement, KGB's pick-by-pick audit, and the trades both sides gain from.">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* page-specific: diverging arms, trade cards, roster grid */
+  :root {
+    --div-pos: #256abf;
+    --div-neg: #c2352f;
+    --div-mid: #f0efec;
+    --emph: #256abf;
+    --rest: #86b6ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      --div-pos: #3987e5;
+      --div-neg: #e66767;
+      --div-mid: #383835;
+      --emph: #3987e5;
+      --rest: #184f95;
+    }
+  }
+  :root[data-theme="dark"] {
+    --div-pos: #3987e5;
+    --div-neg: #e66767;
+    --div-mid: #383835;
+    --emph: #3987e5;
+    --rest: #184f95;
+  }
+  .trade { border-top: 1px solid var(--grid); padding: 14px 0; }
+  .trade:first-child { border-top: 0; padding-top: 2px; }
+  .trade-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .trade-head .who { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+  .trade-head .gain { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .swap { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin-top: 8px; }
+  @media (max-width: 620px) { .swap { grid-template-columns: 1fr; } .swap .arrow { display: none; } }
+  .swap .side { font-size: 13.5px; }
+  .swap .side .lbl { display: block; font-size: 11.5px; text-transform: uppercase;
+                     letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 3px; }
+  .swap .arrow { color: var(--text-muted); font-size: 16px; }
+  .gainbar { height: 8px; border-radius: 4px; background: var(--emph); }
+  .gaintrack { background: color-mix(in srgb, var(--text-primary) 7%, transparent);
+               border-radius: 4px; height: 8px; width: 100%; }
+  .moves { counter-reset: mv; list-style: none; padding: 0; margin: 0; }
+  .moves li { position: relative; padding: 14px 0 14px 38px; border-top: 1px solid var(--grid); }
+  .moves li:first-child { border-top: 0; padding-top: 2px; }
+  .moves li::before {
+    counter-increment: mv; content: counter(mv);
+    position: absolute; left: 0; top: 13px;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: color-mix(in srgb, var(--emph) 14%, transparent);
+    color: var(--emph); font-size: 12.5px; font-weight: 600;
+    display: grid; place-items: center;
+  }
+  .moves li:first-child::before { top: 1px; }
+  .moves h3 { font-size: 14.5px; margin: 0 0 4px; }
+  .moves p { margin: 0; color: var(--text-secondary); font-size: 13.5px; max-width: 76ch; }
+  .rosters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; }
+  @media (max-width: 760px) { .rosters { grid-template-columns: 1fr; } }
+  .rteam { font-size: 14px; font-weight: 600; margin: 0 0 2px; display: flex; gap: 8px; align-items: baseline; }
+  .rteam .rk { color: var(--text-muted); font-variant-numeric: tabular-nums; font-weight: 400; font-size: 12.5px; }
+  .rteam .vp { margin-left: auto; font-variant-numeric: tabular-nums; color: var(--text-secondary); font-weight: 400; font-size: 12.5px; }
+  .rline { font-size: 12.5px; color: var(--text-secondary); margin: 2px 0; }
+  .rline .slot { display: inline-block; min-width: 42px; color: var(--text-muted); font-size: 11.5px;
+                 text-transform: uppercase; letter-spacing: 0.05em; }
+  .focus-card { outline: 1px solid color-mix(in srgb, var(--emph) 45%, transparent); outline-offset: 3px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>Post-draft report — <span id="hdr-team">KGB</span></h1>
+  <p class="sub">Every roster in the league scored by the starting lineup it can
+  actually field, in points over replacement. Then the part that still matters in
+  September: which picks cost value, and which trades a leaguemate would say yes to.</p>
+  <p class="srcline">
+    <span id="meta-line"></span> ·
+    <a href="index.html">Pre-draft model &rarr;</a>
+  </p>
+</header>
+
+<div class="filters" role="group" aria-label="Page controls">
+  <span class="lbl">Post-draft grades</span>
+  <span class="spacer"></span>
+  <button class="ghost" id="tv-toggle" aria-pressed="false">Show data tables</button>
+  <button class="ghost" id="theme-toggle">Dark mode</button>
+</div>
+
+<section class="sect" id="verdict" style="margin-top:0">
+  <div class="hero-row">
+    <div class="card hero">
+      <div class="label" id="hero-label">KGB · starting lineup over replacement</div>
+      <div class="value" id="hero-value">—</div>
+      <div class="delta" id="hero-delta"></div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Where the league finished</h2>
+  <p class="note">Each team's best possible starting lineup, summed as points over
+  positional replacement. <strong>The whole league fits inside 171 points — about ten a
+  week</strong> — so last place is not a lost season; it is one position group away.
+  Defenses are excluded (see the method note).</p>
+  <div class="card">
+    <ul class="legend" id="league-legend"></ul>
+    <div id="league-chart"></div>
+    <div class="tv" id="league-table" hidden></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Where KGB is short</h2>
+  <p class="note">KGB's lineup slots against the league median for that slot. The
+  shape is the diagnosis: <strong>a strong backfield, a top-3 tight end, and a
+  receiving corps last in the league.</strong> Every point of the deficit sits in one
+  place, which is the good news — one WR upgrade moves the whole team.</p>
+  <div class="card">
+    <ul class="legend" id="gap-legend"></ul>
+    <div id="gap-chart"></div>
+    <div class="tv" id="gap-table" hidden></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Pick by pick</h2>
+  <p class="note">Value over replacement for each of KGB's 16 picks. Bars below the
+  line are picks that returned less than a freely-available player at the position:
+  <strong>four of sixteen, and all four came after round 8</strong>. Hover any bar for
+  the best player still on the board at that pick and who eventually took them.</p>
+  <div class="card">
+    <ul class="legend" id="pick-legend"></ul>
+    <div id="pick-chart"></div>
+    <div class="tv" id="pick-table" hidden></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>Trades both sides gain from</h2>
+  <p class="note">Every package of up to two players a side was enumerated against all
+  eleven leaguemates, keeping only those where <em>both</em> starting lineups improve:
+  <span id="trade-count">—</span>. In a pure-projection lens a fair trade is
+  near zero-sum, so the survivors are exactly the positional-surplus mismatches: KGB's
+  spare running backs against someone else's spare receiver.</p>
+  <div class="card" id="trades"></div>
+</section>
+
+<section class="sect">
+  <h2>The five moves</h2>
+  <div class="card"><ol class="moves">
+    <li>
+      <h3>Sell the fourth and fifth running back, buy a receiver.</h3>
+      <p>Lloyd (RB28) and Price (RB24) are startable for teams whose RB2 is a
+      committee back, and worth nothing to a team already starting McCaffrey and
+      Hampton. Every trade in the table above is a version of that swap. Lead with
+      David, Win95 and Keung — the three whose receiver room is deep enough to sell
+      from.</p>
+    </li>
+    <li>
+      <h3>Do not pay for a quarterback.</h3>
+      <p>Replacement QB in this pool projects 379; Mahomes projects 385. The entire
+      positional edge is six points a season. Mahomes at 11.07 was a correct read, and
+      the corollary is that any offer sending real skill-position value the other way
+      for a "better" QB is a loss. If someone offers a receiver for Mahomes, take it and
+      stream.</p>
+    </li>
+    <li>
+      <h3>Drop Kyler Murray.</h3>
+      <p>QB24 behind an every-week QB1 is a roster spot spending itself. Three teams
+      carry a single quarterback — Sly, Win95 and TheOhZone — but only TheOhZone's is
+      weak enough to want help, and Shough-for-Murray is not a trade anyone wins. Ask
+      once, then cut him for a receiver flyer.</p>
+    </li>
+    <li>
+      <h3>Cut the second defense, Rodriguez and Kamara — then stream.</h3>
+      <p>Four roster spots return either nothing or less than nothing (Rodriguez −48,
+      Kamara −75 against replacement). Keep the Buccaneers, stream the matchup weekly,
+      and spend the freed spots on receiver upside — which is the only position where
+      this roster has room to gain.</p>
+    </li>
+    <li>
+      <h3>Leave the kicker alone.</h3>
+      <p>Mevis is K9 and the spread from K1 to K12 is about 30 points. It is the one
+      position where the correct amount of in-season effort is zero.</p>
+    </li>
+  </ol></div>
+</section>
+
+<section class="sect">
+  <h2>Every roster</h2>
+  <p class="note">Optimal starting lineup per team, ranked. Bench players are listed
+  where they carry startable value.</p>
+  <div class="card"><div class="rosters" id="rosters"></div></div>
+</section>
+
+<footer class="page">
+  <p><strong>Method &amp; caveats.</strong> Replacement level is the last league-wide
+  starter at each position for a QB/2RB/3WR/TE/FLEX/K lineup, with the FLEX slot split
+  half RB, half WR — <span id="repl-line"></span>. Value over replacement is a player's
+  projected points minus that level, and a team's score is the sum over its best legal
+  starting lineup. An unfillable slot is charged the full replacement level, so trading
+  away your only quarterback is never free.</p>
+  <ul class="caveat">
+    <li><strong>Defenses are excluded.</strong> The source file projects every DST
+    between −69 and −190 points, which is a different scale rather than a ranking, so
+    mixing it into a points total would be meaningless. DSTs still appear on rosters.</li>
+    <li><strong>Projections are the tracker's, not this model's.</strong> Ranks and
+    projected points come from the draft export as-is; a few disagree with each other
+    (a player ranked ahead of another at the same position while projecting fewer
+    points). Where they conflict, the points column drives everything here.</li>
+    <li><strong>Season-long points only.</strong> No bye conflicts, injury risk, playoff
+    schedule, or week-to-week variance — a two-point edge in this table is noise, a
+    fifty-point edge is not.</li>
+    <li><strong>Trade gains are the projection's view, not a negotiation.</strong> A
+    leaguemate who is higher on his own player will say no regardless of what the
+    arithmetic says.</li>
+  </ul>
+  <div class="files">
+    <a href="postdraft.json">Post-draft data (JSON)</a>
+    <a href="hh_draft_2026.csv">Draft results (CSV)</a>
+    <a href="index.html">Pre-draft model</a>
+  </div>
+  <p style="margin-top:14px" id="foot-meta"></p>
+</footer>
+
+</div>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+const POS_COLOR = { RB: 'var(--series-1)', WR: 'var(--series-2)', TE: 'var(--series-3)',
+                    QB: 'var(--series-4)', K: 'var(--deemph)', DST: 'var(--deemph)' };
+const SLOT_ORDER = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K'];
+const SVGNS = 'http://www.w3.org/2000/svg';
+
+let DATA = null, TABLES = false;
+
+const $ = id => document.getElementById(id);
+const fmt = (n, d = 0) => n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const sgn = (n, d = 0) => (n > 0 ? '+' : n < 0 ? '−' : '') + fmt(Math.abs(n), d);
+const el = (tag, attrs = {}, kids = []) => {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  for (const c of [].concat(kids)) n.appendChild(c);
+  return n;
+};
+const txt = s => document.createTextNode(s);
+const svgText = (x, y, s, cls, extra = {}) => {
+  const t = el('text', { x, y, class: cls, ...extra });
+  t.appendChild(txt(s));
+  return t;
+};
+const html = (tag, cls, inner) => {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (inner !== undefined) n.innerHTML = inner;
+  return n;
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+/* ---------- tooltip ---------- */
+const tip = $('tip');
+function showTip(evt, head, rows) {
+  tip.innerHTML = `<div class="t-head">${head}</div>` + rows.map(r =>
+    `<div class="t-row">${r.color ? `<span class="t-key" style="background:${r.color}"></span>` : ''}` +
+    `<span class="t-name">${r.name}</span><span class="t-val" style="margin-left:auto">${r.val}</span></div>`).join('');
+  tip.style.opacity = '1';
+  moveTip(evt);
+}
+function moveTip(evt) {
+  const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + w > innerWidth - 8) x = evt.clientX - w - pad;
+  if (y + h > innerHeight - 8) y = evt.clientY - h - pad;
+  tip.style.left = x + 'px';
+  tip.style.top = y + 'px';
+}
+const hideTip = () => { tip.style.opacity = '0'; };
+
+function legend(node, items, shape = 'rect') {
+  node.replaceChildren(...items.map(it => {
+    const li = document.createElement('li');
+    li.appendChild(html('span', 'key-' + shape, ''));
+    li.firstChild.style.background = it.color;
+    li.appendChild(txt(' ' + it.label));
+    return li;
+  }));
+}
+
+function table(node, cols, rows, caption) {
+  const t = html('table');
+  if (caption) { const c = html('caption', null, caption); t.appendChild(c); }
+  const thead = html('thead');
+  thead.appendChild(html('tr', null, cols.map(c => `<th>${c}</th>`).join('')));
+  const tbody = html('tbody');
+  rows.forEach(r => tbody.appendChild(html('tr', null, r.map(c => `<td>${c}</td>`).join(''))));
+  t.append(thead, tbody);
+  node.replaceChildren(t);
+}
+
+/* ---------- 1. league bar ---------- */
+function drawLeague() {
+  const teams = DATA.teams, focus = DATA.meta.focus;
+  const rowH = 26, gap = 6, padL = 92, padR = 56, padT = 22, padB = 26;
+  const W = 880, plotW = W - padL - padR;
+  const H = padT + teams.length * (rowH + gap) - gap + padB;
+  const max = Math.max(...teams.map(t => t.vorp)) * 1.02;
+  const x = v => (v / max) * plotW;
+
+  const g = [];
+  for (let i = 0; i <= 4; i++) {
+    const v = (max / 4) * i, px = padL + x(v);
+    g.push(el('line', { x1: px, x2: px, y1: padT - 6, y2: padT + teams.length * (rowH + gap) - gap, class: 'gridline' }));
+    g.push(svgText(px, H - 8, fmt(v), 'tick', { 'text-anchor': 'middle' }));
+  }
+  g.push(svgText(padL + plotW / 2, padT - 12, 'projected starting lineup, points over replacement', 'tick',
+    { 'text-anchor': 'middle' }));
+
+  teams.forEach((t, i) => {
+    const y = padT + i * (rowH + gap), isF = t.team === focus;
+    const w = Math.max(x(t.vorp), 2);
+    g.push(svgText(padL - 10, y + rowH / 2 + 4, `${t.rank}. ${t.team}`, isF ? 'vlabel' : 'cat',
+      { 'text-anchor': 'end' }));
+    const bar = el('rect', {
+      x: padL, y, width: w, height: rowH, rx: 4,
+      fill: isF ? 'var(--emph)' : 'var(--rest)', class: 'mark',
+    });
+    g.push(bar);
+    g.push(svgText(padL + w + 8, y + rowH / 2 + 4, fmt(t.vorp, 1), 'vlabel'));
+    const hit = el('rect', { x: padL, y: y - gap / 2, width: plotW, height: rowH + gap, class: 'hit' });
+    const starters = SLOT_ORDER.flatMap(s => (t.starters[s] || []).map(p => p.name)).join(', ');
+    hit.addEventListener('pointerenter', e => { bar.classList.add('lifted'); showTip(e, `${t.team} — rank ${t.rank} of ${teams.length}`, [
+      { name: 'Lineup over replacement', val: fmt(t.vorp, 1) },
+      { name: 'Projected starter points', val: fmt(t.pts, 1) },
+      { name: 'Best WR / RB slot rank', val: `WR ${t.pos_rank.WR} · RB ${t.pos_rank.RB}` },
+    ]); });
+    hit.addEventListener('pointermove', moveTip);
+    hit.addEventListener('pointerleave', () => { bar.classList.remove('lifted'); hideTip(); });
+    hit.appendChild(el('title', {}, [txt(`${t.team}: ${starters}`)]));
+    g.push(hit);
+  });
+
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': 'Starting-lineup value over replacement by team' }, g);
+  $('league-chart').replaceChildren(svg);
+  legend($('league-legend'), [
+    { color: 'var(--emph)', label: DATA.meta.focus },
+    { color: 'var(--rest)', label: 'Other teams' },
+  ]);
+  table($('league-table'),
+    ['Team', 'Rank', 'Lineup VOR', 'Starter pts', 'QB', 'RB', 'WR', 'TE', 'FLEX'],
+    teams.map(t => [t.team, t.rank, fmt(t.vorp, 1), fmt(t.pts, 1),
+      fmt(t.pos_vorp.QB, 1), fmt(t.pos_vorp.RB, 1), fmt(t.pos_vorp.WR, 1),
+      fmt(t.pos_vorp.TE, 1), fmt(t.pos_vorp.FLEX, 1)]),
+    'Value over replacement by lineup slot, all teams.');
+}
+
+/* ---------- 2. diverging gap chart ---------- */
+function drawGap() {
+  const focus = DATA.teams.find(t => t.team === DATA.meta.focus);
+  const med = DATA.meta.median_pos_vorp;
+  const rows = SLOT_ORDER.map(s => ({
+    slot: s, mine: focus.pos_vorp[s], med: med[s],
+    d: Math.round((focus.pos_vorp[s] - med[s]) * 10) / 10,
+    rank: focus.pos_rank[s],
+  }));
+
+  const rowH = 28, gap = 8, padL = 62, padR = 62, padT = 26, padB = 26;
+  const W = 880, plotW = W - padL - padR, mid = padL + plotW / 2;
+  const H = padT + rows.length * (rowH + gap) - gap + padB;
+  const max = Math.max(...rows.map(r => Math.abs(r.d))) * 1.15;
+  const x = v => (v / max) * (plotW / 2);
+  const g = [];
+
+  [-1, -0.5, 0.5, 1].forEach(f => {
+    const px = mid + x(max * f);
+    g.push(el('line', { x1: px, x2: px, y1: padT - 6, y2: padT + rows.length * (rowH + gap) - gap, class: 'gridline' }));
+    g.push(svgText(px, H - 8, sgn(Math.round(max * f)), 'tick', { 'text-anchor': 'middle' }));
+  });
+  g.push(el('line', { x1: mid, x2: mid, y1: padT - 10, y2: padT + rows.length * (rowH + gap) - gap, class: 'baseline' }));
+  g.push(svgText(mid, padT - 14, 'league median', 'tick', { 'text-anchor': 'middle' }));
+
+  rows.forEach((r, i) => {
+    const y = padT + i * (rowH + gap);
+    const w = Math.max(Math.abs(x(r.d)), 2);
+    const neg = r.d < 0;
+    g.push(svgText(padL - 12, y + rowH / 2 + 4, r.slot, 'cat', { 'text-anchor': 'end' }));
+    const bar = el('rect', {
+      x: neg ? mid - w : mid, y, width: w, height: rowH, rx: 4,
+      fill: neg ? 'var(--div-neg)' : 'var(--div-pos)', class: 'mark',
+    });
+    g.push(bar);
+    g.push(svgText(neg ? mid - w - 8 : mid + w + 8, y + rowH / 2 + 4, sgn(r.d, 1), 'vlabel',
+      neg ? { 'text-anchor': 'end' } : {}));
+    const hit = el('rect', { x: padL, y: y - gap / 2, width: plotW, height: rowH + gap, class: 'hit' });
+    hit.addEventListener('pointerenter', e => { bar.classList.add('lifted'); showTip(e, `${r.slot} slot`, [
+      { name: `${focus.team}`, val: fmt(r.mine, 1), color: neg ? 'var(--div-neg)' : 'var(--div-pos)' },
+      { name: 'League median', val: fmt(r.med, 1) },
+      { name: 'Rank in league', val: `${r.rank} of ${DATA.teams.length}` },
+    ]); });
+    hit.addEventListener('pointermove', moveTip);
+    hit.addEventListener('pointerleave', () => { bar.classList.remove('lifted'); hideTip(); });
+    g.push(hit);
+  });
+
+  $('gap-chart').replaceChildren(el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': 'KGB lineup slots versus the league median' }, g));
+  legend($('gap-legend'), [
+    { color: 'var(--div-pos)', label: 'Above league median' },
+    { color: 'var(--div-neg)', label: 'Below league median' },
+  ]);
+  table($('gap-table'), ['Slot', `${focus.team} VOR`, 'League median', 'Difference', 'Rank'],
+    rows.map(r => [r.slot, fmt(r.mine, 1), fmt(r.med, 1), sgn(r.d, 1), `${r.rank} of ${DATA.teams.length}`]),
+    'Slot-by-slot value over replacement against the league median.');
+}
+
+/* ---------- 3. pick-by-pick ---------- */
+function drawPicks() {
+  const log = DATA.focus_log;
+  const padL = 46, padR = 14, padT = 24, padB = 46;
+  const W = 880, plotW = W - padL - padR, plotH = 250;
+  const H = padT + plotH + padB;
+  const lo = Math.min(0, ...log.map(p => p.vorp)) * 1.12;
+  const hi = Math.max(0, ...log.map(p => p.vorp)) * 1.12;
+  const y = v => padT + plotH * (hi - v) / (hi - lo);
+  const bandW = plotW / log.length, barW = Math.min(bandW - 10, 34);
+  const g = [];
+
+  const step = 40;
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    g.push(el('line', { x1: padL, x2: padL + plotW, y1: y(v), y2: y(v), class: v === 0 ? 'baseline' : 'gridline' }));
+    g.push(svgText(padL - 8, y(v) + 4, fmt(v), 'tick', { 'text-anchor': 'end' }));
+  }
+  g.push(svgText(padL, padT - 10, 'points over replacement', 'tick'));
+
+  log.forEach((p, i) => {
+    const cx = padL + bandW * (i + 0.5);
+    const up = p.vorp >= 0;
+    const h = Math.max(Math.abs(y(p.vorp) - y(0)), 2);
+    const bar = el('rect', {
+      x: cx - barW / 2, y: up ? y(p.vorp) : y(0), width: barW, height: h,
+      rx: 4, fill: POS_COLOR[p.pos], class: 'mark',
+    });
+    g.push(bar);
+    if (Math.abs(p.vorp) >= 35) {
+      g.push(svgText(cx, up ? y(p.vorp) - 7 : y(p.vorp) + 15, sgn(p.vorp), 'vlabel', { 'text-anchor': 'middle' }));
+    }
+    // secondary encoding: position is spelled out under every bar, never colour alone
+    g.push(svgText(cx, padT + plotH + 18, p.pos, 'cat', { 'text-anchor': 'middle' }));
+    g.push(svgText(cx, padT + plotH + 34, `${p.rnd}.${String(p.pick).padStart(2, '0')}`, 'tick',
+      { 'text-anchor': 'middle' }));
+
+    const hit = el('rect', { x: cx - bandW / 2, y: padT, width: bandW, height: plotH, class: 'hit' });
+    const ba = p.best_avail.filter(b => b.name !== p.name)[0];
+    hit.addEventListener('pointerenter', e => {
+      bar.classList.add('lifted');
+      const rows = [
+        { name: `${p.pos}${p.pos_rank} · ${p.nfl}`, val: fmt(p.fpts, 1) + ' pts', color: POS_COLOR[p.pos] },
+        { name: 'Over replacement', val: sgn(p.vorp, 1) },
+      ];
+      if (ba) rows.push({ name: `Best left: ${ba.name} (${ba.pos})`, val: `${sgn(ba.vorp, 1)} → ${ba.team}` });
+      showTip(e, `Round ${p.rnd}, pick ${p.pick} — ${p.name}`, rows);
+    });
+    hit.addEventListener('pointermove', moveTip);
+    hit.addEventListener('pointerleave', () => { bar.classList.remove('lifted'); hideTip(); });
+    g.push(hit);
+  });
+
+  $('pick-chart').replaceChildren(el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': 'Value over replacement of each KGB pick' }, g));
+  legend($('pick-legend'), ['RB', 'WR', 'TE', 'QB', 'K'].map(p => ({ color: POS_COLOR[p], label: p })));
+  table($('pick-table'),
+    ['Pick', 'Player', 'Pos', 'Proj pts', 'Over repl.', 'Best still on the board', 'Taken by'],
+    log.map(p => {
+      const ba = p.best_avail.filter(b => b.name !== p.name)[0];
+      return [`${p.rnd}.${String(p.pick).padStart(2, '0')}`, p.name, `${p.pos}${p.pos_rank}`,
+        fmt(p.fpts, 1), sgn(p.vorp, 1),
+        ba ? `${ba.name} (${ba.pos}, ${sgn(ba.vorp, 1)})` : '—', ba ? ba.team : '—'];
+    }),
+    'Defenses are unscored, so both DST picks show as zero.');
+}
+
+/* ---------- 4. trades ---------- */
+function drawTrades() {
+  const ts = DATA.trades, max = Math.max(...ts.map(t => t.gain_focus));
+  const names = ps => ps.map(p =>
+    `<strong>${esc(p.name)}</strong> <span style="color:var(--text-muted)">${p.pos}${p.pos_rank}</span>`).join(' + ');
+  $('trade-count').textContent =
+    `${fmt(DATA.trades_found)} pass, and these ${ts.length} are the distinct best of them`;
+  $('trades').replaceChildren(...ts.map(t => {
+    const d = html('div', 'trade');
+    d.appendChild(html('div', 'trade-head',
+      `<span class="who">with ${esc(t.partner)}</span>` +
+      `<span class="gain">${sgn(t.gain_focus, 1)} ${esc(DATA.meta.focus)}</span>` +
+      `<span class="who">${sgn(t.gain_partner, 1)} them</span>`));
+    d.appendChild(html('div', 'swap',
+      `<div class="side"><span class="lbl">${esc(DATA.meta.focus)} sends</span>${names(t.give)}</div>` +
+      `<div class="arrow">&rarr;&larr;</div>` +
+      `<div class="side"><span class="lbl">${esc(t.partner)} sends</span>${names(t.get)}</div>`));
+    const track = html('div', 'gaintrack');
+    const bar = html('div', 'gainbar');
+    bar.style.width = (t.gain_focus / max * 100).toFixed(1) + '%';
+    track.appendChild(bar);
+    track.style.marginTop = '10px';
+    d.appendChild(track);
+    return d;
+  }));
+}
+
+/* ---------- 5. rosters ---------- */
+function drawRosters() {
+  $('rosters').replaceChildren(...DATA.teams.map(t => {
+    const d = html('div', t.team === DATA.meta.focus ? 'focus-card' : '');
+    d.appendChild(html('p', 'rteam',
+      `<span class="rk">${t.rank}.</span>${esc(t.team)}<span class="vp">${fmt(t.vorp, 1)} VOR</span>`));
+    SLOT_ORDER.forEach(s => {
+      const ps = t.starters[s] || [];
+      d.appendChild(html('p', 'rline', `<span class="slot">${s}</span>` + (ps.length
+        ? ps.map(p => `${esc(p.name)} <span style="color:var(--text-muted)">${p.pos}${p.pos_rank}</span>`).join(', ')
+        : '<span style="color:var(--div-neg)">empty</span>')));
+    });
+    const useful = t.bench.filter(p => p.pos !== 'DST' && p.vorp > 0);
+    if (useful.length) {
+      d.appendChild(html('p', 'rline', '<span class="slot">Bench</span>' +
+        useful.map(p => `${esc(p.name)} <span style="color:var(--text-muted)">${p.pos}${p.pos_rank}</span>`).join(', ')));
+    }
+    return d;
+  }));
+}
+
+/* ---------- hero + meta ---------- */
+function drawHero() {
+  const teams = DATA.teams, f = teams.find(t => t.team === DATA.meta.focus);
+  const top = teams[0], med = DATA.meta.median_pos_vorp;
+  $('hdr-team').textContent = f.team;
+  $('hero-label').textContent = `${f.team} · starting lineup over replacement`;
+  $('hero-value').textContent = fmt(f.vorp, 1);
+  $('hero-delta').innerHTML =
+    `Rank <strong>${f.rank} of ${teams.length}</strong> — ${fmt(top.vorp - f.vorp, 1)} behind ` +
+    `${esc(top.team)}, but only ${fmt(Math.abs(f.vorp - teams[teams.length - 2].vorp), 1)} ` +
+    `off eleventh and ${fmt(Math.abs(f.vorp - teams[5].vorp), 1)} off the top half.`;
+
+  const wrGap = f.pos_vorp.WR - med.WR;
+  const belowRepl = DATA.focus_log.filter(p => p.vorp < 0).length;
+  const best = DATA.trades[0];
+  const kpis = [
+    { label: 'Receiver corps', value: `${f.pos_rank.WR} of ${teams.length}`,
+      foot: `${sgn(Math.round(wrGap))} against the league median — the whole deficit` },
+    { label: 'Picks below replacement', value: `${belowRepl} of ${DATA.focus_log.length}`,
+      foot: 'Tate, Rodriguez, Murray, Kamara — all after round 8' },
+    { label: 'Best trade on the table', value: sgn(best.gain_focus, 1),
+      foot: `with ${best.partner}, and ${sgn(best.gain_partner, 1)} for them` },
+  ];
+  $('kpis').replaceChildren(...kpis.map(k => html('div', 'tile',
+    `<div class="label">${k.label}</div><div class="value">${k.value}</div><div class="foot">${k.foot}</div>`)));
+
+  const m = DATA.meta;
+  $('meta-line').textContent =
+    `${m.label} · ${m.rounds} rounds · lineup QB/2RB/3WR/TE/FLEX/K`;
+  $('repl-line').textContent = SLOT_ORDER.filter(s => s !== 'FLEX')
+    .map(s => `${s} ${fmt(m.replacement[s], 1)}`).join(', ');
+  $('foot-meta').textContent =
+    `Generated by postdraft.py from ${m.rounds * m.teams} picks. ` +
+    `Replacement levels are derived from this draft's own pool, so they move if the file changes.`;
+}
+
+/* ---------- chrome ---------- */
+$('tv-toggle').addEventListener('click', () => {
+  TABLES = !TABLES;
+  $('tv-toggle').setAttribute('aria-pressed', String(TABLES));
+  $('tv-toggle').textContent = TABLES ? 'Hide data tables' : 'Show data tables';
+  document.querySelectorAll('.tv').forEach(n => { n.hidden = !TABLES; });
+});
+function applyTheme(mode) {
+  document.documentElement.setAttribute('data-theme', mode);
+  $('theme-toggle').textContent = mode === 'dark' ? 'Light mode' : 'Dark mode';
+}
+$('theme-toggle').addEventListener('click', () => {
+  const now = document.documentElement.getAttribute('data-theme');
+  const dark = now ? now === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(dark ? 'light' : 'dark');
+});
+$('theme-toggle').textContent = matchMedia('(prefers-color-scheme: dark)').matches ? 'Light mode' : 'Dark mode';
+
+fetch('postdraft.json')
+  .then(r => r.json())
+  .then(d => {
+    DATA = d;
+    drawHero(); drawLeague(); drawGap(); drawPicks(); drawTrades(); drawRosters();
+  })
+  .catch(e => {
+    $('hero-value').textContent = '—';
+    $('hero-delta').textContent = 'Could not load postdraft.json: ' + e.message;
+  });
+addEventListener('resize', () => { if (DATA) { drawLeague(); drawGap(); drawPicks(); } });
+</script>
+</body>
+</html>
