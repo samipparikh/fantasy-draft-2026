@@ -87,6 +87,7 @@
 <div class="filters" role="group" aria-label="Page controls">
   <span class="lbl">Post-draft grades</span>
   <span class="spacer"></span>
+  <a class="ghost" href="defense.html" style="text-decoration:none">Defense by week &rarr;</a>
   <button class="ghost" id="tv-toggle" aria-pressed="false">Show data tables</button>
   <button class="ghost" id="theme-toggle">Dark mode</button>
 </div>
@@ -207,9 +208,11 @@
   starting lineup. An unfillable slot is charged the full replacement level, so trading
   away your only quarterback is never free.</p>
   <ul class="caveat">
-    <li><strong>Defenses are excluded.</strong> The source file projects every DST
+    <li><strong>Defenses are excluded here.</strong> The source file projects every DST
     between −69 and −190 points, which is a different scale rather than a ranking, so
-    mixing it into a points total would be meaningless. DSTs still appear on rosters.</li>
+    mixing it into a points total would be meaningless. DSTs still appear on rosters, and
+    they get their own matchup model on the <a href="defense.html">defense by week</a>
+    page, where that ranking is used as a ranking.</li>
     <li><strong>Projections are the tracker's, not this model's.</strong> Ranks and
     projected points come from the draft export as-is; a few disagree with each other
     (a player ranked ahead of another at the same position while projecting fewer
@@ -225,6 +228,7 @@
     <a href="postdraft.json">Post-draft data (JSON)</a>
     <a href="hh_draft_2026.csv">Draft results (CSV)</a>
     <a href="index.html">Pre-draft model</a>
+    <a href="defense.html">Defense by week</a>
   </div>
   <p style="margin-top:14px" id="foot-meta"></p>
 </footer>

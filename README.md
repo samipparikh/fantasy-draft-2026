@@ -46,6 +46,45 @@ Two things worth knowing about the scoring:
 - **An unfillable starting slot is charged the full replacement level**, so
   trading away your only quarterback never scores as a gain.
 
+## Weekly defense model
+
+`dst_model.py` projects every defense against the opponent it actually plays, for
+all 18 weeks, and picks a start each week for one roster.
+
+```bash
+python3 dst_model.py --refresh                 # re-pull schedule + prior-season form
+python3 dst_model.py --rostered TB,NYG,LV
+```
+
+Two components. **Points allowed**: an expected points-allowed line from an offense
+index for the opponent, a defense index for the defense, and home field — the three
+coefficients fit by least squares against the closing betting lines for the 202
+team-games that have them, so the scale is the market's (mean absolute error 1.20
+points). Expected tier points are then integrated over a normal centred on that
+line, because the tier table is a steep staircase and points allowed vary around
+the line with an SD of 9.0, measured from last season's results against the lines.
+**Big plays**: sacks, takeaways and return scores as a linear function of the same
+two indices around a 6.1-point league average.
+
+Output is `docs/dst.json`, rendered by
+[`docs/defense.html`](https://samipparikh.github.io/fantasy-draft-2026/defense.html).
+
+Worth knowing:
+
+- **All 32 defenses sit on one scale.** The draft export ranks only the defenses it
+  contains (DEF1–DEF31); the 11 undrafted teams are exactly the 11 missing rank
+  slots, so they are ordered by last season's points allowed, dropped into those
+  slots, and given a projection interpolated off the rank curve. A prior built from
+  last season alone rates Cleveland an above-average defense — the league's own
+  board has it 17th.
+- **Betting lines exist only through week 8.** Later weeks use the same fitted
+  coefficients with no market to check them against, so they rank matchups rather
+  than forecast points.
+
+`data/nfl_2026_schedule.csv` and `data/nfl_2025_team_form.csv` are vendored slices
+of [nflverse](https://github.com/nflverse/nfldata) `games.csv`, so a normal run is
+offline; `--refresh` re-pulls them.
+
 ## Data
 
 `ringer_2026.csv` — all 224 players from The Ringer's 2026 preseason rankings
@@ -88,6 +127,7 @@ replacement level.
 | File | Contents |
 |---|---|
 | `docs/postdraft.json` | Post-draft grades, pick audit and trade finder output |
+| `docs/dst.json` | Weekly defense projections, start calls and model coefficients |
 | `out/report.txt` | The full text report |
 | `out/board_vor.csv` | All 224 players ranked by VOR, with tiers |
 | `out/availability_slot6.csv` | P(available) at each of your 16 picks |
@@ -102,4 +142,5 @@ replacement level.
   not model bye-week conflicts, injury risk, playoff schedule, or in-season
   trades. `bye` and `sos` are carried in the CSV for you to eyeball.
 - Kicker and defense are treated as near-worthless until the final two rounds,
-  which is correct for points but ignores streaming upside.
+  which is correct for points but ignores streaming upside — `dst_model.py` is the
+  answer to the defense half of that.

@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defense by week — KGB, HH 2026 half-PPR</title>
+<meta name="description" content="Week-by-week matchup projections for the Buccaneers, Giants and Raiders defenses plus every free-agent defense, with the start call marked for all 18 weeks.">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* page-specific: the matchup grid, status chips, sequential ink pairs */
+  :root {
+    --ink-1: #ffffff;   /* text on --tier-1, the darkest step */
+    --ink-2: #ffffff;
+    --ink-3: #0b0b0b;
+    --ink-4: #0b0b0b;
+    --bye: #edece7;
+    --ink-bye: #52514e;
+    --emph: #256abf;
+    --rest: #86b6ef;
+    --flag: #b8480c;    /* "a free agent beats this" — 5.15:1 on the surface */
+    --ring: #0b0b0b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      --ink-1: #0b0b0b; --ink-2: #0b0b0b; --ink-3: #0b0b0b; --ink-4: #ffffff;
+      --bye: #232322; --ink-bye: #c3c2b7;
+      --emph: #3987e5; --rest: #184f95; --flag: #e8763d; --ring: #ffffff;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink-1: #0b0b0b; --ink-2: #0b0b0b; --ink-3: #0b0b0b; --ink-4: #ffffff;
+    --bye: #232322; --ink-bye: #c3c2b7;
+    --emph: #3987e5; --rest: #184f95; --flag: #e8763d; --ring: #ffffff;
+  }
+
+  .gridscroll { overflow-x: auto; margin: 0 -4px; padding: 0 4px 4px; }
+  table.grid { border-collapse: separate; border-spacing: 3px; width: auto; min-width: 100%; }
+  table.grid th, table.grid td { border: 0; padding: 0; }
+  table.grid thead th {
+    font-size: 11.5px; color: var(--text-muted); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em; text-align: center;
+    padding-bottom: 2px; min-width: 42px;
+  }
+  table.grid th.rowlab {
+    text-align: left; font-size: 12.5px; font-weight: 600; color: var(--text-primary);
+    white-space: nowrap; padding-right: 8px; font-variant-numeric: normal;
+    /* pinned, so scrolling out to week 18 on a phone does not lose the row you are in */
+    position: sticky; left: 0; z-index: 2; background: var(--surface-1);
+  }
+  table.grid th.rowlab .rk { display: block; font-size: 11px; font-weight: 400; color: var(--text-muted); }
+  table.grid tr.grouphead th {
+    text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-muted); font-weight: 600; padding: 16px 0 4px;
+  }
+  .cell {
+    position: relative; border-radius: 5px; min-width: 42px; height: 44px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    line-height: 1.15; cursor: default;
+  }
+  .cell .opp { font-size: 10.5px; letter-spacing: 0.01em; }
+  .cell .val { font-size: 13.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .cell.bye { background: var(--bye); color: var(--ink-bye); }
+  .cell.bye .val { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; }
+  /* the ring has to read on all four ramp steps, light and dark, so it is a pale
+     halo under a dark line rather than one colour picked for the middle of the ramp */
+  .cell.pick { box-shadow: 0 0 0 1.5px var(--surface-1), 0 0 0 3px var(--ring); }
+  .cell .mark {
+    position: absolute; top: 0; right: 3px; font-size: 10px; font-weight: 700;
+  }
+  .s1 { background: var(--tier-1); color: var(--ink-1); }
+  .s2 { background: var(--tier-2); color: var(--ink-2); }
+  .s3 { background: var(--tier-3); color: var(--ink-3); }
+  .s4 { background: var(--tier-4); color: var(--ink-4); }
+
+  .weeks { list-style: none; margin: 0; padding: 0; }
+  .weeks li { display: grid; grid-template-columns: 62px 1fr; gap: 14px;
+              padding: 11px 0; border-top: 1px solid var(--grid); align-items: baseline; }
+  .weeks li:first-child { border-top: 0; padding-top: 0; }
+  .weeks .wk { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+  .weeks .call { font-size: 14px; }
+  .weeks .call .why { display: block; color: var(--text-secondary); font-size: 13px; margin-top: 2px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+    border-radius: 5px; padding: 2px 7px; margin-right: 8px; white-space: nowrap;
+  }
+  .chip.start { color: var(--good); background: color-mix(in srgb, var(--good) 12%, transparent); }
+  .chip.swap  { color: var(--flag); background: color-mix(in srgb, var(--flag) 14%, transparent); }
+  .now { box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--emph) 45%, transparent); border-radius: 8px; }
+  /* the grid's table twin is twenty columns wide — scroll it, do not push the page out */
+  .tv { overflow-x: auto; }
+  .tv table { width: auto; min-width: 100%; }
+  .tv th, .tv td { white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>Which defense do I start, week by week</h1>
+  <p class="sub">Every defense in the league projected against the opponent it actually
+  plays, for all eighteen weeks. The three on KGB's roster are on top; the ten nobody
+  drafted are below them, because that is where the upgrades are. The ringed cell in
+  each column is the one to start that week.</p>
+  <p class="srcline" id="srcline"></p>
+</header>
+
+<div class="filters" role="group" aria-label="Page controls">
+  <span class="lbl">Defense model</span>
+  <a class="ghost" href="results.html" style="text-decoration:none">&larr; Post-draft report</a>
+  <span class="spacer"></span>
+  <button class="ghost" id="tv-toggle" aria-pressed="false">Show data tables</button>
+  <button class="ghost" id="theme-toggle">Dark mode</button>
+</div>
+
+<section class="sect" id="verdict" style="margin-top:0">
+  <div class="hero-row">
+    <div class="card hero">
+      <div class="label">Best of the three, every week</div>
+      <div class="value" id="hero-val">—</div>
+      <div class="delta" id="hero-delta"></div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</section>
+
+<section class="sect">
+  <h2>The grid</h2>
+  <p class="note">Projected fantasy points, opponent shown above each number. Colour is a
+  four-step ramp on the same number that is printed in the cell, so nothing depends on
+  reading the shade. A ring and a check mark sit on the defense to start that week.</p>
+  <ul class="legend" id="grid-legend"></ul>
+  <div class="card">
+    <div class="gridscroll" id="grid"></div>
+  </div>
+  <div class="tv" id="grid-tv" hidden style="margin-top:14px"></div>
+</section>
+
+<section class="sect">
+  <h2>The eighteen calls</h2>
+  <p class="note">Where a free agent beats all three by more than 1.5 projected points,
+  it is worth the roster move; below that the edge is inside the model's own error and
+  not worth a transaction. <span id="standing"></span></p>
+  <div class="card"><ul class="weeks" id="weeks"></ul></div>
+</section>
+
+<section class="sect">
+  <h2>Full-season value</h2>
+  <p class="note">Every defense's projected points across its seventeen games. KGB's
+  three are highlighted; the pale bars are unowned.</p>
+  <ul class="legend" id="season-legend"></ul>
+  <div class="card"><svg id="season" role="img" aria-labelledby="season-title"></svg>
+    <span id="season-title" class="sr"></span></div>
+  <div class="tv" id="season-tv" hidden style="margin-top:14px"></div>
+</section>
+
+<section class="sect">
+  <h2>What the model is doing</h2>
+  <div class="card" id="model-card">
+    <p style="margin-top:0" id="model-copy"></p>
+    <div id="coef-tv" style="margin-top:14px"></div>
+  </div>
+</section>
+
+<footer class="page">
+  <p><strong>Method.</strong> Each matchup gets an expected points-allowed line from three
+  inputs: an offense index for the opponent, a defense index for the defense, and home
+  field. Those three coefficients are not guesses — they are fit by least squares against
+  the closing betting lines for the <span id="cal-n">—</span> team-games that have them,
+  so the whole scale is the market's. Expected tier points are then integrated over a
+  normal centred on that line, because a defense projected to allow twenty points does not
+  allow exactly twenty and the tier table is a steep staircase. A sack-and-takeaway
+  component, league-average at <span id="bp-base">—</span> points and scaled by the same
+  two indices, is added on top.</p>
+  <ul class="caveat">
+    <li><strong>The defense index is the league's own board, extended.</strong> The draft
+    export ranks the defenses it contains from DEF1 to DEF31, and the eleven undrafted
+    teams are exactly the eleven missing rank slots. Ordering those eleven by last
+    season's points allowed and reading their projection off the rank curve keeps all
+    thirty-two on one scale. A prior built from last season alone rated Cleveland an
+    above-average defense; the league's own board has it seventeenth. Note where that
+    leaves the top free agents: Cleveland, New Orleans and Carolina land at DEF17 through
+    DEF19 by construction, immediately below the last drafted defense, so their edge is
+    the least certain number on this page. It is also 45 points wide over the Giants,
+    which is more than the imputation could plausibly be wrong by.</li>
+    <li><strong>Betting lines only exist through week eight.</strong> Weeks nine to
+    eighteen use the same fitted coefficients with no market to check them against, so
+    they are a ranking of matchups rather than a forecast of points. Hover any cell that
+    has a line to see it.</li>
+    <li><strong>This is a matchup model, not a simulation.</strong> No injuries, no
+    weather, no pass-rush rate, no snap-level anything. It ranks weeks within a defense
+    and defenses within a week, which is all a start-or-sit decision needs.</li>
+    <li><strong>Scoring is the standard points-allowed table</strong> plus 1 per sack,
+    2 per takeaway, 6 per return score. If this league scores defenses differently the
+    ordering barely moves, but the point totals will.</li>
+  </ul>
+  <div class="files">
+    <a href="dst.json">Defense model output (JSON)</a>
+    <a href="results.html">Post-draft report</a>
+    <a href="index.html">Pre-draft model</a>
+  </div>
+  <p style="margin-top:14px" id="foot-meta"></p>
+</footer>
+
+</div>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+const SVGNS = 'http://www.w3.org/2000/svg';
+/* fixed absolute cut points, close to the quartiles of the whole grid, so a shade
+   means the same thing in week 1 and week 18 */
+const RAMP = [
+  { min: 6.5, cls: 's1', label: '6.5 and up — start it' },
+  { min: 5.4, cls: 's2', label: '5.4 to 6.5 — fine' },
+  { min: 4.2, cls: 's3', label: '4.2 to 5.4 — thin' },
+  { min: -99, cls: 's4', label: 'under 4.2 — bad matchup' },
+];
+const STREAM_EDGE = 1.5;
+
+let DATA = null, TABLES = false;
+
+const $ = id => document.getElementById(id);
+const fmt = (n, d = 0) => n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const sgn = (n, d = 0) => (n > 0 ? '+' : n < 0 ? '−' : '') + fmt(Math.abs(n), d);
+const el = (tag, attrs = {}, kids = []) => {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  for (const c of [].concat(kids)) n.appendChild(c);
+  return n;
+};
+const txt = s => document.createTextNode(s);
+const svgText = (x, y, s, cls, extra = {}) => {
+  const t = el('text', { x, y, class: cls, ...extra });
+  t.appendChild(txt(s));
+  return t;
+};
+const html = (tag, cls, inner) => {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (inner !== undefined) n.innerHTML = inner;
+  return n;
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const nm = t => DATA.meta.team_name[t] || t;
+const cell = (t, w) => DATA.cells[t][String(w)];
+const step = v => RAMP.find(r => v >= r.min);
+
+/* ---------- tooltip ---------- */
+const tip = $('tip');
+function showTip(evt, head, rows) {
+  tip.innerHTML = `<div class="t-head">${head}</div>` + rows.map(r =>
+    `<div class="t-row">${r.color ? `<span class="t-key" style="background:${r.color}"></span>` : ''}` +
+    `<span class="t-name">${r.name}</span><span class="t-val" style="margin-left:auto">${r.val}</span></div>`).join('');
+  tip.style.opacity = '1';
+  moveTip(evt);
+}
+function moveTip(evt) {
+  const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+  /* keyboard focus fires without pointer coordinates — fall back to the element's box */
+  const at = Number.isFinite(evt.clientX) && evt.clientX !== 0
+    ? { x: evt.clientX, y: evt.clientY }
+    : (() => { const r = evt.currentTarget.getBoundingClientRect();
+               return { x: r.left + r.width / 2, y: r.bottom }; })();
+  let x = at.x + pad, y = at.y + pad;
+  if (x + w > innerWidth - 8) x = at.x - w - pad;
+  if (y + h > innerHeight - 8) y = at.y - h - pad;
+  tip.style.left = x + 'px';
+  tip.style.top = y + 'px';
+}
+const hideTip = () => { tip.style.opacity = '0'; };
+
+function legend(node, items, shape = 'rect') {
+  node.replaceChildren(...items.map(it => {
+    const li = document.createElement('li');
+    if (it.color) {
+      li.appendChild(html('span', 'key-' + shape, ''));
+      li.firstChild.style.background = it.color;
+    } else if (it.glyph) {
+      li.appendChild(html('span', null, it.glyph));
+    }
+    li.appendChild(txt(' ' + it.label));
+    return li;
+  }));
+}
+
+function table(node, cols, rows, caption) {
+  const t = html('table');
+  if (caption) t.appendChild(html('caption', null, caption));
+  const thead = html('thead');
+  thead.appendChild(html('tr', null, cols.map(c => `<th>${c}</th>`).join('')));
+  const tbody = html('tbody');
+  rows.forEach(r => tbody.appendChild(html('tr', null, r.map(c => `<td>${c}</td>`).join(''))));
+  t.append(thead, tbody);
+  node.replaceChildren(t);
+}
+
+/* ---------- 1. verdict ---------- */
+function bestOfWeek(teams, w) {
+  const live = teams.filter(t => cell(t, w));
+  if (!live.length) return null;
+  return live.reduce((a, b) => (cell(a, w).proj >= cell(b, w).proj ? a : b));
+}
+
+function drawVerdict() {
+  const m = DATA.meta, weeks = m.weeks, own = m.rostered, fa = m.available;
+  const ownSum = weeks.reduce((s, w) => s + (bestOfWeek(own, w) ? cell(bestOfWeek(own, w), w).proj : 0), 0);
+  const allSum = weeks.reduce((s, w) => {
+    const b = bestOfWeek(own.concat(fa), w);
+    return s + (b ? cell(b, w).proj : 0);
+  }, 0);
+  const swapWeeks = weeks.filter(w => DATA.recommend[String(w)].stream);
+  const bestFa = fa.slice().sort((a, b) => DATA.season_total[b] - DATA.season_total[a])[0];
+  const worstOwn = own.slice().sort((a, b) => DATA.season_total[a] - DATA.season_total[b])[0];
+
+  $('hero-val').textContent = fmt(ownSum, 1);
+  $('hero-delta').innerHTML =
+    `projected points over ${weeks.length} weeks, ${fmt(ownSum / weeks.length, 1)} a week. ` +
+    `Streaming the best defense available every week would return ${fmt(allSum, 1)} — ` +
+    `<strong>${sgn(allSum - ownSum, 1)}</strong> left on the table.`;
+
+  const kpis = [
+    { label: 'Weeks to look outside the roster', value: String(swapWeeks.length),
+      foot: 'weeks ' + swapWeeks.join(', ') },
+    { label: 'Best defense nobody drafted', value: nm(bestFa),
+      foot: `DEF${m.index[bestFa].def_rank} on the board, ${fmt(DATA.season_total[bestFa], 1)} for the season` },
+    { label: 'Weakest of the three', value: nm(worstOwn),
+      foot: `DEF${m.index[worstOwn].def_rank}, ${fmt(DATA.season_total[worstOwn], 1)} — ` +
+            `${fmt(DATA.season_total[bestFa] - DATA.season_total[worstOwn], 1)} behind a free agent` },
+  ];
+  $('kpis').replaceChildren(...kpis.map(k => html('div', 'tile',
+    `<div class="label">${k.label}</div><div class="value">${k.value}</div><div class="foot">${k.foot}</div>`)));
+}
+
+/* ---------- 2. the grid ---------- */
+function gridRow(t, weeks, picks) {
+  const tr = html('tr');
+  const th = html('th', 'rowlab',
+    `${esc(nm(t))}<span class="rk">DEF${DATA.meta.index[t].def_rank} &middot; ${fmt(DATA.season_total[t], 1)} season</span>`);
+  th.setAttribute('scope', 'row');
+  tr.appendChild(th);
+  weeks.forEach(w => {
+    const td = html('td');
+    const c = cell(t, w);
+    if (!c) {
+      const d = html('div', 'cell bye', '<span class="val">BYE</span>');
+      d.setAttribute('aria-label', `${nm(t)}, week ${w}: bye`);
+      td.appendChild(d);
+      tr.appendChild(td);
+      return;
+    }
+    const s = step(c.proj);
+    const isPick = picks[w] === t;
+    const d = html('div', `cell ${s.cls}${isPick ? ' pick' : ''}`,
+      `<span class="opp">${c.home ? '' : '@'}${esc(c.opp)}</span>` +
+      `<span class="val">${fmt(c.proj, 1)}</span>` +
+      (isPick ? '<span class="mark" aria-hidden="true">✓</span>' : ''));
+    d.setAttribute('tabindex', '0');
+    d.setAttribute('aria-label',
+      `${nm(t)}, week ${w}, ${c.home ? 'home against' : 'away at'} ${nm(c.opp)}: ` +
+      `${fmt(c.proj, 1)} projected points${isPick ? ', start this one' : ''}`);
+    const rows = [
+      { name: 'Projected points', val: fmt(c.proj, 1) },
+      { name: 'From points allowed', val: fmt(c.tier_pts, 1) },
+      { name: 'From sacks & takeaways', val: fmt(c.bigplay_pts, 1) },
+      { name: 'Expected points allowed', val: fmt(c.exp_pa, 1) },
+    ];
+    if (c.market_pa !== null) rows.push({ name: 'Betting line implies', val: fmt(c.market_pa, 1) });
+    const head = `${nm(t)} &middot; week ${w} ${c.home ? 'vs' : 'at'} ${nm(c.opp)} &middot; ${c.gameday}`;
+    d.addEventListener('mouseenter', e => showTip(e, head, rows));
+    d.addEventListener('focus', e => showTip(e, head, rows));
+    d.addEventListener('keydown', e => { if (e.key === 'Escape') hideTip(); });
+    d.addEventListener('mousemove', moveTip);
+    d.addEventListener('mouseleave', hideTip);
+    d.addEventListener('blur', hideTip);
+    td.appendChild(d);
+    tr.appendChild(td);
+  });
+  return tr;
+}
+
+function drawGrid() {
+  const m = DATA.meta, weeks = m.weeks;
+  const picks = {};
+  weeks.forEach(w => {
+    const r = DATA.recommend[String(w)];
+    picks[w] = r.stream || r.start;
+  });
+
+  const t = html('table', 'grid');
+  const thead = html('thead');
+  const hr = html('tr');
+  hr.appendChild(html('th', null, '<span class="sr">Defense</span>'));
+  weeks.forEach(w => {
+    const th = html('th', null, 'Wk ' + w);
+    th.setAttribute('scope', 'col');
+    if (w === m.current_week) th.classList.add('now');
+    hr.appendChild(th);
+  });
+  thead.appendChild(hr);
+
+  const tbody = html('tbody');
+  const group = (title, teams) => {
+    const gr = html('tr', 'grouphead');
+    const gh = html('th', null, title);
+    gh.setAttribute('colspan', String(weeks.length + 1));
+    gr.appendChild(gh);
+    tbody.appendChild(gr);
+    teams.forEach(x => tbody.appendChild(gridRow(x, weeks, picks)));
+  };
+  group('On the roster', m.rostered.slice().sort((a, b) => DATA.season_total[b] - DATA.season_total[a]));
+  group('Free agents — nobody drafted these',
+    m.available.slice().sort((a, b) => DATA.season_total[b] - DATA.season_total[a]));
+
+  t.append(thead, tbody);
+  $('grid').replaceChildren(t);
+
+  legend($('grid-legend'), [
+    { color: 'var(--tier-1)', label: RAMP[0].label },
+    { color: 'var(--tier-2)', label: RAMP[1].label },
+    { color: 'var(--tier-3)', label: RAMP[2].label },
+    { color: 'var(--tier-4)', label: RAMP[3].label },
+    { color: 'var(--bye)', label: 'bye week' },
+    { glyph: '✓', label: 'start this one' },
+  ]);
+
+  const shown = m.rostered.concat(m.available);
+  table($('grid-tv'), ['Defense', ...weeks.map(w => 'Wk ' + w), 'Season'],
+    shown.map(x => [nm(x), ...weeks.map(w => {
+      const c = cell(x, w);
+      return c ? `${c.home ? '' : '@'}${c.opp} ${fmt(c.proj, 1)}` : 'bye';
+    }), fmt(DATA.season_total[x], 1)]),
+    'Projected fantasy points by week and opponent. Rostered defenses first.');
+}
+
+/* ---------- 3. the weekly calls ---------- */
+function drawWeeks() {
+  const m = DATA.meta;
+
+  /* the same free agent turning up in several of those weeks is not a weekly
+     decision, it is a standing one — say so once instead of eighteen times */
+  const counts = {};
+  m.weeks.forEach(w => {
+    const s = DATA.recommend[String(w)].stream;
+    if (s) counts[s] = (counts[s] || 0) + 1;
+  });
+  const repeat = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+  const worst = m.rostered.slice().sort((a, b) => DATA.season_total[a] - DATA.season_total[b])[0];
+  if (repeat && repeat[1] > 1) {
+    const [t, n] = repeat;
+    $('standing').innerHTML =
+      `The same name keeps coming up: <strong>${esc(nm(t))} in ${n} of them</strong>, ` +
+      `on a season projection of ${fmt(DATA.season_total[t], 1)} where ${esc(nm(worst))} ` +
+      `project ${fmt(DATA.season_total[worst], 1)}. That is not eighteen weekly decisions, it is one — ` +
+      `claim ${esc(nm(t))} now, drop ${esc(nm(worst))}, and the weeks below take care of themselves.`;
+  }
+
+  const items = m.weeks.map(w => {
+    const r = DATA.recommend[String(w)];
+    const li = html('li');
+    if (w === m.current_week) li.classList.add('now');
+    li.appendChild(html('div', 'wk', 'Week ' + w));
+    const c = html('div', 'call');
+    const startC = r.start ? cell(r.start, w) : null;
+    if (r.stream) {
+      const sc = cell(r.stream, w);
+      c.innerHTML =
+        `<span class="chip swap"><span aria-hidden="true">↑</span> Add</span> ` +
+        `<strong>${esc(nm(r.stream))}</strong> ${sc.home ? 'vs' : 'at'} ${esc(nm(sc.opp))}, ` +
+        `${fmt(sc.proj, 1)} projected` +
+        `<span class="why">Beats ${esc(nm(r.start))} (${fmt(startC.proj, 1)} ` +
+        `${startC.home ? 'vs' : 'at'} ${esc(nm(startC.opp))}) by ${fmt(r.stream_gain, 1)}. ` +
+        `${esc(nm(r.stream))} are unowned.</span>`;
+    } else if (r.start) {
+      const bench = r.bench.map(b => `${nm(b)} ${fmt(cell(b, w).proj, 1)}`);
+      const bye = r.on_bye.map(b => `${nm(b)} on bye`);
+      c.innerHTML =
+        `<span class="chip start"><span aria-hidden="true">✓</span> Start</span> ` +
+        `<strong>${esc(nm(r.start))}</strong> ${startC.home ? 'vs' : 'at'} ${esc(nm(startC.opp))}, ` +
+        `${fmt(startC.proj, 1)} projected` +
+        `<span class="why">Bench ${esc(bench.concat(bye).join(', '))}. ` +
+        `Nothing on waivers clears it by ${fmt(STREAM_EDGE, 1)}.</span>`;
+    }
+    li.appendChild(c);
+    return li;
+  });
+  $('weeks').replaceChildren(...items);
+}
+
+/* ---------- 4. season totals ---------- */
+function drawSeason() {
+  const m = DATA.meta;
+  const own = new Set(m.rostered);
+  const rows = Object.keys(DATA.season_total)
+    .sort((a, b) => DATA.season_total[b] - DATA.season_total[a]);
+  const rowH = 15, gap = 4, padL = 104, padR = 46, padT = 24, padB = 26;
+  const W = 880, plotW = W - padL - padR;
+  const H = padT + rows.length * (rowH + gap) - gap + padB;
+  const step40 = 40;
+  const max = Math.ceil(Math.max(...rows.map(t => DATA.season_total[t])) / step40) * step40;
+  const ticks = Math.round(max / step40);
+  const x = v => (v / max) * plotW;
+
+  const g = [];
+  for (let i = 0; i <= ticks; i++) {
+    const v = step40 * i, px = padL + x(v);
+    g.push(el('line', { x1: px, x2: px, y1: padT - 6, y2: padT + rows.length * (rowH + gap) - gap, class: 'gridline' }));
+    g.push(svgText(px, H - 8, fmt(v), 'tick', { 'text-anchor': 'middle' }));
+  }
+  g.push(svgText(padL + plotW / 2, padT - 12, 'projected fantasy points, full season', 'tick',
+    { 'text-anchor': 'middle' }));
+
+  rows.forEach((t, i) => {
+    const y = padT + i * (rowH + gap), mine = own.has(t);
+    const v = DATA.season_total[t], w = Math.max(x(v), 2);
+    g.push(svgText(padL - 10, y + rowH / 2 + 4, nm(t), mine ? 'vlabel' : 'cat', { 'text-anchor': 'end' }));
+    const bar = el('rect', { x: padL, y, width: w, height: rowH, rx: 3,
+      fill: mine ? 'var(--emph)' : 'var(--rest)', class: 'mark' });
+    g.push(bar);
+    g.push(svgText(padL + w + 7, y + rowH / 2 + 4, fmt(v, 1), mine ? 'vlabel' : 'tick'));
+    const hit = el('rect', { x: 0, y: y - gap / 2, width: W, height: rowH + gap, class: 'hit' });
+    const ix = m.index[t];
+    const head = `${nm(t)} &middot; DEF${ix.def_rank}${ix.rank_imputed ? ' (rank imputed)' : ''}`;
+    const rowsT = [
+      { name: 'Season projection', val: fmt(v, 1) },
+      { name: 'Defense index', val: sgn(ix.def, 2) },
+      { name: 'Points allowed 2025', val: fmt(ix.pa_pg_2025, 1) + ' a game' },
+      { name: 'Owned', val: mine ? 'KGB' : (ix.drafted ? 'another team' : 'free agent') },
+    ];
+    hit.addEventListener('mouseenter', e => showTip(e, head, rowsT));
+    hit.addEventListener('mousemove', moveTip);
+    hit.addEventListener('mouseleave', hideTip);
+    g.push(hit);
+  });
+
+  const svg = $('season');
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.setAttribute('width', W);
+  svg.setAttribute('height', H);
+  svg.replaceChildren(...g);
+  $('season-title').textContent =
+    `Bar chart of projected full-season fantasy points for all 32 defenses, ` +
+    `best to worst. KGB's three are ${m.rostered.map(nm).join(', ')}.`;
+
+  legend($('season-legend'), [
+    { color: 'var(--emph)', label: "KGB's defenses" },
+    { color: 'var(--rest)', label: 'everyone else' },
+  ]);
+
+  table($('season-tv'), ['Defense', 'DEF rank', 'Season points', 'Defense index', '2025 points allowed/g', 'Owned'],
+    rows.map(t => {
+      const ix = m.index[t];
+      return [nm(t), 'DEF' + ix.def_rank + (ix.rank_imputed ? '*' : ''), fmt(DATA.season_total[t], 1),
+        sgn(ix.def, 2), fmt(ix.pa_pg_2025, 1),
+        own.has(t) ? 'KGB' : (ix.drafted ? 'another team' : 'free agent')];
+    }),
+    'Full-season projections and inputs. * marks a DEF rank imputed from the open slots on the draft board.');
+}
+
+/* ---------- 5. model card ---------- */
+function drawModel() {
+  const m = DATA.meta, c = m.coef;
+  $('model-copy').innerHTML =
+    `A league-average defense is expected to allow <strong>${fmt(c.b0, 1)}</strong> points. ` +
+    `Each standard deviation of opponent offense adds <strong>${fmt(c.kO, 2)}</strong> to that, ` +
+    `each standard deviation of defense quality takes off <strong>${fmt(c.kD, 2)}</strong>, and ` +
+    `playing at home takes off <strong>${fmt(Math.abs(c.hfa), 2)}</strong>. Fit against the market ` +
+    `on ${c.n} team-games, the average miss is ${fmt(c.mae, 2)} points — the model agrees with the ` +
+    `betting lines about as closely as two sportsbooks agree with each other. Points allowed then ` +
+    `varies around that line with a standard deviation of ${fmt(m.residual_sd, 1)}, measured from ` +
+    `last season's actual results against the lines, which is what turns one expected number into ` +
+    `expected tier points.`;
+
+  const tiers = m.pa_tiers.map(t => [
+    t.hi >= 999 ? `${t.lo} or more` : (t.lo === t.hi ? String(t.lo) : `${t.lo}–${t.hi}`),
+    sgn(t.pts, 0),
+  ]);
+  table($('coef-tv'), ['Points allowed', 'Fantasy points'], tiers,
+    'The points-allowed table this model scores against.');
+}
+
+/* ---------- boot ---------- */
+fetch('dst.json').then(r => r.json()).then(d => {
+  DATA = d;
+  const m = d.meta;
+  $('srcline').innerHTML =
+    `${m.season} schedule and last season's results from ` +
+    `<a href="https://github.com/nflverse/nfldata">nflverse</a>; defense and offense rankings ` +
+    `from this league's own draft board. Calibrated against closing betting lines. ` +
+    `Built ${m.today} — week ${m.current_week} is the live one.`;
+  $('cal-n').textContent = m.coef.n;
+  $('bp-base').textContent = fmt(m.bigplay.base, 1);
+  $('foot-meta').textContent =
+    `${m.focus} holds ${m.rostered.map(nm).join(', ')}. ` +
+    `${m.drafted_elsewhere.length} defenses are on other rosters and ${m.available.length} are free agents.`;
+  drawVerdict();
+  drawGrid();
+  drawWeeks();
+  drawSeason();
+  drawModel();
+}).catch(e => {
+  $('hero-delta').textContent = 'Could not load dst.json: ' + e.message;
+});
+
+$('tv-toggle').addEventListener('click', () => {
+  TABLES = !TABLES;
+  document.querySelectorAll('.tv').forEach(n => { n.hidden = !TABLES; });
+  $('tv-toggle').setAttribute('aria-pressed', String(TABLES));
+  $('tv-toggle').textContent = TABLES ? 'Hide data tables' : 'Show data tables';
+});
+
+function setTheme(mode) {
+  document.documentElement.setAttribute('data-theme', mode);
+  $('theme-toggle').textContent = mode === 'dark' ? 'Light mode' : 'Dark mode';
+}
+$('theme-toggle').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const isDark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(isDark ? 'light' : 'dark');
+});
+$('theme-toggle').textContent = matchMedia('(prefers-color-scheme: dark)').matches ? 'Light mode' : 'Dark mode';
+</script>
+</body>
+</html>

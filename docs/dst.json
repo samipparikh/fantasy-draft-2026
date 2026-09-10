@@ -1,0 +1,6267 @@
+{
+ "meta": {
+  "focus": "KGB",
+  "season": 2026,
+  "weeks": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18
+  ],
+  "today": "2026-09-10",
+  "current_week": 1,
+  "rostered": [
+   "TB",
+   "NYG",
+   "LV"
+  ],
+  "available": [
+   "ARI",
+   "ATL",
+   "CAR",
+   "CIN",
+   "CLE",
+   "IND",
+   "MIA",
+   "NO",
+   "NYJ",
+   "WAS"
+  ],
+  "drafted_elsewhere": [
+   "BAL",
+   "BUF",
+   "CHI",
+   "DAL",
+   "DEN",
+   "DET",
+   "GB",
+   "HOU",
+   "JAX",
+   "KC",
+   "LA",
+   "LAC",
+   "MIN",
+   "NE",
+   "PHI",
+   "PIT",
+   "SEA",
+   "SF",
+   "TEN"
+  ],
+  "team_name": {
+   "ARI": "Cardinals",
+   "ATL": "Falcons",
+   "BAL": "Ravens",
+   "BUF": "Bills",
+   "CAR": "Panthers",
+   "CHI": "Bears",
+   "CIN": "Bengals",
+   "CLE": "Browns",
+   "DAL": "Cowboys",
+   "DEN": "Broncos",
+   "DET": "Lions",
+   "GB": "Packers",
+   "HOU": "Texans",
+   "IND": "Colts",
+   "JAX": "Jaguars",
+   "KC": "Chiefs",
+   "LA": "Rams",
+   "LAC": "Chargers",
+   "LV": "Raiders",
+   "MIA": "Dolphins",
+   "MIN": "Vikings",
+   "NE": "Patriots",
+   "NO": "Saints",
+   "NYG": "Giants",
+   "NYJ": "Jets",
+   "PHI": "Eagles",
+   "PIT": "Steelers",
+   "SEA": "Seahawks",
+   "SF": "49ers",
+   "TB": "Buccaneers",
+   "TEN": "Titans",
+   "WAS": "Commanders"
+  },
+  "pa_tiers": [
+   {
+    "lo": 0,
+    "hi": 0,
+    "pts": 10
+   },
+   {
+    "lo": 1,
+    "hi": 6,
+    "pts": 7
+   },
+   {
+    "lo": 7,
+    "hi": 13,
+    "pts": 4
+   },
+   {
+    "lo": 14,
+    "hi": 20,
+    "pts": 1
+   },
+   {
+    "lo": 21,
+    "hi": 27,
+    "pts": 0
+   },
+   {
+    "lo": 28,
+    "hi": 34,
+    "pts": -1
+   },
+   {
+    "lo": 35,
+    "hi": 999,
+    "pts": -4
+   }
+  ],
+  "coef": {
+   "b0": 23.926,
+   "kO": 2.465,
+   "kD": 1.233,
+   "hfa": -1.744,
+   "n": 202,
+   "rmse": 1.514,
+   "mae": 1.204
+  },
+  "residual_sd": 8.988,
+  "bigplay": {
+   "base": 6.1,
+   "per_sd_def": 1.5,
+   "per_sd_off": -0.7
+  },
+  "index": {
+   "ARI": {
+    "off": -0.56,
+    "def": -1.3,
+    "def_rank": 27,
+    "def_proj": -167.54,
+    "pa_pg_2025": 28.706,
+    "pf_pg_2025": 20.882,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "ATL": {
+    "off": -0.65,
+    "def": -0.32,
+    "def_rank": 22,
+    "def_proj": -146.71,
+    "pa_pg_2025": 23.588,
+    "pf_pg_2025": 20.765,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "BAL": {
+    "off": 0.34,
+    "def": 0.38,
+    "def_rank": 7,
+    "def_proj": -104.2,
+    "pa_pg_2025": 23.412,
+    "pf_pg_2025": 24.941,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "BUF": {
+    "off": 0.64,
+    "def": 0.26,
+    "def_rank": 16,
+    "def_proj": -127.25,
+    "pa_pg_2025": 21.471,
+    "pf_pg_2025": 28.294,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "CAR": {
+    "off": -1.19,
+    "def": 0.04,
+    "def_rank": 18,
+    "def_proj": -134.05,
+    "pa_pg_2025": 22.353,
+    "pf_pg_2025": 18.294,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "CHI": {
+    "off": 0.94,
+    "def": -0.11,
+    "def_rank": 15,
+    "def_proj": -126.95,
+    "pa_pg_2025": 24.412,
+    "pf_pg_2025": 25.941,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "CIN": {
+    "off": 0.45,
+    "def": -1.61,
+    "def_rank": 30,
+    "def_proj": -185.0,
+    "pa_pg_2025": 28.941,
+    "pf_pg_2025": 24.353,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "CLE": {
+    "off": -0.91,
+    "def": 0.1,
+    "def_rank": 17,
+    "def_proj": -130.65,
+    "pa_pg_2025": 22.294,
+    "pf_pg_2025": 16.412,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "DAL": {
+    "off": 1.0,
+    "def": -1.68,
+    "def_rank": 29,
+    "def_proj": -180.65,
+    "pa_pg_2025": 30.059,
+    "pf_pg_2025": 27.706,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "DEN": {
+    "off": 0.14,
+    "def": 1.52,
+    "def_rank": 2,
+    "def_proj": -73.5,
+    "pa_pg_2025": 18.294,
+    "pf_pg_2025": 23.588,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "DET": {
+    "off": 1.49,
+    "def": -0.0,
+    "def_rank": 13,
+    "def_proj": -121.25,
+    "pa_pg_2025": 24.294,
+    "pf_pg_2025": 28.294,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "GB": {
+    "off": 0.51,
+    "def": 0.45,
+    "def_rank": 11,
+    "def_proj": -117.75,
+    "pa_pg_2025": 21.176,
+    "pf_pg_2025": 23.0,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "HOU": {
+    "off": -0.38,
+    "def": 1.64,
+    "def_rank": 3,
+    "def_proj": -73.55,
+    "pa_pg_2025": 17.353,
+    "pf_pg_2025": 23.765,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "IND": {
+    "off": 0.55,
+    "def": -0.47,
+    "def_rank": 23,
+    "def_proj": -150.88,
+    "pa_pg_2025": 24.235,
+    "pf_pg_2025": 27.412,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "JAX": {
+    "off": 1.22,
+    "def": 0.52,
+    "def_rank": 14,
+    "def_proj": -124.55,
+    "pa_pg_2025": 19.765,
+    "pf_pg_2025": 27.882,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "KC": {
+    "off": 0.17,
+    "def": 0.67,
+    "def_rank": 12,
+    "def_proj": -118.6,
+    "pa_pg_2025": 19.294,
+    "pf_pg_2025": 21.294,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "LA": {
+    "off": 1.25,
+    "def": 1.02,
+    "def_rank": 5,
+    "def_proj": -88.4,
+    "pa_pg_2025": 20.353,
+    "pf_pg_2025": 30.471,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "LAC": {
+    "off": -0.13,
+    "def": 0.64,
+    "def_rank": 10,
+    "def_proj": -115.4,
+    "pa_pg_2025": 20.0,
+    "pf_pg_2025": 21.647,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "LV": {
+    "off": -1.22,
+    "def": -0.75,
+    "def_rank": 25,
+    "def_proj": -159.21,
+    "pa_pg_2025": 25.412,
+    "pf_pg_2025": 14.176,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "MIA": {
+    "off": -1.73,
+    "def": -0.63,
+    "def_rank": 24,
+    "def_proj": -155.04,
+    "pa_pg_2025": 24.941,
+    "pf_pg_2025": 20.412,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "MIN": {
+    "off": -0.29,
+    "def": 1.06,
+    "def_rank": 6,
+    "def_proj": -91.85,
+    "pa_pg_2025": 19.588,
+    "pf_pg_2025": 20.235,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "NE": {
+    "off": 1.13,
+    "def": 0.89,
+    "def_rank": 9,
+    "def_proj": -108.7,
+    "pa_pg_2025": 18.824,
+    "pf_pg_2025": 28.824,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "NO": {
+    "off": -0.46,
+    "def": -0.04,
+    "def_rank": 19,
+    "def_proj": -137.45,
+    "pa_pg_2025": 22.529,
+    "pf_pg_2025": 18.0,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "NYG": {
+    "off": -0.18,
+    "def": -1.0,
+    "def_rank": 28,
+    "def_proj": -171.7,
+    "pa_pg_2025": 25.824,
+    "pf_pg_2025": 22.412,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "NYJ": {
+    "off": -1.79,
+    "def": -1.83,
+    "def_rank": 32,
+    "def_proj": -193.7,
+    "pa_pg_2025": 29.588,
+    "pf_pg_2025": 17.647,
+    "drafted": false,
+    "rank_imputed": true
+   },
+   "PHI": {
+    "off": 0.4,
+    "def": 1.26,
+    "def_rank": 4,
+    "def_proj": -83.4,
+    "pa_pg_2025": 19.118,
+    "pf_pg_2025": 22.294,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "PIT": {
+    "off": -0.66,
+    "def": 0.43,
+    "def_rank": 8,
+    "def_proj": -106.4,
+    "pa_pg_2025": 22.765,
+    "pf_pg_2025": 23.353,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "SEA": {
+    "off": 0.44,
+    "def": 1.73,
+    "def_rank": 1,
+    "def_proj": -69.1,
+    "pa_pg_2025": 17.176,
+    "pf_pg_2025": 28.412,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "SF": {
+    "off": 1.13,
+    "def": -0.0,
+    "def_rank": 20,
+    "def_proj": -140.85,
+    "pa_pg_2025": 21.824,
+    "pf_pg_2025": 25.706,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "TB": {
+    "off": 0.14,
+    "def": -0.33,
+    "def_rank": 21,
+    "def_proj": -142.55,
+    "pa_pg_2025": 24.176,
+    "pf_pg_2025": 22.353,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "TEN": {
+    "off": -1.58,
+    "def": -1.58,
+    "def_rank": 31,
+    "def_proj": -189.35,
+    "pa_pg_2025": 28.118,
+    "pf_pg_2025": 16.706,
+    "drafted": true,
+    "rank_imputed": false
+   },
+   "WAS": {
+    "off": -0.24,
+    "def": -0.96,
+    "def_rank": 26,
+    "def_proj": -163.37,
+    "pa_pg_2025": 26.529,
+    "pf_pg_2025": 20.941,
+    "drafted": false,
+    "rank_imputed": true
+   }
+  }
+ },
+ "cells": {
+  "SEA": {
+   "1": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-09-09",
+    "exp_pa": 22.8,
+    "tier_pts": 0.33,
+    "bigplay_pts": 7.91,
+    "proj": 8.2,
+    "market_pa": 20.8
+   },
+   "2": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 20.4,
+    "tier_pts": 0.9,
+    "bigplay_pts": 9.1,
+    "proj": 10.0,
+    "market_pa": null
+   },
+   "3": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 21.2,
+    "tier_pts": 0.71,
+    "bigplay_pts": 8.87,
+    "proj": 9.6,
+    "market_pa": null
+   },
+   "4": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 19.7,
+    "tier_pts": 1.06,
+    "bigplay_pts": 8.79,
+    "proj": 9.9,
+    "market_pa": null
+   },
+   "5": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 22.8,
+    "tier_pts": 0.33,
+    "bigplay_pts": 7.91,
+    "proj": 8.2,
+    "market_pa": null
+   },
+   "6": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-10-15",
+    "exp_pa": 22.1,
+    "tier_pts": 0.49,
+    "bigplay_pts": 8.6,
+    "proj": 9.1,
+    "market_pa": null
+   },
+   "7": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 20.5,
+    "tier_pts": 0.88,
+    "bigplay_pts": 8.58,
+    "proj": 9.5,
+    "market_pa": null
+   },
+   "8": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-11-02",
+    "exp_pa": 22.4,
+    "tier_pts": 0.44,
+    "bigplay_pts": 8.04,
+    "proj": 8.5,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 18.7,
+    "tier_pts": 1.31,
+    "bigplay_pts": 9.1,
+    "proj": 10.4,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 18.8,
+    "tier_pts": 1.29,
+    "bigplay_pts": 9.55,
+    "proj": 10.8,
+    "market_pa": null
+   },
+   "11": null,
+   "12": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 24.6,
+    "tier_pts": -0.08,
+    "bigplay_pts": 7.91,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-12-07",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 8.0,
+    "proj": 8.4,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 19.6,
+    "tier_pts": 1.09,
+    "bigplay_pts": 8.83,
+    "proj": 9.9,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-12-19",
+    "exp_pa": 22.8,
+    "tier_pts": 0.34,
+    "bigplay_pts": 8.42,
+    "proj": 8.8,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-12-25",
+    "exp_pa": 23.1,
+    "tier_pts": 0.26,
+    "bigplay_pts": 7.82,
+    "proj": 8.1,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 18.9,
+    "tier_pts": 1.27,
+    "bigplay_pts": 9.53,
+    "proj": 10.8,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 24.9,
+    "tier_pts": -0.14,
+    "bigplay_pts": 7.82,
+    "proj": 7.7,
+    "market_pa": null
+   }
+  },
+  "NE": {
+   "1": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-09-09",
+    "exp_pa": 23.9,
+    "tier_pts": 0.08,
+    "bigplay_pts": 7.13,
+    "proj": 7.2,
+    "market_pa": 23.8
+   },
+   "2": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 19.5,
+    "tier_pts": 1.13,
+    "bigplay_pts": 7.9,
+    "proj": 9.0,
+    "market_pa": null
+   },
+   "3": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 25.8,
+    "tier_pts": -0.36,
+    "bigplay_pts": 6.59,
+    "proj": 6.2,
+    "market_pa": null
+   },
+   "4": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.4,
+    "tier_pts": -0.04,
+    "bigplay_pts": 6.99,
+    "proj": 6.9,
+    "market_pa": null
+   },
+   "5": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 18.1,
+    "tier_pts": 1.45,
+    "bigplay_pts": 8.29,
+    "proj": 9.7,
+    "market_pa": null
+   },
+   "6": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 16.7,
+    "tier_pts": 1.78,
+    "bigplay_pts": 8.69,
+    "proj": 10.5,
+    "market_pa": null
+   },
+   "7": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-10-22",
+    "exp_pa": 25.2,
+    "tier_pts": -0.21,
+    "bigplay_pts": 6.78,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "8": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 18.6,
+    "tier_pts": 1.34,
+    "bigplay_pts": 8.65,
+    "proj": 10.0,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 22.3,
+    "tier_pts": 0.45,
+    "bigplay_pts": 7.08,
+    "proj": 7.5,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 26.5,
+    "tier_pts": -0.51,
+    "bigplay_pts": 6.39,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "11": null,
+   "12": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 7.53,
+    "proj": 7.9,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 22.7,
+    "tier_pts": 0.37,
+    "bigplay_pts": 6.99,
+    "proj": 7.4,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-12-10",
+    "exp_pa": 20.4,
+    "tier_pts": 0.91,
+    "bigplay_pts": 7.64,
+    "proj": 8.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-12-21",
+    "exp_pa": 23.3,
+    "tier_pts": 0.23,
+    "bigplay_pts": 7.31,
+    "proj": 7.5,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 18.4,
+    "tier_pts": 1.37,
+    "bigplay_pts": 8.69,
+    "proj": 10.1,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 21.4,
+    "tier_pts": 0.66,
+    "bigplay_pts": 7.34,
+    "proj": 8.0,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 16.8,
+    "tier_pts": 1.75,
+    "bigplay_pts": 8.65,
+    "proj": 10.4,
+    "market_pa": null
+   }
+  },
+  "LA": {
+   "1": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-09-10",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 6.84,
+    "proj": 7.0,
+    "market_pa": 22.5
+   },
+   "2": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-09-21",
+    "exp_pa": 20.5,
+    "tier_pts": 0.88,
+    "bigplay_pts": 7.76,
+    "proj": 8.6,
+    "market_pa": 19.5
+   },
+   "3": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 23.0,
+    "tier_pts": 0.29,
+    "bigplay_pts": 7.54,
+    "proj": 7.8,
+    "market_pa": 21.2
+   },
+   "4": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 23.6,
+    "tier_pts": 0.14,
+    "bigplay_pts": 7.36,
+    "proj": 7.5,
+    "market_pa": 23.0
+   },
+   "5": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-10-12",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 7.18,
+    "proj": 7.6,
+    "market_pa": 25.2
+   },
+   "6": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 19.5,
+    "tier_pts": 1.11,
+    "bigplay_pts": 8.03,
+    "proj": 9.1,
+    "market_pa": 17.0
+   },
+   "7": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 19.7,
+    "tier_pts": 1.08,
+    "bigplay_pts": 8.49,
+    "proj": 9.6,
+    "market_pa": 19.5
+   },
+   "8": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 20.6,
+    "tier_pts": 0.86,
+    "bigplay_pts": 7.73,
+    "proj": 8.6,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 22.1,
+    "tier_pts": 0.5,
+    "bigplay_pts": 7.8,
+    "proj": 8.3,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 21.3,
+    "tier_pts": 0.69,
+    "bigplay_pts": 8.03,
+    "proj": 8.7,
+    "market_pa": null
+   },
+   "11": null,
+   "12": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-11-25",
+    "exp_pa": 22.2,
+    "tier_pts": 0.48,
+    "bigplay_pts": 7.28,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-12-03",
+    "exp_pa": 21.4,
+    "tier_pts": 0.68,
+    "bigplay_pts": 7.51,
+    "proj": 8.2,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 25.5,
+    "tier_pts": -0.27,
+    "bigplay_pts": 6.84,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.4,
+    "tier_pts": 0.2,
+    "bigplay_pts": 6.94,
+    "proj": 7.1,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-12-25",
+    "exp_pa": 23.8,
+    "tier_pts": 0.12,
+    "bigplay_pts": 7.32,
+    "proj": 7.4,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.0,
+    "tier_pts": 0.29,
+    "bigplay_pts": 7.54,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 22.0,
+    "tier_pts": 0.52,
+    "bigplay_pts": 7.32,
+    "proj": 7.8,
+    "market_pa": null
+   }
+  },
+  "SF": {
+   "1": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-09-10",
+    "exp_pa": 27.0,
+    "tier_pts": -0.63,
+    "bigplay_pts": 5.22,
+    "proj": 4.6,
+    "market_pa": 26.0
+   },
+   "2": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 17.9,
+    "tier_pts": 1.49,
+    "bigplay_pts": 7.3,
+    "proj": 8.8,
+    "market_pa": 18.0
+   },
+   "3": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 20.8,
+    "tier_pts": 0.81,
+    "bigplay_pts": 6.49,
+    "proj": 7.3,
+    "market_pa": 17.5
+   },
+   "4": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 6.0,
+    "proj": 6.4,
+    "market_pa": 22.0
+   },
+   "5": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 25.0,
+    "tier_pts": -0.18,
+    "bigplay_pts": 5.78,
+    "proj": 5.6,
+    "market_pa": null
+   },
+   "6": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-10-19",
+    "exp_pa": 21.6,
+    "tier_pts": 0.62,
+    "bigplay_pts": 6.26,
+    "proj": 6.9,
+    "market_pa": 22.5
+   },
+   "7": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 22.3,
+    "tier_pts": 0.45,
+    "bigplay_pts": 6.55,
+    "proj": 7.0,
+    "market_pa": 21.5
+   },
+   "8": null,
+   "9": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 19.2,
+    "tier_pts": 1.19,
+    "bigplay_pts": 6.95,
+    "proj": 8.1,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 26.4,
+    "tier_pts": -0.49,
+    "bigplay_pts": 5.4,
+    "proj": 4.9,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 21.5,
+    "tier_pts": 0.65,
+    "bigplay_pts": 6.3,
+    "proj": 6.9,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 23.3,
+    "tier_pts": 0.23,
+    "bigplay_pts": 5.78,
+    "proj": 6.0,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.5,
+    "tier_pts": 0.18,
+    "bigplay_pts": 6.22,
+    "proj": 6.4,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 25.3,
+    "tier_pts": -0.23,
+    "bigplay_pts": 5.22,
+    "proj": 5.0,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-12-17",
+    "exp_pa": 23.6,
+    "tier_pts": 0.15,
+    "bigplay_pts": 6.19,
+    "proj": 6.3,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 24.4,
+    "tier_pts": -0.02,
+    "bigplay_pts": 5.97,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.2,
+    "tier_pts": 0.25,
+    "bigplay_pts": 5.81,
+    "proj": 6.1,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 6.49,
+    "proj": 6.9,
+    "market_pa": null
+   }
+  },
+  "CAR": {
+   "1": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 24.5,
+    "tier_pts": -0.05,
+    "bigplay_pts": 5.5,
+    "proj": 5.4,
+    "market_pa": 24.8
+   },
+   "2": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 22.3,
+    "tier_pts": 0.46,
+    "bigplay_pts": 6.61,
+    "proj": 7.1,
+    "market_pa": 22.5
+   },
+   "3": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 21.6,
+    "tier_pts": 0.61,
+    "bigplay_pts": 6.8,
+    "proj": 7.4,
+    "market_pa": 19.0
+   },
+   "4": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 25.8,
+    "tier_pts": -0.36,
+    "bigplay_pts": 5.11,
+    "proj": 4.8,
+    "market_pa": 25.2
+   },
+   "5": null,
+   "6": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 24.9,
+    "tier_pts": -0.14,
+    "bigplay_pts": 5.88,
+    "proj": 5.7,
+    "market_pa": 25.0
+   },
+   "7": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 6.06,
+    "proj": 6.5,
+    "market_pa": 23.5
+   },
+   "8": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-10-29",
+    "exp_pa": 25.1,
+    "tier_pts": -0.2,
+    "bigplay_pts": 5.8,
+    "proj": 5.6,
+    "market_pa": 26.2
+   },
+   "9": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 6.06,
+    "proj": 6.5,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 22.8,
+    "tier_pts": 0.35,
+    "bigplay_pts": 6.48,
+    "proj": 6.8,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 23.0,
+    "tier_pts": 0.3,
+    "bigplay_pts": 5.92,
+    "proj": 6.2,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-11-30",
+    "exp_pa": 24.2,
+    "tier_pts": 0.01,
+    "bigplay_pts": 6.06,
+    "proj": 6.1,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.2,
+    "tier_pts": 0.25,
+    "bigplay_pts": 6.36,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 21.0,
+    "tier_pts": 0.76,
+    "bigplay_pts": 6.48,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.3,
+    "tier_pts": 0.23,
+    "bigplay_pts": 5.84,
+    "proj": 6.1,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 22.2,
+    "tier_pts": 0.47,
+    "bigplay_pts": 6.62,
+    "proj": 7.1,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 5.85,
+    "proj": 6.1,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 20.5,
+    "tier_pts": 0.87,
+    "bigplay_pts": 6.61,
+    "proj": 7.5,
+    "market_pa": null
+   }
+  },
+  "CHI": {
+   "1": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 21.1,
+    "tier_pts": 0.73,
+    "bigplay_pts": 6.77,
+    "proj": 7.5,
+    "market_pa": 21.8
+   },
+   "2": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 21.6,
+    "tier_pts": 0.62,
+    "bigplay_pts": 6.14,
+    "proj": 6.8,
+    "market_pa": 21.2
+   },
+   "3": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2026-09-28",
+    "exp_pa": 23.3,
+    "tier_pts": 0.22,
+    "bigplay_pts": 5.66,
+    "proj": 5.9,
+    "market_pa": 22.5
+   },
+   "4": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 17.9,
+    "tier_pts": 1.49,
+    "bigplay_pts": 7.19,
+    "proj": 8.7,
+    "market_pa": 18.5
+   },
+   "5": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 25.3,
+    "tier_pts": -0.24,
+    "bigplay_pts": 5.58,
+    "proj": 5.3,
+    "market_pa": 26.2
+   },
+   "6": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 22.5,
+    "tier_pts": 0.42,
+    "bigplay_pts": 6.39,
+    "proj": 6.8,
+    "market_pa": 22.2
+   },
+   "7": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-10-22",
+    "exp_pa": 25.1,
+    "tier_pts": -0.19,
+    "bigplay_pts": 5.15,
+    "proj": 5.0,
+    "market_pa": null
+   },
+   "8": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-11-02",
+    "exp_pa": 25.2,
+    "tier_pts": -0.2,
+    "bigplay_pts": 5.63,
+    "proj": 5.4,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 22.7,
+    "tier_pts": 0.37,
+    "bigplay_pts": 5.84,
+    "proj": 6.2,
+    "market_pa": null
+   },
+   "10": null,
+   "11": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 21.2,
+    "tier_pts": 0.71,
+    "bigplay_pts": 6.26,
+    "proj": 7.0,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-11-26",
+    "exp_pa": 27.7,
+    "tier_pts": -0.79,
+    "bigplay_pts": 4.89,
+    "proj": 4.1,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 25.3,
+    "tier_pts": -0.24,
+    "bigplay_pts": 5.09,
+    "proj": 4.8,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 19.8,
+    "tier_pts": 1.04,
+    "bigplay_pts": 7.15,
+    "proj": 8.2,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-12-19",
+    "exp_pa": 25.6,
+    "tier_pts": -0.32,
+    "bigplay_pts": 5.49,
+    "proj": 5.2,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-12-25",
+    "exp_pa": 23.6,
+    "tier_pts": 0.16,
+    "bigplay_pts": 5.58,
+    "proj": 5.7,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 26.0,
+    "tier_pts": -0.4,
+    "bigplay_pts": 4.89,
+    "proj": 4.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 23.3,
+    "tier_pts": 0.21,
+    "bigplay_pts": 6.14,
+    "proj": 6.4,
+    "market_pa": null
+   }
+  },
+  "CIN": {
+   "1": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 24.5,
+    "tier_pts": -0.06,
+    "bigplay_pts": 3.58,
+    "proj": 3.5,
+    "market_pa": 23.5
+   },
+   "2": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 25.0,
+    "tier_pts": -0.17,
+    "bigplay_pts": 3.95,
+    "proj": 3.8,
+    "market_pa": 24.0
+   },
+   "3": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 24.3,
+    "tier_pts": -0.01,
+    "bigplay_pts": 4.15,
+    "proj": 4.1,
+    "market_pa": 22.5
+   },
+   "4": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 27.2,
+    "tier_pts": -0.66,
+    "bigplay_pts": 2.83,
+    "proj": 2.2,
+    "market_pa": 24.5
+   },
+   "5": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 21.7,
+    "tier_pts": 0.61,
+    "bigplay_pts": 4.89,
+    "proj": 5.5,
+    "market_pa": 21.8
+   },
+   "6": null,
+   "7": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 26.8,
+    "tier_pts": -0.57,
+    "bigplay_pts": 3.44,
+    "proj": 2.9,
+    "market_pa": 27.5
+   },
+   "8": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 20.3,
+    "tier_pts": 0.93,
+    "bigplay_pts": 4.79,
+    "proj": 5.7,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 24.3,
+    "tier_pts": -0.01,
+    "bigplay_pts": 4.14,
+    "proj": 4.1,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 4.15,
+    "proj": 4.5,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-11-23",
+    "exp_pa": 25.3,
+    "tier_pts": -0.25,
+    "bigplay_pts": 3.85,
+    "proj": 3.6,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 23.0,
+    "tier_pts": 0.28,
+    "bigplay_pts": 4.0,
+    "proj": 4.3,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.7,
+    "tier_pts": 0.14,
+    "bigplay_pts": 4.32,
+    "proj": 4.5,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 24.6,
+    "tier_pts": -0.08,
+    "bigplay_pts": 3.56,
+    "proj": 3.5,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.0,
+    "tier_pts": 0.29,
+    "bigplay_pts": 4.51,
+    "proj": 4.8,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 27.3,
+    "tier_pts": -0.68,
+    "bigplay_pts": 3.3,
+    "proj": 2.6,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-12-31",
+    "exp_pa": 25.0,
+    "tier_pts": -0.17,
+    "bigplay_pts": 3.44,
+    "proj": 3.3,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 21.9,
+    "tier_pts": 0.54,
+    "bigplay_pts": 4.32,
+    "proj": 4.9,
+    "market_pa": null
+   }
+  },
+  "TB": {
+   "1": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 25.4,
+    "tier_pts": -0.27,
+    "bigplay_pts": 5.29,
+    "proj": 5.0,
+    "market_pa": 27.0
+   },
+   "2": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 20.3,
+    "tier_pts": 0.92,
+    "bigplay_pts": 6.25,
+    "proj": 7.2,
+    "market_pa": 18.0
+   },
+   "3": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 21.9,
+    "tier_pts": 0.56,
+    "bigplay_pts": 5.81,
+    "proj": 6.4,
+    "market_pa": 21.5
+   },
+   "4": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 23.8,
+    "tier_pts": 0.1,
+    "bigplay_pts": 5.25,
+    "proj": 5.3,
+    "market_pa": 24.5
+   },
+   "5": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-10-08",
+    "exp_pa": 26.8,
+    "tier_pts": -0.58,
+    "bigplay_pts": 4.91,
+    "proj": 4.3,
+    "market_pa": 28.0
+   },
+   "6": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 21.0,
+    "tier_pts": 0.77,
+    "bigplay_pts": 6.07,
+    "proj": 6.8,
+    "market_pa": 22.0
+   },
+   "7": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 21.4,
+    "tier_pts": 0.66,
+    "bigplay_pts": 6.44,
+    "proj": 7.1,
+    "market_pa": 22.0
+   },
+   "8": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 21.0,
+    "tier_pts": 0.76,
+    "bigplay_pts": 6.06,
+    "proj": 6.8,
+    "market_pa": 21.0
+   },
+   "9": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.7,
+    "tier_pts": -0.55,
+    "bigplay_pts": 4.95,
+    "proj": 4.4,
+    "market_pa": null
+   },
+   "10": null,
+   "11": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 28.0,
+    "tier_pts": -0.85,
+    "bigplay_pts": 4.56,
+    "proj": 3.7,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-11-30",
+    "exp_pa": 19.7,
+    "tier_pts": 1.08,
+    "bigplay_pts": 6.44,
+    "proj": 7.5,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 22.3,
+    "tier_pts": 0.46,
+    "bigplay_pts": 5.7,
+    "proj": 6.2,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 25.2,
+    "tier_pts": -0.21,
+    "bigplay_pts": 5.37,
+    "proj": 5.2,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 21.5,
+    "tier_pts": 0.65,
+    "bigplay_pts": 5.93,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 22.7,
+    "tier_pts": 0.35,
+    "bigplay_pts": 6.06,
+    "proj": 6.4,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 25.7,
+    "tier_pts": -0.32,
+    "bigplay_pts": 4.73,
+    "proj": 4.4,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 5.93,
+    "proj": 6.2,
+    "market_pa": null
+   }
+  },
+  "DET": {
+   "1": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 21.1,
+    "tier_pts": 0.75,
+    "bigplay_pts": 6.42,
+    "proj": 7.2,
+    "market_pa": 21.8
+   },
+   "2": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-09-17",
+    "exp_pa": 25.5,
+    "tier_pts": -0.29,
+    "bigplay_pts": 5.65,
+    "proj": 5.4,
+    "market_pa": 27.2
+   },
+   "3": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 17.8,
+    "tier_pts": 1.52,
+    "bigplay_pts": 7.35,
+    "proj": 8.9,
+    "market_pa": 18.0
+   },
+   "4": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 21.0,
+    "tier_pts": 0.76,
+    "bigplay_pts": 6.93,
+    "proj": 7.7,
+    "market_pa": 22.2
+   },
+   "5": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 6.49,
+    "proj": 6.9,
+    "market_pa": 20.0
+   },
+   "6": null,
+   "7": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 23.4,
+    "tier_pts": 0.19,
+    "bigplay_pts": 5.74,
+    "proj": 5.9,
+    "market_pa": 24.0
+   },
+   "8": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 21.5,
+    "tier_pts": 0.65,
+    "bigplay_pts": 6.3,
+    "proj": 7.0,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 19.7,
+    "tier_pts": 1.08,
+    "bigplay_pts": 7.31,
+    "proj": 8.4,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 25.0,
+    "tier_pts": -0.16,
+    "bigplay_pts": 5.31,
+    "proj": 5.1,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 6.0,
+    "proj": 6.4,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-11-26",
+    "exp_pa": 24.5,
+    "tier_pts": -0.06,
+    "bigplay_pts": 5.44,
+    "proj": 5.4,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 22.3,
+    "tier_pts": 0.45,
+    "bigplay_pts": 6.55,
+    "proj": 7.0,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 18.3,
+    "tier_pts": 1.4,
+    "bigplay_pts": 7.2,
+    "proj": 8.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 6.3,
+    "proj": 6.5,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-12-28",
+    "exp_pa": 21.7,
+    "tier_pts": 0.58,
+    "bigplay_pts": 6.22,
+    "proj": 6.8,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 26.3,
+    "tier_pts": -0.46,
+    "bigplay_pts": 5.44,
+    "proj": 5.0,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 25.2,
+    "tier_pts": -0.21,
+    "bigplay_pts": 5.74,
+    "proj": 5.5,
+    "market_pa": null
+   }
+  },
+  "NO": {
+   "1": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 27.7,
+    "tier_pts": -0.77,
+    "bigplay_pts": 5.0,
+    "proj": 4.2,
+    "market_pa": 28.8
+   },
+   "2": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 24.8,
+    "tier_pts": -0.13,
+    "bigplay_pts": 5.8,
+    "proj": 5.7,
+    "market_pa": 27.0
+   },
+   "3": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 19.2,
+    "tier_pts": 1.18,
+    "bigplay_pts": 6.9,
+    "proj": 8.1,
+    "market_pa": 19.5
+   },
+   "4": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-10-05",
+    "exp_pa": 20.6,
+    "tier_pts": 0.85,
+    "bigplay_pts": 6.5,
+    "proj": 7.3,
+    "market_pa": 21.5
+   },
+   "5": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 21.5,
+    "tier_pts": 0.64,
+    "bigplay_pts": 6.25,
+    "proj": 6.9,
+    "market_pa": 23.0
+   },
+   "6": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 23.5,
+    "tier_pts": 0.17,
+    "bigplay_pts": 6.17,
+    "proj": 6.3,
+    "market_pa": 23.5
+   },
+   "7": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 20.6,
+    "tier_pts": 0.85,
+    "bigplay_pts": 6.51,
+    "proj": 7.4,
+    "market_pa": 22.5
+   },
+   "8": null,
+   "9": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 20.0,
+    "tier_pts": 1.0,
+    "bigplay_pts": 6.68,
+    "proj": 7.7,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 19.3,
+    "tier_pts": 1.16,
+    "bigplay_pts": 6.87,
+    "proj": 8.0,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 26.3,
+    "tier_pts": -0.47,
+    "bigplay_pts": 5.38,
+    "proj": 4.9,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 25.1,
+    "tier_pts": -0.19,
+    "bigplay_pts": 5.72,
+    "proj": 5.5,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.5,
+    "tier_pts": 0.18,
+    "bigplay_pts": 5.69,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 21.0,
+    "tier_pts": 0.75,
+    "bigplay_pts": 6.87,
+    "proj": 7.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 24.3,
+    "tier_pts": -0.01,
+    "bigplay_pts": 5.94,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 20.8,
+    "tier_pts": 0.8,
+    "bigplay_pts": 6.44,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 22.4,
+    "tier_pts": 0.44,
+    "bigplay_pts": 6.5,
+    "proj": 6.9,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 22.6,
+    "tier_pts": 0.39,
+    "bigplay_pts": 5.94,
+    "proj": 6.3,
+    "market_pa": null
+   }
+  },
+  "HOU": {
+   "1": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 21.7,
+    "tier_pts": 0.58,
+    "bigplay_pts": 8.11,
+    "proj": 8.7,
+    "market_pa": 23.0
+   },
+   "2": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 21.3,
+    "tier_pts": 0.69,
+    "bigplay_pts": 8.24,
+    "proj": 8.9,
+    "market_pa": 21.5
+   },
+   "3": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 23.3,
+    "tier_pts": 0.23,
+    "bigplay_pts": 8.17,
+    "proj": 8.4,
+    "market_pa": 22.0
+   },
+   "4": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 22.6,
+    "tier_pts": 0.38,
+    "bigplay_pts": 7.86,
+    "proj": 8.2,
+    "market_pa": 22.5
+   },
+   "5": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 18.0,
+    "tier_pts": 1.47,
+    "bigplay_pts": 9.67,
+    "proj": 11.1,
+    "market_pa": 20.0
+   },
+   "6": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 24.9,
+    "tier_pts": -0.15,
+    "bigplay_pts": 7.71,
+    "proj": 7.6,
+    "market_pa": 22.0
+   },
+   "7": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 19.7,
+    "tier_pts": 1.06,
+    "bigplay_pts": 8.68,
+    "proj": 9.7,
+    "market_pa": 19.0
+   },
+   "8": null,
+   "9": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 21.6,
+    "tier_pts": 0.62,
+    "bigplay_pts": 8.65,
+    "proj": 9.3,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 19.7,
+    "tier_pts": 1.08,
+    "bigplay_pts": 9.2,
+    "proj": 10.3,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-11-19",
+    "exp_pa": 21.5,
+    "tier_pts": 0.64,
+    "bigplay_pts": 8.17,
+    "proj": 8.8,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 21.0,
+    "tier_pts": 0.76,
+    "bigplay_pts": 8.32,
+    "proj": 9.1,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 20.3,
+    "tier_pts": 0.93,
+    "bigplay_pts": 9.02,
+    "proj": 10.0,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 21.3,
+    "tier_pts": 0.68,
+    "bigplay_pts": 8.73,
+    "proj": 9.4,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.2,
+    "tier_pts": 0.25,
+    "bigplay_pts": 7.71,
+    "proj": 8.0,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-12-24",
+    "exp_pa": 22.9,
+    "tier_pts": 0.32,
+    "bigplay_pts": 8.28,
+    "proj": 8.6,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2027-01-04",
+    "exp_pa": 23.2,
+    "tier_pts": 0.25,
+    "bigplay_pts": 8.21,
+    "proj": 8.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 16.3,
+    "tier_pts": 1.87,
+    "bigplay_pts": 9.67,
+    "proj": 11.5,
+    "market_pa": null
+   }
+  },
+  "BUF": {
+   "1": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 22.7,
+    "tier_pts": 0.36,
+    "bigplay_pts": 6.75,
+    "proj": 7.1,
+    "market_pa": 21.5
+   },
+   "2": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2026-09-17",
+    "exp_pa": 25.5,
+    "tier_pts": -0.29,
+    "bigplay_pts": 5.44,
+    "proj": 5.2,
+    "market_pa": 24.2
+   },
+   "3": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 21.5,
+    "tier_pts": 0.63,
+    "bigplay_pts": 6.58,
+    "proj": 7.2,
+    "market_pa": 22.8
+   },
+   "4": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.6,
+    "tier_pts": -0.09,
+    "bigplay_pts": 5.7,
+    "proj": 5.6,
+    "market_pa": null
+   },
+   "5": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-10-12",
+    "exp_pa": 26.7,
+    "tier_pts": -0.55,
+    "bigplay_pts": 5.61,
+    "proj": 5.1,
+    "market_pa": 28.2
+   },
+   "6": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 20.6,
+    "tier_pts": 0.85,
+    "bigplay_pts": 7.34,
+    "proj": 8.2,
+    "market_pa": 20.5
+   },
+   "7": null,
+   "8": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 22.7,
+    "tier_pts": 0.36,
+    "bigplay_pts": 6.25,
+    "proj": 6.6,
+    "market_pa": 24.5
+   },
+   "9": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-11-09",
+    "exp_pa": 22.9,
+    "tier_pts": 0.32,
+    "bigplay_pts": 6.69,
+    "proj": 7.0,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 19.2,
+    "tier_pts": 1.19,
+    "bigplay_pts": 7.74,
+    "proj": 8.9,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 17.6,
+    "tier_pts": 1.56,
+    "bigplay_pts": 7.7,
+    "proj": 9.3,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-11-26",
+    "exp_pa": 22.3,
+    "tier_pts": 0.46,
+    "bigplay_pts": 6.37,
+    "proj": 6.8,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 26.4,
+    "tier_pts": -0.49,
+    "bigplay_pts": 5.7,
+    "proj": 5.2,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 24.9,
+    "tier_pts": -0.14,
+    "bigplay_pts": 6.13,
+    "proj": 6.0,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-12-19",
+    "exp_pa": 24.2,
+    "tier_pts": 0.01,
+    "bigplay_pts": 5.83,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-12-25",
+    "exp_pa": 23.9,
+    "tier_pts": 0.07,
+    "bigplay_pts": 6.39,
+    "proj": 6.5,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 19.3,
+    "tier_pts": 1.15,
+    "bigplay_pts": 7.7,
+    "proj": 8.9,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 17.5,
+    "tier_pts": 1.6,
+    "bigplay_pts": 7.74,
+    "proj": 9.3,
+    "market_pa": null
+   }
+  },
+  "IND": {
+   "1": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 23.6,
+    "tier_pts": 0.15,
+    "bigplay_pts": 5.16,
+    "proj": 5.3,
+    "market_pa": 25.5
+   },
+   "2": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 24.9,
+    "tier_pts": -0.16,
+    "bigplay_pts": 5.27,
+    "proj": 5.1,
+    "market_pa": 27.0
+   },
+   "3": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 21.8,
+    "tier_pts": 0.56,
+    "bigplay_pts": 5.66,
+    "proj": 6.2,
+    "market_pa": 23.5
+   },
+   "4": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 23.9,
+    "tier_pts": 0.08,
+    "bigplay_pts": 5.56,
+    "proj": 5.6,
+    "market_pa": 26.0
+   },
+   "5": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 22.9,
+    "tier_pts": 0.32,
+    "bigplay_pts": 5.86,
+    "proj": 6.2,
+    "market_pa": 25.0
+   },
+   "6": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 18.9,
+    "tier_pts": 1.27,
+    "bigplay_pts": 6.5,
+    "proj": 7.8,
+    "market_pa": 22.0
+   },
+   "7": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 23.8,
+    "tier_pts": 0.11,
+    "bigplay_pts": 5.6,
+    "proj": 5.7,
+    "market_pa": 24.5
+   },
+   "8": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 27.5,
+    "tier_pts": -0.73,
+    "bigplay_pts": 4.54,
+    "proj": 3.8,
+    "market_pa": 27.0
+   },
+   "9": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 25.2,
+    "tier_pts": -0.22,
+    "bigplay_pts": 4.7,
+    "proj": 4.5,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 18.5,
+    "tier_pts": 1.35,
+    "bigplay_pts": 6.61,
+    "proj": 8.0,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-11-19",
+    "exp_pa": 23.6,
+    "tier_pts": 0.16,
+    "bigplay_pts": 5.66,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 22.3,
+    "tier_pts": 0.45,
+    "bigplay_pts": 5.52,
+    "proj": 6.0,
+    "market_pa": null
+   },
+   "13": null,
+   "14": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 25.5,
+    "tier_pts": -0.28,
+    "bigplay_pts": 5.12,
+    "proj": 4.8,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 20.6,
+    "tier_pts": 0.85,
+    "bigplay_pts": 6.5,
+    "proj": 7.4,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 23.9,
+    "tier_pts": 0.09,
+    "bigplay_pts": 5.08,
+    "proj": 5.2,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 22.3,
+    "tier_pts": 0.46,
+    "bigplay_pts": 6.03,
+    "proj": 6.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 25.8,
+    "tier_pts": -0.34,
+    "bigplay_pts": 4.54,
+    "proj": 4.2,
+    "market_pa": null
+   }
+  },
+  "BAL": {
+   "1": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 24.8,
+    "tier_pts": -0.13,
+    "bigplay_pts": 6.29,
+    "proj": 6.2,
+    "market_pa": 22.0
+   },
+   "2": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 20.6,
+    "tier_pts": 0.86,
+    "bigplay_pts": 6.99,
+    "proj": 7.9,
+    "market_pa": 19.5
+   },
+   "3": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 25.9,
+    "tier_pts": -0.38,
+    "bigplay_pts": 5.98,
+    "proj": 5.6,
+    "market_pa": 24.5
+   },
+   "4": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 17.8,
+    "tier_pts": 1.51,
+    "bigplay_pts": 7.78,
+    "proj": 9.3,
+    "market_pa": 19.5
+   },
+   "5": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 21.8,
+    "tier_pts": 0.56,
+    "bigplay_pts": 7.13,
+    "proj": 7.7,
+    "market_pa": 22.0
+   },
+   "6": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 21.2,
+    "tier_pts": 0.71,
+    "bigplay_pts": 7.31,
+    "proj": 8.0,
+    "market_pa": 19.0
+   },
+   "7": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 22.8,
+    "tier_pts": 0.33,
+    "bigplay_pts": 6.36,
+    "proj": 6.7,
+    "market_pa": 24.0
+   },
+   "8": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 25.0,
+    "tier_pts": -0.18,
+    "bigplay_pts": 6.22,
+    "proj": 6.0,
+    "market_pa": 27.0
+   },
+   "9": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-11-05",
+    "exp_pa": 24.7,
+    "tier_pts": -0.1,
+    "bigplay_pts": 5.82,
+    "proj": 5.7,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-11-16",
+    "exp_pa": 21.4,
+    "tier_pts": 0.67,
+    "bigplay_pts": 6.77,
+    "proj": 7.4,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 20.5,
+    "tier_pts": 0.87,
+    "bigplay_pts": 7.51,
+    "proj": 8.4,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 6.94,
+    "proj": 7.3,
+    "market_pa": null
+   },
+   "13": null,
+   "14": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 22.1,
+    "tier_pts": 0.51,
+    "bigplay_pts": 6.58,
+    "proj": 7.1,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 21.8,
+    "tier_pts": 0.57,
+    "bigplay_pts": 7.14,
+    "proj": 7.7,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 19.5,
+    "tier_pts": 1.12,
+    "bigplay_pts": 7.31,
+    "proj": 8.4,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-12-31",
+    "exp_pa": 24.6,
+    "tier_pts": -0.07,
+    "bigplay_pts": 6.36,
+    "proj": 6.3,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 20.1,
+    "tier_pts": 0.98,
+    "bigplay_pts": 7.14,
+    "proj": 8.1,
+    "market_pa": null
+   }
+  },
+  "JAX": {
+   "1": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 19.3,
+    "tier_pts": 1.16,
+    "bigplay_pts": 7.52,
+    "proj": 8.7,
+    "market_pa": 15.5
+   },
+   "2": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 23.6,
+    "tier_pts": 0.14,
+    "bigplay_pts": 6.78,
+    "proj": 6.9,
+    "market_pa": 23.2
+   },
+   "3": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 24.3,
+    "tier_pts": -0.02,
+    "bigplay_pts": 6.09,
+    "proj": 6.1,
+    "market_pa": null
+   },
+   "4": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.4,
+    "tier_pts": -0.03,
+    "bigplay_pts": 6.56,
+    "proj": 6.5,
+    "market_pa": 27.0
+   },
+   "5": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 22.5,
+    "tier_pts": 0.4,
+    "bigplay_pts": 6.6,
+    "proj": 7.0,
+    "market_pa": 23.5
+   },
+   "6": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 20.6,
+    "tier_pts": 0.85,
+    "bigplay_pts": 7.14,
+    "proj": 8.0,
+    "market_pa": 20.5
+   },
+   "7": null,
+   "8": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 22.9,
+    "tier_pts": 0.31,
+    "bigplay_pts": 6.49,
+    "proj": 6.8,
+    "market_pa": 22.5
+   },
+   "9": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-11-05",
+    "exp_pa": 24.1,
+    "tier_pts": 0.03,
+    "bigplay_pts": 6.64,
+    "proj": 6.7,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 19.4,
+    "tier_pts": 1.14,
+    "bigplay_pts": 7.98,
+    "proj": 9.1,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 22.9,
+    "tier_pts": 0.32,
+    "bigplay_pts": 7.0,
+    "proj": 7.3,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 17.6,
+    "tier_pts": 1.55,
+    "bigplay_pts": 7.98,
+    "proj": 9.5,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 25.6,
+    "tier_pts": -0.31,
+    "bigplay_pts": 6.22,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-12-14",
+    "exp_pa": 19.9,
+    "tier_pts": 1.02,
+    "bigplay_pts": 7.34,
+    "proj": 8.4,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 22.4,
+    "tier_pts": 0.44,
+    "bigplay_pts": 7.14,
+    "proj": 7.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 25.7,
+    "tier_pts": -0.34,
+    "bigplay_pts": 6.18,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 21.0,
+    "tier_pts": 0.77,
+    "bigplay_pts": 7.04,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 24.6,
+    "tier_pts": -0.09,
+    "bigplay_pts": 6.49,
+    "proj": 6.4,
+    "market_pa": null
+   }
+  },
+  "CLE": {
+   "1": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 26.8,
+    "tier_pts": -0.58,
+    "bigplay_pts": 5.4,
+    "proj": 4.8,
+    "market_pa": 24.0
+   },
+   "2": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 24.1,
+    "tier_pts": 0.02,
+    "bigplay_pts": 6.15,
+    "proj": 6.2,
+    "market_pa": 24.5
+   },
+   "3": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 19.1,
+    "tier_pts": 1.2,
+    "bigplay_pts": 7.08,
+    "proj": 8.3,
+    "market_pa": 20.5
+   },
+   "4": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-10-01",
+    "exp_pa": 20.4,
+    "tier_pts": 0.9,
+    "bigplay_pts": 6.71,
+    "proj": 7.6,
+    "market_pa": 21.5
+   },
+   "5": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 19.4,
+    "tier_pts": 1.14,
+    "bigplay_pts": 7.5,
+    "proj": 8.6,
+    "market_pa": 21.0
+   },
+   "6": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 22.9,
+    "tier_pts": 0.31,
+    "bigplay_pts": 6.01,
+    "proj": 6.3,
+    "market_pa": 25.5
+   },
+   "7": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 19.9,
+    "tier_pts": 1.02,
+    "bigplay_pts": 7.36,
+    "proj": 8.4,
+    "market_pa": 21.5
+   },
+   "8": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 22.2,
+    "tier_pts": 0.48,
+    "bigplay_pts": 6.71,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 22.7,
+    "tier_pts": 0.37,
+    "bigplay_pts": 6.57,
+    "proj": 6.9,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 21.1,
+    "tier_pts": 0.73,
+    "bigplay_pts": 6.51,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "11": null,
+   "12": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 19.1,
+    "tier_pts": 1.22,
+    "bigplay_pts": 7.1,
+    "proj": 8.3,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.2,
+    "tier_pts": 0.25,
+    "bigplay_pts": 5.93,
+    "proj": 6.2,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 20.5,
+    "tier_pts": 0.89,
+    "bigplay_pts": 6.71,
+    "proj": 7.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.4,
+    "tier_pts": 0.21,
+    "bigplay_pts": 6.37,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 24.6,
+    "tier_pts": -0.09,
+    "bigplay_pts": 6.01,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.4,
+    "tier_pts": 0.19,
+    "bigplay_pts": 5.86,
+    "proj": 6.1,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 24.9,
+    "tier_pts": -0.15,
+    "bigplay_pts": 5.93,
+    "proj": 5.8,
+    "market_pa": null
+   }
+  },
+  "PIT": {
+   "1": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 20.0,
+    "tier_pts": 0.99,
+    "bigplay_pts": 7.2,
+    "proj": 8.2,
+    "market_pa": 19.5
+   },
+   "2": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 26.2,
+    "tier_pts": -0.44,
+    "bigplay_pts": 5.95,
+    "proj": 5.5,
+    "market_pa": null
+   },
+   "3": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 22.8,
+    "tier_pts": 0.34,
+    "bigplay_pts": 6.43,
+    "proj": 6.8,
+    "market_pa": 24.0
+   },
+   "4": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-10-01",
+    "exp_pa": 21.1,
+    "tier_pts": 0.72,
+    "bigplay_pts": 7.38,
+    "proj": 8.1,
+    "market_pa": 19.0
+   },
+   "5": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 23.0,
+    "tier_pts": 0.29,
+    "bigplay_pts": 6.36,
+    "proj": 6.6,
+    "market_pa": 22.5
+   },
+   "6": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 6.65,
+    "proj": 6.8,
+    "market_pa": 23.5
+   },
+   "7": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 22.3,
+    "tier_pts": 0.46,
+    "bigplay_pts": 7.06,
+    "proj": 7.5,
+    "market_pa": 20.0
+   },
+   "8": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 19.4,
+    "tier_pts": 1.14,
+    "bigplay_pts": 7.38,
+    "proj": 8.5,
+    "market_pa": null
+   },
+   "9": null,
+   "10": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 24.5,
+    "tier_pts": -0.06,
+    "bigplay_pts": 6.43,
+    "proj": 6.4,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 24.4,
+    "tier_pts": -0.03,
+    "bigplay_pts": 6.46,
+    "proj": 6.4,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-11-27",
+    "exp_pa": 22.0,
+    "tier_pts": 0.53,
+    "bigplay_pts": 6.65,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 20.7,
+    "tier_pts": 0.82,
+    "bigplay_pts": 7.01,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-12-14",
+    "exp_pa": 26.4,
+    "tier_pts": -0.49,
+    "bigplay_pts": 5.89,
+    "proj": 5.4,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 6.5,
+    "proj": 6.9,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 18.7,
+    "tier_pts": 1.3,
+    "bigplay_pts": 7.58,
+    "proj": 8.9,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 19.5,
+    "tier_pts": 1.12,
+    "bigplay_pts": 7.85,
+    "proj": 9.0,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 24.2,
+    "tier_pts": 0.0,
+    "bigplay_pts": 6.5,
+    "proj": 6.5,
+    "market_pa": null
+   }
+  },
+  "ATL": {
+   "1": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 22.7,
+    "tier_pts": 0.36,
+    "bigplay_pts": 6.08,
+    "proj": 6.4,
+    "market_pa": 23.0
+   },
+   "2": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 19.6,
+    "tier_pts": 1.08,
+    "bigplay_pts": 6.45,
+    "proj": 7.5,
+    "market_pa": 21.0
+   },
+   "3": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-09-24",
+    "exp_pa": 25.6,
+    "tier_pts": -0.3,
+    "bigplay_pts": 5.26,
+    "proj": 5.0,
+    "market_pa": 27.0
+   },
+   "4": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-10-05",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 5.94,
+    "proj": 6.2,
+    "market_pa": 24.0
+   },
+   "5": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 23.4,
+    "tier_pts": 0.19,
+    "bigplay_pts": 5.38,
+    "proj": 5.6,
+    "market_pa": 26.5
+   },
+   "6": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 24.9,
+    "tier_pts": -0.15,
+    "bigplay_pts": 4.96,
+    "proj": 4.8,
+    "market_pa": 25.2
+   },
+   "7": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 25.4,
+    "tier_pts": -0.26,
+    "bigplay_pts": 4.83,
+    "proj": 4.6,
+    "market_pa": 26.0
+   },
+   "8": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 24.7,
+    "tier_pts": -0.09,
+    "bigplay_pts": 5.52,
+    "proj": 5.4,
+    "market_pa": 25.5
+   },
+   "9": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 23.7,
+    "tier_pts": 0.13,
+    "bigplay_pts": 5.3,
+    "proj": 5.4,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 23.0,
+    "tier_pts": 0.29,
+    "bigplay_pts": 5.5,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "11": null,
+   "12": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 23.6,
+    "tier_pts": 0.15,
+    "bigplay_pts": 5.82,
+    "proj": 6.0,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 26.3,
+    "tier_pts": -0.46,
+    "bigplay_pts": 4.57,
+    "proj": 4.1,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 22.1,
+    "tier_pts": 0.51,
+    "bigplay_pts": 6.26,
+    "proj": 6.8,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 5.78,
+    "proj": 5.9,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 22.9,
+    "tier_pts": 0.31,
+    "bigplay_pts": 5.52,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 21.5,
+    "tier_pts": 0.65,
+    "bigplay_pts": 5.94,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 21.4,
+    "tier_pts": 0.67,
+    "bigplay_pts": 6.45,
+    "proj": 7.1,
+    "market_pa": null
+   }
+  },
+  "TEN": {
+   "1": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 19.7,
+    "tier_pts": 1.06,
+    "bigplay_pts": 4.99,
+    "proj": 6.0,
+    "market_pa": 18.5
+   },
+   "2": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 25.1,
+    "tier_pts": -0.2,
+    "bigplay_pts": 3.45,
+    "proj": 3.3,
+    "market_pa": 24.0
+   },
+   "3": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 25.4,
+    "tier_pts": -0.27,
+    "bigplay_pts": 3.86,
+    "proj": 3.6,
+    "market_pa": 23.8
+   },
+   "4": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 26.7,
+    "tier_pts": -0.56,
+    "bigplay_pts": 3.49,
+    "proj": 2.9,
+    "market_pa": 28.0
+   },
+   "5": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 4.0,
+    "proj": 4.2,
+    "market_pa": 23.5
+   },
+   "6": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 27.2,
+    "tier_pts": -0.67,
+    "bigplay_pts": 3.35,
+    "proj": 2.7,
+    "market_pa": 25.5
+   },
+   "7": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 21.9,
+    "tier_pts": 0.55,
+    "bigplay_pts": 4.37,
+    "proj": 4.9,
+    "market_pa": 19.0
+   },
+   "8": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 27.0,
+    "tier_pts": -0.62,
+    "bigplay_pts": 3.42,
+    "proj": 2.8,
+    "market_pa": null
+   },
+   "9": null,
+   "10": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 27.1,
+    "tier_pts": -0.65,
+    "bigplay_pts": 2.88,
+    "proj": 2.2,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 28.3,
+    "tier_pts": -0.92,
+    "bigplay_pts": 3.03,
+    "proj": 2.1,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 28.9,
+    "tier_pts": -1.03,
+    "bigplay_pts": 2.88,
+    "proj": 1.8,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.5,
+    "tier_pts": 0.16,
+    "bigplay_pts": 3.9,
+    "proj": 4.1,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 29.5,
+    "tier_pts": -1.18,
+    "bigplay_pts": 2.69,
+    "proj": 1.5,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 25.5,
+    "tier_pts": -0.28,
+    "bigplay_pts": 3.35,
+    "proj": 3.1,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 22.9,
+    "tier_pts": 0.32,
+    "bigplay_pts": 4.59,
+    "proj": 4.9,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 4.2,
+    "proj": 4.6,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 24.9,
+    "tier_pts": -0.16,
+    "bigplay_pts": 4.0,
+    "proj": 3.8,
+    "market_pa": null
+   }
+  },
+  "NYJ": {
+   "1": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 22.3,
+    "tier_pts": 0.46,
+    "bigplay_pts": 4.46,
+    "proj": 4.9,
+    "market_pa": 20.0
+   },
+   "2": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 25.7,
+    "tier_pts": -0.33,
+    "bigplay_pts": 2.99,
+    "proj": 2.7,
+    "market_pa": 24.0
+   },
+   "3": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 29.9,
+    "tier_pts": -1.25,
+    "bigplay_pts": 2.31,
+    "proj": 1.1,
+    "market_pa": 27.5
+   },
+   "4": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 28.5,
+    "tier_pts": -0.96,
+    "bigplay_pts": 2.69,
+    "proj": 1.7,
+    "market_pa": 27.0
+   },
+   "5": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 22.2,
+    "tier_pts": 0.48,
+    "bigplay_pts": 3.99,
+    "proj": 4.5,
+    "market_pa": 18.5
+   },
+   "6": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 29.0,
+    "tier_pts": -1.06,
+    "bigplay_pts": 2.56,
+    "proj": 1.5,
+    "market_pa": null
+   },
+   "7": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 20.2,
+    "tier_pts": 0.95,
+    "bigplay_pts": 4.56,
+    "proj": 5.5,
+    "market_pa": 19.5
+   },
+   "8": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 21.4,
+    "tier_pts": 0.66,
+    "bigplay_pts": 4.2,
+    "proj": 4.9,
+    "market_pa": 19.5
+   },
+   "9": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.6,
+    "tier_pts": -0.54,
+    "bigplay_pts": 3.23,
+    "proj": 2.7,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 26.0,
+    "tier_pts": -0.4,
+    "bigplay_pts": 2.9,
+    "proj": 2.5,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 25.9,
+    "tier_pts": -0.37,
+    "bigplay_pts": 3.44,
+    "proj": 3.1,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 21.9,
+    "tier_pts": 0.54,
+    "bigplay_pts": 4.56,
+    "proj": 5.1,
+    "market_pa": null
+   },
+   "13": null,
+   "14": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 24.8,
+    "tier_pts": -0.12,
+    "bigplay_pts": 3.25,
+    "proj": 3.1,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 24.8,
+    "tier_pts": -0.12,
+    "bigplay_pts": 3.74,
+    "proj": 3.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 27.2,
+    "tier_pts": -0.67,
+    "bigplay_pts": 2.56,
+    "proj": 1.9,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 3.56,
+    "proj": 3.7,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 27.8,
+    "tier_pts": -0.79,
+    "bigplay_pts": 2.9,
+    "proj": 2.1,
+    "market_pa": null
+   }
+  },
+  "LAC": {
+   "1": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 20.0,
+    "tier_pts": 0.99,
+    "bigplay_pts": 7.45,
+    "proj": 8.4,
+    "market_pa": 19.0
+   },
+   "2": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 18.4,
+    "tier_pts": 1.38,
+    "bigplay_pts": 7.91,
+    "proj": 9.3,
+    "market_pa": 16.5
+   },
+   "3": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 24.7,
+    "tier_pts": -0.11,
+    "bigplay_pts": 6.6,
+    "proj": 6.5,
+    "market_pa": 25.8
+   },
+   "4": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.2,
+    "tier_pts": 0.0,
+    "bigplay_pts": 6.74,
+    "proj": 6.7,
+    "market_pa": null
+   },
+   "5": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 21.7,
+    "tier_pts": 0.58,
+    "bigplay_pts": 6.96,
+    "proj": 7.5,
+    "market_pa": 21.0
+   },
+   "6": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 23.6,
+    "tier_pts": 0.16,
+    "bigplay_pts": 6.93,
+    "proj": 7.1,
+    "market_pa": 24.5
+   },
+   "7": null,
+   "8": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 26.2,
+    "tier_pts": -0.45,
+    "bigplay_pts": 6.18,
+    "proj": 5.7,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 20.5,
+    "tier_pts": 0.88,
+    "bigplay_pts": 7.32,
+    "proj": 8.2,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "BAL",
+    "home": false,
+    "gameday": "2026-11-16",
+    "exp_pa": 24.0,
+    "tier_pts": 0.06,
+    "bigplay_pts": 6.81,
+    "proj": 6.9,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 17.0,
+    "tier_pts": 1.71,
+    "bigplay_pts": 8.3,
+    "proj": 10.0,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 24.2,
+    "tier_pts": 0.02,
+    "bigplay_pts": 6.26,
+    "proj": 6.3,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 23.5,
+    "tier_pts": 0.18,
+    "bigplay_pts": 6.95,
+    "proj": 7.1,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 20.1,
+    "tier_pts": 0.96,
+    "bigplay_pts": 7.91,
+    "proj": 8.9,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-12-17",
+    "exp_pa": 24.2,
+    "tier_pts": 0.01,
+    "bigplay_pts": 6.26,
+    "proj": 6.3,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 18.9,
+    "tier_pts": 1.26,
+    "bigplay_pts": 8.26,
+    "proj": 9.5,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 21.8,
+    "tier_pts": 0.56,
+    "bigplay_pts": 6.93,
+    "proj": 7.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 23.5,
+    "tier_pts": 0.18,
+    "bigplay_pts": 6.96,
+    "proj": 7.1,
+    "market_pa": null
+   }
+  },
+  "ARI": {
+   "1": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 25.2,
+    "tier_pts": -0.22,
+    "bigplay_pts": 4.24,
+    "proj": 4.0,
+    "market_pa": 28.5
+   },
+   "2": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 24.9,
+    "tier_pts": -0.14,
+    "bigplay_pts": 3.84,
+    "proj": 3.7,
+    "market_pa": null
+   },
+   "3": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 28.3,
+    "tier_pts": -0.92,
+    "bigplay_pts": 3.35,
+    "proj": 2.4,
+    "market_pa": 29.0
+   },
+   "4": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 25.1,
+    "tier_pts": -0.19,
+    "bigplay_pts": 4.27,
+    "proj": 4.1,
+    "market_pa": 26.2
+   },
+   "5": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 27.5,
+    "tier_pts": -0.73,
+    "bigplay_pts": 3.1,
+    "proj": 2.4,
+    "market_pa": 28.5
+   },
+   "6": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 28.6,
+    "tier_pts": -0.98,
+    "bigplay_pts": 3.27,
+    "proj": 2.3,
+    "market_pa": 30.5
+   },
+   "7": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 24.1,
+    "tier_pts": 0.03,
+    "bigplay_pts": 4.05,
+    "proj": 4.1,
+    "market_pa": 25.5
+   },
+   "8": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 28.0,
+    "tier_pts": -0.84,
+    "bigplay_pts": 3.45,
+    "proj": 2.6,
+    "market_pa": 29.0
+   },
+   "9": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.6,
+    "tier_pts": -0.54,
+    "bigplay_pts": 3.84,
+    "proj": 3.3,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 26.9,
+    "tier_pts": -0.59,
+    "bigplay_pts": 3.27,
+    "proj": 2.7,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 26.0,
+    "tier_pts": -0.39,
+    "bigplay_pts": 4.02,
+    "proj": 3.6,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 4.31,
+    "proj": 4.6,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 24.8,
+    "tier_pts": -0.12,
+    "bigplay_pts": 3.87,
+    "proj": 3.7,
+    "market_pa": null
+   },
+   "14": null,
+   "15": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 19.4,
+    "tier_pts": 1.14,
+    "bigplay_pts": 5.4,
+    "proj": 6.5,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 24.4,
+    "tier_pts": -0.03,
+    "bigplay_pts": 4.47,
+    "proj": 4.4,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 20.8,
+    "tier_pts": 0.81,
+    "bigplay_pts": 5.0,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 26.6,
+    "tier_pts": -0.53,
+    "bigplay_pts": 3.35,
+    "proj": 2.8,
+    "market_pa": null
+   }
+  },
+  "LV": {
+   "1": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 18.8,
+    "tier_pts": 1.27,
+    "bigplay_pts": 6.18,
+    "proj": 7.5,
+    "market_pa": 18.8
+   },
+   "2": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 24.5,
+    "tier_pts": -0.06,
+    "bigplay_pts": 5.06,
+    "proj": 5.0,
+    "market_pa": 26.0
+   },
+   "3": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 5.29,
+    "proj": 5.4,
+    "market_pa": 23.0
+   },
+   "4": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 23.5,
+    "tier_pts": 0.17,
+    "bigplay_pts": 4.85,
+    "proj": 5.0,
+    "market_pa": 24.5
+   },
+   "5": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 27.6,
+    "tier_pts": -0.76,
+    "bigplay_pts": 4.18,
+    "proj": 3.4,
+    "market_pa": null
+   },
+   "6": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 24.7,
+    "tier_pts": -0.1,
+    "bigplay_pts": 4.52,
+    "proj": 4.4,
+    "market_pa": 27.0
+   },
+   "7": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 26.2,
+    "tier_pts": -0.44,
+    "bigplay_pts": 4.1,
+    "proj": 3.7,
+    "market_pa": 27.0
+   },
+   "8": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 20.4,
+    "tier_pts": 0.89,
+    "bigplay_pts": 6.22,
+    "proj": 7.1,
+    "market_pa": 21.0
+   },
+   "9": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 27.6,
+    "tier_pts": -0.77,
+    "bigplay_pts": 4.18,
+    "proj": 3.4,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 24.2,
+    "tier_pts": 0.01,
+    "bigplay_pts": 4.66,
+    "proj": 4.7,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 25.2,
+    "tier_pts": -0.22,
+    "bigplay_pts": 4.87,
+    "proj": 4.7,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "CLE",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 22.6,
+    "tier_pts": 0.38,
+    "bigplay_pts": 5.61,
+    "proj": 6.0,
+    "market_pa": null
+   },
+   "13": null,
+   "14": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 22.8,
+    "tier_pts": 0.34,
+    "bigplay_pts": 5.06,
+    "proj": 5.4,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 23.5,
+    "tier_pts": 0.19,
+    "bigplay_pts": 4.87,
+    "proj": 5.1,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 19.2,
+    "tier_pts": 1.18,
+    "bigplay_pts": 6.08,
+    "proj": 7.3,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.5,
+    "tier_pts": 0.18,
+    "bigplay_pts": 5.37,
+    "proj": 5.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 25.3,
+    "tier_pts": -0.24,
+    "bigplay_pts": 4.85,
+    "proj": 4.6,
+    "market_pa": null
+   }
+  },
+  "MIA": {
+   "1": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 21.7,
+    "tier_pts": 0.6,
+    "bigplay_pts": 6.01,
+    "proj": 6.6,
+    "market_pa": 21.8
+   },
+   "2": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 27.5,
+    "tier_pts": -0.73,
+    "bigplay_pts": 4.37,
+    "proj": 3.6,
+    "market_pa": 28.5
+   },
+   "3": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 23.4,
+    "tier_pts": 0.2,
+    "bigplay_pts": 5.04,
+    "proj": 5.2,
+    "market_pa": 26.0
+   },
+   "4": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.0,
+    "tier_pts": 0.06,
+    "bigplay_pts": 5.37,
+    "proj": 5.4,
+    "market_pa": 25.5
+   },
+   "5": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 24.1,
+    "tier_pts": 0.04,
+    "bigplay_pts": 4.84,
+    "proj": 4.9,
+    "market_pa": 27.8
+   },
+   "6": null,
+   "7": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 20.3,
+    "tier_pts": 0.93,
+    "bigplay_pts": 6.41,
+    "proj": 7.3,
+    "market_pa": 22.0
+   },
+   "8": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 25.7,
+    "tier_pts": -0.34,
+    "bigplay_pts": 4.37,
+    "proj": 4.0,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.6,
+    "tier_pts": -0.54,
+    "bigplay_pts": 4.12,
+    "proj": 3.6,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 26.1,
+    "tier_pts": -0.41,
+    "bigplay_pts": 4.78,
+    "proj": 4.4,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 26.3,
+    "tier_pts": -0.46,
+    "bigplay_pts": 4.71,
+    "proj": 4.2,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 18.5,
+    "tier_pts": 1.34,
+    "bigplay_pts": 6.41,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 25.0,
+    "tier_pts": -0.18,
+    "bigplay_pts": 5.06,
+    "proj": 4.9,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 25.3,
+    "tier_pts": -0.23,
+    "bigplay_pts": 4.5,
+    "proj": 4.3,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 25.9,
+    "tier_pts": -0.39,
+    "bigplay_pts": 4.81,
+    "proj": 4.4,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 22.6,
+    "tier_pts": 0.38,
+    "bigplay_pts": 5.25,
+    "proj": 5.6,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 24.5,
+    "tier_pts": -0.07,
+    "bigplay_pts": 4.71,
+    "proj": 4.6,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 27.5,
+    "tier_pts": -0.73,
+    "bigplay_pts": 4.37,
+    "proj": 3.6,
+    "market_pa": null
+   }
+  },
+  "MIN": {
+   "1": {
+    "opp": "GB",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 22.1,
+    "tier_pts": 0.5,
+    "bigplay_pts": 7.34,
+    "proj": 7.8,
+    "market_pa": 22.5
+   },
+   "2": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 24.9,
+    "tier_pts": -0.16,
+    "bigplay_pts": 7.04,
+    "proj": 6.9,
+    "market_pa": 24.2
+   },
+   "3": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 23.0,
+    "tier_pts": 0.3,
+    "bigplay_pts": 7.6,
+    "proj": 7.9,
+    "market_pa": 23.0
+   },
+   "4": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 16.6,
+    "tier_pts": 1.8,
+    "bigplay_pts": 8.91,
+    "proj": 10.7,
+    "market_pa": 18.0
+   },
+   "5": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 21.5,
+    "tier_pts": 0.64,
+    "bigplay_pts": 8.02,
+    "proj": 8.7,
+    "market_pa": 21.5
+   },
+   "6": null,
+   "7": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-10-25",
+    "exp_pa": 22.2,
+    "tier_pts": 0.47,
+    "bigplay_pts": 7.31,
+    "proj": 7.8,
+    "market_pa": 22.0
+   },
+   "8": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 26.3,
+    "tier_pts": -0.46,
+    "bigplay_pts": 6.65,
+    "proj": 6.2,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-11-09",
+    "exp_pa": 22.5,
+    "tier_pts": 0.42,
+    "bigplay_pts": 7.25,
+    "proj": 7.7,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 23.9,
+    "tier_pts": 0.09,
+    "bigplay_pts": 7.34,
+    "proj": 7.4,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-11-22",
+    "exp_pa": 25.4,
+    "tier_pts": -0.26,
+    "bigplay_pts": 6.9,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-11-29",
+    "exp_pa": 19.3,
+    "tier_pts": 1.17,
+    "bigplay_pts": 8.15,
+    "proj": 9.3,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 17.9,
+    "tier_pts": 1.48,
+    "bigplay_pts": 8.53,
+    "proj": 10.0,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2026-12-10",
+    "exp_pa": 25.4,
+    "tier_pts": -0.26,
+    "bigplay_pts": 6.91,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 24.5,
+    "tier_pts": -0.07,
+    "bigplay_pts": 6.65,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 20.3,
+    "tier_pts": 0.93,
+    "bigplay_pts": 7.86,
+    "proj": 8.8,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 18.2,
+    "tier_pts": 1.42,
+    "bigplay_pts": 8.95,
+    "proj": 10.4,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 7.04,
+    "proj": 7.3,
+    "market_pa": null
+   }
+  },
+  "GB": {
+   "1": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 22.7,
+    "tier_pts": 0.37,
+    "bigplay_pts": 6.98,
+    "proj": 7.3,
+    "market_pa": 24.0
+   },
+   "2": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 19.0,
+    "tier_pts": 1.24,
+    "bigplay_pts": 8.02,
+    "proj": 9.3,
+    "market_pa": 18.5
+   },
+   "3": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-09-24",
+    "exp_pa": 20.0,
+    "tier_pts": 0.99,
+    "bigplay_pts": 7.23,
+    "proj": 8.2,
+    "market_pa": 19.5
+   },
+   "4": {
+    "opp": "TB",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 6.67,
+    "proj": 6.8,
+    "market_pa": 23.0
+   },
+   "5": {
+    "opp": "CHI",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 24.0,
+    "tier_pts": 0.07,
+    "bigplay_pts": 6.11,
+    "proj": 6.2,
+    "market_pa": 23.2
+   },
+   "6": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 24.1,
+    "tier_pts": 0.04,
+    "bigplay_pts": 6.07,
+    "proj": 6.1,
+    "market_pa": 24.2
+   },
+   "7": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 27.1,
+    "tier_pts": -0.63,
+    "bigplay_pts": 5.73,
+    "proj": 5.1,
+    "market_pa": 26.5
+   },
+   "8": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-10-29",
+    "exp_pa": 18.7,
+    "tier_pts": 1.3,
+    "bigplay_pts": 7.6,
+    "proj": 8.9,
+    "market_pa": 19.2
+   },
+   "9": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.2,
+    "tier_pts": -0.43,
+    "bigplay_pts": 5.98,
+    "proj": 5.5,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "MIN",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 20.9,
+    "tier_pts": 0.78,
+    "bigplay_pts": 6.98,
+    "proj": 7.8,
+    "market_pa": null
+   },
+   "11": null,
+   "12": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-11-25",
+    "exp_pa": 26.5,
+    "tier_pts": -0.5,
+    "bigplay_pts": 5.9,
+    "proj": 5.4,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "NO",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 22.2,
+    "tier_pts": 0.47,
+    "bigplay_pts": 7.09,
+    "proj": 7.6,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 23.2,
+    "tier_pts": 0.24,
+    "bigplay_pts": 6.32,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 17.4,
+    "tier_pts": 1.62,
+    "bigplay_pts": 7.98,
+    "proj": 9.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-12-25",
+    "exp_pa": 25.7,
+    "tier_pts": -0.33,
+    "bigplay_pts": 6.11,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2027-01-04",
+    "exp_pa": 20.7,
+    "tier_pts": 0.83,
+    "bigplay_pts": 7.04,
+    "proj": 7.9,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "DET",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 25.3,
+    "tier_pts": -0.24,
+    "bigplay_pts": 5.73,
+    "proj": 5.5,
+    "market_pa": null
+   }
+  },
+  "PHI": {
+   "1": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 20.0,
+    "tier_pts": 0.99,
+    "bigplay_pts": 8.15,
+    "proj": 9.1,
+    "market_pa": 19.5
+   },
+   "2": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 18.5,
+    "tier_pts": 1.36,
+    "bigplay_pts": 9.1,
+    "proj": 10.5,
+    "market_pa": 18.5
+   },
+   "3": {
+    "opp": "CHI",
+    "home": false,
+    "gameday": "2026-09-28",
+    "exp_pa": 24.7,
+    "tier_pts": -0.1,
+    "bigplay_pts": 7.33,
+    "proj": 7.2,
+    "market_pa": 24.0
+   },
+   "4": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 7.11,
+    "proj": 7.2,
+    "market_pa": 24.5
+   },
+   "5": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 25.4,
+    "tier_pts": -0.26,
+    "bigplay_pts": 7.14,
+    "proj": 6.9,
+    "market_pa": 22.0
+   },
+   "6": {
+    "opp": "CAR",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 17.7,
+    "tier_pts": 1.54,
+    "bigplay_pts": 8.82,
+    "proj": 10.4,
+    "market_pa": 18.5
+   },
+   "7": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-10-26",
+    "exp_pa": 23.1,
+    "tier_pts": 0.27,
+    "bigplay_pts": 7.29,
+    "proj": 7.6,
+    "market_pa": 22.8
+   },
+   "8": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 21.8,
+    "tier_pts": 0.57,
+    "bigplay_pts": 8.15,
+    "proj": 8.7,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 20.2,
+    "tier_pts": 0.95,
+    "bigplay_pts": 8.11,
+    "proj": 9.1,
+    "market_pa": null
+   },
+   "10": null,
+   "11": {
+    "opp": "PIT",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 19.0,
+    "tier_pts": 1.23,
+    "bigplay_pts": 8.45,
+    "proj": 9.7,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-11-26",
+    "exp_pa": 24.8,
+    "tier_pts": -0.13,
+    "bigplay_pts": 7.29,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 21.0,
+    "tier_pts": 0.76,
+    "bigplay_pts": 8.38,
+    "proj": 9.1,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 22.0,
+    "tier_pts": 0.53,
+    "bigplay_pts": 7.6,
+    "proj": 8.1,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2026-12-19",
+    "exp_pa": 21.7,
+    "tier_pts": 0.59,
+    "bigplay_pts": 7.68,
+    "proj": 8.3,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-12-24",
+    "exp_pa": 19.7,
+    "tier_pts": 1.07,
+    "bigplay_pts": 8.25,
+    "proj": 9.3,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 25.2,
+    "tier_pts": -0.21,
+    "bigplay_pts": 7.2,
+    "proj": 7.0,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 21.9,
+    "tier_pts": 0.54,
+    "bigplay_pts": 8.11,
+    "proj": 8.7,
+    "market_pa": null
+   }
+  },
+  "WAS": {
+   "1": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 26.1,
+    "tier_pts": -0.42,
+    "bigplay_pts": 4.38,
+    "proj": 4.0,
+    "market_pa": 25.0
+   },
+   "2": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2026-09-20",
+    "exp_pa": 27.6,
+    "tier_pts": -0.75,
+    "bigplay_pts": 3.96,
+    "proj": 3.2,
+    "market_pa": 28.0
+   },
+   "3": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 24.5,
+    "tier_pts": -0.05,
+    "bigplay_pts": 4.35,
+    "proj": 4.3,
+    "market_pa": null
+   },
+   "4": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.7,
+    "tier_pts": -0.11,
+    "bigplay_pts": 4.27,
+    "proj": 4.2,
+    "market_pa": 24.5
+   },
+   "5": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2026-10-11",
+    "exp_pa": 22.9,
+    "tier_pts": 0.31,
+    "bigplay_pts": 4.78,
+    "proj": 5.1,
+    "market_pa": 23.0
+   },
+   "6": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-10-19",
+    "exp_pa": 27.9,
+    "tier_pts": -0.82,
+    "bigplay_pts": 3.87,
+    "proj": 3.0,
+    "market_pa": 28.0
+   },
+   "7": null,
+   "8": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 24.3,
+    "tier_pts": -0.02,
+    "bigplay_pts": 4.38,
+    "proj": 4.4,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.5,
+    "tier_pts": -0.5,
+    "bigplay_pts": 3.78,
+    "proj": 3.3,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-11-12",
+    "exp_pa": 24.7,
+    "tier_pts": -0.1,
+    "bigplay_pts": 4.78,
+    "proj": 4.7,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "CIN",
+    "home": true,
+    "gameday": "2026-11-23",
+    "exp_pa": 24.5,
+    "tier_pts": -0.05,
+    "bigplay_pts": 4.34,
+    "proj": 4.3,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 23.7,
+    "tier_pts": 0.12,
+    "bigplay_pts": 5.05,
+    "proj": 5.2,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "TEN",
+    "home": false,
+    "gameday": "2026-12-06",
+    "exp_pa": 21.2,
+    "tier_pts": 0.71,
+    "bigplay_pts": 5.77,
+    "proj": 6.5,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "HOU",
+    "home": true,
+    "gameday": "2026-12-13",
+    "exp_pa": 22.4,
+    "tier_pts": 0.42,
+    "bigplay_pts": 4.92,
+    "proj": 5.3,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "ATL",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 21.8,
+    "tier_pts": 0.58,
+    "bigplay_pts": 5.12,
+    "proj": 5.7,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "MIN",
+    "home": false,
+    "gameday": "2026-12-27",
+    "exp_pa": 24.4,
+    "tier_pts": -0.03,
+    "bigplay_pts": 4.86,
+    "proj": 4.8,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "JAX",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 28.1,
+    "tier_pts": -0.87,
+    "bigplay_pts": 3.81,
+    "proj": 2.9,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 25.8,
+    "tier_pts": -0.36,
+    "bigplay_pts": 3.96,
+    "proj": 3.6,
+    "market_pa": null
+   }
+  },
+  "NYG": {
+   "1": {
+    "opp": "DAL",
+    "home": true,
+    "gameday": "2026-09-13",
+    "exp_pa": 25.9,
+    "tier_pts": -0.37,
+    "bigplay_pts": 3.89,
+    "proj": 3.5,
+    "market_pa": 25.8
+   },
+   "2": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-09-21",
+    "exp_pa": 28.3,
+    "tier_pts": -0.9,
+    "bigplay_pts": 3.72,
+    "proj": 2.8,
+    "market_pa": 29.0
+   },
+   "3": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 19.5,
+    "tier_pts": 1.11,
+    "bigplay_pts": 5.7,
+    "proj": 6.8,
+    "market_pa": 20.8
+   },
+   "4": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-10-04",
+    "exp_pa": 22.0,
+    "tier_pts": 0.52,
+    "bigplay_pts": 4.99,
+    "proj": 5.5,
+    "market_pa": 19.2
+   },
+   "5": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 24.6,
+    "tier_pts": -0.08,
+    "bigplay_pts": 4.76,
+    "proj": 4.7,
+    "market_pa": 25.5
+   },
+   "6": {
+    "opp": "NO",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 22.3,
+    "tier_pts": 0.45,
+    "bigplay_pts": 4.91,
+    "proj": 5.4,
+    "market_pa": 21.0
+   },
+   "7": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 24.2,
+    "tier_pts": 0.0,
+    "bigplay_pts": 4.86,
+    "proj": 4.9,
+    "market_pa": 24.5
+   },
+   "8": null,
+   "9": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 26.1,
+    "tier_pts": -0.43,
+    "bigplay_pts": 4.31,
+    "proj": 3.9,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-11-12",
+    "exp_pa": 22.8,
+    "tier_pts": 0.33,
+    "bigplay_pts": 4.76,
+    "proj": 5.1,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 26.4,
+    "tier_pts": -0.49,
+    "bigplay_pts": 3.74,
+    "proj": 3.3,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-11-29",
+    "exp_pa": 26.5,
+    "tier_pts": -0.52,
+    "bigplay_pts": 4.21,
+    "proj": 3.7,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 26.2,
+    "tier_pts": -0.45,
+    "bigplay_pts": 3.8,
+    "proj": 3.4,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 26.3,
+    "tier_pts": -0.45,
+    "bigplay_pts": 4.28,
+    "proj": 3.8,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "CLE",
+    "home": true,
+    "gameday": "2026-12-20",
+    "exp_pa": 21.2,
+    "tier_pts": 0.72,
+    "bigplay_pts": 5.23,
+    "proj": 6.0,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "DET",
+    "home": false,
+    "gameday": "2026-12-28",
+    "exp_pa": 28.8,
+    "tier_pts": -1.03,
+    "bigplay_pts": 3.55,
+    "proj": 2.5,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "DAL",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 27.6,
+    "tier_pts": -0.76,
+    "bigplay_pts": 3.89,
+    "proj": 3.1,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 24.4,
+    "tier_pts": -0.03,
+    "bigplay_pts": 4.31,
+    "proj": 4.3,
+    "market_pa": null
+   }
+  },
+  "DAL": {
+   "1": {
+    "opp": "NYG",
+    "home": false,
+    "gameday": "2026-09-13",
+    "exp_pa": 25.6,
+    "tier_pts": -0.3,
+    "bigplay_pts": 3.7,
+    "proj": 3.4,
+    "market_pa": 22.8
+   },
+   "2": {
+    "opp": "WAS",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 23.7,
+    "tier_pts": 0.13,
+    "bigplay_pts": 3.74,
+    "proj": 3.9,
+    "market_pa": 23.5
+   },
+   "3": {
+    "opp": "BAL",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 25.1,
+    "tier_pts": -0.19,
+    "bigplay_pts": 3.34,
+    "proj": 3.1,
+    "market_pa": 27.0
+   },
+   "4": {
+    "opp": "HOU",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 25.1,
+    "tier_pts": -0.19,
+    "bigplay_pts": 3.84,
+    "proj": 3.7,
+    "market_pa": 25.0
+   },
+   "5": {
+    "opp": "TB",
+    "home": true,
+    "gameday": "2026-10-08",
+    "exp_pa": 24.6,
+    "tier_pts": -0.08,
+    "bigplay_pts": 3.48,
+    "proj": 3.4,
+    "market_pa": 24.5
+   },
+   "6": {
+    "opp": "GB",
+    "home": false,
+    "gameday": "2026-10-18",
+    "exp_pa": 27.3,
+    "tier_pts": -0.68,
+    "bigplay_pts": 3.22,
+    "proj": 2.5,
+    "market_pa": 27.2
+   },
+   "7": {
+    "opp": "PHI",
+    "home": false,
+    "gameday": "2026-10-26",
+    "exp_pa": 27.0,
+    "tier_pts": -0.62,
+    "bigplay_pts": 3.3,
+    "proj": 2.7,
+    "market_pa": 25.8
+   },
+   "8": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 22.9,
+    "tier_pts": 0.32,
+    "bigplay_pts": 3.97,
+    "proj": 4.3,
+    "market_pa": 18.5
+   },
+   "9": {
+    "opp": "IND",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 27.4,
+    "tier_pts": -0.7,
+    "bigplay_pts": 3.19,
+    "proj": 2.5,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-11-15",
+    "exp_pa": 27.1,
+    "tier_pts": -0.63,
+    "bigplay_pts": 2.78,
+    "proj": 2.1,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "TEN",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 20.4,
+    "tier_pts": 0.91,
+    "bigplay_pts": 4.68,
+    "proj": 5.6,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "PHI",
+    "home": true,
+    "gameday": "2026-11-26",
+    "exp_pa": 25.2,
+    "tier_pts": -0.23,
+    "bigplay_pts": 3.3,
+    "proj": 3.1,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-12-07",
+    "exp_pa": 27.1,
+    "tier_pts": -0.64,
+    "bigplay_pts": 3.26,
+    "proj": 2.6,
+    "market_pa": null
+   },
+   "14": null,
+   "15": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 29.1,
+    "tier_pts": -1.08,
+    "bigplay_pts": 2.7,
+    "proj": 1.6,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 27.3,
+    "tier_pts": -0.68,
+    "bigplay_pts": 2.72,
+    "proj": 2.0,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "NYG",
+    "home": true,
+    "gameday": "2027-01-03",
+    "exp_pa": 23.8,
+    "tier_pts": 0.1,
+    "bigplay_pts": 3.7,
+    "proj": 3.8,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "WAS",
+    "home": false,
+    "gameday": "2027-01-10",
+    "exp_pa": 25.4,
+    "tier_pts": -0.27,
+    "bigplay_pts": 3.74,
+    "proj": 3.5,
+    "market_pa": null
+   }
+  },
+  "KC": {
+   "1": {
+    "opp": "DEN",
+    "home": true,
+    "gameday": "2026-09-14",
+    "exp_pa": 21.7,
+    "tier_pts": 0.6,
+    "bigplay_pts": 7.01,
+    "proj": 7.6,
+    "market_pa": 20.5
+   },
+   "2": {
+    "opp": "IND",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 22.7,
+    "tier_pts": 0.36,
+    "bigplay_pts": 6.72,
+    "proj": 7.1,
+    "market_pa": 20.5
+   },
+   "3": {
+    "opp": "MIA",
+    "home": false,
+    "gameday": "2026-09-27",
+    "exp_pa": 18.8,
+    "tier_pts": 1.27,
+    "bigplay_pts": 8.32,
+    "proj": 9.6,
+    "market_pa": 18.5
+   },
+   "4": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 20.1,
+    "tier_pts": 0.97,
+    "bigplay_pts": 7.96,
+    "proj": 8.9,
+    "market_pa": 19.0
+   },
+   "5": null,
+   "6": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2026-10-18",
+    "exp_pa": 21.0,
+    "tier_pts": 0.75,
+    "bigplay_pts": 7.2,
+    "proj": 8.0,
+    "market_pa": 22.0
+   },
+   "7": {
+    "opp": "SEA",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 24.2,
+    "tier_pts": 0.02,
+    "bigplay_pts": 6.8,
+    "proj": 6.8,
+    "market_pa": null
+   },
+   "8": {
+    "opp": "DEN",
+    "home": false,
+    "gameday": "2026-11-01",
+    "exp_pa": 23.4,
+    "tier_pts": 0.19,
+    "bigplay_pts": 7.01,
+    "proj": 7.2,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "NYJ",
+    "home": true,
+    "gameday": "2026-11-08",
+    "exp_pa": 16.9,
+    "tier_pts": 1.72,
+    "bigplay_pts": 8.36,
+    "proj": 10.1,
+    "market_pa": null
+   },
+   "10": {
+    "opp": "ATL",
+    "home": false,
+    "gameday": "2026-11-15",
+    "exp_pa": 21.5,
+    "tier_pts": 0.64,
+    "bigplay_pts": 7.57,
+    "proj": 8.2,
+    "market_pa": null
+   },
+   "11": {
+    "opp": "ARI",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 20.0,
+    "tier_pts": 1.0,
+    "bigplay_pts": 7.5,
+    "proj": 8.5,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "BUF",
+    "home": false,
+    "gameday": "2026-11-26",
+    "exp_pa": 24.7,
+    "tier_pts": -0.1,
+    "bigplay_pts": 6.66,
+    "proj": 6.6,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "LA",
+    "home": false,
+    "gameday": "2026-12-03",
+    "exp_pa": 26.2,
+    "tier_pts": -0.44,
+    "bigplay_pts": 6.23,
+    "proj": 5.8,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "CIN",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 24.2,
+    "tier_pts": 0.01,
+    "bigplay_pts": 6.79,
+    "proj": 6.8,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "NE",
+    "home": true,
+    "gameday": "2026-12-21",
+    "exp_pa": 24.1,
+    "tier_pts": 0.03,
+    "bigplay_pts": 6.32,
+    "proj": 6.3,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "SF",
+    "home": true,
+    "gameday": "2026-12-27",
+    "exp_pa": 24.1,
+    "tier_pts": 0.02,
+    "bigplay_pts": 6.32,
+    "proj": 6.3,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 22.8,
+    "tier_pts": 0.34,
+    "bigplay_pts": 7.2,
+    "proj": 7.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 18.3,
+    "tier_pts": 1.39,
+    "bigplay_pts": 7.96,
+    "proj": 9.4,
+    "market_pa": null
+   }
+  },
+  "DEN": {
+   "1": {
+    "opp": "KC",
+    "home": false,
+    "gameday": "2026-09-14",
+    "exp_pa": 22.5,
+    "tier_pts": 0.41,
+    "bigplay_pts": 8.26,
+    "proj": 8.7,
+    "market_pa": 23.0
+   },
+   "2": {
+    "opp": "JAX",
+    "home": true,
+    "gameday": "2026-09-20",
+    "exp_pa": 23.3,
+    "tier_pts": 0.22,
+    "bigplay_pts": 7.53,
+    "proj": 7.8,
+    "market_pa": 20.2
+   },
+   "3": {
+    "opp": "LA",
+    "home": true,
+    "gameday": "2026-09-27",
+    "exp_pa": 23.4,
+    "tier_pts": 0.2,
+    "bigplay_pts": 7.51,
+    "proj": 7.7,
+    "market_pa": 24.2
+   },
+   "4": {
+    "opp": "SF",
+    "home": false,
+    "gameday": "2026-10-04",
+    "exp_pa": 24.8,
+    "tier_pts": -0.13,
+    "bigplay_pts": 7.59,
+    "proj": 7.5,
+    "market_pa": 24.5
+   },
+   "5": {
+    "opp": "LAC",
+    "home": false,
+    "gameday": "2026-10-11",
+    "exp_pa": 21.7,
+    "tier_pts": 0.59,
+    "bigplay_pts": 8.48,
+    "proj": 9.1,
+    "market_pa": 23.5
+   },
+   "6": {
+    "opp": "SEA",
+    "home": true,
+    "gameday": "2026-10-15",
+    "exp_pa": 21.4,
+    "tier_pts": 0.67,
+    "bigplay_pts": 8.07,
+    "proj": 8.7,
+    "market_pa": null
+   },
+   "7": {
+    "opp": "ARI",
+    "home": false,
+    "gameday": "2026-10-25",
+    "exp_pa": 20.7,
+    "tier_pts": 0.84,
+    "bigplay_pts": 8.78,
+    "proj": 9.6,
+    "market_pa": 18.0
+   },
+   "8": {
+    "opp": "KC",
+    "home": true,
+    "gameday": "2026-11-01",
+    "exp_pa": 20.7,
+    "tier_pts": 0.82,
+    "bigplay_pts": 8.26,
+    "proj": 9.1,
+    "market_pa": null
+   },
+   "9": {
+    "opp": "CAR",
+    "home": false,
+    "gameday": "2026-11-08",
+    "exp_pa": 19.1,
+    "tier_pts": 1.2,
+    "bigplay_pts": 9.22,
+    "proj": 10.4,
+    "market_pa": null
+   },
+   "10": null,
+   "11": {
+    "opp": "LV",
+    "home": true,
+    "gameday": "2026-11-22",
+    "exp_pa": 17.3,
+    "tier_pts": 1.63,
+    "bigplay_pts": 9.24,
+    "proj": 10.9,
+    "market_pa": null
+   },
+   "12": {
+    "opp": "PIT",
+    "home": false,
+    "gameday": "2026-11-27",
+    "exp_pa": 20.4,
+    "tier_pts": 0.9,
+    "bigplay_pts": 8.85,
+    "proj": 9.7,
+    "market_pa": null
+   },
+   "13": {
+    "opp": "MIA",
+    "home": true,
+    "gameday": "2026-12-06",
+    "exp_pa": 16.0,
+    "tier_pts": 1.92,
+    "bigplay_pts": 9.59,
+    "proj": 11.5,
+    "market_pa": null
+   },
+   "14": {
+    "opp": "NYJ",
+    "home": false,
+    "gameday": "2026-12-13",
+    "exp_pa": 17.6,
+    "tier_pts": 1.56,
+    "bigplay_pts": 9.64,
+    "proj": 11.2,
+    "market_pa": null
+   },
+   "15": {
+    "opp": "LV",
+    "home": false,
+    "gameday": "2026-12-20",
+    "exp_pa": 19.0,
+    "tier_pts": 1.22,
+    "bigplay_pts": 9.24,
+    "proj": 10.5,
+    "market_pa": null
+   },
+   "16": {
+    "opp": "BUF",
+    "home": true,
+    "gameday": "2026-12-25",
+    "exp_pa": 21.9,
+    "tier_pts": 0.55,
+    "bigplay_pts": 7.93,
+    "proj": 8.5,
+    "market_pa": null
+   },
+   "17": {
+    "opp": "NE",
+    "home": false,
+    "gameday": "2027-01-03",
+    "exp_pa": 24.8,
+    "tier_pts": -0.13,
+    "bigplay_pts": 7.59,
+    "proj": 7.5,
+    "market_pa": null
+   },
+   "18": {
+    "opp": "LAC",
+    "home": true,
+    "gameday": "2027-01-10",
+    "exp_pa": 20.0,
+    "tier_pts": 1.0,
+    "bigplay_pts": 8.48,
+    "proj": 9.5,
+    "market_pa": null
+   }
+  }
+ },
+ "season_total": {
+  "SEA": 155.7,
+  "NE": 139.4,
+  "LA": 135.5,
+  "SF": 109.1,
+  "CAR": 108.7,
+  "CHI": 103.5,
+  "CIN": 67.8,
+  "TB": 99.5,
+  "DET": 113.7,
+  "NO": 111.8,
+  "HOU": 156.1,
+  "BUF": 118.7,
+  "IND": 98.1,
+  "BAL": 123.8,
+  "JAX": 124.5,
+  "CLE": 118.0,
+  "PIT": 122.5,
+  "ATL": 99.0,
+  "TEN": 58.5,
+  "NYJ": 54.6,
+  "LAC": 129.0,
+  "ARI": 63.0,
+  "LV": 88.2,
+  "MIA": 84.4,
+  "MIN": 136.7,
+  "GB": 119.6,
+  "PHI": 144.1,
+  "WAS": 74.5,
+  "NYG": 72.7,
+  "DAL": 53.8,
+  "KC": 130.7,
+  "DEN": 157.9
+ },
+ "recommend": {
+  "1": {
+   "start": "LV",
+   "start_proj": 7.5,
+   "bench": [
+    "TB",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "2": {
+   "start": "TB",
+   "start_proj": 7.2,
+   "bench": [
+    "LV",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "3": {
+   "start": "NYG",
+   "start_proj": 6.8,
+   "bench": [
+    "TB",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": "CLE",
+   "stream_proj": 8.3,
+   "stream_gain": 1.5
+  },
+  "4": {
+   "start": "NYG",
+   "start_proj": 5.5,
+   "bench": [
+    "TB",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": "CLE",
+   "stream_proj": 7.6,
+   "stream_gain": 2.1
+  },
+  "5": {
+   "start": "NYG",
+   "start_proj": 4.7,
+   "bench": [
+    "TB",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": "CLE",
+   "stream_proj": 8.6,
+   "stream_gain": 3.9
+  },
+  "6": {
+   "start": "TB",
+   "start_proj": 6.8,
+   "bench": [
+    "NYG",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "7": {
+   "start": "TB",
+   "start_proj": 7.1,
+   "bench": [
+    "NYG",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "8": {
+   "start": "LV",
+   "start_proj": 7.1,
+   "bench": [
+    "TB"
+   ],
+   "on_bye": [
+    "NYG"
+   ],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "9": {
+   "start": "TB",
+   "start_proj": 4.4,
+   "bench": [
+    "NYG",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": "NO",
+   "stream_proj": 7.7,
+   "stream_gain": 3.3
+  },
+  "10": {
+   "start": "NYG",
+   "start_proj": 5.1,
+   "bench": [
+    "LV"
+   ],
+   "on_bye": [
+    "TB"
+   ],
+   "stream": "IND",
+   "stream_proj": 8.0,
+   "stream_gain": 2.9
+  },
+  "11": {
+   "start": "LV",
+   "start_proj": 4.7,
+   "bench": [
+    "TB",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": "CAR",
+   "stream_proj": 6.2,
+   "stream_gain": 1.5
+  },
+  "12": {
+   "start": "TB",
+   "start_proj": 7.5,
+   "bench": [
+    "LV",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "13": {
+   "start": "TB",
+   "start_proj": 6.2,
+   "bench": [
+    "NYG"
+   ],
+   "on_bye": [
+    "LV"
+   ],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "14": {
+   "start": "LV",
+   "start_proj": 5.4,
+   "bench": [
+    "TB",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": "CLE",
+   "stream_proj": 7.6,
+   "stream_gain": 2.2
+  },
+  "15": {
+   "start": "TB",
+   "start_proj": 6.6,
+   "bench": [
+    "NYG",
+    "LV"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "16": {
+   "start": "LV",
+   "start_proj": 7.3,
+   "bench": [
+    "TB",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "17": {
+   "start": "LV",
+   "start_proj": 5.5,
+   "bench": [
+    "TB",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  },
+  "18": {
+   "start": "TB",
+   "start_proj": 6.2,
+   "bench": [
+    "LV",
+    "NYG"
+   ],
+   "on_bye": [],
+   "stream": null,
+   "stream_proj": null,
+   "stream_gain": null
+  }
+ }
+}
